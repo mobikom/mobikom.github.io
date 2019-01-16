@@ -3,12 +3,12 @@
   "name": "The mobikom",
   "icons": [
     {
-      "src": "/images/icons-192.png",
+      "src": "https://github.githubassets.com/favicon.ico",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icons-512.png",
+      "src": "https://github.com/fluidicon.png",
       "type": "image/png",
       "sizes": "512x512"
     }
