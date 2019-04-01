@@ -13,7 +13,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "mobikom.github.io/",
+  "start_url": "/index.html",
   "background_color": "#f0f0f2",
   "display": "standalone",
   "scope": "mobikom.github.io/",
