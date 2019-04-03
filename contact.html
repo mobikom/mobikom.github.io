@@ -137,12 +137,12 @@ textarea
 		<h2>Contact mobikom source code laboratory</h2>
 		<fieldset>
 		<em>Required fields &#42; </em>
-		    <p><label for=name>&#42; Full Name</label>
-		    <input type="text" name="name" required placeholder="Your Name / Вашите имена"></p>
-		    <p><label>&#42; Email</label>
-		    <input type="text" name="email" type="email" required placeholder="Your Email / Вашата ел.поща"></p>
-		    <p><label>&#42; Message</label>
-		    <textarea type="text" name="message" cols="20" rows="5" required="required" placeholder="Message text/ Съобщението Ви тук!"></textarea></p><br />
+		    <label for=name>&#42; Full Name</label>
+		    <input type="text" name="name" required placeholder="Your Name / Вашите имена">
+		    <label>&#42; Email</label>
+		    <input type="text" name="email" type="email" required placeholder="Your Email / Вашата ел.поща">
+		    <label>&#42; Message</label>
+		    <textarea type="text" name="message" cols="20" rows="5" required="required" placeholder="Message text/ Съобщението Ви тук!"></textarea><br />
 		<em><strong title="The EU General Data Protection Regulation (GDPR)">GDPR Note:</strong> By clicking "Submit",
 			you acknowledge that you have read our updated terms of service,
 			privacy policy and cookie policy, and that your continued use of the website is subject to these policies.</em>
@@ -152,6 +152,24 @@ textarea
 		    <input id="submit" name="submit" type="submit" value="Submit / Изпрати">
 		</fieldset>
 	    </form>
+		7777
+		<hr>
+		ZZZZZ
+		<form action="https://www.mobikom.bg/contact/form.php" id=form>
+                    <p><label for=name>Full Name</label> <input type=name name=name id=name required></p>
+                        <p><label for=email>Email</label> <input type=email name=email id=email required></p>
+                        <p><label for=location>Location</label> <input type=text name=location id=location></p>
+                        <p><label for=twitter>Twitter Username</label> <input type=text name=twitter id=twitter></p>
+                        <p><label for=web>Web Address (Portfolio,Github etc)</label> <input type=url name=web id=web>
+                        </p>
+                        <p><label for="coverletter">Cover Letter</label> <textarea id="coverletter" required cols=20 rows=5
+                                                                                 placeholder=Write...></textarea></p>
+                        <p><label for="file"><i class="fa fa-paperclip"></i> Upload Your Resume</label> <input type=file
+                                                                                                             id=file>
+                        </p> <input class="btn btn-success btn-lg" type=submit value=Submit> <input
+                                class="btn btn-default btn-lg" type=reset value=Cancel>
+</form>
+		8888
 	    </section>
 		<hr>
 		<footer>
