@@ -9,7 +9,37 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://mobikom.github.io/about.html</loc>
+        <lastmod>1999-11-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+   <url>
         <loc>https://mobikom.github.io/contact.html</loc>
+        <lastmod>1999-11-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+   <url>
+        <loc>https://mobikom.github.io/terms.html</loc>
+        <lastmod>1999-11-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+   <url>
+        <loc>https://mobikom.github.io/privacy.html</loc>
+        <lastmod>1999-11-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+   <url>
+        <loc>https://mobikom.github.io/gdpr.html</loc>
+        <lastmod>1999-11-18</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>0.8</priority>
+    </url>
+   <url>
+        <loc>https://mobikom.github.io/404.html</loc>
         <lastmod>1999-11-18</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.8</priority>
