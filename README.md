@@ -51,3 +51,12 @@ The platform implements a strict progressive disclosure funnel:
 
 * **Source Code & Web Architecture:** Released under the [MIT License](LICENSE).
 * **Editorial Content, Trademarks & Biographies:** &copy; 2026 Mobikom Bulgaria & Stoyan Stoyanov, MBA. All rights reserved.
+
+## ☕ Support & Sponsorship
+
+If you would like to support independent web infrastructure and regional media:
+
+* **[Direct Bank Wire / IBAN Settlement](https://mobikom.bg/contact/#banking)** &mdash; Official bank transfer.
+* **[Buy Me a Coffee](https://www.buymeacoffee.com/mobikom)** &mdash; Quick 1-click micro-support.
+* **[Patreon Membership](https://www.patreon.com/mobikom)** &mdash; Monthly recurring subscription.
+* **[GitHub Sponsors](https://github.com/sponsors/mobikom)** &mdash; Direct GitHub developer sponsorship.
