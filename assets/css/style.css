@@ -1,0 +1,744 @@
+/* ==========================================================================
+   mobikom.bg — Master Stylesheet (Production Grade)
+   Architecture: Pure CSS Grid Level 2, Subgrid with Fallback, Native Checkbox
+                 Navigation, Hybrid Editorial Typography, Strict A4 Print Engine
+   Zero External Dependencies • Zero Web Fonts • 100% Native Edge Performance
+   ========================================================================== */
+
+:root {
+  /* Light Theme (Crisp Editorial Paper & Architectural Slate) */
+  --bg: #ffffff;
+  --bg-alt: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #475569;
+  --accent: #0052cc;
+  --accent-hover: #0747a6;
+  --cta-bg: #2563eb;
+  --cta-hover: #1d4ed8;
+  --max-w: 1080px;
+  --radius: 6px;
+
+  /* Typography Stacks */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: Georgia, "Times New Roman", Times, serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark Theme (Obsidian & Deep Slate Palette) */
+    --bg: #0b0f19;
+    --bg-alt: #131b2e;
+    --border: #1e293b;
+    --text: #f1f5f9;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --accent-hover: #7dd3fc;
+    --cta-bg: #0284c7;
+    --cta-hover: #0369a1;
+  }
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   Typography & High-Speed Rendering
+   ========================================================================== */
+html {
+  font-family: var(--font-serif);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* UI & Headings Typography Pairing */
+h1, h2, h3, h4, 
+.brand-link, .nav-bar, .hero-tag, .card-meta, 
+a.nav-btn, a.nav-link, a.lang-toggle, .search-title-row {
+  font-family: var(--font-sans);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Custom Mobikom Selection */
+::selection {
+  background: var(--accent);
+  color: #ffffff;
+}
+
+/* Accessible Keyboard Focus (WCAG 2.1 AA) */
+a:focus-visible, input:focus-visible, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+/* ==========================================================================
+   Layout Shells
+   ========================================================================== */
+.shell {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding: 1.25rem;
+}
+
+.shell-narrow {
+  width: 100%;
+  max-width: 840px;
+  margin-inline: auto;
+  padding: 1.25rem;
+}
+
+header, footer {
+  position: relative;
+  background-color: var(--bg-alt);
+  border-block: 1px solid var(--border);
+}
+
+/* ==========================================================================
+   Navigation Bar (Pure CSS Grid + Zero-JS Checkbox Mobile Menu)
+   ========================================================================== */
+.nav-bar {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.brand-link {
+  display: grid;
+  align-items: center;
+  text-decoration: none;
+}
+
+.brand-logo-svg {
+  width: 200px;
+  height: 46px;
+  display: block;
+}
+
+nav {
+  display: grid;
+  justify-content: end;
+}
+
+/* Desktop Navigation (>= 769px) */
+.nav-toggle,
+.nav-toggle-label {
+  display: none;
+}
+
+nav ul {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+/* Mobile Navigation (<= 768px) */
+@media (max-width: 768px) {
+  .nav-bar { grid-template-columns: auto 1fr; }
+  nav { justify-content: end; }
+
+  .nav-toggle-label {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.4rem 0.65rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background-color: var(--bg);
+    color: var(--text);
+    user-select: none;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .nav-toggle:checked ~ ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 1.25rem;
+    right: 1.25rem;
+    background-color: var(--bg-alt);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+  }
+
+  .nav-toggle:checked ~ ul a.nav-link,
+  .nav-toggle:checked ~ ul a.nav-btn,
+  .nav-toggle:checked ~ ul a.lang-toggle {
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* Navigation Links & Buttons */
+a.nav-link, a.lang-toggle, a.card-link {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 4px;
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+a.nav-link:hover, a.nav-link[aria-current="page"] {
+  color: var(--accent);
+}
+
+a.nav-btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.5rem 0.85rem;
+  border-radius: 4px;
+  background-color: var(--cta-bg);
+  color: #ffffff;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+a.nav-btn:hover {
+  background-color: var(--cta-hover);
+  color: #ffffff;
+}
+
+a.lang-toggle {
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+
+a.card-link {
+  color: var(--accent);
+  padding: 0.25rem 0;
+  font-weight: 600;
+}
+
+a.card-link:hover {
+  text-decoration: underline;
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85em;
+  color: var(--muted);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  word-break: break-all;
+}
+
+/* ==========================================================================
+   Hero Section
+   ========================================================================== */
+main {
+  padding-block: 3.5rem;
+}
+
+.hero {
+  margin-bottom: 3.5rem;
+}
+
+.hero-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  letter-spacing: -0.03em;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.hero-lead {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--muted);
+  max-width: 780px;
+  margin-bottom: 2rem;
+}
+
+.hero-actions {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 640px) {
+  .hero-actions { grid-auto-flow: row; }
+}
+
+/* ==========================================================================
+   Search Container
+   ========================================================================== */
+.search-container {
+  background-color: var(--bg-alt);
+  border: 2px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.search-title-row {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.search-field {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.search-field:focus {
+  outline: 2px solid var(--accent);
+}
+
+/* ==========================================================================
+   CSS Grid Level 2 with Subgrid (With Safe Fallback)
+   ========================================================================== */
+.grid-subgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+/* Standard Fallback for legacy browsers */
+.feature-card {
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  gap: 0.5rem;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s ease,
+              box-shadow 0.2s ease;
+}
+
+/* Modern Browser Subgrid Alignment */
+@supports (grid-template-rows: subgrid) {
+  .feature-card {
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+  }
+}
+
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+}
+
+.feature-card h3 { font-size: 1.25rem; }
+.feature-card p { color: var(--muted); font-size: 0.95rem; }
+.card-meta { font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; }
+
+/* ==========================================================================
+   Conversion Banner & High-Speed Rendering
+   ========================================================================== */
+.conversion-banner {
+  margin-top: 4rem;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2.5rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .conversion-banner { grid-template-columns: 1fr; }
+}
+
+.conversion-banner h2 { font-size: 1.5rem; letter-spacing: -0.02em; }
+.conversion-banner p { color: var(--muted); max-width: 600px; }
+
+/* Smart Deferred Rendering for off-screen elements */
+footer, .conversion-banner {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 350px;
+}
+
+/* ==========================================================================
+   4-Column Footer
+   ========================================================================== */
+footer {
+  padding-block: 2.5rem;
+  font-size: 0.9rem;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-col {
+  display: grid;
+  gap: 0.5rem;
+  align-content: start;
+}
+
+.footer-col h4 {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  font-weight: 700;
+}
+
+.footer-col ul {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.footer-col a {
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+.footer-col a:hover {
+  color: var(--accent);
+}
+
+.footer-bottom {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@media (max-width: 640px) {
+  .footer-bottom { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   Executive CV Layout (/stoyanov/)
+   ========================================================================== */
+.cv-box {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  margin-top: 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.cv-head {
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .cv-head { grid-template-columns: 1fr; }
+}
+
+.cv-photo-wrap {
+  display: grid;
+  justify-items: end;
+  text-align: right;
+  gap: 0.4rem;
+  max-width: 180px;
+}
+
+.cv-photo-img {
+  width: 150px;
+  height: auto;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  display: block;
+}
+
+.cv-sec {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.cv-sec h3 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.25rem;
+  letter-spacing: 0.05em;
+}
+
+.cv-item {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.cv-title {
+  font-weight: 700;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+  .cv-title { grid-template-columns: 1fr; }
+}
+
+.cv-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.cv-list {
+  list-style-position: inside;
+  line-height: 1.6;
+}
+
+.toolbar-grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.audit-box {
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1rem;
+  margin-block: 1.5rem;
+}
+
+.audit-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  line-height: 1.7;
+}
+
+.audit-list strong {
+  color: var(--accent);
+}
+
+/* ==========================================================================
+   STRICT SINGLE-PAGE A4 PRINT & PDF ENGINE
+   Fits exactly on 1 Page A4 (210mm x 297mm) without spilling over
+   ========================================================================== */
+@page {
+  size: A4 portrait;
+  margin: 5mm 8mm 5mm 8mm;
+}
+
+@media print {
+  header, footer, .no-print, .conversion-banner, .nav-bar, .toolbar-grid, .search-container {
+    display: none !important;
+  }
+  
+  html, body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 7.5pt;
+    line-height: 1.2;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+  }
+
+  .shell, .shell-narrow, .cv-box {
+    max-width: 100% !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    background: transparent !important;
+    display: block;
+    gap: 0;
+  }
+
+  .cv-head {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    border-bottom: 1.5pt solid #0052cc !important;
+    padding-bottom: 3px;
+    margin-bottom: 4px;
+    gap: 8px;
+  }
+
+  .cv-head h1 {
+    font-size: 13pt;
+    line-height: 1.1;
+    margin-bottom: 1px;
+    color: #000000 !important;
+  }
+
+  .cv-head h2 {
+    font-size: 8.5pt;
+    color: #0052cc !important;
+    margin-bottom: 1px;
+  }
+
+  .cv-head .cv-meta {
+    font-size: 7pt;
+    line-height: 1.15;
+    color: #222222 !important;
+  }
+
+  .cv-photo-wrap {
+    max-width: 80px;
+    text-align: right;
+    justify-items: end;
+  }
+
+  .cv-photo-img {
+    width: 62px;
+    height: auto;
+    border: 0.5pt solid #cccccc !important;
+  }
+
+  .cv-photo-wrap figcaption {
+    font-size: 5pt;
+    line-height: 1.05;
+    max-width: 85px;
+  }
+
+  .cv-sec {
+    margin-bottom: 3px;
+    display: block;
+  }
+
+  .cv-sec h3 {
+    font-size: 7.5pt;
+    color: #0052cc !important;
+    border-bottom: 0.5pt solid #cccccc !important;
+    padding-bottom: 1px;
+    margin-bottom: 2px;
+    letter-spacing: 0.03em;
+  }
+
+  .cv-item {
+    margin-bottom: 2px;
+    display: block;
+  }
+
+  .cv-title {
+    font-size: 7.2pt;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    color: #000000 !important;
+  }
+
+  .cv-title span {
+    font-weight: bold;
+  }
+
+  .cv-list {
+    padding-left: 10px;
+    line-height: 1.15;
+  }
+
+  .cv-list li {
+    font-size: 7.2pt;
+    margin-bottom: 1px;
+  }
+
+  p, .cv-meta {
+    font-size: 7.2pt;
+    line-height: 1.15;
+  }
+
+  code {
+    border: none !important;
+    background: transparent !important;
+    color: #222222 !important;
+    font-size: 6.8pt;
+    padding: 0;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: #000000 !important;
+  }
+}

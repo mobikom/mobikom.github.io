@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Computer Memory for Non-Specialists | Mobikom Bulgaria</title>
+  <meta name="description" content="A practical guide to computer memory architecture by Stoyan Stoyanov, MBA: DDR generations, dual-channel RAM, CPU cache hierarchies, HDDs, RAID arrays, and SSD endurance.">
+  <meta name="author" content="Stoyanov">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://mobikom.bg/blog/computer-memory/">
+  <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/">
+  <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/">
+  <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom News RSS Feed" href="https://mobikom.bg/rss.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mobikom">
+  <meta property="og:title" content="Computer Memory for Non-Specialists | Mobikom Bulgaria">
+  <meta property="og:description" content="Hardware fundamentals: RAM, CPU cache, hard drives, RAID arrays, and flash storage explained by Stoyan Stoyanov, MBA.">
+  <meta property="og:url" content="https://mobikom.bg/blog/computer-memory/">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://mobikom.bg/blog/computer-memory/#article",
+        "headline": "Computer Memory for Non-Specialists",
+        "description": "A practical guide to RAM, CPU caches, magnetic hard drives, RAID configurations, and flash memory.",
+        "url": "https://mobikom.bg/blog/computer-memory/",
+        "inLanguage": "en",
+        "datePublished": "2024-03-12",
+        "dateModified": "2024-03-12",
+        "author": {
+          "@type": "Person",
+          "name": "Stoyan Stoyanov, MBA",
+          "url": "https://mobikom.bg/stoyanov/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mobikom Bulgaria",
+          "url": "https://mobikom.bg/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://mobikom.bg/blog/computer-memory/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://mobikom.bg/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Computer Memory", "item": "https://mobikom.bg/blog/computer-memory/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="shell nav-bar">
+      <a href="/" class="brand-link" title="Mobikom Bulgaria - Gateway Home">
+        <svg viewBox="0 0 240 50" class="brand-logo-svg" role="img" aria-label="Mobikom Bulgaria Logo">
+          <g transform="translate(5, 5)">
+            <circle cx="8" cy="18" r="4" fill="#0052cc" /><circle cx="22" cy="8" r="4" fill="#0052cc" /><circle cx="22" cy="28" r="4" fill="#0052cc" /><circle cx="36" cy="18" r="4" fill="#0052cc" />
+            <path d="M8 18 L22 8 L36 18 L22 28 Z M22 8 L22 28" stroke="#0052cc" stroke-width="2" fill="none" />
+            <text x="48" y="26" font-size="22" font-weight="800" fill="currentColor">Mobikom</text>
+            <text x="148" y="26" font-size="22" font-weight="400" fill="#2563eb">Bulgaria</text>
+          </g>
+        </svg>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation">
+        <label for="nav-toggle" class="nav-toggle-label" title="Menu">&#9776;</label>
+
+        <ul>
+          <li><a href="/" class="nav-link" title="Go to Mobikom Gateway Home">Home</a></li>
+          <li><a href="/about/" class="nav-link" title="About Us &amp; History">About Us</a></li>
+          <li><a href="/portfolio/" class="nav-link" title="Portfolio">Portfolio</a></li>
+          <li><a href="/blog/" class="nav-link" aria-current="page" title="Insights &amp; Articles">Insights</a></li>
+          <li><a href="/contact/" class="nav-btn" title="Contact Us Directly">Get In Touch</a></li>
+          <li><a href="/bg/blog/computer-memory/" class="lang-toggle" title="Превключете на Български език">BG</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+      <article>
+        <header class="hero">
+          <span class="hero-tag">HARDWARE ARCHITECTURE &bull; TECHNICAL GUIDE</span>
+          <h1>Computer Memory for Non-Specialists</h1>
+          <p class="hero-lead">By <a href="/stoyanov/" class="card-link"><strong>Stoyan Stoyanov, MBA</strong></a> for mobikom.bg &bull; Updated: March 12, 2024</p>
+        </header>
+
+        <section class="feature-card" style="margin-block: 1.5rem;">
+          <span class="card-meta">PART 1: DYNAMIC VOLATILE STORAGE</span>
+          <h2>RAM: DDR Memory Generations &amp; Bus Architecture</h2>
+          <p>
+            RAM (Random Access Memory) is the primary volatile dynamic storage tier in personal computers, bridges slower mass storage with the processor. Modern DDR generations operate across distinct frequency bands:
+          </p>
+          <ul>
+            <li><strong>DDR3 Generation:</strong> Frequencies ranging from 1 GHz to 2 GHz;</li>
+            <li><strong>DDR4 Generation:</strong> Frequencies ranging from 2 GHz to 3 GHz;</li>
+            <li><strong>DDR5 Generation:</strong> Frequencies from 3 GHz to over 4 GHz, converging on CPU bus speeds.</li>
+          </ul>
+          <p>
+            While operating system developers quote a 4 GB baseline minimum, engineering reality demands at least an 8 GB module, and ideally a dual-module kit (2×8 GB = 16 GB) for responsive multitasking.
+          </p>
+          <p>
+            Installing paired, identical DDR modules unlocks <strong>Dual-Channel mode</strong>, broadening the memory bus from 64 to 128 parallel lines for significantly enhanced throughput between the CPU and RAM.
+          </p>
+          <p>
+            <strong>The Physical Proximity Law:</strong> Inside the CPU silicon die (roughly 10×10 mm) sits the fastest volatile tier: <strong>L1, L2, and L3 cache</strong> (1 to 40 MB), running at full processor core clock speeds (1 to 5+ GHz). The closer a memory store is to the execution pipeline, the faster its transfer speed, but the smaller its physical capacity. Dynamic RAM holds data charge only while energized; when power ceases, it resets to zero within seconds.
+          </p>
+        </section>
+
+        <section class="feature-card" style="margin-block: 1.5rem;">
+          <span class="card-meta">PART 2: PERSISTENT STORAGE</span>
+          <h2>Hard Disk Drives (HDD) &amp; Magnetic Platters</h2>
+          <p>
+            The mechanical hard drive remains the standard baseline for persistent mass storage, housing operating systems (Windows, Linux, DOS, macOS), virtualization environments (KVM), and file archives.
+          </p>
+          <ul>
+            <li><strong>Standard Interface:</strong> SATA3 serial high-speed communication ribbon;</li>
+            <li><strong>Rotational Velocities:</strong> 5,400 RPM for 2.5" laptops; 7,200 to 10,000 RPM for 3.5" desktop systems; up to 15,000 RPM for enterprise SAS server drives;</li>
+            <li><strong>Mechanical Precision:</strong> Hermetically sealed aluminum enclosures containing mirrored glass magnetic platters and read/write actuator arms vulnerable to physical shocks and static discharge.</li>
+          </ul>
+        </section>
+
+        <section class="feature-card" style="margin-block: 1.5rem;">
+          <span class="card-meta">PART 3: REDUNDANCY &amp; BACKUP</span>
+          <h2>RAID Arrays, Flash SSDs &amp; Backup Principles</h2>
+          <p>
+            To guarantee continuous uptime and safeguard against physical drive loss, drives are configured in multi-disk RAID arrays:
+          </p>
+          <ul>
+            <li><strong>RAID 1 / RAID 0:</strong> Mirroring for redundancy or striping for expanded contiguous capacity;</li>
+            <li><strong>RAID 10:</strong> Mirrored striping delivering zero-downtime reliability for high-availability production servers;</li>
+            <li><strong>RAID 5:</strong> Parity-based protection allowing live hot-swapping of failed drives without powering down.</li>
+          </ul>
+          <p>
+            Solid-State Drives (SSDs, EEPROM, and NVMe modules) offer instant access times without mechanical latency, but require lifecycle planning around finite flash write-cycles.
+          </p>
+          <blockquote style="border-left: 3px solid #2563eb; padding-left: 1rem; font-weight: bold; margin-block: 1rem;">
+            „We strongly recommend regular, systematic archiving of all critical business and personal data. Proper planning ensures you benefit from faster, lighter, and more resilient systems.“
+          </blockquote>
+        </section>
+
+        <div style="margin-top: 2rem;">
+          <a href="/blog/" class="card-link" title="Return to Blog Hub">&larr; Return to All Articles &amp; Insights</a>
+        </div>
+      </article>
+
+      <section class="conversion-banner">
+        <div>
+          <h2>Need Infrastructure or Storage Consulting?</h2>
+          <p>Our operations team advises on high-availability server architecture, edge caching, and hardware disaster recovery.</p>
+        </div>
+        <a href="/contact/" class="nav-btn" title="Contact Technical Desk">Contact Operations Desk &rarr;</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Mobikom Network</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Dobrich Regional News">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Dobruja Regional Journal">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Best Jobs Bulgaria">bestjobs.bg</a></li>
+            <li><a href="/rss.xml" class="card-link" title="Subscribe to RSS Feed">&#128246; RSS News Feed</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="/" class="card-link" title="Mobikom Home">Main Overview</a></li>
+            <li><a href="/about/" class="card-link" title="About Us &amp; History">About Us &amp; History</a></li>
+            <li><a href="/about/leadership-governance/" class="card-link" title="Leadership &amp; Corporate Governance">Leadership &amp; Governance</a></li>
+            <li><a href="/stoyanov/" class="card-link" title="Executive CV of Stoyan Stoyanov, MBA">Executive Live CV</a></li>
+            <li><a href="/portfolio/" class="card-link" title="Project Portfolio">Project Portfolio</a></li>
+            <li><a href="/blog/" class="card-link" title="Insights &amp; Articles">Insights &amp; Articles</a></li>
+            <li><a href="/contact/" class="card-link" title="Direct Contact">Business Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>History &amp; Archives</h4>
+          <ul>
+            <li><a href="/about/#nmt-450" class="card-link" title="The NMT-450 Mobifon Era">NMT-450 Mobifons (1992)</a></li>
+            <li><a href="/about/#pagers-mobika" class="card-link" title="Beeper &amp; Pager Era">Paging &amp; Mobika Cards</a></li>
+            <li><a href="/about/#ostatus-2011" class="card-link" title="2011 Media Group History">2011 Media Group History</a></li>
+            <li><a href="/blog/manifesto-512/" class="card-link" title="Modern Static Architecture">512-Byte Web Architecture</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Security &amp; Legal</h4>
+          <ul>
+            <li><a href="/privacy/" class="card-link" title="Strict No-Tracking Privacy Notice">Privacy Policy</a></li>
+            <li><a href="/terms/" class="card-link" title="Terms of Use">Terms of Use</a></li>
+            <li><a href="/gdpr/" class="card-link" title="GDPR Compliance">GDPR Compliance</a></li>
+            <li><a href="/bg/blog/computer-memory/" class="card-link" title="Българска Версия">Български (BG)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal &bull; <a href="/rss.xml" class="card-link" title="RSS Feed">RSS Feed</a></p>
+        <a href="/contact/" class="card-link" title="Direct Contact Channel">Contact Operations Desk &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

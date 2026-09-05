@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Манифест за 512-байтовата уеб архитектура | Mobikom България</title>
+  <meta name="description" content="Технически манифест за уеб производителност и сигурност: Защо простотата осигурява защита, как статичният HTML5 и CSS Grid зареждат за под 10 милисекунди без излишни скриптове.">
+  <meta name="author" content="Stoyanov">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none';">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://mobikom.bg/bg/blog/manifesto-512/">
+  <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/manifesto-512/">
+  <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/manifesto-512/">
+  <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/manifesto-512/">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS информационен канал" href="https://mobikom.bg/rss.xml">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mobikom">
+  <meta property="og:title" content="Манифест за 512-байтовата уеб архитектура | Mobikom България">
+  <meta property="og:description" content="По-малкото е повече, простото е по-сигурно. Защо 512 байта гарантират бързина и непревземаема уеб сигурност.">
+  <meta property="og:url" content="https://mobikom.bg/bg/blog/manifesto-512/">
+  <meta name="twitter:card" content="summary">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        "@id": "https://mobikom.bg/bg/blog/manifesto-512/#article",
+        "headline": "Изисквания и дизайн на уеб портала (512-байтов манифест)",
+        "description": "Технически манифест за изграждане на устойчиви и бързи статични сайтове с HTML5 и CSS Grid Level 2.",
+        "url": "https://mobikom.bg/bg/blog/manifesto-512/",
+        "inLanguage": "bg",
+        "author": { "@type": "Person", "name": "Стоян Стоянов, MBA" },
+        "publisher": { "@type": "Organization", "name": "Mobikom България", "url": "https://mobikom.bg/" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://mobikom.bg/bg/blog/manifesto-512/#breadcrumb",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
+          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "512-байтов Манифест", "item": "https://mobikom.bg/bg/blog/manifesto-512/" }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="shell nav-bar">
+      <a href="/bg/" class="brand-link" title="Mobikom България - Начален портал">
+        <svg viewBox="0 0 240 50" class="brand-logo-svg" role="img" aria-label="Mobikom България Лого">
+          <g transform="translate(5, 5)">
+            <circle cx="8" cy="18" r="4" fill="#0052cc" /><circle cx="22" cy="8" r="4" fill="#0052cc" /><circle cx="22" cy="28" r="4" fill="#0052cc" /><circle cx="36" cy="18" r="4" fill="#0052cc" />
+            <path d="M8 18 L22 8 L36 18 L22 28 Z M22 8 L22 28" stroke="#0052cc" stroke-width="2" fill="none" />
+            <text x="48" y="26" font-size="22" font-weight="800" fill="currentColor">Mobikom</text>
+            <text x="148" y="26" font-size="22" font-weight="400" fill="#2563eb">Bulgaria</text>
+          </g>
+        </svg>
+      </a>
+
+      <nav aria-label="Основна навигация">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигацията">
+        <label for="nav-toggle" class="nav-toggle-label" title="Меню">&#9776;</label>
+
+        <ul>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал">Начало</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="За нас и история">За нас</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Мрежово портфолио">Портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Анализи и статии">Анализи</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт">Контакт</a></li>
+          <li><a href="/blog/manifesto-512/" class="lang-toggle" title="Switch to English version">EN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+      <article>
+        <header class="hero">
+          <span class="hero-tag">ТЕХНИЧЕСКИ МАНИФЕСТ &bull; АРХИТЕКТУРА</span>
+          <h1>Изисквания и дизайн на уеб портала</h1>
+          <p class="hero-lead">Стандартът за 512 байта: Скорост, сигурност и премахване на излишния софтуерен товар.</p>
+        </header>
+
+        <section style="margin-block: 2rem;">
+          <blockquote style="border-left: 4px solid var(--accent, #0052cc); padding-left: 1.25rem; font-size: 1.15rem; font-style: italic; color: #4b5563; margin-block: 1.5rem;">
+            По-малкото е повече, простото е по-сигурно. 512 байта са равни на 512 знака, а това означава бързи уеб страници. Статичен сайт с HTML 5, изчистен CSS или CSS Grid Layout Level 2 за комплексни структури с повече гъвкавост и ако е необходимо JavaScript ES6. Лесен за редактиране, изключително бърз без използване на бази данни, визуализация на сървърно ниво или скриптове. При респонсив дизайн няма нужда от мобилен атрибут. Така отпада необходимостта десктоп и мобилната версия да се разделят на отделни адреси. Поверителността е органично включена.
+          </blockquote>
+        </section>
+
+        <section class="grid-subgrid">
+          <div class="feature-card">
+            <span class="card-meta">СТЪЛБ 01</span>
+            <h3>Нулева повърхност за атака</h3>
+            <p>Без динамични скриптове, PHP среди или бази данни, сайтът е напълно изолиран от SQL инжекции, неоторизиран достъп и пробиви в софтуерни модули.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="card-meta">СТЪЛБ 02</span>
+            <h3>Мигновено кеширане на Edge</h3>
+            <p>Предварително генерираният чист HTML се доставя за под 10 милисекунди директно от кеша на Cloudflare по целия свят, независимо от броя едновременни читатели.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="card-meta">СТЪЛБ 03</span>
+            <h3>Органична поверителност</h3>
+            <p>Статичните страници не се нуждаят от проследяващи бисквитки или потребителски профили. Зачитането на читателя не е досаден банер, а базов инженерен фундамент.</p>
+          </div>
+        </section>
+
+        <div style="margin-top: 2rem;">
+          <a href="/bg/blog/" class="card-link" title="Назад към блога">&larr; Всички статии и анализи</a>
+        </div>
+      </article>
+
+      <section class="conversion-banner">
+        <div>
+          <h2>Нуждаете се от консултация за статична архитектура?</h2>
+          <p>Ние проектираме високоскоростни и защитени статични медийни платформи. Обсъдете Вашите инженерни изисквания с нас.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Контакт с оперативния отдел">Свържете се с нас &rarr;</a>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Мрежа на Мобиком</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Регионални новини Добрич">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Регионален журнал Добруджа">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Обяви за работа BestJobs">bestjobs.bg</a></li>
+            <li><a href="/rss.xml" class="card-link" title="Абониране за RSS емисия">&#128246; RSS информационен канал</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Навигация</h4>
+          <ul>
+            <li><a href="/bg/" class="card-link" title="Начален портал">Начален портал</a></li>
+            <li><a href="/bg/about/" class="card-link" title="За нас и история">За нас и история</a></li>
+            <li><a href="/bg/about/leadership-governance/" class="card-link" title="Корпоративно управление">Корпоративно управление</a></li>
+            <li><a href="/stoyanov/" class="card-link" title="Професионално CV на Стоян Стоянов, MBA">Професионално CV</a></li>
+            <li><a href="/bg/portfolio/" class="card-link" title="Проектно портфолио">Проектно портфолио</a></li>
+            <li><a href="/bg/blog/" class="card-link" title="Анализи и статии">Анализи и статии</a></li>
+            <li><a href="/bg/contact/" class="card-link" title="Директен контакт">Бизнес контакт</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>История и архиви</h4>
+          <ul>
+            <li><a href="/bg/about/#nmt-450" class="card-link" title="Ерата на NMT-450 Мобифоните">NMT-450 Мобифони (1992)</a></li>
+            <li><a href="/bg/about/#pagers-mobika" class="card-link" title="Ерата на пейджърите и картите Мобика">Пейджъри и Мобика карти</a></li>
+            <li><a href="/bg/about/#ostatus-2011" class="card-link" title="История на медийната група от 2011">Медийна група (2011)</a></li>
+            <li><a href="/bg/blog/manifesto-512/" class="card-link" title="Модерна статична уеб архитектура">512-байтова архитектура</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Сигурност и правни условия</h4>
+          <ul>
+            <li><a href="/bg/privacy/" class="card-link" title="Политика за поверителност без проследяване">Поверителност</a></li>
+            <li><a href="/bg/terms/" class="card-link" title="Общи условия за ползване">Общи условия</a></li>
+            <li><a href="/bg/gdpr/" class="card-link" title="Съответствие с GDPR">GDPR съответствие</a></li>
+            <li><a href="/blog/manifesto-512/" class="card-link" title="English Version">English (EN)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Защитен портал без бисквитки &bull; <a href="/rss.xml" class="card-link" title="RSS емисия">RSS емисия</a></p>
+        <a href="/bg/contact/" class="card-link" title="Директен канал за връзка">Връзка с оперативния отдел &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
