@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ======================================================== -->
+  <!-- 1. GATEWAY / HOMEPAGES                                   -->
+  <!-- ======================================================== -->
+  <url>
+    <loc>https://mobikom.bg/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 2. ABOUT US & HISTORY                                    -->
+  <!-- ======================================================== -->
+  <url>
+    <loc>https://mobikom.bg/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/about/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/about/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/about/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/about/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 3. LEADERSHIP & CORPORATE GOVERNANCE                     -->
+  <!-- ======================================================== -->
+  <url>
+    <loc>https://mobikom.bg/about/leadership-governance/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/about/leadership-governance/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/about/leadership-governance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/leadership-governance/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/about/leadership-governance/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/about/leadership-governance/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/about/leadership-governance/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/leadership-governance/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 4. EXECUTIVE CV (STOYAN STOYANOV, MBA)                   -->
+  <!-- ======================================================== -->
+  <url>
+    <loc>https://mobikom.bg/stoyanov/</loc>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 5. PORTFOLIO                                             -->
+  <!-- ======================================================== -->
+  <url>
+    <loc>https://mobikom.bg/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/portfolio/"/>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/portfolio/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/portfolio/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/portfolio/"/>
+    <lastmod>2026-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 6. CONTACT DESK                                          -->
+  <!-- ======================================================== -->
+  <url>
+    <loc>https://mobikom.bg/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/contact/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/contact/"/>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/contact/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/contact/"/>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 7. BLOG & INSIGHTS HUBS                                  -->
+  <!-- ======================================================== -->
+  <url>
+    <loc>https://mobikom.bg/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/blog/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 8. BLOG ARTICLES (INDIVIDUAL DIRECTORIES)                -->
+  <!-- ======================================================== -->
+
+  <!-- 8.1 512-Byte Web Architecture Manifesto -->
+  <url>
+    <loc>https://mobikom.bg/blog/manifesto-512/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/manifesto-512/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/manifesto-512/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/manifesto-512/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/blog/manifesto-512/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/manifesto-512/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/manifesto-512/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/manifesto-512/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 8.2 Dobruja Media Group Heritage -->
+  <url>
+    <loc>https://mobikom.bg/blog/dobruja-media-group/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/dobruja-media-group/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/dobruja-media-group/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/dobruja-media-group/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/blog/dobruja-media-group/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/dobruja-media-group/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/dobruja-media-group/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/dobruja-media-group/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 8.3 Network Advertising Solutions -->
+  <url>
+    <loc>https://mobikom.bg/blog/advertising/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/advertising/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/advertising/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/advertising/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/blog/advertising/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/advertising/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/advertising/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/advertising/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 8.4 The NMT-450 Mobifon & Paging Revolution -->
+  <url>
+    <loc>https://mobikom.bg/blog/nmt-450-retrospective/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/nmt-450-retrospective/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/nmt-450-retrospective/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/nmt-450-retrospective/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/blog/nmt-450-retrospective/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/nmt-450-retrospective/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/nmt-450-retrospective/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/nmt-450-retrospective/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 8.5 Sea Stars: Pomorie Lye & Mineral Wellness -->
+  <url>
+    <loc>https://mobikom.bg/blog/sea-stars/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/sea-stars/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/sea-stars/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/sea-stars/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/blog/sea-stars/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/sea-stars/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/sea-stars/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/sea-stars/"/>
+    <lastmod>2026-09-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- 8.6 Computer Memory for Non-Specialists -->
+  <url>
+    <loc>https://mobikom.bg/blog/computer-memory/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/blog/computer-memory/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/"/>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ======================================================== -->
+  <!-- 9. SECURITY & LEGAL                                      -->
+  <!-- ======================================================== -->
+
+  <!-- 9.1 Privacy Policy -->
+  <url>
+    <loc>https://mobikom.bg/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/privacy/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/privacy/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- 9.2 Terms of Use -->
+  <url>
+    <loc>https://mobikom.bg/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/terms/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/terms/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/terms/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/terms/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- 9.3 GDPR Compliance -->
+  <url>
+    <loc>https://mobikom.bg/gdpr/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/gdpr/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/gdpr/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/gdpr/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/gdpr/"/>
+    <lastmod>2026-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
