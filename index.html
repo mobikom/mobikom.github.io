@@ -6,37 +6,46 @@
   <title>Mobikom | Digital Media Network &amp; Web Ecosystem Bulgaria</title>
   <meta name="description" content="Mobikom - Digital network operating premier Bulgarian online services: dobrichnews.com, dobruja.com, bestjobs.bg, and high-availability web operations.">
   <meta name="author" content="Stoyanov">
-
-  <!-- Early Hints / Fast CSS Load -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- Harmonized Content Security Policy with Cloudflare Edge -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none';">
+  <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
-  <!-- Multilingual & Canonical Links -->
+  <!-- Core Web Vitals Preload -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Canonical & Multilingual -->
   <link rel="canonical" href="https://mobikom.bg/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/">
   <link rel="alternate" type="application/rss+xml" title="Mobikom News RSS Feed" href="https://mobikom.bg/rss.xml">
 
-  <!-- Open Graph & Twitter Cards -->
+  <!-- Social & Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="bg_BG">
   <meta property="og:site_name" content="Mobikom">
   <meta property="og:title" content="Mobikom | Digital Media Network &amp; Web Ecosystem Bulgaria">
   <meta property="og:description" content="Independent Web Operations &amp; Digital Publishing Engines in Bulgaria.">
   <meta property="og:url" content="https://mobikom.bg/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mobikom | Digital Media Network &amp; Web Ecosystem Bulgaria">
+  <meta name="twitter:description" content="Independent Web Operations &amp; Digital Publishing Engines in Bulgaria.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Schema.org Structured Data -->
+  <!-- Schema.org Rich Snippet -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Mobikom Bulgaria",
     "url": "https://mobikom.bg/",
+    "logo": "https://mobikom.bg/assets/img/logo.svg",
+    "foundingDate": "2011",
     "email": "office@mobikom.bg",
+    "description": "Independent Web Operations & Digital Publishing Engines in Bulgaria.",
+    "areaServed": "BG",
     "sameAs": [
       "https://www.dobrichnews.com",
       "https://www.dobruja.com",
@@ -50,7 +59,7 @@
   <header>
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom Bulgaria - Gateway Home">
-        <svg viewBox="0 0 240 50" class="brand-logo-svg" role="img" aria-label="Mobikom Bulgaria Logo">
+        <svg viewBox="0 0 240 50" width="200" height="46" class="brand-logo-svg" role="img" aria-label="Mobikom Bulgaria Logo">
           <g transform="translate(5, 5)">
             <circle cx="8" cy="18" r="4" fill="#0052cc" /><circle cx="22" cy="8" r="4" fill="#0052cc" /><circle cx="22" cy="28" r="4" fill="#0052cc" /><circle cx="36" cy="18" r="4" fill="#0052cc" />
             <path d="M8 18 L22 8 L36 18 L22 28 Z M22 8 L22 28" stroke="#0052cc" stroke-width="2" fill="none" />
@@ -91,16 +100,18 @@
         </div>
       </section>
 
-      <!-- Search Component -->
+      <!-- Search Section (W3C-compliant separation of label and link) -->
       <section class="search-container" aria-label="Ecosystem Search">
-        <label for="search-input" class="search-title-row">
-          <span>&#128269;</span>
-          <span>Search Ecosystem &bull; <a href="/rss.xml" class="card-link" title="Subscribe to RSS Feed">&#128246; RSS Feed</a>:</span>
-        </label>
-        <input type="search" id="search-input" class="search-field" placeholder="Type to search (e.g., dobrichnews, bestjobs, NMT-450, Pomorie, advertising)..." autocomplete="off">
+        <div class="search-title-row">
+          <label for="search-input">
+            <span>&#128269; Search Ecosystem:</span>
+          </label>
+          <a href="/rss.xml" class="card-link" title="Subscribe to RSS Feed">&#128246; RSS Feed</a>
+        </div>
+        <input type="search" id="search-input" class="search-field" placeholder="Type to search (e.g., dobrichnews, bestjobs, NMT-450, Pomorie)..." autocomplete="off">
       </section>
 
-      <!-- Primary Ecosystem Grid -->
+      <!-- Grid Cards -->
       <section>
         <h2>Core Digital Assets &amp; Platforms</h2>
         <div class="grid-subgrid" id="cards-grid">
@@ -109,21 +120,21 @@
             <span class="card-meta">REGIONAL MEDIA PORTAL</span>
             <h3>dobrichnews.com</h3>
             <p>Real-time regional daily news engine delivering verified journalism, civic reporting, and municipal affairs to North-East Bulgaria.</p>
-            <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Read Latest News on dobrichnews.com">Access dobrichnews.com &rarr;</a>
+            <a href="https://www.dobrichnews.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Read Latest News on dobrichnews.com">Access dobrichnews.com &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="dobruja community culture journal regional agriculture history">
             <span class="card-meta">COMMUNITY &amp; CULTURE JOURNAL</span>
             <h3>dobruja.com</h3>
             <p>Regional media channel and digital cultural journal covering agricultural trends, historical preservation, and community events.</p>
-            <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Explore Regional Stories on dobruja.com">Access dobruja.com &rarr;</a>
+            <a href="https://www.dobruja.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Explore Regional Stories on dobruja.com">Access dobruja.com &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="bestjobs job ads board employment vacancies careers bulgaria">
             <span class="card-meta">JOB ADS BOARD</span>
             <h3>bestjobs.bg</h3>
             <p>High-efficiency online job ads board for posting and discovering career opportunities and employment listings across Bulgaria.</p>
-            <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Search Career Opportunities on bestjobs.bg">Access bestjobs.bg &rarr;</a>
+            <a href="https://bestjobs.bg" class="card-link" rel="noopener noreferrer" target="_blank" title="Search Career Opportunities on bestjobs.bg">Access bestjobs.bg &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="seastars wellness commerce Pomorie lye black sea salts cosmetics">
@@ -160,14 +171,13 @@
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Dobrich Regional News">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Dobruja Regional Journal">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Best Jobs Bulgaria">bestjobs.bg</a></li>
+            <li><a href="https://www.dobrichnews.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Dobrich Regional News">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Dobruja Regional Journal">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" class="card-link" rel="noopener noreferrer" target="_blank" title="Best Jobs Bulgaria">bestjobs.bg</a></li>
             <li><a href="/rss.xml" class="card-link" title="Subscribe to RSS Feed">&#128246; RSS News Feed</a></li>
           </ul>
         </div>
 
-        <!-- Strict Ordered Hierarchy: Index -> About -> Leadership -> Stoyanov CV -->
         <div class="footer-col">
           <h4>Navigation</h4>
           <ul>
@@ -209,15 +219,6 @@
     </div>
   </footer>
 
-  <script>
-    document.getElementById('search-input')?.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase().trim();
-      document.querySelectorAll('[data-searchable]').forEach((card) => {
-        const text = card.getAttribute('data-searchable').toLowerCase();
-        card.style.display = text.includes(term) ? '' : 'none';
-      });
-    }, { passive: true });
-  </script>
-
+  <script src="/assets/js/search.js" defer></script>
 </body>
 </html>
