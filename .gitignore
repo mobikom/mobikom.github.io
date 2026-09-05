@@ -1,0 +1,33 @@
+# ==============================================================================
+# mobikom.bg — Git Ignore Rules
+# High-Availability Web Operations & Static Edge Architecture
+# ==============================================================================
+
+# macOS System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows System Files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+
+# IDE, Editor & Tooling Configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# Local Temporary, Backup & Scratch Files
+*.bak
+*.tmp
+*.log
+tree.txt
