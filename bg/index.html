@@ -1,42 +1,51 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Мобиком | Дигитална медийна мрежа и уеб екосистема България</title>
-  <meta name="description" content="Мобиком - Дигитална мрежа управляваща водещи български уеб медии и платформи: dobrichnews.com, dobruja.com, bestjobs.bg и специализирани уеб системи.">
+  <title>Мобиком | Дигитална медийна мрежа &amp; Уеб екосистема България</title>
+  <meta name="description" content="Мобиком - Дигитална мрежа, управляваща водещи български онлайн платформи: dobrichnews.com, dobruja.com, bestjobs.bg и високодостъпни уеб операции.">
   <meta name="author" content="Стоянов">
-
-  <!-- Early Hints / Бързо зареждане на CSS -->
-  <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- Синхронизиран Content Security Policy с Cloudflare Edge -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none';">
+  <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
-  <!-- Многоезични и канонични тагове -->
+  <!-- Core Web Vitals Preload -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Canonical & Канонични връзки -->
   <link rel="canonical" href="https://mobikom.bg/bg/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS Новинарска Емисия" href="https://mobikom.bg/rss.xml">
 
-  <!-- Open Graph & Twitter социални карти -->
+  <!-- Социални мета тагове & Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Мобиком България">
-  <meta property="og:title" content="Мобиком | Дигитална медийна мрежа и уеб екосистема България">
-  <meta property="og:description" content="Независими уеб операции и дигитални медийни платформи в България.">
+  <meta property="og:locale" content="bg_BG">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:site_name" content="Мобиком">
+  <meta property="og:title" content="Мобиком | Дигитална медийна мрежа &amp; Уеб екосистема България">
+  <meta property="og:description" content="Независими уеб операции и дигитални издателски платформи в България.">
   <meta property="og:url" content="https://mobikom.bg/bg/">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мобиком | Дигитална медийна мрежа &amp; Уеб екосистема България">
+  <meta name="twitter:description" content="Независими уеб операции и дигитални издателски платформи в България.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Структурирани данни: Schema.org Organization -->
+  <!-- Schema.org Структурирани данни -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Мобиком България",
     "url": "https://mobikom.bg/bg/",
+    "logo": "https://mobikom.bg/assets/img/logo.svg",
+    "foundingDate": "2011",
     "email": "office@mobikom.bg",
+    "description": "Независими уеб операции и дигитални новинарски платформи в България.",
+    "areaServed": "BG",
     "sameAs": [
       "https://www.dobrichnews.com",
       "https://www.dobruja.com",
@@ -49,8 +58,8 @@
 
   <header>
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България - Начален портал">
-        <svg viewBox="0 0 240 50" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
+      <a href="/bg/" class="brand-link" title="Мобиком България - Начало">
+        <svg viewBox="0 0 240 50" width="200" height="46" class="brand-logo-svg" role="img" aria-label="Мобиком България Лого">
           <g transform="translate(5, 5)">
             <circle cx="8" cy="18" r="4" fill="#0052cc" /><circle cx="22" cy="8" r="4" fill="#0052cc" /><circle cx="22" cy="28" r="4" fill="#0052cc" /><circle cx="36" cy="18" r="4" fill="#0052cc" />
             <path d="M8 18 L22 8 L36 18 L22 28 Z M22 8 L22 28" stroke="#0052cc" stroke-width="2" fill="none" />
@@ -65,12 +74,12 @@
         <label for="nav-toggle" class="nav-toggle-label" title="Меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link" aria-current="page" title="Начална страница Мобиком">Начало</a></li>
-          <li><a href="/bg/about/" class="nav-link" title="За нас и история">За нас</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link" title="Портфолио от проекти">Проекти</a></li>
-          <li><a href="/bg/blog/" class="nav-link" title="Статии и анализи">Анализи</a></li>
-          <li><a href="/bg/contact/" class="nav-btn" title="Свържете се директно с нас">Контакти</a></li>
-          <li><a href="/" class="lang-toggle" title="Switch to English language">EN</a></li>
+          <li><a href="/bg/" class="nav-link" aria-current="page" title="Към началото на Мобиком">Начало</a></li>
+          <li><a href="/about/" class="nav-link" title="За нас и фирмена история">За нас</a></li>
+          <li><a href="/portfolio/" class="nav-link" title="Портфолио от проекти">Портфолио</a></li>
+          <li><a href="/blog/" class="nav-link" title="Анализи и технически статии">Анализи</a></li>
+          <li><a href="/contact/" class="nav-btn" title="Свържете се с нас">Контакти</a></li>
+          <li><a href="/" class="lang-toggle" title="Switch to English version">EN</a></li>
         </ul>
       </nav>
     </div>
@@ -83,73 +92,75 @@
         <h1>Мобиком</h1>
         <p class="hero-lead">Проектиран за скорост, мащабируемост и медиен обхват в България.</p>
         <p>
-          Управление на високоскоростни медийни портали, платформи за обяви за работа и интерактивни уеб ресурси. Изграден върху телекомуникационното наследство на България, оптимизиран за съвременната мрежа.
+          Управление на високоскоростни дигитални издателски платформи, портали за кариерни обяви и интерактивни възли. Стъпил върху богатото наследство на българските телекомуникации, архитектурно изграден за съвременния отворен уеб.
         </p>
         <div class="hero-actions">
-          <a href="/bg/about/" class="nav-btn" title="Запознайте се с историята на Мобиком">За нас и история &rarr;</a>
-          <a href="/bg/portfolio/" class="nav-link" title="Разгледайте всички активни платформи">Медийна мрежа</a>
+          <a href="/about/" class="nav-btn" title="За нас и историята на компанията">Вижте „За нас“ и историята &rarr;</a>
+          <a href="/portfolio/" class="nav-link" title="Преглед на всички дигитални платформи">Разгледайте мрежата</a>
         </div>
       </section>
 
-      <!-- Интерактивна бърза търсачка -->
-      <section class="search-container" aria-label="Търсене в портала">
-        <label for="search-input" class="search-title-row">
-          <span>&#128269;</span>
-          <span>Търсене в мрежата &bull; <a href="/rss.xml" class="card-link" title="Абониране за RSS емисия">&#128246; RSS Емисия</a>:</span>
-        </label>
-        <input type="search" id="search-input" class="search-field" placeholder="Търсене в проекти (напр. dobrichnews, bestjobs, NMT-450, Поморие, реклама)..." autocomplete="off">
+      <!-- Търсачка (W3C валидно отделени етикет и RSS връзка) -->
+      <section class="search-container" aria-label="Търсене в екосистемата">
+        <div class="search-title-row">
+          <label for="search-input">
+            <span>&#128269; Търсене в екосистемата:</span>
+          </label>
+          <a href="/rss.xml" class="card-link" title="Абонирайте се за RSS емисия">&#128246; RSS Емисия</a>
+        </div>
+        <input type="search" id="search-input" class="search-field" placeholder="Въведете за търсене (напр. dobrichnews, bestjobs, NMT-450, Поморие, реклама)..." autocomplete="off">
       </section>
 
-      <!-- Мрежа от основни проекти -->
+      <!-- Мрежа с основни активи -->
       <section>
-        <h2>Основни дигитални активи и платформи</h2>
+        <h2>Основни дигитални платформи &amp; проекти</h2>
         <div class="grid-subgrid" id="cards-grid">
           
-          <article class="feature-card" data-searchable="dobrichnews регионални новини добрич журналистика медия община">
-            <span class="card-meta">РЕГИОНАЛЕН НОВИНАРСКИ ПОРТАЛ</span>
+          <article class="feature-card" data-searchable="dobrichnews regional media news dobrich journalism municipal добрич новини регионална медия журналистика община">
+            <span class="card-meta">РЕГИОНАЛЕН МЕДИЕН ПОРТАЛ</span>
             <h3>dobrichnews.com</h3>
-            <p>Ежедневен новинарски портал, предоставящ проверена регионална журналистика, граждански теми и актуални събития от Североизточна България.</p>
-            <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към новините в dobrichnews.com">Към dobrichnews.com &rarr;</a>
+            <p>Новинарски двигател за ежедневни новини в реално време, предоставящ проверена журналистика, граждански репортажи и общински дела за Североизточна България.</p>
+            <a href="https://www.dobrichnews.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Прочетете последните новини в dobrichnews.com">Към dobrichnews.com &rarr;</a>
           </article>
 
-          <article class="feature-card" data-searchable="dobruja добруджа култура общност история земеделие традиции">
-            <span class="card-meta">ДНЕВНИК ЗА ОБЩНОСТ И КУЛТУРА</span>
+          <article class="feature-card" data-searchable="dobruja community culture journal regional agriculture history добруджа култура журнал земеделие история общност">
+            <span class="card-meta">ОБЩЕСТВЕН И КУЛТУРЕН ЖУРНАЛ</span>
             <h3>dobruja.com</h3>
-            <p>Регионален културен журнал, отразяващ развитието на селското стопанство, историческото наследство и обществения живот в Добруджа.</p>
-            <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалните теми в dobruja.com">Към dobruja.com &rarr;</a>
+            <p>Регионален медиен канал и дигитален културен журнал, отразяващ земеделски тенденции, опазване на историческото наследство и обществени събития.</p>
+            <a href="https://www.dobruja.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Разгледайте историите в dobruja.com">Към dobruja.com &rarr;</a>
           </article>
 
-          <article class="feature-card" data-searchable="bestjobs обяви за работа кариера свободни позиции кандидати българия">
+          <article class="feature-card" data-searchable="bestjobs job ads board employment vacancies careers bulgaria работа обяви свободни позиции кариера българия">
             <span class="card-meta">ПОРТАЛ ЗА ОБЯВИ ЗА РАБОТА</span>
             <h3>bestjobs.bg</h3>
-            <p>Високоефективна онлайн платформа за публикуване на работни позиции и откриване на нови професионални възможности в цяла България.</p>
-            <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на свободни работни места">Към bestjobs.bg &rarr;</a>
+            <p>Високоефективна онлайн платформа за публикуване и намиране на свободни работни места и кариерни възможности в цяла България.</p>
+            <a href="https://bestjobs.bg" class="card-link" rel="noopener noreferrer" target="_blank" title="Търсете кариерни възможности в bestjobs.bg">Към bestjobs.bg &rarr;</a>
           </article>
 
-          <article class="feature-card" data-searchable="seastars поморийска луга черноморска сол минерали уелнес козметика бан">
-            <span class="card-meta">НАТУРАЛНИ МОРСКИ МИНЕРАЛИ</span>
+          <article class="feature-card" data-searchable="seastars wellness commerce pomorie lye black sea salts cosmetics сий старс поморие поморийска луга соли минерали козметика">
+            <span class="card-meta">НАТУРАЛНО ЗДРАВЕ И МИНЕРАЛИ</span>
             <h3>Sea Stars Shop</h3>
-            <p>Специализиран каталог и дигитална витрина за лечебна поморийска луга, натурални черноморски соли и минерална грижа от БАН.</p>
-            <a href="/bg/portfolio/#seastars" class="card-link" title="Научете повече за Sea Stars в портфолиото">Разгледайте проекта &rarr;</a>
+            <p>Специализиран дигитален каталог и архив за автентични черноморски минерални соли, лечебна поморийска луга и натурална медицинска грижа за кожата.</p>
+            <a href="/portfolio/#seastars" class="card-link" title="Преглед на минералния каталог">Вижте представянето на проекта &rarr;</a>
           </article>
 
-          <article class="feature-card" data-searchable="история nmt-450 мобифони пейджъри бийпъри мобиком 1992 мобика архив">
+          <article class="feature-card" data-searchable="history nmt-450 mobifons pagers beepers rtc mobikom 1992 ostatus история мобифони пейджъри ртк мобиком архиви">
             <span class="card-meta">ИСТОРИЧЕСКА ХРОНОЛОГИЯ</span>
             <h3>Архив на домейна и наследство</h3>
-            <p>От първите NMT-450 Мобифони и пейджъри през 1992 г. до първите системи за микроблогинг и съвременна уеб архитектура.</p>
-            <a href="/bg/about/#nmt-450" class="card-link" title="Пълна история на Мобиком">Пълна хронология &rarr;</a>
+            <p>От аналоговите Мобифони NMT-450 и пейджърите през 1992 г. до първите микрологове и съвременната бърза уеб архитектура.</p>
+            <a href="/about/#nmt-450" class="card-link" title="Разгледайте пълната хронология на Мобиком">Пълна хронология &rarr;</a>
           </article>
 
         </div>
       </section>
 
-      <!-- Конверсионен банер -->
+      <!-- Банер за запитвания -->
       <section class="conversion-banner">
         <div>
-          <h2>Търсите медийно партньорство или проект?</h2>
-          <p>Предоставяме медийно отразяване, рекламно присъствие и дигитални консултации. Свържете се директно с нашия оперативен екип без проследяващи формуляри.</p>
+          <h2>Имате проект или медийно запитване?</h2>
+          <p>Осигуряваме медийно партньорство, публикуване на свободни работни позиции и дигитални консултации. Свържете се директно с нашия оперативен екип без външни проследяващи формуляри.</p>
         </div>
-        <a href="/bg/contact/" class="nav-btn" title="Директна връзка с бизнес отдела">Връзка с бизнес отдела</a>
+        <a href="/contact/" class="nav-btn" title="Отворете официалния канал за директна връзка">Контакт с бизнес отдела</a>
       </section>
     </div>
   </main>
@@ -160,64 +171,54 @@
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Добрич Новини">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Добруджа Регионален Портал">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Обяви за работа BestJobs">bestjobs.bg</a></li>
-            <li><a href="/rss.xml" class="card-link" title="Абониране за RSS емисия">&#128246; RSS Новини</a></li>
+            <li><a href="https://www.dobrichnews.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Добрич Регионални Новини">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" class="card-link" rel="noopener noreferrer" target="_blank" title="Добруджа Регионален Журнал">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" class="card-link" rel="noopener noreferrer" target="_blank" title="Обяви за работа BestJobs">bestjobs.bg</a></li>
+            <li><a href="/rss.xml" class="card-link" title="Абонирайте се за RSS емисията">&#128246; RSS Новинарски Канал</a></li>
           </ul>
         </div>
 
-        <!-- Строго подредена йерархия: Начало -> За нас -> Ръководство -> Онлайн CV -->
         <div class="footer-col">
           <h4>Навигация</h4>
           <ul>
-            <li><a href="/bg/" class="card-link" title="Начало Мобиком">Начален портал</a></li>
-            <li><a href="/bg/about/" class="card-link" title="За нас и история">За нас и история</a></li>
-            <li><a href="/bg/about/leadership-governance/" class="card-link" title="Корпоративно ръководство и управление">Ръководство и управление</a></li>
-            <li><a href="/stoyanov/bg/" class="card-link" title="Лидерство и онлайн резюме на Стоян Стоянов, MBA">Лидерство и онлайн CV</a></li>
-            <li><a href="/bg/portfolio/" class="card-link" title="Портфолио проекти">Портфолио проекти</a></li>
-            <li><a href="/bg/blog/" class="card-link" title="Статии и анализи">Статии и анализи</a></li>
-            <li><a href="/bg/contact/" class="card-link" title="Бизнес контакти">Контакти</a></li>
+            <li><a href="/bg/" class="card-link" title="Начало на Мобиком">Главен преглед</a></li>
+            <li><a href="/about/" class="card-link" title="За нас и фирмена история">За нас и история</a></li>
+            <li><a href="/about/leadership-governance/" class="card-link" title="Ръководство и корпоративно управление">Ръководство и управление</a></li>
+            <li><a href="/stoyanov/bg/" class="card-link" title="Публично CV на Стоян Стоянов, MBA">Публично CV на управителя</a></li>
+            <li><a href="/portfolio/" class="card-link" title="Портфолио с проекти">Портфолио проекти</a></li>
+            <li><a href="/blog/" class="card-link" title="Анализи и статии">Анализи и статии</a></li>
+            <li><a href="/contact/" class="card-link" title="Директен контакт">Бизнес контакти</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>История и архиви</h4>
+          <h4>История &amp; Архиви</h4>
           <ul>
-            <li><a href="/bg/about/#nmt-450" class="card-link" title="Ерата на мобифоните NMT-450">NMT-450 Мобифони (1992)</a></li>
-            <li><a href="/bg/about/#pagers-mobika" class="card-link" title="Ерата на пейджърите и Мобика">Пейджинг и карти Мобика</a></li>
-            <li><a href="/bg/about/#ostatus-2011" class="card-link" title="Медийна група от 2011 г.">Медийна група 2011 г.</a></li>
-            <li><a href="/bg/blog/#manifesto-512" class="card-link" title="Манифест за 512-байтова архитектура">Манифест 512 байта</a></li>
+            <li><a href="/about/#nmt-450" class="card-link" title="Ерата на Мобифон NMT-450">NMT-450 Мобифони (1992)</a></li>
+            <li><a href="/about/#pagers-mobika" class="card-link" title="Ерата на пейджърите и Мобика">Пейджинг &amp; карти Мобика</a></li>
+            <li><a href="/about/#ostatus-2011" class="card-link" title="История на медийната група от 2011">История на медийната група 2011</a></li>
+            <li><a href="/blog/#manifesto-512" class="card-link" title="Модерна статична уеб архитектура">512-байтова уеб архитектура</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Сигурност и право</h4>
+          <h4>Сигурност &amp; Правила</h4>
           <ul>
-            <li><a href="/bg/privacy/" class="card-link" title="Политика за защита на поверителността">Поверителност</a></li>
-            <li><a href="/bg/terms/" class="card-link" title="Условия за ползване">Общи условия</a></li>
-            <li><a href="/bg/gdpr/" class="card-link" title="Съответствие с GDPR">Регламент GDPR</a></li>
-            <li><a href="/" class="card-link" title="Switch to English language">English (EN)</a></li>
+            <li><a href="/privacy/" class="card-link" title="Политика за стриктна поверителност без проследяване">Поверителност</a></li>
+            <li><a href="/terms/" class="card-link" title="Условия за ползване на услугата">Условия за ползване</a></li>
+            <li><a href="/gdpr/" class="card-link" title="Декларация за съответствие с GDPR">Съответствие с GDPR</a></li>
+            <li><a href="/" class="card-link" title="Switch to English Version">English Version (EN)</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Портал с нулеви бисквитки и гарантирана сигурност &bull; <a href="/rss.xml" class="card-link" title="RSS емисия">RSS Емисия</a></p>
-        <a href="/bg/contact/" class="card-link" title="Директен канал за контакт">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Портал без бисквитки, проектиран за поверителност &bull; <a href="/rss.xml" class="card-link" title="RSS емисия">RSS Емисия</a></p>
+        <a href="/contact/" class="card-link" title="Директен канал за връзка с нас">Оперативен отдел &rarr;</a>
       </div>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('search-input')?.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase().trim();
-      document.querySelectorAll('[data-searchable]').forEach((card) => {
-        const text = card.getAttribute('data-searchable').toLowerCase();
-        card.style.display = text.includes(term) ? '' : 'none';
-      });
-    }, { passive: true });
-  </script>
-
+  <script src="/assets/js/search.js" defer></script>
 </body>
 </html>
