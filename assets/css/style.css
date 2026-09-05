@@ -334,7 +334,7 @@ main {
 
 .search-title-row {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 1fr auto;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.95rem;
@@ -402,7 +402,7 @@ main {
 .card-meta { font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; }
 
 /* ==========================================================================
-   Conversion Banner & High-Speed Rendering
+   Conversion Banner & Deferred Rendering
    ========================================================================== */
 .conversion-banner {
   margin-top: 4rem;
@@ -423,7 +423,6 @@ main {
 .conversion-banner h2 { font-size: 1.5rem; letter-spacing: -0.02em; }
 .conversion-banner p { color: var(--muted); max-width: 600px; }
 
-/* Smart Deferred Rendering for off-screen elements */
 footer, .conversion-banner {
   content-visibility: auto;
   contain-intrinsic-size: 0 350px;
@@ -604,8 +603,8 @@ footer {
 }
 
 /* ==========================================================================
-   STRICT SINGLE-PAGE A4 PRINT & PDF ENGINE
-   Fits exactly on 1 Page A4 (210mm x 297mm) without spilling over
+   STRICT SINGLE-PAGE A4 PRINT & PDF ENGINE (Zero !important)
+   Fits precisely on 1 Page A4 (210mm x 297mm) without spilling over
    ========================================================================== */
 @page {
   size: A4 portrait;
@@ -613,13 +612,20 @@ footer {
 }
 
 @media print {
+  :root {
+    --bg: #ffffff;
+    --bg-alt: #ffffff;
+    --border: #cccccc;
+    --text: #000000;
+    --muted: #222222;
+    --accent: #0052cc;
+  }
+
   header, footer, .no-print, .conversion-banner, .nav-bar, .toolbar-grid, .search-container {
-    display: none !important;
+    display: none;
   }
   
   html, body {
-    background: #ffffff !important;
-    color: #000000 !important;
     font-size: 7.5pt;
     line-height: 1.2;
     padding: 0;
@@ -628,11 +634,11 @@ footer {
   }
 
   .shell, .shell-narrow, .cv-box {
-    max-width: 100% !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    background: transparent !important;
+    max-width: 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    background: transparent;
     display: block;
     gap: 0;
   }
@@ -641,7 +647,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr auto;
     align-items: start;
-    border-bottom: 1.5pt solid #0052cc !important;
+    border-bottom: 1.5pt solid #0052cc;
     padding-bottom: 3px;
     margin-bottom: 4px;
     gap: 8px;
@@ -651,19 +657,19 @@ footer {
     font-size: 13pt;
     line-height: 1.1;
     margin-bottom: 1px;
-    color: #000000 !important;
+    color: #000000;
   }
 
   .cv-head h2 {
     font-size: 8.5pt;
-    color: #0052cc !important;
+    color: #0052cc;
     margin-bottom: 1px;
   }
 
   .cv-head .cv-meta {
     font-size: 7pt;
     line-height: 1.15;
-    color: #222222 !important;
+    color: #222222;
   }
 
   .cv-photo-wrap {
@@ -675,7 +681,7 @@ footer {
   .cv-photo-img {
     width: 62px;
     height: auto;
-    border: 0.5pt solid #cccccc !important;
+    border: 0.5pt solid #cccccc;
   }
 
   .cv-photo-wrap figcaption {
@@ -691,8 +697,8 @@ footer {
 
   .cv-sec h3 {
     font-size: 7.5pt;
-    color: #0052cc !important;
-    border-bottom: 0.5pt solid #cccccc !important;
+    color: #0052cc;
+    border-bottom: 0.5pt solid #cccccc;
     padding-bottom: 1px;
     margin-bottom: 2px;
     letter-spacing: 0.03em;
@@ -707,11 +713,11 @@ footer {
     font-size: 7.2pt;
     display: grid;
     grid-template-columns: 1fr auto;
-    color: #000000 !important;
+    color: #000000;
   }
 
   .cv-title span {
-    font-weight: bold;
+    font-weight: 700;
   }
 
   .cv-list {
@@ -730,15 +736,15 @@ footer {
   }
 
   code {
-    border: none !important;
-    background: transparent !important;
-    color: #222222 !important;
+    border: none;
+    background: transparent;
+    color: #222222;
     font-size: 6.8pt;
     padding: 0;
   }
 
   a {
-    text-decoration: none !important;
-    color: #000000 !important;
+    text-decoration: none;
+    color: #000000;
   }
 }
