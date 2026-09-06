@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const enToBgSingle = {
     'a':'а', 'b':'б', 'v':'в', 'w':'в', 'g':'г', 'd':'д', 'e':'е',
     'z':'з', 'i':'и', 'j':'й', 'k':'к', 'l':'л', 'm':'м', 'n':'н',
-    'o':'о', 'п':'p', 'r':'р', 's':'с', 't':'т', 'u':'у', 'f':'ф',
+    'o':'о', 'p':'п', 'r':'р', 's':'с', 't':'т', 'u':'у', 'f':'ф',
     'h':'х', 'c':'к', 'y':'й', 'q':'к', 'x':'кс'
   };
 
@@ -55,24 +55,26 @@ document.addEventListener('DOMContentLoaded', () => {
     return Array.from(variants);
   }
 
-  // 2. Pre-index each card once on load for fast querying
+  // 2. Pre-index cards (textContent avoids layout recalculations)
   const cardIndex = cards.map(card => {
     const dataMeta = card.getAttribute('data-searchable') || '';
-    const visibleText = card.innerText || '';
+    const visibleText = card.textContent || '';
     const combinedIndex = `${dataMeta} ${visibleText}`.toLowerCase();
     return { element: card, content: combinedIndex };
   });
 
-  // Create an accessible "No results" message node if it does not exist
+  // Create an accessible "No results" message node
   let noResults = document.getElementById('search-empty-msg');
   if (!noResults) {
     noResults = document.createElement('p');
     noResults.id = 'search-empty-msg';
+    noResults.setAttribute('role', 'status');
+    noResults.setAttribute('aria-live', 'polite');
     noResults.style.display = 'none';
     noResults.style.gridColumn = '1 / -1';
     noResults.style.textAlign = 'center';
     noResults.style.padding = '2.5rem 1rem';
-    noResults.style.color = 'var(--text-muted)';
+    noResults.style.color = 'var(--muted)';
     noResults.style.fontSize = '1.05rem';
     noResults.textContent = 'No matching platforms found. / Няма намерени резултати.';
     cardsGrid.appendChild(noResults);
@@ -88,17 +90,18 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
 
-    // Split input into individual tokens (e.g. "добрич news" -> ["добрич", "news"])
+    // Split input into individual tokens
     const queryTokens = rawQuery.split(/\s+/).filter(Boolean);
+    
+    // Precompute variants once per keystroke
+    const tokenVariantsList = queryTokens.map(getBilingualVariants);
     let visibleCount = 0;
 
     cardIndex.forEach(item => {
       // Card must match EVERY token in the query (AND logic)
-      const matchesAllTokens = queryTokens.every(token => {
-        const variants = getBilingualVariants(token);
-        // Matches if ANY phonetic variant exists in card content
-        return variants.some(variant => item.content.includes(variant));
-      });
+      const matchesAllTokens = tokenVariantsList.every(variants =>
+        variants.some(variant => item.content.includes(variant))
+      );
 
       if (matchesAllTokens) {
         item.element.style.display = '';
