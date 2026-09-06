@@ -3,139 +3,170 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none';">
-  <meta name="referrer" content="no-referrer">
-  <meta name="robots" content="noindex, nofollow">
-  <title>404 - Resource Not Found | Mobikom</title>
-  <style>
-    :root {
-      --bg: #ffffff;
-      --text: #0f172a;
-      --muted: #475569;
-      --accent: #0052cc;
-      --cta-bg: #2563eb;
-      --cta-hover: #1d4ed8;
-      --border: #e2e8f0;
-      --btn-alt-bg: #f1f5f9;
-      --btn-alt-text: #0f172a;
-      --radius: 6px;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #0b0f19;
-        --text: #f1f5f9;
-        --muted: #94a3b8;
-        --accent: #38bdf8;
-        --cta-bg: #0284c7;
-        --cta-hover: #0369a1;
-        --border: #1e293b;
-        --btn-alt-bg: #1e293b;
-        --btn-alt-text: #f1f5f9;
-      }
-    }
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 1.5rem;
-      -webkit-font-smoothing: antialiased;
-    }
-    .err-box {
-      display: grid;
-      gap: 1.25rem;
-      max-width: 520px;
-    }
-    .brand {
-      font-size: 1.2rem;
-      font-weight: 800;
-      letter-spacing: -0.02em;
-      color: var(--text);
-      text-decoration: none;
-      margin-bottom: 0.5rem;
-    }
-    .brand span {
-      color: var(--accent);
-    }
-    .code {
-      font-size: clamp(4rem, 10vw, 6rem);
-      font-weight: 800;
-      color: var(--accent);
-      line-height: 1;
-      letter-spacing: -0.04em;
-    }
-    h1 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-    p {
-      color: var(--muted);
-      font-size: 0.95rem;
-      line-height: 1.5;
-    }
-    .btn-group {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      justify-content: center;
-      margin-top: 0.75rem;
-    }
-    a.btn {
-      display: inline-block;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-      padding: 0.65rem 1.4rem;
-      border-radius: var(--radius);
-      transition: background-color 0.15s ease, transform 0.15s ease;
-      min-height: 44px;
-      line-height: 1.7;
-    }
-    a.btn-primary {
-      background-color: var(--cta-bg);
-      color: #ffffff;
-    }
-    a.btn-primary:hover {
-      background-color: var(--cta-hover);
-      transform: translateY(-2px);
-    }
-    a.btn-secondary {
-      background-color: var(--btn-alt-bg);
-      color: var(--btn-alt-text);
-      border: 1px solid var(--border);
-    }
-    a.btn-secondary:hover {
-      opacity: 0.9;
-      transform: translateY(-2px);
-    }
-    a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 3px;
-    }
-  </style>
+  <title>404: Resource Not Found | Mobikom</title>
+  <meta name="description" content="The requested resource, archive, or page could not be resolved on the Mobikom network.">
+  <meta name="theme-color" content="#0052cc">
+  <meta name="robots" content="noindex, follow">
+
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
+
+  <meta property="og:title" content="404: Resource Not Found | Mobikom">
+  <meta property="og:description" content="The requested endpoint could not be found in the current static web distribution.">
+  <meta property="og:type" content="website">
 </head>
 <body>
-  <div class="err-box">
-    <div class="brand">MOBI<span>KOM</span></div>
-    <div class="code">404</div>
-    <h1>Resource Not Found &bull; Страницата не е намерена</h1>
-    <p>
-      The requested endpoint does not exist or has been decommissioned on this network node.<br>
-      Търсеният адрес не съществува или е преместен на друг възел в мрежата.
-    </p>
-    <div class="btn-group">
-      <a href="/" class="btn btn-primary" title="Return to English Gateway">Home (EN) &rarr;</a>
-      <a href="/bg/" class="btn btn-secondary" title="Към българския портал">Начало (BG) &rarr;</a>
+
+  <header>
+    <div class="shell nav-bar">
+      <a href="/" class="brand-link" title="Mobikom">
+        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
+          <g transform="translate(4, 3)">
+            <circle cx="8" cy="20" r="4" fill="#0052cc" />
+            <circle cx="22" cy="10" r="4" fill="#0052cc" />
+            <circle cx="22" cy="30" r="4" fill="#0052cc" />
+            <circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">BULGARIA</text>
+          </g>
+        </svg>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu Toggle">
+        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+
+        <ul>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
+          <li><a href="/blog/" class="nav-link">Insights</a></li>
+          <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
+          <li><a href="/bg/" class="lang-toggle">BG</a></li>
+        </ul>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <div class="shell shell-narrow">
+      
+      <section class="hero" style="margin-top: 1rem;">
+        <span class="hero-tag" style="color: #dc2626;">HTTP 404 &bull; Routing Exception</span>
+        <h1 style="font-size: clamp(2.5rem, 6vw, 4rem); line-height: 1.1; margin-bottom: 1rem;">Resource Not Found</h1>
+        <p class="hero-lead">The requested URL does not exist in the current static distribution.</p>
+        <p style="margin-bottom: 0.75rem;">
+          The page or document may have been relocated during our architectural refactoring, archived, or entered with a typographical error.
+        </p>
+        <p style="font-size: 0.95rem; font-style: italic; color: var(--muted);">
+          Търсеният адрес или документ не съществува в текущата статична дистрибуция на мрежата.
+        </p>
+
+        <div class="hero-actions" style="margin-top: 1.75rem;">
+          <a href="/" class="nav-btn">&larr; Return to Homepage</a>
+          <a href="/blog/" class="nav-link">Browse Insights &amp; Papers</a>
+        </div>
+      </section>
+
+      <!-- Recovery Directory Grid -->
+      <section style="margin-top: 2.5rem;">
+        <h2>Key Network Directories</h2>
+        <div class="grid-cards" style="margin-top: 1rem;">
+          
+          <article class="feature-card">
+            <span class="card-meta">TECHNICAL ESSAYS</span>
+            <h3>Insights &amp; Papers</h3>
+            <p>Access our web manifestos, regional research, and technical monographs.</p>
+            <a href="/blog/" class="card-link">Open Insights Index &rarr;</a>
+          </article>
+
+          <article class="feature-card">
+            <span class="card-meta">ARCHIVAL INITIATIVE</span>
+            <h3>Sea Stars &amp; Pomorie Lye</h3>
+            <p>Monograph on Black Sea mineral balneology and deterministic cataloging.</p>
+            <a href="/blog/seastars/" class="card-link">View Monograph &rarr;</a>
+          </article>
+
+          <article class="feature-card">
+            <span class="card-meta">REGIONAL OPERATIONS</span>
+            <h3>Media Network</h3>
+            <p>Direct access to dobrichnews.com, dobruja.com, and bestjobs.bg.</p>
+            <a href="/portfolio/" class="card-link">Explore Ecosystem &rarr;</a>
+          </article>
+
+          <article class="feature-card">
+            <span class="card-meta">БЪЛГАРСКА ВЕРСИЯ</span>
+            <h3>Начална страница (BG)</h3>
+            <p>Преминете към българската езикова версия на институционалния портал.</p>
+            <a href="/bg/" class="card-link">Към Мобиком България &rarr;</a>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- Operational Notice -->
+      <section class="conversion-banner" style="margin-top: 3rem;">
+        <div>
+          <h3>Persistent Routing Failure?</h3>
+          <p>If a critical technical link or archive citation was broken, notify our operations desk.</p>
+        </div>
+        <a href="/contact/" class="nav-btn">Report Broken Link</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Mobikom Network</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
+            <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Governance &amp; Desk</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About Us &amp; History</a></li>
+            <li><a href="/portfolio/">Project Portfolio</a></li>
+            <li><a href="/blog/">Insights &amp; Papers</a></li>
+            <li><a href="/contact/">Direct Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Key Papers</h4>
+          <ul>
+            <li><a href="/blog/seastars/">Sea Stars &amp; Pomorie Lye</a></li>
+            <li><a href="/about/#nmt-450">NMT-450 Heritage (1992)</a></li>
+            <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Security &amp; Legal</h4>
+          <ul>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Use</a></li>
+            <li><a href="/gdpr/">GDPR Compliance</a></li>
+            <li><a href="/bg/">Български (BG)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <a href="/contact/">Operations Desk &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
 </html>
