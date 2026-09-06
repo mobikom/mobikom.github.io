@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Insights &amp; Technical Papers | Mobikom</title>
-  <meta name="description" content="Technical manifestos, hardware architecture guides, telecommunications chronologies, and privacy-first web publishing insights from Mobikom.">
+  <meta name="description" content="Technical monographs, archival studies, and web engineering principles from the Mobikom network operations desk.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -15,11 +15,40 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/">
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Insights &amp; Technical Papers | Mobikom">
-  <meta property="og:description" content="Engineering guides, web performance manifestos, and telecommunications history from Mobikom.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Mobikom Insights &amp; Technical Papers">
+  <meta property="og:description" content="Engineering monographs, privacy-first web infrastructure, and Bulgarian digital preservation.">
   <meta property="og:url" content="https://mobikom.bg/blog/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Structured Data: Collection & Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://mobikom.bg/blog/" }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://mobikom.bg/blog/#collection",
+        "url": "https://mobikom.bg/blog/",
+        "name": "Insights & Technical Papers",
+        "description": "Technical monographs, archival studies, and web engineering principles from Mobikom.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mobikom",
+          "url": "https://mobikom.bg/"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -49,7 +78,7 @@
           <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
           <li><a href="/blog/" class="nav-link" aria-current="page">Insights</a></li>
           <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/blog/" class="lang-toggle">BG</a></li>
+          <li><a href="/bg/blog/" class="lang-toggle" hreflang="bg">BG</a></li>
         </ul>
       </nav>
     </div>
@@ -58,70 +87,60 @@
   <main>
     <div class="shell">
       
+      <!-- Section Header -->
       <section class="hero">
-        <span class="hero-tag">Technical Papers &bull; Editorial Dispatches</span>
-        <h1>Insights &amp; Articles</h1>
-        <p class="hero-lead">Web Performance Engineering, Hardware Principles, and Telecommunications History.</p>
-        <p>
-          Authoritative technical papers, architectural manifestos, and operational case studies published by Mobikom's engineering and editorial desk.
-        </p>
-        <div class="hero-actions">
-          <a href="/rss.xml" class="nav-btn">&#128246; Subscribe to RSS Feed</a>
-          <a href="/about/governance/" class="nav-link">Governance &amp; Standards &rarr;</a>
-        </div>
+        <span class="hero-tag">Field Notes &bull; Architecture &bull; Archive</span>
+        <h1>Insights &amp; Papers</h1>
+        <p class="hero-lead">Technical commentary, privacy frameworks, and regional preservation studies.</p>
+        <p>Documenting our operations, static web performance philosophies, and local Bulgarian digital assets without behavioral trackers.</p>
+      </section>
+
+      <!-- Fast Search Component -->
+      <section class="search-container">
+        <form role="search" onsubmit="return false;">
+          <div class="search-title-row">
+            <label for="search-input">&#128269; Filter Articles &amp; Papers:</label>
+            <a href="/rss.xml">&#128246; RSS Feed</a>
+          </div>
+          <input type="search" id="search-input" class="search-field" placeholder="Search insights (seastars, pomorie, 512-byte, ostatus, nmt-450)..." autocomplete="off">
+        </form>
       </section>
 
       <!-- Articles Grid -->
       <section>
-        <h2>Published Articles &amp; Manifestos</h2>
-        <div class="grid-cards">
+        <h2>Published Articles</h2>
+        <div class="grid-cards" id="cards-grid">
           
-          <!-- Article 1: Computer Memory -->
-          <article class="feature-card">
-            <span class="card-meta">HARDWARE ARCHITECTURE &bull; SEP 2026</span>
-            <h3>Computer Memory for Non-Specialists</h3>
-            <p>A practical engineering guide explaining DDR RAM generations, dual-channel bus widening, CPU cache proximity laws (L1-L3), rotational hard drives (HDD), multi-disk RAID configurations, and flash storage endurance.</p>
-            <a href="/blog/computer-memory/" class="card-link">Read Full Guide &rarr;</a>
+          <!-- Article: Sea Stars -->
+          <article class="feature-card" data-searchable="seastars sea stars pomorie lye solilug bas ban thalassotherapy balneology mineral chemistry black sea">
+            <span class="card-meta">BALNEOLOGY &bull; ARCHIVES</span>
+            <h3>Sea Stars &amp; Pomorie Lye: Mineral Balneology &amp; Digital Preservation</h3>
+            <p>Bridging authentic Black Sea mineral chemistry developed with the Bulgarian Academy of Sciences (BAS) and deterministic digital cataloging.</p>
+            <a href="/blog/seastars/" class="card-link">Read Full Monograph &rarr;</a>
           </article>
 
-          <!-- Article 2: 512-Byte Manifesto -->
-          <article class="feature-card">
-            <span class="card-meta">WEB ARCHITECTURE &bull; SEP 2026</span>
-            <h3>The 512-Byte Manifesto</h3>
-            <p>Less is more, simple is more secure. An architectural deep dive on eliminating runtime dependencies, third-party trackers, and fragile databases in favor of pure HTML5 and clean CSS for sub-10ms delivery and native privacy.</p>
-            <a href="/blog/manifesto-512/" class="card-link">Read Manifesto &rarr;</a>
+          <!-- Article: 512-Byte Web -->
+          <article class="feature-card" data-searchable="512-byte web manifesto minimalism static html zero-js speed latency eco battery">
+            <span class="card-meta">WEB PERFORMANCE</span>
+            <h3>The 512-Byte Web Principle</h3>
+            <p>Why reducing network round-trips and eradicating unnecessary client-side JavaScript represents the true future of sustainable web operations.</p>
+            <a href="/blog/manifesto-512/" class="card-link">Read Essay &rarr;</a>
           </article>
 
-          <!-- Article 3: Dobruja Media Group -->
-          <article class="feature-card">
-            <span class="card-meta">MEDIA CHRONOLOGY &bull; AUG 2026</span>
-            <h3>Dobruja Media Group Heritage</h3>
-            <p>The evolutionary timeline of North-East Bulgaria's independent online publishing network: tracing the 2011 launches of news.dobruja.com to the establishment of dobrichnews.com and bestjobs.bg integration.</p>
-            <a href="/blog/dobruja-media-group/" class="card-link">Read Chronology &rarr;</a>
+          <!-- Article: Regional Media Resilience -->
+          <article class="feature-card" data-searchable="regional media dobrichnews dobruja decentralization syndication privacy journalism">
+            <span class="card-meta">MEDIA OPERATIONS</span>
+            <h3>Decentralized Media Operations in Dobruja</h3>
+            <p>Maintaining high-availability news reporting with zero tracking cookies and resilient static syndication architectures.</p>
+            <a href="/blog/regional-media-resilience/" class="card-link">Read Analysis &rarr;</a>
           </article>
 
-          <!-- Article 4: Advertising Solutions -->
-          <article class="feature-card">
-            <span class="card-meta">COMMERCIAL SOLUTIONS &bull; AUG 2026</span>
-            <h3>Advertising Without Telemetry</h3>
-            <p>Explore direct sponsorships, high-impact static display placements, and verified regional reach across our media network with instantaneous edge delivery and zero third-party cookie consent bloat.</p>
-            <a href="/blog/advertising/" class="card-link">Explore Advertising &rarr;</a>
-          </article>
-
-          <!-- Article 5: NMT-450 Telecom Retrospective -->
-          <article class="feature-card">
-            <span class="card-meta">TELECOM ARCHIVE &bull; AUG 2026</span>
-            <h3>The NMT-450 Mobifon &amp; Paging Revolution</h3>
-            <p>An engineering retrospective on Bulgaria's first commercial wireless cellular network launched by RTC Mobikom in 1992: analog 450 MHz propagation, rugged Benefon/Nokia handsets, and nationwide Mobika phonecards.</p>
-            <a href="/blog/nmt-450-retrospective/" class="card-link">Read Retrospective &rarr;</a>
-          </article>
-
-          <!-- Article 6: Sea Stars Pomorie Lye -->
-          <article class="feature-card">
-            <span class="card-meta">PRODUCT SCIENCE &bull; AUG 2026</span>
-            <h3>Sea Stars: Pomorie Lye &amp; Natural Minerals</h3>
-            <p>Preserving the digital catalog and product science of authentic Black Sea mineral salts and therapeutic Pomorie lake lye (луга) formulated in collaboration with the Bulgarian Academy of Sciences (BAS).</p>
-            <a href="/blog/sea-stars/" class="card-link">Read Case Study &rarr;</a>
+          <!-- Article: Telecom Chronology -->
+          <article class="feature-card" data-searchable="nmt-450 mobifons 1992 pagers mobika telecom heritage bulgaria analog">
+            <span class="card-meta">TELECOM HERITAGE</span>
+            <h3>From 1992 NMT-450 Mobifons to Clean Modern Standards</h3>
+            <p>Reflecting on three decades of telecommunications progress in Bulgaria: from early analog cell networks to lightweight static protocols.</p>
+            <a href="/about/#nmt-450" class="card-link">Explore Chronology &rarr;</a>
           </article>
 
         </div>
@@ -130,10 +149,10 @@
       <!-- Conversion Banner -->
       <section class="conversion-banner">
         <div>
-          <h3>Syndication &amp; Technical Inquiries</h3>
-          <p>Interested in republishing our research, direct media sponsorship, or web performance consulting? Contact our desk.</p>
+          <h3>Syndication &amp; Technical Publishing</h3>
+          <p>Interested in reprinting our research or collaborating on lightweight digital publishing infrastructure?</p>
         </div>
-        <a href="/contact/" class="nav-btn">Contact Operations Desk</a>
+        <a href="/contact/" class="nav-btn">Contact the Desk</a>
       </section>
 
     </div>
@@ -145,9 +164,9 @@
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
             <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
           </ul>
         </div>
@@ -157,7 +176,6 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about/">About Us &amp; History</a></li>
-            <li><a href="/about/governance/">Governance</a></li>
             <li><a href="/portfolio/">Project Portfolio</a></li>
             <li><a href="/blog/">Insights &amp; Papers</a></li>
             <li><a href="/contact/">Direct Contact</a></li>
@@ -165,12 +183,11 @@
         </div>
 
         <div class="footer-col">
-          <h4>Chronology</h4>
+          <h4>Key Papers</h4>
           <ul>
-            <li><a href="/about/#nmt-450">NMT-450 Mobifons (1992)</a></li>
-            <li><a href="/about/#pagers-mobika">Pagers &amp; Mobika Cards</a></li>
-            <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
-            <li><a href="/blog/#manifesto-512">512-Byte Web Principle</a></li>
+            <li><a href="/blog/seastars/">Sea Stars &amp; Pomorie Lye</a></li>
+            <li><a href="/blog/manifesto-512/">512-Byte Web Principle</a></li>
+            <li><a href="/about/#nmt-450">NMT-450 Heritage (1992)</a></li>
           </ul>
         </div>
 
@@ -192,5 +209,6 @@
     </div>
   </footer>
 
+  <script src="/assets/js/search.js" defer></script>
 </body>
 </html>
