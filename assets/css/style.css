@@ -1,58 +1,73 @@
 /* ==========================================================================
-   mobikom.bg — Master Stylesheet (Production Grade)
-   Architecture: Pure CSS Grid Level 2, Subgrid with Fallback, Native Checkbox
-                 Navigation, Hybrid Editorial Typography, Strict A4 Print Engine
-   Zero External Dependencies • Zero Web Fonts • 100% Native Edge Performance
+   mobikom.bg — Master Institutional Stylesheet (Release 2026)
+   Architecture: Pure CSS Grid Level 2, Subgrid with Progressive Fallbacks,
+                 Zero-JS Accessible Navigation, Strict A4 Single-Page Print
+   Zero External Dependencies • Zero Web Fonts • Zero !important Declarations
    ========================================================================== */
 
+/* --------------------------------------------------------------------------
+   1. Design Tokens & Corporate Palette (WCAG 2.2 AAA Conformance)
+   -------------------------------------------------------------------------- */
 :root {
-  /* Light Theme (Crisp Editorial Paper & Architectural Slate) */
+  /* Light Theme (Crisp Institutional Paper & Corporate Cobalt) */
   --bg: #ffffff;
-  --bg-alt: #f8fafc;
+  --bg-surface: #f8fafc;
+  --bg-elevated: #ffffff;
   --border: #e2e8f0;
-  --text: #0f172a;
-  --muted: #475569;
-  --accent: #0052cc;
-  --accent-hover: #0747a6;
-  --cta-bg: #2563eb;
-  --cta-hover: #1d4ed8;
-  --max-w: 1080px;
-  --radius: 6px;
+  --border-strong: #cbd5e1;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --text-inverse: #ffffff;
 
-  /* Typography Stacks */
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-serif: Georgia, "Times New Roman", Times, serif;
+  --primary: #0052cc;
+  --primary-hover: #0747a6;
+  --accent: #2563eb;
+  --accent-soft: rgba(37, 99, 235, 0.08);
+
+  --max-w: 1100px;
+  --radius: 6px;
+  --radius-lg: 10px;
+  --transition: 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Native System Typography Stack (Zero Latency, Zero Font Fingerprinting) */
+  --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark Theme (Obsidian & Deep Slate Palette) */
-    --bg: #0b0f19;
-    --bg-alt: #131b2e;
+    /* Dark Theme (Obsidian & High-Security Slate) */
+    --bg: #090d16;
+    --bg-surface: #0f172a;
+    --bg-elevated: #1e293b;
     --border: #1e293b;
-    --text: #f1f5f9;
-    --muted: #94a3b8;
-    --accent: #38bdf8;
-    --accent-hover: #7dd3fc;
-    --cta-bg: #0284c7;
-    --cta-hover: #0369a1;
+    --border-strong: #334155;
+    --text-main: #f8fafc;
+    --text-muted: #94a3b8;
+    --text-inverse: #090d16;
+
+    --primary: #38bdf8;
+    --primary-hover: #7dd3fc;
+    --accent: #60a5fa;
+    --accent-soft: rgba(96, 165, 250, 0.12);
   }
 }
 
+/* --------------------------------------------------------------------------
+   2. Core CSS Reset & Structural Scaffolding
+   -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* ==========================================================================
-   Typography & High-Speed Rendering
-   ========================================================================== */
 html {
-  font-family: var(--font-serif);
+  font-family: var(--font-stack);
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text-main);
   line-height: 1.6;
+  text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -64,74 +79,86 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-/* UI & Headings Typography Pairing */
-h1, h2, h3, h4, 
-.brand-link, .nav-bar, .hero-tag, .card-meta, 
-a.nav-btn, a.nav-link, a.lang-toggle, .search-title-row {
-  font-family: var(--font-sans);
-  text-wrap: balance;
-}
-
-p {
-  text-wrap: pretty;
-}
-
-/* Custom Mobikom Selection */
-::selection {
-  background: var(--accent);
-  color: #ffffff;
-}
-
-/* Accessible Keyboard Focus (WCAG 2.1 AA) */
-a:focus-visible, input:focus-visible, button:focus-visible {
-  outline: 2px solid var(--accent);
+/* Accessible High-Contrast Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--primary);
   outline-offset: 3px;
   border-radius: var(--radius);
 }
 
-/* ==========================================================================
-   Layout Shells
-   ========================================================================== */
+::selection {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   3. Typography & Editorial Formatting
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4 {
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.25;
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--text-muted);
+  text-wrap: pretty;
+}
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+}
+
+/* --------------------------------------------------------------------------
+   4. Layout Shells
+   -------------------------------------------------------------------------- */
 .shell {
   width: 100%;
   max-width: var(--max-w);
   margin-inline: auto;
-  padding: 1.25rem;
+  padding-inline: 1.5rem;
 }
 
 .shell-narrow {
   width: 100%;
-  max-width: 840px;
+  max-width: 860px;
   margin-inline: auto;
-  padding: 1.25rem;
+  padding-inline: 1.5rem;
 }
 
 header, footer {
-  position: relative;
-  background-color: var(--bg-alt);
+  background-color: var(--bg-surface);
   border-block: 1px solid var(--border);
 }
 
-/* ==========================================================================
-   Navigation Bar (Pure CSS Grid + Zero-JS Checkbox Mobile Menu)
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   5. Header & Zero-JS Accessible Navigation
+   -------------------------------------------------------------------------- */
 .nav-bar {
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+  padding-block: 0.85rem;
 }
 
 .brand-link {
-  display: grid;
+  display: inline-flex;
   align-items: center;
   text-decoration: none;
 }
 
 .brand-logo-svg {
+  display: block;
   width: 200px;
   height: 46px;
-  display: block;
 }
 
 nav {
@@ -139,7 +166,6 @@ nav {
   justify-content: end;
 }
 
-/* Desktop Navigation (>= 769px) */
 .nav-toggle,
 .nav-toggle-label {
   display: none;
@@ -154,26 +180,64 @@ nav ul {
   list-style: none;
 }
 
-/* Mobile Navigation (<= 768px) */
-@media (max-width: 768px) {
-  .nav-bar { grid-template-columns: auto 1fr; }
-  nav { justify-content: end; }
+/* Nav Links, Buttons & Language Switches */
+a.nav-link, a.lang-toggle, a.card-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius);
+  transition: color var(--transition), background-color var(--transition);
+}
 
+a.nav-link:hover, a.nav-link[aria-current="page"] {
+  color: var(--primary);
+  background-color: var(--accent-soft);
+}
+
+a.lang-toggle {
+  border: 1px solid var(--border-strong);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.65rem;
+}
+
+a.nav-btn {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: var(--radius);
+  background-color: var(--accent);
+  color: #ffffff;
+  transition: background-color var(--transition), transform var(--transition);
+}
+
+a.nav-btn:hover {
+  background-color: var(--primary-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Mobile Navigation Drawer (<= 768px) */
+@media (max-width: 768px) {
   .nav-toggle-label {
     display: grid;
     place-items: center;
     cursor: pointer;
     font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 1;
     padding: 0.4rem 0.65rem;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     border-radius: var(--radius);
     background-color: var(--bg);
-    color: var(--text);
-    user-select: none;
+    color: var(--text-main);
     min-height: 44px;
     min-width: 44px;
+    user-select: none;
   }
 
   nav ul {
@@ -186,88 +250,27 @@ nav ul {
     gap: 0.35rem;
     position: absolute;
     top: calc(100% + 1px);
-    left: 1.25rem;
-    right: 1.25rem;
-    background-color: var(--bg-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1rem;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    left: 1.5rem;
+    right: 1.5rem;
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
   }
 
   .nav-toggle:checked ~ ul a.nav-link,
   .nav-toggle:checked ~ ul a.nav-btn,
   .nav-toggle:checked ~ ul a.lang-toggle {
-    display: block;
     width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
+    padding: 0.8rem 1rem;
   }
 }
 
-/* Navigation Links & Buttons */
-a.nav-link, a.lang-toggle, a.card-link {
-  display: inline-block;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: 4px;
-  transition: color 0.15s ease, background-color 0.15s ease;
-}
-
-a.nav-link:hover, a.nav-link[aria-current="page"] {
-  color: var(--accent);
-}
-
-a.nav-btn {
-  display: inline-block;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  padding: 0.5rem 0.85rem;
-  border-radius: 4px;
-  background-color: var(--cta-bg);
-  color: #ffffff;
-  transition: background-color 0.2s ease, transform 0.15s ease;
-}
-
-a.nav-btn:hover {
-  background-color: var(--cta-hover);
-  color: #ffffff;
-}
-
-a.lang-toggle {
-  border: 1px solid var(--border);
-  font-size: 0.85rem;
-}
-
-a.card-link {
-  color: var(--accent);
-  padding: 0.25rem 0;
-  font-weight: 600;
-}
-
-a.card-link:hover {
-  text-decoration: underline;
-}
-
-code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-size: 0.85em;
-  color: var(--muted);
-  background-color: var(--bg);
-  border: 1px solid var(--border);
-  padding: 0.1rem 0.35rem;
-  border-radius: 3px;
-  word-break: break-all;
-}
-
-/* ==========================================================================
-   Hero Section
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   6. Hero Section
+   -------------------------------------------------------------------------- */
 main {
   padding-block: 3.5rem;
 }
@@ -277,222 +280,262 @@ main {
 }
 
 .hero-tag {
+  display: inline-block;
   font-size: 0.85rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--accent);
-  letter-spacing: 0.05em;
-  display: block;
-  margin-bottom: 0.5rem;
+  color: var(--primary);
+  letter-spacing: 0.06em;
+  margin-bottom: 0.75rem;
 }
 
 .hero h1 {
-  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-size: clamp(2.3rem, 5vw, 3.6rem);
   letter-spacing: -0.03em;
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
 }
 
 .hero-lead {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--text-main);
   margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .hero p {
   font-size: 1.15rem;
-  color: var(--muted);
-  max-width: 780px;
+  max-width: 820px;
   margin-bottom: 2rem;
+  line-height: 1.7;
 }
 
 .hero-actions {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: max-content;
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
+  gap: 1rem;
 }
 
-@media (max-width: 640px) {
-  .hero-actions { grid-auto-flow: row; }
-}
-
-/* ==========================================================================
-   Search Container
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   7. Ecosystem Search Component
+   -------------------------------------------------------------------------- */
 .search-container {
-  background-color: var(--bg-alt);
-  border: 2px solid var(--accent);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-left: 4px solid var(--primary);
   border-radius: var(--radius);
   padding: 1.25rem 1.5rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3.5rem;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .search-title-row {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
+}
+
+.search-title-row label {
   font-size: 0.95rem;
   font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.05em;
   text-transform: uppercase;
+  color: var(--text-main);
+  letter-spacing: 0.05em;
 }
 
 .search-field {
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   font-family: inherit;
   font-size: 1rem;
   background-color: var(--bg);
-  color: var(--text);
+  color: var(--text-main);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+  transition: border-color var(--transition);
 }
 
 .search-field:focus {
-  outline: 2px solid var(--accent);
+  border-color: var(--primary);
 }
 
-/* ==========================================================================
-   CSS Grid Level 2 with Subgrid (With Safe Fallback)
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   8. Pure CSS Grid Level 2 with Subgrid
+   -------------------------------------------------------------------------- */
 .grid-subgrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.75rem;
   margin-top: 1.5rem;
 }
 
-/* Standard Fallback for legacy browsers */
+/* Standard Fallback for CSS Grid Level 1 Engines */
 .feature-card {
   display: grid;
   grid-template-rows: auto auto 1fr auto;
-  gap: 0.5rem;
-  background-color: var(--bg-alt);
+  gap: 0.75rem;
+  background-color: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 1.5rem;
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
-              border-color 0.2s ease,
-              box-shadow 0.2s ease;
-}
-
-/* Modern Browser Subgrid Alignment */
-@supports (grid-template-rows: subgrid) {
-  .feature-card {
-    grid-template-rows: subgrid;
-    grid-row: span 4;
-  }
+  padding: 1.75rem;
+  transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .feature-card:hover {
   transform: translateY(-2px);
-  border-color: var(--accent);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
 }
 
-.feature-card h3 { font-size: 1.25rem; }
-.feature-card p { color: var(--muted); font-size: 0.95rem; }
-.card-meta { font-size: 0.8rem; font-weight: 700; color: var(--accent); letter-spacing: 0.05em; text-transform: uppercase; }
+.card-meta {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
 
-/* ==========================================================================
-   Conversion Banner & Deferred Rendering
-   ========================================================================== */
+.feature-card h3 {
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+a.card-link {
+  color: var(--primary);
+  font-weight: 600;
+  padding: 0;
+  justify-self: start;
+  align-self: end;
+}
+
+a.card-link:hover {
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+/* Modern CSS Grid Level 2 Subgrid Alignment */
+@supports (grid-template-rows: subgrid) {
+  .grid-subgrid {
+    grid-auto-rows: auto auto 1fr auto;
+    align-items: stretch;
+    row-gap: 0.75rem;
+  }
+
+  .feature-card {
+    grid-row: span 4;
+    display: grid;
+    grid-template-rows: subgrid;
+    row-gap: 0.75rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Strategic Conversion Banner & Deferred Rendering
+   -------------------------------------------------------------------------- */
 .conversion-banner {
   margin-top: 4rem;
-  background-color: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
   padding: 2.5rem 2rem;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  gap: 1.5rem;
+  gap: 2rem;
+  content-visibility: auto;
+  contain-intrinsic-size: 0 200px;
 }
 
-@media (max-width: 640px) {
-  .conversion-banner { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .conversion-banner {
+    grid-template-columns: 1fr;
+  }
 }
 
-.conversion-banner h2 { font-size: 1.5rem; letter-spacing: -0.02em; }
-.conversion-banner p { color: var(--muted); max-width: 600px; }
+.conversion-banner h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
 
-footer, .conversion-banner {
+.conversion-banner p {
+  max-width: 650px;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   10. Institutional 4-Column Footer
+   -------------------------------------------------------------------------- */
+footer {
+  padding-block: 3.5rem 2rem;
+  font-size: 0.95rem;
   content-visibility: auto;
   contain-intrinsic-size: 0 350px;
 }
 
-/* ==========================================================================
-   4-Column Footer
-   ========================================================================== */
-footer {
-  padding-block: 2.5rem;
-  font-size: 0.9rem;
-}
-
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .footer-col {
   display: grid;
-  gap: 0.5rem;
+  gap: 0.75rem;
   align-content: start;
 }
 
 .footer-col h4 {
-  font-size: 1rem;
-  margin-bottom: 0.75rem;
-  color: var(--text);
+  font-size: 1.05rem;
   font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
 .footer-col ul {
   list-style: none;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .footer-col a {
-  color: var(--muted);
+  color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: color 0.15s ease;
+  transition: color var(--transition);
 }
 
 .footer-col a:hover {
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .footer-bottom {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   border-top: 1px solid var(--border);
-  padding-top: 1.5rem;
-  color: var(--muted);
-  font-size: 0.85rem;
+  padding-top: 2rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
 }
 
-@media (max-width: 640px) {
-  .footer-bottom { grid-template-columns: 1fr; }
-}
-
-/* ==========================================================================
-   Executive CV Layout (/stoyanov/)
-   ========================================================================== */
+/* --------------------------------------------------------------------------
+   11. Executive CV & Records Architecture (/stoyanov/)
+   -------------------------------------------------------------------------- */
 .cv-box {
-  background-color: var(--bg-alt);
+  background-color: var(--bg-surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: clamp(1.5rem, 4vw, 2.5rem);
@@ -511,7 +554,9 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .cv-head { grid-template-columns: 1fr; }
+  .cv-head {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cv-photo-wrap {
@@ -537,16 +582,32 @@ footer {
 
 .cv-sec h3 {
   font-size: 1.1rem;
-  color: var(--accent);
+  color: var(--primary);
   text-transform: uppercase;
   border-bottom: 1px solid var(--border);
   padding-bottom: 0.25rem;
   letter-spacing: 0.05em;
 }
 
+/* Timeline Two-Column Grid with Subgrid Support */
+.cv-timeline {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1rem;
+}
+
 .cv-item {
   display: grid;
   gap: 0.25rem;
+}
+
+@supports (grid-template-columns: subgrid) {
+  .cv-item-subgrid {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: baseline;
+  }
 }
 
 .cv-title {
@@ -557,12 +618,14 @@ footer {
 }
 
 @media (max-width: 640px) {
-  .cv-title { grid-template-columns: 1fr; }
+  .cv-title {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cv-meta {
   font-size: 0.9rem;
-  color: var(--muted);
+  color: var(--text-muted);
   line-height: 1.4;
 }
 
@@ -581,9 +644,9 @@ footer {
 }
 
 .audit-box {
-  background-color: var(--bg-alt);
+  background-color: var(--bg-surface);
   border: 1px solid var(--border);
-  border-left: 4px solid var(--accent);
+  border-left: 4px solid var(--primary);
   border-radius: var(--radius);
   padding: 1.5rem;
   display: grid;
@@ -599,13 +662,13 @@ footer {
 }
 
 .audit-list strong {
-  color: var(--accent);
+  color: var(--primary);
 }
 
-/* ==========================================================================
-   STRICT SINGLE-PAGE A4 PRINT & PDF ENGINE (Zero !important)
+/* --------------------------------------------------------------------------
+   12. Strict Single-Page A4 Print Engine (Zero !important)
    Fits precisely on 1 Page A4 (210mm x 297mm) without spilling over
-   ========================================================================== */
+   -------------------------------------------------------------------------- */
 @page {
   size: A4 portrait;
   margin: 5mm 8mm 5mm 8mm;
@@ -614,18 +677,20 @@ footer {
 @media print {
   :root {
     --bg: #ffffff;
-    --bg-alt: #ffffff;
+    --bg-surface: #ffffff;
     --border: #cccccc;
-    --text: #000000;
-    --muted: #222222;
-    --accent: #0052cc;
+    --text-main: #000000;
+    --text-muted: #222222;
+    --primary: #0052cc;
   }
 
   header, footer, .no-print, .conversion-banner, .nav-bar, .toolbar-grid, .search-container {
     display: none;
   }
-  
+
   html, body {
+    background-color: #ffffff;
+    color: #000000;
     font-size: 7.5pt;
     line-height: 1.2;
     padding: 0;
