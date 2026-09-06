@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Анализи и технически статии | Мобиком</title>
-  <meta name="description" content="Технически анализи, архитектурни ръководства, телекомуникационни хроники и стандарти за поверителност и бързина от Мобиком.">
+  <title>Анализи и Технически Публикации | Мобиком</title>
+  <meta name="description" content="Технически анализи, архивни изследвания и инженерни стандарти за уеб устойчивост от Мобиком България.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -13,19 +13,48 @@
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Анализи и технически статии | Мобиком">
-  <meta property="og:description" content="Уеб инженерство, хардуерни принципи и телекомуникационна история на България от Мобиком.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Мобиком Анализи и Публикации">
+  <meta property="og:description" content="Инженерни статии, поверителност без бисквитки и съхранение на българското дигитално наследство.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Structured Data: Collection & Breadcrumbs -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
+          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" }
+        ]
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://mobikom.bg/bg/blog/#collection",
+        "url": "https://mobikom.bg/bg/blog/",
+        "name": "Анализи и Технически Публикации",
+        "description": "Технически анализи, архивни изследвания и инженерни стандарти от Мобиком.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Мобиком",
+          "url": "https://mobikom.bg/bg/"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
   <header>
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
@@ -34,22 +63,22 @@
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
             <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
-            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">BULGARIA</text>
+            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Меню">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
         <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
 
         <ul>
           <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/about/">За нас</a></li>
-          <li><a href="/bg/portfolio/">Портфолио</a></li>
+          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
           <li><a href="/bg/blog/" class="nav-link" aria-current="page">Анализи</a></li>
-          <li><a href="/contact/" class="nav-btn">Контакти</a></li>
-          <li><a href="/blog/" class="lang-toggle">EN</a></li>
+          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
+          <li><a href="/blog/" class="lang-toggle" hreflang="en">EN</a></li>
         </ul>
       </nav>
     </div>
@@ -58,82 +87,72 @@
   <main>
     <div class="shell">
       
+      <!-- Section Header -->
       <section class="hero">
-        <span class="hero-tag">Технически анализи &bull; Редакционни анализи</span>
-        <h1>Анализи и публикации</h1>
-        <p class="hero-lead">Уеб инженерство, хардуерни принципи и телекомуникационна история на България.</p>
-        <p>
-          Задълбочени технически ръководства, архитектурни манифести и практически анализи, публикувани от инженерния и редакционен екип на Мобиком.
-        </p>
-        <div class="hero-actions">
-          <a href="/rss.xml" class="nav-btn">&#128246; Абонирайте се за RSS</a>
-          <a href="/about/governance/" class="nav-link">Управление и стандарти &rarr;</a>
-        </div>
+        <span class="hero-tag">Технически Бележки &bull; Архитектура &bull; Архив</span>
+        <h1>Анализи и Публикации</h1>
+        <p class="hero-lead">Технически коментари, рамки за поверителност и регионални изследвания.</p>
+        <p>Документираме оперативните процеси, философията за бърз статичен уеб и българските цифрови ресурси без проследяване.</p>
       </section>
 
-      <!-- Мрежа със статии -->
+      <!-- Fast Search Component -->
+      <section class="search-container">
+        <form role="search" onsubmit="return false;">
+          <div class="search-title-row">
+            <label for="search-input">&#128269; Филтриране на публикациите:</label>
+            <a href="/rss.xml">&#128246; RSS Емисия</a>
+          </div>
+          <input type="search" id="search-input" class="search-field" placeholder="Търсене на статии (сеа старс, поморие, луга, 512 байта, остатус)..." autocomplete="off">
+        </form>
+      </section>
+
+      <!-- Articles Grid -->
       <section>
-        <h2>Публикувани статии &amp; манифести</h2>
-        <div class="grid-cards">
+        <h2>Публикувани Материали</h2>
+        <div class="grid-cards" id="cards-grid">
           
-          <!-- Статия 1: Компютърна памет -->
-          <article class="feature-card">
-            <span class="card-meta">ХАРДУЕРНА АРХИТЕКТУРА &bull; СЕП 2026</span>
-            <h3>Компютърна памет за непрограмисти</h3>
-            <p>Практическо инженерно ръководство, обясняващо поколенията DDR RAM, двуканалния режим на работа, нивата на кеш паметта (L1-L3), класическите хард дискове (HDD), RAID масивите и живота на флаш паметите.</p>
-            <a href="/blog/computer-memory/" class="card-link">Прочетете анализа &rarr;</a>
+          <!-- Article: Sea Stars -->
+          <article class="feature-card" data-searchable="seastars sea stars поморие луга солилуг бан йонх балнеология минерална химия черно море">
+            <span class="card-meta">БАЛНЕОЛОГИЯ &bull; АРХИВИ</span>
+            <h3>Sea Stars и Поморийската Луга: Балнеология и Дигитално Съхранение</h3>
+            <p>Свързваме автентичната черноморска минерална химия, разработена съвместно с БАН, с устойчиво дигитално каталогизиране.</p>
+            <a href="/bg/blog/seastars/" class="card-link">Прочетете публикацията &rarr;</a>
           </article>
 
-          <!-- Статия 2: 512-байтов манифест -->
-          <article class="feature-card">
-            <span class="card-meta">УЕБ АРХИТЕКТУРА &bull; СЕП 2026</span>
-            <h3>Манифестът за 512 байта</h3>
-            <p>По-малкото е повече, простото е по-сигурно. Архитектурен анализ за премахването на външните скриптове, проследяващите бисквитки и тромавите бази данни в полза на чист HTML5 и CSS за светкавично зареждане под 10 ms.</p>
-            <a href="/blog/manifesto-512/" class="card-link">Прочетете манифеста &rarr;</a>
+          <!-- Article: 512-Byte Web -->
+          <article class="feature-card" data-searchable="512 байта манифест минимализъм статичен html нулев js скорост латентност батерия еко">
+            <span class="card-meta">УЕБ ЕФЕКТИВНОСТ</span>
+            <h3>Принципът за 512-байтовия Уеб</h3>
+            <p>Защо редуцирането на мрежовите пакети и премахването на ненужния JavaScript представляват бъдещето на устойчивите системи.</p>
+            <a href="/bg/blog/manifesto-512/" class="card-link">Към есето &rarr;</a>
           </article>
 
-          <!-- Статия 3: Добруджа Медия Груп -->
-          <article class="feature-card">
-            <span class="card-meta">МЕДИЙНА ХРОНОЛОГИЯ &bull; АВГ 2026</span>
-            <h3>История на Добруджа Медия Груп</h3>
-            <p>Хроника на развитието на независимата медийна мрежа в Североизточна България: от старта на news.dobruja.com през 2011 г. до изграждането на всекидневника dobrichnews.com и платформата bestjobs.bg.</p>
-            <a href="/blog/dobruja-media-group/" class="card-link">Прочетете историята &rarr;</a>
+          <!-- Article: Regional Media Resilience -->
+          <article class="feature-card" data-searchable="регионални медии добрич нюз dobrichnews добруджа децентрализация синдикация журналистика">
+            <span class="card-meta">МЕДИЙНИ ОПЕРАЦИИ</span>
+            <h3>Децентрализирани медийни мрежи в Добруджа</h3>
+            <p>Поддържане на надеждни новинарски канали с нулево проследяване и устойчива архитектура за регионално съдържание.</p>
+            <a href="/bg/blog/regional-media-resilience/" class="card-link">Към анализа &rarr;</a>
           </article>
 
-          <!-- Статия 4: Реклама без проследяване -->
-          <article class="feature-card">
-            <span class="card-meta">РЕКЛАМНИ РЕШЕНИЯ &bull; АВГ 2026</span>
-            <h3>Реклама в медиите без проследяване</h3>
-            <p>Директни спонсорства, статични рекламни позиции и доказан регионален обхват в нашата медийна мрежа с мигновено зареждане и без досадни съгласия за проследяващи бисквитки.</p>
-            <a href="/blog/advertising/" class="card-link">Вижте рекламните формати &rarr;</a>
-          </article>
-
-          <!-- Статия 5: NMT-450 Ретроспектива -->
-          <article class="feature-card">
-            <span class="card-meta">ТЕЛЕКОМ АРХИВ &bull; АВГ 2026</span>
-            <h3>Революцията Мобифон NMT-450 и пейджърите</h3>
-            <p>Инженерен преглед на първата клетъчна мрежа в България, стартирана от РТК Мобиком през 1992 г.: аналогово разпространение на 450 MHz, телефони Benefon/Nokia и националната мрежа от фонокарти Мобика.</p>
-            <a href="/blog/nmt-450-retrospective/" class="card-link">Прочетете ретроспективата &rarr;</a>
-          </article>
-
-          <!-- Статия 6: Sea Stars Поморийска луга -->
-          <article class="feature-card">
-            <span class="card-meta">ПРОДУКТОВА НАУКА &bull; АВГ 2026</span>
-            <h3>Sea Stars: Поморийска луга и минерално здраве</h3>
-            <p>Съхраняване на дигиталния каталог и научните разработки за автентичните черноморски соли и лечебната поморийска луга, създадени съвместно с Българската академия на науките (БАН).</p>
-            <a href="/blog/sea-stars/" class="card-link">Прочетете представянето &rarr;</a>
+          <!-- Article: Telecom Chronology -->
+          <article class="feature-card" data-searchable="nmt-450 мобифони 1992 пейджъри мобика телеком наследство българия аналогови">
+            <span class="card-meta">ТЕЛЕКОМ НАСЛЕДСТВО</span>
+            <h3>От аналоговите Мобифони NMT-450 (1992) до съвременния уеб</h3>
+            <p>Три десетилетия телекомуникационна история в България: от ранните аналогови клетки до леките статични уеб стандарти.</p>
+            <a href="/bg/about/#nmt-450" class="card-link">Разгледайте хронологията &rarr;</a>
           </article>
 
         </div>
       </section>
 
-      <!-- Банер -->
+      <!-- Conversion Banner -->
       <section class="conversion-banner">
         <div>
-          <h3>Синдикация и технически запитвания</h3>
-          <p>Интересувате се от препубликуване на наши анализи, директно медийно партньорство или уеб консултации? Свържете се с нас.</p>
+          <h3>Синдикация и Техническо Партньорство</h3>
+          <p>Интересувате се от препечатване на материали или съвместно изграждане на устойчива цифрова инфраструктура?</p>
         </div>
-        <a href="/contact/" class="nav-btn">Контакт с отдела</a>
+        <a href="/bg/contact/" class="nav-btn">Свържете се с отдела</a>
       </section>
 
     </div>
@@ -145,52 +164,51 @@
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Канал</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
+            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Управление &amp; Навигация</h4>
+          <h4>Управление и Връзка</h4>
           <ul>
             <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За нас и история</a></li>
-            <li><a href="/about/governance/">Управление</a></li>
-            <li><a href="/bg/portfolio/">Портфолио проекти</a></li>
-            <li><a href="/bg/blog/">Анализи и статии</a></li>
-            <li><a href="/contact/">Бизнес контакти</a></li>
+            <li><a href="/bg/about/">За Нас и История</a></li>
+            <li><a href="/bg/portfolio/">Портфолио Проекти</a></li>
+            <li><a href="/bg/blog/">Анализи и Публикации</a></li>
+            <li><a href="/bg/contact/">Контакт</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Хронология</h4>
+          <h4>Основни Публикации</h4>
           <ul>
-            <li><a href="/about/#nmt-450">NMT-450 Мобифони (1992)</a></li>
-            <li><a href="/about/#pagers-mobika">Пейджинг &amp; карти Мобика</a></li>
-            <li><a href="/about/#ostatus-2011">История на мрежата 2011</a></li>
-            <li><a href="/blog/#manifesto-512">512-байтова архитектура</a></li>
+            <li><a href="/bg/blog/seastars/">Sea Stars и Поморийската Луга</a></li>
+            <li><a href="/bg/blog/manifesto-512/">512-байтовият Принцип</a></li>
+            <li><a href="/bg/about/#nmt-450">NMT-450 Наследство (1992)</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Сигурност &amp; Законодателство</h4>
+          <h4>Сигурност и Законодателство</h4>
           <ul>
-            <li><a href="/privacy/">Поверителност</a></li>
-            <li><a href="/terms/">Условия за ползване</a></li>
-            <li><a href="/gdpr/">Съответствие с GDPR</a></li>
-            <li><a href="/blog/">English Version (EN)</a></li>
+            <li><a href="/bg/privacy/">Поверителност</a></li>
+            <li><a href="/bg/terms/">Общи Условия</a></li>
+            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
+            <li><a href="/blog/">English (EN)</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Портал без бисквитки. Защита на данните.</p>
-        <a href="/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал без проследяващи бисквитки.</p>
+        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
       </div>
     </div>
   </footer>
 
+  <script src="/assets/js/search.js" defer></script>
 </body>
 </html>
