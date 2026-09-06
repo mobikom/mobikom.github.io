@@ -71,6 +71,10 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* STABILITY FIX: Locks the horizontal viewport so pages never jump sideways */
+  overflow-y: scroll;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -117,7 +121,7 @@ code {
 }
 
 /* --------------------------------------------------------------------------
-   4. Layout Shells
+   4. Layout Shells (Harmonized Widths)
    -------------------------------------------------------------------------- */
 .shell {
   width: 100%;
@@ -126,9 +130,10 @@ code {
   padding-inline: 1.5rem;
 }
 
+/* HARMONIZATION FIX: Tied directly to var(--max-w) to prevent page jumping */
 .shell-narrow {
   width: 100%;
-  max-width: 860px;
+  max-width: var(--max-w);
   margin-inline: auto;
   padding-inline: 1.5rem;
 }
@@ -696,6 +701,8 @@ footer {
     padding: 0;
     margin: 0;
     height: 100%;
+    overflow-y: visible;
+    scrollbar-gutter: auto;
   }
 
   .shell, .shell-narrow, .cv-box {
