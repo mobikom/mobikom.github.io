@@ -1,68 +1,68 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Компютърна памет за непрограмисти | Мобиком</title>
-  <meta name="description" content="Практическо инженерно ръководство за компютърната памет: поколения DDR RAM, двуканална архитектура, процесорни кешове (L1-L3), твърди дискове (HDD), RAID масиви и SSD издръжливост.">
-  <meta name="author" content="Стоян Стоянов, MBA">
+  <title>Mobikom: Computer Memory for Non-Specialists | Technical Guide</title>
+  <meta name="description" content="A practical engineering guide to computer memory: DDR RAM generations, dual-channel architecture, CPU caches (L1-L3), magnetic hard drives, RAID arrays, and SSD endurance.">
+  <meta name="author" content="Stoyan Stoyanov, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <link rel="canonical" href="https://mobikom.bg/bg/blog/computer-memory/">
-  <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/">
+  <link rel="canonical" href="https://mobikom.bg/blog/computer-memory/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/">
+  <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom Network RSS Feed" href="https://mobikom.bg/rss.xml">
 
   <meta property="og:type" content="article">
-  <meta property="og:locale" content="bg_BG">
-  <meta property="og:locale:alternate" content="en_US">
-  <meta property="og:site_name" content="Мобиком">
-  <meta property="og:title" content="Компютърна памет за непрограмисти | Мобиком">
-  <meta property="og:description" content="Практическо ръководство за RAM, процесорни кешове, твърди дискове, RAID конфигурации и флаш памет.">
-  <meta property="og:url" content="https://mobikom.bg/bg/blog/computer-memory/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="bg_BG">
+  <meta property="og:site_name" content="Mobikom">
+  <meta property="og:title" content="Mobikom: Computer Memory for Non-Specialists">
+  <meta property="og:description" content="A practical guide to RAM, CPU caches, magnetic hard drives, RAID configurations, and flash memory.">
+  <meta property="og:url" content="https://mobikom.bg/blog/computer-memory/">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Компютърна памет за непрограмисти | Мобиком">
-  <meta name="twitter:description" content="Практическо ръководство за RAM, процесорни кешове, твърди дискове, RAID конфигурации и флаш памет.">
+  <meta name="twitter:title" content="Mobikom: Computer Memory for Non-Specialists">
+  <meta name="twitter:description" content="A practical guide to RAM, CPU caches, magnetic hard drives, RAID configurations, and flash memory.">
   <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Schema.org Article & BreadcrumbList -->
+  <!-- Schema.org BlogPosting & BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
         "@type": "BlogPosting",
-        "@id": "https://mobikom.bg/bg/blog/computer-memory/#article",
-        "headline": "Компютърна памет за непрограмисти",
-        "description": "Практическо инженерно ръководство за RAM, процесорни кешове, твърди дискове, RAID конфигурации и флаш памет.",
-        "url": "https://mobikom.bg/bg/blog/computer-memory/",
-        "inLanguage": "bg",
+        "@id": "https://mobikom.bg/blog/computer-memory/#article",
+        "headline": "Mobikom: Computer Memory for Non-Specialists",
+        "description": "A practical guide to RAM, CPU caches, magnetic hard drives, RAID configurations, and flash memory.",
+        "url": "https://mobikom.bg/blog/computer-memory/",
+        "inLanguage": "en",
         "datePublished": "2024-03-12",
-        "dateModified": "2024-03-12",
+        "dateModified": "2026-09-06",
         "author": {
           "@type": "Person",
-          "name": "Стоян Стоянов, MBA",
-          "url": "https://mobikom.bg/stoyanov/bg/"
+          "name": "Stoyan Stoyanov, MBA",
+          "url": "https://mobikom.bg/stoyanov/"
         },
         "publisher": {
           "@type": "Organization",
-          "name": "Мобиком България",
-          "url": "https://mobikom.bg/bg/"
+          "name": "Mobikom Bulgaria",
+          "url": "https://mobikom.bg/"
         }
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://mobikom.bg/bg/blog/computer-memory/#breadcrumb",
+        "@id": "https://mobikom.bg/blog/computer-memory/#breadcrumb",
         "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Компютърна памет", "item": "https://mobikom.bg/bg/blog/computer-memory/" }
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
+          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://mobikom.bg/blog/" },
+          { "@type": "ListItem", "position": 3, "name": "Computer Memory", "item": "https://mobikom.bg/blog/computer-memory/" }
         ]
       }
     ]
@@ -73,8 +73,8 @@
 
   <header>
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/" class="brand-link" title="Mobikom">
+        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
@@ -87,17 +87,17 @@
         </svg>
       </a>
 
-      <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Меню">
+      <nav aria-label="Primary Navigation">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu Toggle">
         <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/about/">За нас</a></li>
-          <li><a href="/bg/portfolio/">Портфолио</a></li>
-          <li><a href="/bg/blog/">Анализи</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Контакти</a></li>
-          <li><a href="/blog/computer-memory/" class="lang-toggle">EN</a></li>
+          <li><a href="/" class="nav-link">Home</a></li>
+          <li><a href="/about/" class="nav-link">About</a></li>
+          <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
+          <li><a href="/blog/" class="nav-link">Insights</a></li>
+          <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
+          <li><a href="/bg/blog/computer-memory/" class="lang-toggle">BG</a></li>
         </ul>
       </nav>
     </div>
@@ -108,55 +108,137 @@
       
       <article>
         <header class="hero">
-          <span class="hero-tag">ХАРДУЕРНА АРХИТЕКТУРА &bull; ТЕХНИЧЕСКИ АНАЛИЗ</span>
-          <h1>Компютърна памет за непрограмисти</h1>
-          <p class="hero-lead">От <a href="/stoyanov/bg/"><strong>Стоян Стоянов, MBA</strong></a> за mobikom.bg &bull; Обновено: 12 март 2024 г.</p>
+          <span class="hero-tag">HARDWARE ARCHITECTURE &bull; TECHNICAL GUIDE</span>
+          <h1>Mobikom: Computer Memory for Non-Specialists</h1>
+          <p class="hero-lead">By <a href="/stoyanov/"><strong>Stoyan Stoyanov, MBA</strong></a> for mobikom.bg &bull; Updated: March 12, 2024</p>
         </header>
 
-        <!-- ЧАСТ 1 -->
+        <!-- PART 1 -->
         <section style="margin-bottom: 2.5rem;">
-          <span class="card-meta">ЧАСТ 1: ДИНАМИЧНА ОПЕРАТИВНА ПАМЕТ</span>
-          <h2>RAM: Поколения DDR памет и шинна архитектура</h2>
+          <span class="card-meta">PART 1: DYNAMIC VOLATILE STORAGE</span>
+          <h2>RAM: DDR Memory Generations &amp; Bus Architecture</h2>
           <p>
-            RAM (Random Access Memory) представлява основният динамичен енергозависим слой в персоналните компютри, който осъществява връзката между бавните масови носители на данни и процесора. Съвременните поколения DDR памет работят в различни честотни диапазони:
+            RAM (Random Access Memory) is the primary volatile dynamic storage tier in personal computers, bridging slower mass storage with the processor. Modern DDR generations operate across distinct frequency bands:
           </p>
           <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
-            <li><strong>DDR3 поколение:</strong> Честоти от 1 GHz до 2 GHz;</li>
-            <li><strong>DDR4 поколение:</strong> Честоти от 2 GHz до 3 GHz;</li>
-            <li><strong>DDR5 поколение:</strong> Честоти от 3 GHz до над 4 GHz, доближаващи се до скоростите на процесорната шина.</li>
+            <li><strong>DDR3 Generation:</strong> Frequencies ranging from 1 GHz to 2 GHz;</li>
+            <li><strong>DDR4 Generation:</strong> Frequencies ranging from 2 GHz to 3 GHz;</li>
+            <li><strong>DDR5 Generation:</strong> Frequencies from 3 GHz to over 4 GHz, converging on CPU bus speeds.</li>
           </ul>
           <p>
-            Макар разработчиците на операционни системи да посочват 4 GB като базов минимум, инженерната реалност изисква поне един модул от 8 GB, а в оптималния вариант — двуканален комплект (2&times;8 GB = 16 GB) за бърза и стабилна многозадачна работа.
+            While operating system developers quote a 4 GB baseline minimum, engineering reality demands at least an 8 GB module, and ideally a dual-module kit (2&times;8 GB = 16 GB) for responsive multitasking.
           </p>
           <p style="margin-top: 1rem;">
-            Поставянето на двойка идентични DDR модули активира <strong>двуканален режим (Dual-Channel)</strong>, който разширява шината от 64 на 128 паралелни линии, удвоявайки пропускателната способност между процесора и оперативната памет.
+            Installing paired, identical DDR modules unlocks <strong>Dual-Channel mode</strong>, broadening the memory bus from 64 to 128 parallel lines for significantly enhanced throughput between the CPU and RAM.
           </p>
           <p style="margin-top: 1rem;">
-            <strong>Законът за физическата близост:</strong> Директно в силициевата пластина на процесора (с размери приблизително 10&times;10 mm) се намира най-бързата памет: <strong>L1, L2 и L3 кеш</strong> (от 1 до 40 MB), работеща на пълната тактова честота на ядрата (от 1 до над 5 GHz). Колкото по-близо се намира даден масив от памет до изчислителния конвейер, толкова по-висока е скоростта, но толкова по-малък е физическият му обем. Динамичната RAM памет съхранява данни само докато е захранена с електричество; при прекъсване на захранването тя се нулира за секунди.
+            <strong>The Physical Proximity Law:</strong> Inside the CPU silicon die (roughly 10&times;10 mm) sits the fastest volatile tier: <strong>L1, L2, and L3 cache</strong> (1 to 40 MB), running at full processor core clock speeds (1 to 5+ GHz). The closer a memory store is to the execution pipeline, the faster its transfer speed, but the smaller its physical capacity. Dynamic RAM holds data charge only while energized; when power ceases, it resets to zero within seconds.
           </p>
         </section>
 
-        <!-- ЧАСТ 2 -->
+        <!-- PART 2 -->
         <section style="margin-bottom: 2.5rem;">
-          <span class="card-meta">ЧАСТ 2: ПОСТОЯННО СЪХРАНЕНИЕ НА ДАННИ</span>
-          <h2>Твърди дискове (HDD) и магнитни плочи</h2>
+          <span class="card-meta">PART 2: PERSISTENT STORAGE</span>
+          <h2>Hard Disk Drives (HDD) &amp; Magnetic Platters</h2>
           <p>
-            Механичният твърд диск остава надеждна основа за постоянно масово съхранение на операционни системи (Windows, Linux, DOS, macOS), виртуализационни среди (KVM) и големи архивни обеми.
+            The mechanical hard drive remains the standard baseline for persistent mass storage, housing operating systems (Windows, Linux, DOS, macOS), virtualization environments (KVM), and file archives.
           </p>
           <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
-            <li><strong>Стандартен интерфейс:</strong> SATA3 серийна високоскоростна комуникационна шина;</li>
-            <li><strong>Скорости на въртене:</strong> 5 400 об./мин за 2.5" лаптопи; 7 200 до 10 000 об./мин за 3.5" настолни компютри; до 15 000 об./мин за корпоративни SAS сървърни дискове;</li>
-            <li><strong>Механична прецизност:</strong> Херметически затворени алуминиеви корпуси с полирани магнитни плочи и четящи глави, чувствителни към механични удари и електростатичен разряд.</li>
+            <li><strong>Standard Interface:</strong> SATA3 serial high-speed communication ribbon;</li>
+            <li><strong>Rotational Velocities:</strong> 5,400 RPM for 2.5" laptops; 7,200 to 10,000 RPM for 3.5" desktop systems; up to 15,000 RPM for enterprise SAS server drives;</li>
+            <li><strong>Mechanical Precision:</strong> Hermetically sealed aluminum enclosures containing mirrored glass magnetic platters and read/write actuator arms vulnerable to physical shocks and static discharge.</li>
           </ul>
         </section>
 
-        <!-- ЧАСТ 3 -->
+        <!-- PART 3 -->
         <section style="margin-bottom: 2.5rem;">
-          <span class="card-meta">ЧАСТ 3: ИЗБИРАТЕЛНА НАДЕЖДНОСТ И АРХИВИРАНЕ</span>
-          <h2>RAID масиви, Flash SSD памети и принципи на архивиране</h2>
+          <span class="card-meta">PART 3: REDUNDANCY &amp; BACKUP</span>
+          <h2>RAID Arrays, Flash SSDs &amp; Backup Principles</h2>
           <p>
-            За гарантиране на непрекъсната работа и защита от физическа повреда на носителите, дисковете се конфигурират в многодискови RAID масиви:
+            To guarantee continuous uptime and safeguard against physical drive loss, drives are configured in multi-disk RAID arrays:
           </p>
           <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
-            <li><strong>RAID 1 / RAID 0:</strong> Огледален запис (mirroring) за надеждност или разпределен запис (striping) за по-голям непрекъснат обем;</li>
-            <li><strong>RAID 10:</strong> Комбиниран масив за нулев престой при високодостъпни производствени сървъри;</li>
+            <li><strong>RAID 1 / RAID 0:</strong> Mirroring for redundancy or striping for expanded contiguous capacity;</li>
+            <li><strong>RAID 10:</strong> Mirrored striping delivering zero-downtime reliability for high-availability production servers;</li>
+            <li><strong>RAID 5:</strong> Parity-based protection allowing live hot-swapping of failed drives without powering down.</li>
+          </ul>
+          <p>
+            Solid-State Drives (SSDs, EEPROM, and NVMe modules) offer instant access times without mechanical latency, but require lifecycle planning around finite flash write-cycles.
+          </p>
+          <blockquote style="margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--primary); background: var(--bg-alt); font-style: italic;">
+            „We strongly recommend regular, systematic archiving of all critical business and personal data. Proper planning ensures you benefit from faster, lighter, and more resilient systems.“
+          </blockquote>
+        </section>
+
+        <div style="margin-top: 2rem;">
+          <a href="/blog/" class="nav-link">&larr; Return to All Articles &amp; Insights</a>
+        </div>
+      </article>
+
+      <!-- Conversion Banner -->
+      <section class="conversion-banner">
+        <div>
+          <h3>Need Infrastructure or Storage Consulting?</h3>
+          <p>Our operations team advises on high-availability server architecture, edge caching, and hardware disaster recovery.</p>
+        </div>
+        <a href="/contact/" class="nav-btn">Contact Operations Desk</a>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Mobikom Network</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
+            <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Governance &amp; Desk</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About Us &amp; History</a></li>
+            <li><a href="/about/governance/">Governance</a></li>
+            <li><a href="/portfolio/">Project Portfolio</a></li>
+            <li><a href="/blog/">Insights &amp; Papers</a></li>
+            <li><a href="/contact/">Direct Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chronology</h4>
+          <ul>
+            <li><a href="/about/#nmt-450">NMT-450 Mobifons (1992)</a></li>
+            <li><a href="/about/#pagers-mobika">Pagers &amp; Mobika Cards</a></li>
+            <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
+            <li><a href="/blog/#manifesto-512">512-Byte Web Principle</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Security &amp; Legal</h4>
+          <ul>
+            <li><a href="/privacy/">Privacy Policy</a></li>
+            <li><a href="/terms/">Terms of Use</a></li>
+            <li><a href="/gdpr/">GDPR Compliance</a></li>
+            <li><a href="/bg/blog/computer-memory/">Български (BG)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <a href="/contact/">Operations Desk &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
