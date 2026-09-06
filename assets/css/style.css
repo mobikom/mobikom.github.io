@@ -2,38 +2,15 @@
    mobikom.bg — Master Institutional Stylesheet (Eco-Engineered & Deterministic)
    ==========================================================================
    ARCHITECTURAL MANIFESTO & DESIGN RATIONALE:
-
-   1. WHY STANDARD GRID + FLEXBOX (INSTEAD OF CSS SUBGRID):
-      - Performance & Battery: CSS Subgrid requires the browser engine to run
-        recursive, multi-pass layout recalculations across parent and nested
-        tracks. Standard Grid (columns) + Flexbox (card interior) calculates in
-        a single pass, minimizing CPU cycles and extending battery life on mobile.
-      - Simplicity: Bottom button alignment is achieved using `margin-top: auto`
-        on the anchor link. This provides the exact same visual alignment with
-        zero layout thrashing and 100% universal browser compatibility.
-      - Network & Parsing: Removing subgrid fallback code saves payload bytes
-        and reduces DOM render-tree construction time.
-
-   2. WHY ZERO `!important` DECLARATIONS:
-      - Clean Cascade: `!important` destroys CSS inheritance and leads to
-        specificity wars during future edits.
-      - Scoped Custom Properties: Print styling and dark mode are controlled by
-        re-declaring CSS variables (`:root`, `@media print`) at the root level.
-        The browser recalculates values naturally without overriding rules.
-
-   3. EASY TO READ, EDIT, AND MAINTAIN:
-      - Human-Readable Tokens: Colors, fonts, and geometry are centralized in
-        clear `:root` variables at the very top.
-      - Predictable Specificity: Classes use shallow single-class selectors
-        (e.g., `.feature-card`, `.nav-btn`). You can modify any component
-        without worrying about side effects elsewhere in the document.
+   1. Standard Grid + Flexbox: Avoids multi-pass subgrid recalculations,
+      drastically lowering CPU cycles, memory usage, and battery consumption.
+   2. Zero `!important`: Eliminates specificity wars; print styles and dark
+      mode re-scope root CSS custom properties naturally.
+   3. Stable Viewport: `scrollbar-gutter: stable` and `overflow-y: scroll`
+      prevent horizontal content shift when the scrollbar appears.
    ========================================================================== */
 
-/* --------------------------------------------------------------------------
-   1. Design Tokens (Centralized for Easy Editing)
-   -------------------------------------------------------------------------- */
 :root {
-  /* Light Theme (Crisp Institutional Paper & Corporate Cobalt) */
   --bg: #ffffff;
   --bg-alt: #f8fafc;
   --border: #dbe2ea;
@@ -48,7 +25,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Dark Theme (OLED / Battery Saver Palette) */
     --bg: #0b0f19;
     --bg-alt: #131b2e;
     --border: #1e293b;
@@ -59,9 +35,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   2. Base Reset & Viewport Stability
-   -------------------------------------------------------------------------- */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -73,10 +46,6 @@ html {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-
-  /* STABILITY FIX:
-     Prevents the entire page from twitching/jumping to the right when the
-     vertical scrollbar appears during initial render. */
   overflow-y: scroll;
   scrollbar-gutter: stable;
 }
@@ -92,7 +61,6 @@ main {
   padding-block: 2.5rem;
 }
 
-/* Base Typography */
 h1, h2, h3, h4 {
   color: var(--text);
   line-height: 1.25;
@@ -112,7 +80,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Unified Layout Container */
+/* Unified Content Shell */
 .shell {
   width: 100%;
   max-width: var(--max-w);
@@ -120,9 +88,14 @@ a:hover {
   padding-inline: 1.25rem;
 }
 
-/* --------------------------------------------------------------------------
-   3. Navigation (Zero-JS Accessible Mobile Drawer)
-   -------------------------------------------------------------------------- */
+.shell-narrow {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Header & Zero-JS Accessible Navigation */
 header {
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
@@ -138,6 +111,7 @@ header {
 .brand-link {
   display: inline-flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .brand-logo-svg {
@@ -190,7 +164,7 @@ nav ul {
   border-radius: var(--radius);
 }
 
-/* Mobile Nav Drawer (<= 768px) */
+/* Mobile Nav Drawer */
 @media (max-width: 768px) {
   .nav-toggle-label {
     display: flex;
@@ -222,16 +196,14 @@ nav ul {
     z-index: 100;
   }
 
-  .nav-toggle:checked ~ ul li, 
+  .nav-toggle:checked ~ ul li,
   .nav-toggle:checked ~ ul a {
     width: 100%;
     text-align: left;
   }
 }
 
-/* --------------------------------------------------------------------------
-   4. Hero Section
-   -------------------------------------------------------------------------- */
+/* Hero Section */
 .hero {
   margin-bottom: 2.5rem;
 }
@@ -262,9 +234,7 @@ nav ul {
   margin-top: 1.25rem;
 }
 
-/* --------------------------------------------------------------------------
-   5. Search Box Component
-   -------------------------------------------------------------------------- */
+/* Search Box */
 .search-container {
   background: var(--bg-alt);
   border: 1px solid var(--border);
@@ -292,16 +262,7 @@ nav ul {
   border-radius: var(--radius);
 }
 
-/* --------------------------------------------------------------------------
-   6. Platform Cards: Grid Level 1 + Flexbox Architecture
-   --------------------------------------------------------------------------
-   WHY THIS ENGINE IS SUPERIOR FOR ECO-EFFICIENCY:
-   1. The container (.grid-cards) uses CSS Grid for responsive column division.
-   2. Each card (.feature-card) uses Flexbox in column direction.
-   3. `margin-top: auto` on `a.card-link` pushes the link to the bottom plane
-      instantly in one browser calculation pass.
-   4. Avoids subgrid track calculations, saving memory, CPU cycles, and battery.
-   -------------------------------------------------------------------------- */
+/* Platform Cards (Single-Pass Battery-Friendly Engine) */
 .grid-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -339,16 +300,13 @@ nav ul {
   margin-bottom: 1rem;
 }
 
-/* Pushes action links to the bottom baseline at zero CPU cost */
 .feature-card a.card-link {
   margin-top: auto;
   font-weight: 600;
   display: inline-block;
 }
 
-/* --------------------------------------------------------------------------
-   7. Conversion Banner
-   -------------------------------------------------------------------------- */
+/* Conversion Banner */
 .conversion-banner {
   margin-top: 3rem;
   background: var(--bg-alt);
@@ -362,9 +320,7 @@ nav ul {
   flex-wrap: wrap;
 }
 
-/* --------------------------------------------------------------------------
-   8. Institutional 4-Column Footer
-   -------------------------------------------------------------------------- */
+/* Institutional Footer */
 footer {
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
@@ -410,31 +366,10 @@ footer {
   gap: 0.5rem;
 }
 
-/* --------------------------------------------------------------------------
-   9. Strict Single-Page A4 Print Engine (Zero !important)
-   --------------------------------------------------------------------------
-   WHY ZERO !important WORKS HERE:
-   By overriding values using standard cascade specificity rather than forced
-   rules, the browser applies clean black-and-white print styles naturally.
-   -------------------------------------------------------------------------- */
+/* Print Engine (Zero !important) */
 @media print {
-  header, footer, .search-container, .conversion-banner { 
-    display: none; 
-  }
-  
-  body { 
-    background: #ffffff; 
-    color: #000000; 
-    font-size: 9pt; 
-  }
-  
-  .feature-card { 
-    border: 1px solid #cccccc; 
-    break-inside: avoid; 
-  }
-  
-  a { 
-    color: #000000; 
-    text-decoration: none; 
-  }
+  header, footer, .search-container, .conversion-banner { display: none; }
+  body { background: #ffffff; color: #000000; font-size: 9pt; }
+  .feature-card { border: 1px solid #cccccc; break-inside: avoid; }
+  a { color: #000000; text-decoration: none; }
 }
