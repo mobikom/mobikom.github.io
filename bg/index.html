@@ -1,10 +1,27 @@
+<!--
+  ==============================================================================
+  FILE: /bg/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: Bulgarian (bg) • Localized Root Mirror
+  PATTERN: Pattern 1 (Index & Native CSS Subgrid Engine)
+  STANDARDS: HTML5 Living Standard • CSS Grid Level 2 • Schema.org JSON-LD
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
+  ==============================================================================
+  DESCRIPTION:
+  Canonical Bulgarian index for the Mobikom digital media network. Every internal
+  link is strictly bound to the /bg/ locale. Uses the identical 4-track subgrid
+  engine with Bulgarian semantic transliteration for ecosystem discovery.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мобиком | Дигитална Медийна Мрежа и Уеб Операции</title>
-  <meta name="description" content="Мобиком — Високонадеждна мрежа, управляваща dobrichnews.com, dobruja.com, bestjobs.bg и олекотена статична инфраструктура без проследяване.">
+  <meta name="description" content="Мобиком: Високонадеждна мрежа, управляваща dobrichnews.com, dobruja.com, bestjobs.bg и олекотена статична инфраструктура без проследяване.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -15,15 +32,34 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/">
   <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Мобиком | Дигитална Медийна Мрежа">
   <meta property="og:description" content="Високонадеждна дигитална медийна мрежа в България. Осн. 2011 г.">
   <meta property="og:url" content="https://mobikom.bg/bg/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org Organization Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Мобиком",
+    "url": "https://mobikom.bg/bg/",
+    "logo": "https://mobikom.bg/assets/img/og-cover.png",
+    "foundingDate": "2011",
+    "sameAs": [
+      "https://www.dobrichnews.com",
+      "https://www.dobruja.com",
+      "https://bestjobs.bg"
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <header>
+  <!-- Universal Master Header (Bulgarian Locale) -->
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/bg/" class="brand-link" title="Мобиком България">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
@@ -67,7 +103,6 @@
           Управление на регионални медийни канали, портал за кариери и чиста статична инфраструктура без проследяващи бисквитки.
         </p>
         <div class="hero-actions">
-          <!-- Fixed link pointing directly to /bg/about/ -->
           <a href="/bg/about/" class="nav-btn">За Нас и История &rarr;</a>
           <a href="/bg/portfolio/" class="nav-link">Портфолио на Мрежата</a>
         </div>
@@ -84,7 +119,7 @@
         </form>
       </section>
 
-      <!-- Core Platform Grid -->
+      <!-- Core Platform Grid (Native CSS Subgrid Engine) -->
       <section>
         <h2>Основни Дигитални Активи и Платформи</h2>
         <div class="grid-cards" id="cards-grid">
@@ -114,14 +149,13 @@
             <span class="card-meta">ДИГИТАЛЕН КАТАЛОГ &bull; АРХИВ</span>
             <h3>Sea Stars Shop</h3>
             <p>Дигитален каталог и архив за автентични черноморски минерални соли и лечебна поморийска луга.</p>
-            <a href="/bg/portfolio/#seastars" class="card-link">Преглед на проекта &rarr;</a>
+            <a href="/bg/blog/seastars/" class="card-link">Преглед на публикацията &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="история nmt-450 мобифони 1992 пейджъри мобика телеком архив">
             <span class="card-meta">ТЕЛЕКОМ НА СЛЕДСТВО</span>
             <h3>Архив на Домейна и История</h3>
             <p>От аналоговите Мобифони NMT-450 и уличните фонокарти Мобика (1992) до съвременните леки уеб стандарти.</p>
-            <!-- Fixed link pointing directly to /bg/about/#nmt-450 -->
             <a href="/bg/about/#nmt-450" class="card-link">Разгледайте хронологията &rarr;</a>
           </article>
 
@@ -140,7 +174,8 @@
     </div>
   </main>
 
-  <footer>
+  <!-- Universal Master Footer (Bulgarian Locale) -->
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
@@ -159,7 +194,6 @@
             <li><a href="/bg/">Начало</a></li>
             <li><a href="/bg/about/">За Нас и История</a></li>
             <li><a href="/bg/about/governance/">Управление</a></li>
-            <li><a href="/stoyanov/bg/">Стоян Стоянов (CV)</a></li>
             <li><a href="/bg/portfolio/">Портфолио</a></li>
             <li><a href="/bg/blog/">Анализи</a></li>
             <li><a href="/bg/contact/">Контакт</a></li>
@@ -188,7 +222,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал без бисквитки.</p>
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
         <a href="/bg/contact/">Оперативен отдел &rarr;</a>
       </div>
     </div>
