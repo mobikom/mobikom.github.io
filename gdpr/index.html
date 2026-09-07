@@ -1,10 +1,27 @@
+<!--
+  ==============================================================================
+  FILE: /gdpr/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en)
+  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  STANDARDS: HTML5 Living Standard • EU Regulation 2016/679 • Zero !important
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Compliant
+  ==============================================================================
+  DESCRIPTION:
+  Statutory compliance declaration under EU General Data Protection Regulation
+  (GDPR) 2016/679. Outlines data controller identity, legal processing bases,
+  data subject rights (Articles 15-22), and supervisory authority details.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GDPR Compliance Declaration | Mobikom</title>
-  <meta name="description" content="Formal compliance declaration of Mobikom under Regulation (EU) 2016/679 (GDPR): data protection by design, zero profiling, and data subject rights.">
+  <title>GDPR Compliance &amp; Statutory Rights | Mobikom</title>
+  <meta name="description" content="Statutory declarations under EU Regulation 2016/679 (GDPR): Data controller identity, legal processing bases, and data subject rights.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -15,15 +32,15 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/gdpr/">
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="GDPR Compliance Declaration | Mobikom">
-  <meta property="og:description" content="Formal declaration of compliance under Regulation (EU) 2016/679 (GDPR). Zero profiling and technical privacy by design.">
+  <meta property="og:title" content="GDPR Compliance &amp; Statutory Rights | Mobikom">
+  <meta property="og:description" content="Statutory declarations and data subject rights under EU Regulation 2016/679.">
   <meta property="og:url" content="https://mobikom.bg/gdpr/">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
@@ -49,99 +66,100 @@
           <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
           <li><a href="/blog/" class="nav-link">Insights</a></li>
           <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/gdpr/" class="lang-toggle">BG</a></li>
+          <li><a href="/bg/gdpr/" class="lang-toggle" hreflang="bg">BG</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell">
-      
-      <section class="hero">
-        <span class="hero-tag">Regulatory Declaration &bull; Regulation (EU) 2016/679</span>
-        <h1>GDPR Compliance</h1>
-        <p class="hero-lead">Formal Declaration of Technical and Organizational Data Protection Standards.</p>
-        <p>
-          Mobikom operates under strict adherence to Regulation (EU) 2016/679 of the European Parliament and of the Council (General Data Protection Regulation). By eliminating client-side tracking, cookies, and behavioral data harvesting, our platforms achieve compliance through technical design.
-        </p>
-        <div class="hero-actions">
-          <a href="/privacy/" class="nav-btn">Inspect Privacy Policy &rarr;</a>
-          <a href="/about/governance/" class="nav-link">Corporate Governance</a>
-        </div>
-      </section>
+    <div class="shell-prose">
+      <article class="prose">
+        <header>
+          <span class="hero-tag">EU Regulation 2016/679 &bull; Legal</span>
+          <h1>GDPR Compliance Statement</h1>
+          <p class="hero-lead">Statutory framework for personal data protection, controller identity, and rights exercise.</p>
+          <time datetime="2026-09-07" style="font-size: 0.85rem; color: var(--muted); display: block; margin-top: 0.5rem;">
+            Effective Date: September 7, 2026
+          </time>
+        </header>
 
-      <!-- GDPR Legal Framework Grid -->
-      <section>
-        <h2>Statutory Compliance Framework</h2>
-        <div class="grid-cards">
-          
-          <!-- Article 25 -->
-          <article class="feature-card">
-            <span class="card-meta">ARTICLE 25 &bull; SYSTEM ARCHITECTURE</span>
-            <h3>Data Protection by Design &amp; Default</h3>
-            <p>Our web infrastructure implements data minimization at the architectural level. We do not generate session identifiers, deploy analytics pixels, or embed surveillance cookies. By defaulting to zero data retention, visitor privacy is protected before any transmission occurs.</p>
-          </article>
+        <section>
+          <h2>1. Data Controller Identification</h2>
+          <p>
+            The Data Controller responsible for processing operations related to this web infrastructure is:
+          </p>
+          <ul>
+            <li><strong>Entity:</strong> Mobikom Bulgaria</li>
+            <li><strong>Representative:</strong> Stoyan Stoyanov (General Manager)</li>
+            <li><strong>Official Contact:</strong> desk@mobikom.bg / stoyanov@mobikom.bg</li>
+            <li><strong>Jurisdiction:</strong> Republic of Bulgaria, European Union</li>
+          </ul>
+        </section>
 
-          <!-- Article 5 -->
-          <article class="feature-card">
-            <span class="card-meta">ARTICLE 5 &bull; PROCESSING PRINCIPLES</span>
-            <h3>Principles of Data Minimization</h3>
-            <p>Processing is restricted to the absolute technical minimum necessary for network routing and DDoS defense. We adhere strictly to purpose limitation, storage limitation, and confidentiality, never repurposing network metadata for commercial advertising.</p>
-          </article>
+        <section>
+          <h2>2. Legal Bases for Processing (Article 6 GDPR)</h2>
+          <p>
+            Mobikom processes personal data strictly under valid statutory legal bases:
+          </p>
+          <ul>
+            <li>
+              <strong>Article 6(1)(f) Legitimate Interests:</strong> Ephemeral server connection logs (IP addresses, request headers) processed to defend network endpoints against intrusion, mitigate denial-of-service threats, and ensure technical stability.
+            </li>
+            <li>
+              <strong>Article 6(1)(b) Contract / Direct Inquiries:</strong> Contact information provided by users who initiate direct correspondence with our operations desk, processed solely to respond to their specific communication.
+            </li>
+          </ul>
+        </section>
 
-          <!-- Article 6 -->
-          <article class="feature-card">
-            <span class="card-meta">ARTICLE 6 &bull; LAWFUL BASIS</span>
-            <h3>Lawful Basis for Processing</h3>
-            <p>Ephemeral server log processing is conducted under <strong>Article 6(1)(f) (Legitimate Interests)</strong> solely to ensure network stability, service availability, and cybersecurity. Voluntary email inquiries are processed under <strong>Article 6(1)(b)</strong> to respond to correspondence.</p>
-          </article>
+        <section>
+          <h2>3. Statutory Rights of Data Subjects (Articles 15&ndash;22)</h2>
+          <p>
+            Under European Union law, individuals whose data is processed by our infrastructure hold enforceable rights:
+          </p>
+          <ul>
+            <li><strong>Right of Access (Art. 15):</strong> Obtain confirmation as to whether your personal data is being processed.</li>
+            <li><strong>Right to Rectification (Art. 16):</strong> Request correction of inaccurate personal records.</li>
+            <li><strong>Right to Erasure / "To Be Forgotten" (Art. 17):</strong> Request deletion of email correspondence records where processing grounds no longer apply.</li>
+            <li><strong>Right to Restriction (Art. 18) &amp; Objection (Art. 21):</strong> Contest processing operations based on legitimate interests.</li>
+          </ul>
+          <p>
+            Because we do not use tracking cookies or persistent user profiles, we do not store identifying cross-site visitor histories. Requests regarding direct email correspondence can be exercised by contacting our desk at <strong>desk@mobikom.bg</strong>.
+          </p>
+        </section>
 
-          <!-- Article 22 -->
-          <article class="feature-card">
-            <span class="card-meta">ARTICLE 22 &bull; AUTOMATION SAFEGUARD</span>
-            <h3>No Automated Profiling or Decision-Making</h3>
-            <p>We do not track, score, or evaluate visitor behavior. No algorithms, automated decision-making engines, or behavioral profiling mechanisms are deployed anywhere across our publishing networks or job advertising boards.</p>
-          </article>
+        <section>
+          <h2>4. Supervisory Authority</h2>
+          <p>
+            If you consider that processing of personal data relating to you infringes Regulation (EU) 2016/679, you have the right to lodge a complaint with the national supervisory authority:
+          </p>
+          <ul>
+            <li><strong>Authority:</strong> Commission for Personal Data Protection (CPDP / КЗЛД)</li>
+            <li><strong>Address:</strong> 2 Prof. Tsvetan Lazarov Blvd., Sofia 1592, Bulgaria</li>
+            <li><strong>Website:</strong> cpdp.bg</li>
+          </ul>
+        </section>
 
-          <!-- Articles 15-22 -->
-          <article class="feature-card">
-            <span class="card-meta">ARTICLES 15–22 &bull; USER RIGHTS</span>
-            <h3>Exercise of Data Subject Rights</h3>
-            <p>Individuals have the right to request access, rectification, or erasure of any personal data voluntarily transmitted via email. Because our servers do not log personal identities or browsing sessions, we hold no personal profiles to disclose or erase.</p>
-          </article>
-
-          <!-- Supervisory Authority -->
-          <article class="feature-card">
-            <span class="card-meta">ARTICLE 77 &bull; REGULATORY OVERSIGHT</span>
-            <h3>Supervisory Authority</h3>
-            <p>Data subjects have the right to lodge a complaint with the competent supervisory authority: <strong>Commission for Personal Data Protection (CPDP / КЗЛД)</strong>, Prof. Tsvetan Lazarov Blvd. 2, 1592 Sofia, Bulgaria (Website: <a href="https://www.cpdp.bg" target="_blank" rel="noopener noreferrer">cpdp.bg</a>).</p>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- Conversion Banner -->
-      <section class="conversion-banner">
-        <div>
-          <h3>Formal Regulatory &amp; Compliance Inquiries</h3>
-          <p>For official correspondence regarding data protection standards or statutory audits, contact our compliance desk directly.</p>
-        </div>
-        <a href="mailto:office@mobikom.bg?subject=GDPR%20Compliance%20Inquiry" class="nav-btn">Contact Compliance Desk</a>
-      </section>
-
+        <section class="conversion-banner">
+          <div>
+            <h3>Exercise Data Rights</h3>
+            <p>To request deletion of correspondence records or submit legal inquiries, contact our operations desk.</p>
+          </div>
+          <a href="/contact/" class="nav-btn">Contact Operations Desk</a>
+        </section>
+      </article>
     </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
             <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
           </ul>
         </div>
@@ -152,19 +170,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about/">About Us &amp; History</a></li>
             <li><a href="/about/governance/">Governance</a></li>
-            <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/blog/">Insights &amp; Papers</a></li>
             <li><a href="/contact/">Direct Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Chronology</h4>
-          <ul>
-            <li><a href="/about/#nmt-450">NMT-450 Mobifons (1992)</a></li>
-            <li><a href="/about/#pagers-mobika">Pagers &amp; Mobika Cards</a></li>
-            <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
-            <li><a href="/blog/#manifesto-512">512-Byte Web Principle</a></li>
           </ul>
         </div>
 
@@ -173,14 +179,14 @@
           <ul>
             <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/gdpr/" aria-current="page">GDPR Compliance</a></li>
+            <li><a href="/gdpr/">GDPR Compliance</a></li>
             <li><a href="/bg/gdpr/">Български (BG)</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
