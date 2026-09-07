@@ -5,14 +5,8 @@
   LICENSE: MIT (https://opensource.org/licenses/MIT)
   AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
   LANGUAGE: English (en)
-  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  LAYOUT: Tested 2-Column Grid (Bio Left, Photo with Credit Right)
   STANDARDS: HTML5 Living Standard • Schema.org AboutPage • Zero !important
-  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
-  ==============================================================================
-  DESCRIPTION:
-  Institutional governance, editorial transparency charters, regulatory media
-  disclosures, and executive leadership bio for Mobikom. Features official photo
-  with archival credits and direct routing to the master curriculum vitae.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -32,14 +26,12 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/governance/">
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Mobikom Governance &amp; Leadership">
   <meta property="og:description" content="Operational governance, editorial independence, and executive leadership of Mobikom Bulgaria.">
   <meta property="og:url" content="https://mobikom.bg/about/governance/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/s.stoyanov.jpg">
 
-  <!-- Schema.org Breadcrumbs & AboutPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,16 +61,12 @@
 </head>
 <body>
 
-  <!-- Universal Master Header -->
   <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
           <g transform="translate(4, 3)">
-            <circle cx="8" cy="20" r="4" fill="#0052cc" />
-            <circle cx="22" cy="10" r="4" fill="#0052cc" />
-            <circle cx="22" cy="30" r="4" fill="#0052cc" />
-            <circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <circle cx="8" cy="20" r="4" fill="#0052cc" /><circle cx="22" cy="10" r="4" fill="#0052cc" /><circle cx="22" cy="30" r="4" fill="#0052cc" /><circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
             <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">BULGARIA</text>
@@ -103,10 +91,8 @@
   </header>
 
   <main>
-    <div class="shell-prose">
-      
-      <!-- Pattern 2: Prose Engine -->
-      <article class="prose">
+    <div class="shell">
+      <article class="prose" style="max-width: 100%;">
         
         <header>
           <span class="hero-tag">Institutional Transparency &bull; Compliance</span>
@@ -114,45 +100,37 @@
           <p class="hero-lead">Standards of editorial independence, data minimalism, and operational leadership across the Mobikom network.</p>
         </header>
 
-        <!-- Executive Leadership Section with Photo & Photo Credit -->
-        <section>
-          <span class="hero-tag">Executive Management</span>
-          <h2>Stoyan Stoyanov</h2>
-          <p><strong>Founder &amp; General Manager, Mobikom Bulgaria</strong></p>
+        <!-- HARD-CODED 2-COLUMN GRID: Text Left (1fr), Photo + Credit Right (260px) -->
+        <section style="display: grid; grid-template-columns: 1fr 260px; column-gap: 2rem; align-items: start; margin-bottom: 2.5rem;">
+          
+          <!-- Column 1: Bio Text & Links -->
+          <div>
+            <span class="hero-tag">Executive Management</span>
+            <h2>Stoyan Stoyanov</h2>
+            <p><strong>Founder &amp; General Manager, Mobikom Bulgaria</strong></p>
+            
+            <p>Directing high-availability regional media distribution (<a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>, <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>), career infrastructure (<a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>), and digital catalog archives since 2011.</p>
+            <p>Educational background in Business Administration and Economics (D. A. Tsenov Academy of Economics) and International Hospitality Management (Lycée Hôtelier de Nice, VUM), with continuing academic studies at Medical University.</p>
+            <p>Over a decade of executive management within Bulgarian hospitality (Albena) followed by 15+ years managing Mobikom's decentralized digital assets.</p>
+            <p>Overseeing technical operations, zero-tracking web architecture, and regional news syndication across North-East Bulgaria.</p>
+            <p>Ongoing academic pursuits span law, economics, computer science, medicine, and life sciences.</p>
 
-          <!-- Photo with official archival credit -->
-          <figure>
-            <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="400" height="480" style="width: 100%; max-width: 400px; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
-            <figcaption>
+            <p style="margin-top: 1.25rem;">
+              <a href="/stoyanov/" class="nav-btn">Access Complete Living CV (EN) &rarr;</a>
+            </p>
+          </div>
+
+          <!-- Column 2: Photo on the Right with official archival credit -->
+          <figure style="margin: 0;">
+            <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="260" height="312" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
+            <figcaption style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.4;">
               Photo: V. Varbanova Prep., Honored Editor-in-Chief. Official Visit to the street of the Nobelists in Soweto, South Africa. The home of Mandela and Boutros-Ghali.
             </figcaption>
           </figure>
-          
-          <!-- 10-line concise Executive Bio -->
-          <p>
-            Directing high-availability regional media distribution (<a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>, <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>), career infrastructure (<a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>), and digital catalog archives since 2011.
-          </p>
-          <p>
-            Educational background in Business Administration and Economics (D. A. Tsenov Academy of Economics) and International Hospitality Management (Lycée Hôtelier de Nice, VUM), with continuing academic studies at Medical University.
-          </p>
-          <p>
-            Over a decade of executive management within Bulgarian hospitality (Albena) followed by 15+ years managing Mobikom's decentralized digital assets.
-          </p>
-          <p>
-            Overseeing technical operations, zero-tracking web architecture, and regional news syndication across North-East Bulgaria.
-          </p>
-          <p>
-            Ongoing academic pursuits span law, economics, computer science, medicine, and life sciences.
-          </p>
 
-          <!-- Link to the full living CV -->
-          <p style="margin-top: 1.25rem;">
-            <a href="/stoyanov/" class="nav-btn">Access Complete Living CV (EN) &rarr;</a>
-          </p>
         </section>
 
-        <!-- Editorial Independence & Transparency -->
-        <section>
+        <section style="max-width: var(--max-w-prose);">
           <h2>1. Editorial Independence &amp; Media Disclosure</h2>
           <p>
             In accordance with Bulgarian media transparency regulations, Mobikom maintains strict legal and operational separation between technical infrastructure management, advertising syndication, and editorial newsrooms.
@@ -162,8 +140,7 @@
           </p>
         </section>
 
-        <!-- Technical & Data Mandate -->
-        <section>
+        <section style="max-width: var(--max-w-prose);">
           <h2>2. Zero-Cookie Architectural Mandate</h2>
           <p>
             The network adheres to a strict zero-cookie, zero-tracker engineering philosophy:
@@ -175,8 +152,7 @@
           </ul>
         </section>
 
-        <!-- Reusable Conversion Banner -->
-        <section class="conversion-banner">
+        <section class="conversion-banner" style="max-width: var(--max-w-prose);">
           <div>
             <h3>Official Communications &amp; Legal Notices</h3>
             <p>Direct all inquiries regarding governance, regulatory filings, or rights to the desk.</p>
@@ -185,55 +161,11 @@
         </section>
 
       </article>
-
     </div>
   </main>
 
-  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Mobikom Network</h4>
-          <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Governance &amp; Desk</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About Us &amp; History</a></li>
-            <li><a href="/about/governance/">Governance</a></li>
-            <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/contact/">Direct Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Key Papers</h4>
-          <ul>
-            <li><a href="/blog/seastars/">Sea Stars &amp; Pomorie Lye</a></li>
-            <li><a href="/blog/manifesto-512/">512-Byte Web Principle</a></li>
-            <li><a href="/about/#nmt-450">NMT-450 Heritage (1992)</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Security &amp; Legal</h4>
-          <ul>
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/gdpr/">GDPR Compliance</a></li>
-            <li><a href="/bg/about/governance/">Български (BG)</a></li>
-          </ul>
-        </div>
-      </div>
-
       <div class="footer-bottom">
         <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
