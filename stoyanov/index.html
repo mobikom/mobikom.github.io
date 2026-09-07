@@ -26,12 +26,12 @@
 
     .cv-header {
       border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.5rem;
+      padding-bottom: 0.6rem;
       margin-bottom: 0.75rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 1rem;
+      gap: 1.25rem;
     }
 
     .cv-header h1 {
@@ -40,16 +40,6 @@
       letter-spacing: -0.01em;
       margin-bottom: 0.2rem;
       color: var(--text);
-    }
-
-    .cv-thumb {
-      width: 65px;
-      height: 78px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      flex-shrink: 0;
-      display: block;
     }
 
     .cv-meta-line {
@@ -166,12 +156,6 @@
         margin-bottom: 2pt;
       }
 
-      .cv-thumb {
-        width: 55px;
-        height: 66px;
-        border: 1pt solid #444444;
-      }
-
       .cv-meta-line {
         font-size: 8.5pt;
         color: #222222;
@@ -267,9 +251,9 @@
 
       <article class="cv-sheet">
 
-        <!-- Header: Side-by-side Name and Small Photo without credit -->
+        <!-- Header: Name on left, strictly constrained small photo locked on the RIGHT -->
         <header class="cv-header">
-          <div>
+          <div style="flex: 1;">
             <h1>Stoyan Stoyanov</h1>
             <div class="cv-meta-line">
               <span>Location: Bulgaria</span>
@@ -279,7 +263,8 @@
               <span>Web: mobikom.bg/stoyanov/</span>
             </div>
           </div>
-          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" class="cv-thumb" onerror="this.style.display='none'">
+          <!-- Hard-locked 75px x 90px small picture on the right -->
+          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="75" height="90" style="width: 75px; min-width: 75px; max-width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block; margin: 0; flex-shrink: 0;" onerror="this.style.display='none'">
         </header>
 
         <section class="cv-section">
