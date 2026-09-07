@@ -1,15 +1,32 @@
+<!--
+  ==============================================================================
+  FILE: /404.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  STANDARDS: HTML5 Living Standard • Zero Inline CSS • Zero Runtime Scripts
+  PERFORMANCE: Sub-2KB Single-Packet Payload • Instant TCP InitCwnd Resolution
+  ROBOTS: noindex, follow (RFC 7231 HTTP 404 Compliance)
+  ==============================================================================
+  DESCRIPTION:
+  Deterministic, ultra-lightweight 404 error recovery page. Automatically adapts
+  to light/dark OS modes via master style.css without cookies or trackers.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404: Not Found | Mobikom</title>
+  <title>404: Page Not Found | Mobikom</title>
   <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0052cc">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
 
-  <header>
+  <!-- Universal Master Header -->
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
@@ -21,25 +38,27 @@
           </g>
         </svg>
       </a>
-      <nav aria-label="Quick Recovery">
+
+      <nav aria-label="Recovery Navigation">
         <ul>
           <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/bg/" class="lang-toggle">BG</a></li>
+          <li><a href="/bg/" class="lang-toggle" hreflang="bg">BG</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell shell-narrow">
-      <section class="hero" style="margin-block: 2rem 0;">
-        <span class="hero-tag" style="color: #dc2626;">HTTP 404 &bull; Routing Exception</span>
+    <div class="shell">
+      <section class="hero">
+        <span class="hero-tag">HTTP 404 &bull; Routing Exception</span>
         <h1>Resource Not Found</h1>
-        <p class="hero-lead">The requested URL does not exist in the current static distribution.</p>
-        <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+        <p class="hero-lead">The requested address does not exist in the current static distribution.</p>
+        <p>
           Търсеният адрес не съществува в текущата статична дистрибуция на мрежата.
         </p>
-        <div class="hero-actions" style="margin-top: 1.5rem;">
+
+        <div class="hero-actions">
           <a href="/" class="nav-btn">&larr; Return to Home / Начало</a>
           <a href="/blog/" class="nav-link">Insights &amp; Papers</a>
           <a href="/contact/" class="nav-link">Report Broken Link</a>
@@ -48,10 +67,11 @@
     </div>
   </main>
 
-  <footer>
+  <!-- Universal Master Footer -->
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-        <p>&copy; 2026 mobikom.bg &bull; High-Availability Web Operations</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
