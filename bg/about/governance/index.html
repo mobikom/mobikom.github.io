@@ -5,8 +5,8 @@
   LICENSE: MIT (https://opensource.org/licenses/MIT)
   AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
   LANGUAGE: Bulgarian (bg) • Localized Mirror
-  LAYOUT: Bulletproof 2-Column Flex (Bio Left, Picture with Credit Right)
-  STANDARDS: HTML5 Living Standard • Schema.org AboutPage • Zero !important
+  LAYOUT: CSS Grid Level 2 (Track 1: Bio Left, Track 2: Photo Right)
+  STANDARDS: HTML5 Living Standard • CSS Subgrid • Zero Flexbox
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -31,33 +31,6 @@
   <meta property="og:url" content="https://mobikom.bg/bg/about/governance/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/s.stoyanov.jpg">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "За Нас", "item": "https://mobikom.bg/bg/about/" },
-          { "@type": "ListItem", "position": 3, "name": "Управление", "item": "https://mobikom.bg/bg/about/governance/" }
-        ]
-      },
-      {
-        "@type": "AboutPage",
-        "name": "Институционално Управление и Ръководство",
-        "url": "https://mobikom.bg/bg/about/governance/",
-        "description": "Стандарти за редакционна независимост, минимализъм на данните и оперативно ръководство на Мобиком.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
 
@@ -100,11 +73,11 @@
           <p class="hero-lead">Стандарти за редакционна независимост, минимализъм на данните и оперативно ръководство на Мобиком.</p>
         </header>
 
-        <!-- ZERO-FAIL 2-COLUMN LAYOUT: Bio on Left, Picture with Credit on Right -->
-        <section style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-bottom: 2.5rem;">
+        <!-- CSS GRID LEVEL 2: Колона 1 е Текст, Колона 2 е Снимка вдясно -->
+        <section style="display: grid; grid-template-columns: 1fr 260px; column-gap: 2rem; align-items: start; margin-bottom: 2.5rem;">
           
-          <!-- Колона 1: Текст на биографията (Заема оставащото пространство) -->
-          <div style="flex: 1 1 400px; min-width: 0;">
+          <!-- Колона 1: min-width: 0 гарантира, че колоната се свива и снимката остава вдясно -->
+          <div style="grid-column: 1; min-width: 0;">
             <span class="hero-tag">Оперативно Ръководство</span>
             <h2>Стоян Стоянов</h2>
             <p><strong>Основател и Генерален Мениджър, Мобиком България</strong></p>
@@ -120,9 +93,9 @@
             </p>
           </div>
 
-          <!-- Колона 2: Снимка ВДЯСНО с официален кредит отдолу -->
-          <figure style="flex: 0 0 260px; max-width: 260px; margin: 0;">
-            <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="260" height="312" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
+          <!-- Колона 2: Заключена вдясно на колона 2 -->
+          <figure style="grid-column: 2; width: 260px; margin: 0;">
+            <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="260" height="312" style="width: 260px; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
             <figcaption style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.4;">
               Снимка: Преп. В. Върбанова, Заслужил главен редактор. Официално посещение на улицата на нобелистите в Совето, Южна Африка. Домът на Мандела и Бутрос-Гали.
             </figcaption>
