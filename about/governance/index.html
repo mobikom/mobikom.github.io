@@ -5,7 +5,7 @@
   LICENSE: MIT (https://opensource.org/licenses/MIT)
   AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
   LANGUAGE: English (en)
-  LAYOUT: Tested 2-Column Grid (Bio Left, Photo with Credit Right)
+  LAYOUT: Bulletproof 2-Column Flex (Bio Left, Picture with Credit Right)
   STANDARDS: HTML5 Living Standard • Schema.org AboutPage • Zero !important
   ==============================================================================
 -->
@@ -100,11 +100,11 @@
           <p class="hero-lead">Standards of editorial independence, data minimalism, and operational leadership across the Mobikom network.</p>
         </header>
 
-        <!-- HARD-CODED 2-COLUMN GRID: Text Left (1fr), Photo + Credit Right (260px) -->
-        <section style="display: grid; grid-template-columns: 1fr 260px; column-gap: 2rem; align-items: start; margin-bottom: 2.5rem;">
+        <!-- ZERO-FAIL 2-COLUMN LAYOUT: Bio on Left, Picture with Credit on Right -->
+        <section style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 2rem; margin-bottom: 2.5rem;">
           
-          <!-- Column 1: Bio Text & Links -->
-          <div>
+          <!-- Column 1: Bio Text (Fills remaining width) -->
+          <div style="flex: 1 1 400px; min-width: 0;">
             <span class="hero-tag">Executive Management</span>
             <h2>Stoyan Stoyanov</h2>
             <p><strong>Founder &amp; General Manager, Mobikom Bulgaria</strong></p>
@@ -120,8 +120,8 @@
             </p>
           </div>
 
-          <!-- Column 2: Photo on the Right with official archival credit -->
-          <figure style="margin: 0;">
+          <!-- Column 2: Photo on the Right with official credit -->
+          <figure style="flex: 0 0 260px; max-width: 260px; margin: 0;">
             <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="260" height="312" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
             <figcaption style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.4;">
               Photo: V. Varbanova Prep., Honored Editor-in-Chief. Official Visit to the street of the Nobelists in Soweto, South Africa. The home of Mandela and Boutros-Ghali.
