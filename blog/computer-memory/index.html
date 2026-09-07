@@ -1,69 +1,66 @@
-<!DOCTYPE html> 
+<!--
+  ==============================================================================
+  FILE: /blog/computer-memory/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en)
+  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
+  ==============================================================================
+  DESCRIPTION:
+  Technical paper on computer memory architecture, CPU cache locality (L1/L2/L3),
+  SRAM/DRAM latencies, and how modern web bloat mismanages physical memory.
+  ==============================================================================
+-->
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobikom: Computer Memory for Non-Specialists | Technical Guide</title>
-  <meta name="description" content="A practical engineering guide to computer memory: DDR RAM generations, dual-channel architecture, CPU caches (L1-L3), magnetic hard drives, RAID arrays, and SSD endurance.">
-  <meta name="author" content="Stoyan Stoyanov, MBA">
+  <title>Computer Memory Architecture &amp; The Web Bloat Penalty | Mobikom</title>
+  <meta name="description" content="Technical analysis of computer memory hierarchies, cache lines, RAM latencies, and why static deterministic web design saves physical hardware resources.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
-  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
-
   <link rel="canonical" href="https://mobikom.bg/blog/computer-memory/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/">
-  <link rel="alternate" type="application/rss+xml" title="Mobikom Network RSS Feed" href="https://mobikom.bg/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:type" content="article">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="bg_BG">
-  <meta property="og:site_name" content="Mobikom">
-  <meta property="og:title" content="Mobikom: Computer Memory for Non-Specialists">
-  <meta property="og:description" content="A practical guide to RAM, CPU caches, magnetic hard drives, RAID configurations, and flash memory.">
+  <meta property="og:title" content="Computer Memory Architecture &amp; The Web Bloat Penalty">
+  <meta property="og:description" content="Why hardware cache locality and RAM physics matter in modern web engineering.">
   <meta property="og:url" content="https://mobikom.bg/blog/computer-memory/">
+  <meta property="og:type" content="article">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Mobikom: Computer Memory for Non-Specialists">
-  <meta name="twitter:description" content="A practical guide to RAM, CPU caches, magnetic hard drives, RAID configurations, and flash memory.">
-  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Schema.org BlogPosting & BreadcrumbList -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "BlogPosting",
-        "@id": "https://mobikom.bg/blog/computer-memory/#article",
-        "headline": "Mobikom: Computer Memory for Non-Specialists",
-        "description": "A practical guide to RAM, CPU caches, magnetic hard drives, RAID configurations, and flash memory.",
-        "url": "https://mobikom.bg/blog/computer-memory/",
-        "inLanguage": "en",
-        "datePublished": "2024-03-12",
-        "dateModified": "2026-09-06",
-        "author": {
-          "@type": "Person",
-          "name": "Stoyan Stoyanov, MBA",
-          "url": "https://mobikom.bg/stoyanov/"
-        },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mobikom Bulgaria",
-          "url": "https://mobikom.bg/"
-        }
-      },
-      {
         "@type": "BreadcrumbList",
-        "@id": "https://mobikom.bg/blog/computer-memory/#breadcrumb",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
           { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://mobikom.bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Computer Memory", "item": "https://mobikom.bg/blog/computer-memory/" }
+          { "@type": "ListItem", "position": 3, "name": "Computer Memory Architecture", "item": "https://mobikom.bg/blog/computer-memory/" }
         ]
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Computer Memory Architecture & The Web Bloat Penalty",
+        "description": "Technical analysis of memory hierarchies, CPU cache locality, and how modern web bloat misallocates hardware resources.",
+        "url": "https://mobikom.bg/blog/computer-memory/",
+        "datePublished": "2024-12-05T10:00:00+02:00",
+        "dateModified": "2026-09-07T10:00:00+03:00",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mobikom",
+          "url": "https://mobikom.bg/"
+        }
       }
     ]
   }
@@ -71,7 +68,7 @@
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
@@ -95,146 +92,75 @@
           <li><a href="/" class="nav-link">Home</a></li>
           <li><a href="/about/" class="nav-link">About</a></li>
           <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
-          <li><a href="/blog/" class="nav-link">Insights</a></li>
+          <li><a href="/blog/" class="nav-link" aria-current="page">Insights</a></li>
           <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/blog/computer-memory/" class="lang-toggle">BG</a></li>
+          <li><a href="/bg/blog/computer-memory/" class="lang-toggle" hreflang="bg">BG</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell">
-      
-      <article>
-        <header class="hero">
-          <span class="hero-tag">HARDWARE ARCHITECTURE &bull; TECHNICAL GUIDE</span>
-          <h1>Mobikom: Computer Memory for Non-Specialists</h1>
-          <p class="hero-lead">By <a href="/stoyanov/"><strong>Stoyan Stoyanov, MBA</strong></a> for mobikom.bg &bull; Updated: March 12, 2024</p>
+    <div class="shell-prose">
+      <article class="prose">
+        <header>
+          <span class="hero-tag">Computer Science &bull; Hardware Architecture</span>
+          <h1>Computer Memory Architecture &amp; The Web Bloat Penalty</h1>
+          <p class="hero-lead">Understanding CPU cache hierarchies, physical memory latencies, and how modern web bloat wastes hardware bandwidth and battery energy.</p>
+          <time datetime="2026-09-07">Published in Insights &bull; Monitored by Mobikom Operations</time>
         </header>
 
-        <!-- PART 1 -->
-        <section style="margin-bottom: 2.5rem;">
-          <span class="card-meta">PART 1: DYNAMIC VOLATILE STORAGE</span>
-          <h2>RAM: DDR Memory Generations &amp; Bus Architecture</h2>
+        <section>
+          <h2>1. The Physics of the Memory Hierarchy</h2>
           <p>
-            RAM (Random Access Memory) is the primary volatile dynamic storage tier in personal computers, bridging slower mass storage with the processor. Modern DDR generations operate across distinct frequency bands:
+            At the core of modern computation lies a fundamental physical bottleneck: the processor executes operations far faster than dynamic random-access memory (DRAM) can deliver instructions. To bridge this nanosecond gap, hardware engineers established the cache hierarchy:
           </p>
-          <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
-            <li><strong>DDR3 Generation:</strong> Frequencies ranging from 1 GHz to 2 GHz;</li>
-            <li><strong>DDR4 Generation:</strong> Frequencies ranging from 2 GHz to 3 GHz;</li>
-            <li><strong>DDR5 Generation:</strong> Frequencies from 3 GHz to over 4 GHz, converging on CPU bus speeds.</li>
-          </ul>
-          <p>
-            While operating system developers quote a 4 GB baseline minimum, engineering reality demands at least an 8 GB module, and ideally a dual-module kit (2&times;8 GB = 16 GB) for responsive multitasking.
-          </p>
-          <p style="margin-top: 1rem;">
-            Installing paired, identical DDR modules unlocks <strong>Dual-Channel mode</strong>, broadening the memory bus from 64 to 128 parallel lines for significantly enhanced throughput between the CPU and RAM.
-          </p>
-          <p style="margin-top: 1rem;">
-            <strong>The Physical Proximity Law:</strong> Inside the CPU silicon die (roughly 10&times;10 mm) sits the fastest volatile tier: <strong>L1, L2, and L3 cache</strong> (1 to 40 MB), running at full processor core clock speeds (1 to 5+ GHz). The closer a memory store is to the execution pipeline, the faster its transfer speed, but the smaller its physical capacity. Dynamic RAM holds data charge only while energized; when power ceases, it resets to zero within seconds.
-          </p>
-        </section>
-
-        <!-- PART 2 -->
-        <section style="margin-bottom: 2.5rem;">
-          <span class="card-meta">PART 2: PERSISTENT STORAGE</span>
-          <h2>Hard Disk Drives (HDD) &amp; Magnetic Platters</h2>
-          <p>
-            The mechanical hard drive remains the standard baseline for persistent mass storage, housing operating systems (Windows, Linux, DOS, macOS), virtualization environments (KVM), and file archives.
-          </p>
-          <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
-            <li><strong>Standard Interface:</strong> SATA3 serial high-speed communication ribbon;</li>
-            <li><strong>Rotational Velocities:</strong> 5,400 RPM for 2.5" laptops; 7,200 to 10,000 RPM for 3.5" desktop systems; up to 15,000 RPM for enterprise SAS server drives;</li>
-            <li><strong>Mechanical Precision:</strong> Hermetically sealed aluminum enclosures containing mirrored glass magnetic platters and read/write actuator arms vulnerable to physical shocks and static discharge.</li>
+          <ul>
+            <li><strong>L1 Cache (SRAM):</strong> Operates on-die at sub-nanosecond speeds (~1 ns, 4 cycles). Smallest capacity, highest energy efficiency.</li>
+            <li><strong>L2 &amp; L3 Caches:</strong> Larger SRAM buffers providing 3 to 15 ns latency, designed to retain hot working sets.</li>
+            <li><strong>Main Memory (DRAM):</strong> Off-die silicon requiring 60 to 100 ns plus bus transit overhead. Crossing into DRAM burns orders of magnitude more power.</li>
           </ul>
         </section>
 
-        <!-- PART 3 -->
-        <section style="margin-bottom: 2.5rem;">
-          <span class="card-meta">PART 3: REDUNDANCY &amp; BACKUP</span>
-          <h2>RAID Arrays, Flash SSDs &amp; Backup Principles</h2>
+        <section>
+          <h2>2. How Modern Web Frameworks Thrash Memory</h2>
           <p>
-            To guarantee continuous uptime and safeguard against physical drive loss, drives are configured in multi-disk RAID arrays:
+            When a modern web page downloads 10 megabytes of JavaScript to render a text article, it forces the browser’s Just-In-Time (JIT) compiler to allocate hundreds of thousands of heap objects. This triggers severe architectural penalties:
           </p>
-          <ul style="margin: 1rem 0 1rem 1.5rem; line-height: 1.8;">
-            <li><strong>RAID 1 / RAID 0:</strong> Mirroring for redundancy or striping for expanded contiguous capacity;</li>
-            <li><strong>RAID 10:</strong> Mirrored striping delivering zero-downtime reliability for high-availability production servers;</li>
-            <li><strong>RAID 5:</strong> Parity-based protection allowing live hot-swapping of failed drives without powering down.</li>
+          <ul>
+            <li><strong>Cache Line Invalidation:</strong> Complex object graphs with fragmented memory pointers continuously miss CPU L1/L2 caches, stalling the processor.</li>
+            <li><strong>Garbage Collection Pauses:</strong> The browser engine repeatedly stops execution to traverse and free abandoned heap allocations.</li>
+            <li><strong>Thermal &amp; Battery Drain:</strong> Memory bus saturation forces mobile memory controllers to stay in high-power states, rapidly draining battery charge.</li>
           </ul>
-          <p>
-            Solid-State Drives (SSDs, EEPROM, and NVMe modules) offer instant access times without mechanical latency, but require lifecycle planning around finite flash write-cycles.
-          </p>
-          <blockquote style="margin: 1.5rem 0; padding: 1rem 1.5rem; border-left: 4px solid var(--primary); background: var(--bg-alt); font-style: italic;">
-            „We strongly recommend regular, systematic archiving of all critical business and personal data. Proper planning ensures you benefit from faster, lighter, and more resilient systems.“
-          </blockquote>
         </section>
 
-        <div style="margin-top: 2rem;">
-          <a href="/blog/" class="nav-link">&larr; Return to All Articles &amp; Insights</a>
-        </div>
+        <section>
+          <h2>3. The Static Web as a Memory-First Solution</h2>
+          <p>
+            Mobikom’s static web architecture respects physical hardware constraints. By serving declarative HTML and CSS:
+          </p>
+          <ul>
+            <li><strong>Contiguous Memory Representation:</strong> HTML DOM nodes are parsed in a single sequential pass, matching CPU prefetch buffers.</li>
+            <li><strong>Zero Garbage Collection Overhead:</strong> Without runtime client JavaScript heaps, browser memory consumption remains flat and predictable.</li>
+            <li><strong>Hardware Accessibility:</strong> Pages load instantaneously on decade-old low-memory hardware with zero frame drops.</li>
+          </ul>
+        </section>
+
+        <section class="conversion-banner">
+          <div>
+            <h3>The 512-Byte Web Principle</h3>
+            <p>Discover how minimal packet budgets and static architectures deliver sustainable computing.</p>
+          </div>
+          <a href="/blog/manifesto-512/" class="nav-btn">Read 512-Byte Manifesto &rarr;</a>
+        </section>
       </article>
-
-      <!-- Conversion Banner -->
-      <section class="conversion-banner">
-        <div>
-          <h3>Need Infrastructure or Storage Consulting?</h3>
-          <p>Our operations team advises on high-availability server architecture, edge caching, and hardware disaster recovery.</p>
-        </div>
-        <a href="/contact/" class="nav-btn">Contact Operations Desk</a>
-      </section>
-
     </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="shell">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h4>Mobikom Network</h4>
-          <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Governance &amp; Desk</h4>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About Us &amp; History</a></li>
-            <li><a href="/about/governance/">Governance</a></li>
-            <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/blog/">Insights &amp; Papers</a></li>
-            <li><a href="/contact/">Direct Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Chronology</h4>
-          <ul>
-            <li><a href="/about/#nmt-450">NMT-450 Mobifons (1992)</a></li>
-            <li><a href="/about/#pagers-mobika">Pagers &amp; Mobika Cards</a></li>
-            <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
-            <li><a href="/blog/#manifesto-512">512-Byte Web Principle</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Security &amp; Legal</h4>
-          <ul>
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/gdpr/">GDPR Compliance</a></li>
-            <li><a href="/bg/blog/computer-memory/">Български (BG)</a></li>
-          </ul>
-        </div>
-      </div>
-
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
