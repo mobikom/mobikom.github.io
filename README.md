@@ -97,4 +97,3 @@ If you wish to support independent public-interest web infrastructure, open-sour
 
 * **[Direct Stripe Settlement Checkout](https://buy.stripe.com/7sYdR8epV9RP4cCfDJ2B200)** &mdash; Fast, secure card checkout via Stripe.
 * **[Institutional Desk Wire / Banking](https://mobikom.bg/contact/)** &mdash; Direct transfer via the Operations Desk.
-* **[GitHub Sponsors](https://github.com/sponsors/mobikom)** &mdash; Direct GitHub developer sponsorship.
