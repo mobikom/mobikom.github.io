@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stoyan Stoyanov — Curriculum Vitae | Academic &amp; Executive Dossier</title>
-  <meta name="description" content="Official single-page ATS curriculum vitae of Stoyan Stoyanov: General Management, Economics, Hospitality, and Scientific Research.">
+  <title>Stoyan Stoyanov — Curriculum Vitae</title>
+  <meta name="description" content="Curriculum Vitae of Stoyan Stoyanov: General Management, Economics, Hospitality, and Scientific Research.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -15,29 +15,26 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/stoyanov/">
 
   <style>
-    /* ==========================================================================
-       ATS & A4 Single-Page Layout Engine
-       ========================================================================== */
     .cv-sheet {
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2.25rem;
+      padding: 2rem;
       max-width: 820px;
       margin-inline: auto;
     }
 
     .cv-header {
       border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.75rem;
-      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.85rem;
     }
 
     .cv-header h1 {
       font-size: 1.85rem;
       font-weight: 800;
       letter-spacing: -0.01em;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
       color: var(--text);
     }
 
@@ -46,15 +43,11 @@
       color: var(--muted);
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem 1rem;
-    }
-
-    .cv-meta-line strong {
-      color: var(--text);
+      gap: 0.4rem 0.85rem;
     }
 
     .cv-section {
-      margin-top: 1rem;
+      margin-top: 0.85rem;
     }
 
     .cv-section h2 {
@@ -64,12 +57,12 @@
       letter-spacing: 0.08em;
       color: var(--primary);
       border-bottom: 1px solid var(--border);
-      padding-bottom: 0.2rem;
-      margin-bottom: 0.4rem;
+      padding-bottom: 0.15rem;
+      margin-bottom: 0.35rem;
     }
 
     .cv-item {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.45rem;
     }
 
     .cv-item-title {
@@ -84,7 +77,7 @@
     .cv-item-sub {
       font-size: 0.88rem;
       color: var(--muted);
-      margin-bottom: 0.2rem;
+      margin-bottom: 0.15rem;
     }
 
     .cv-list {
@@ -95,125 +88,119 @@
     }
 
     .cv-list li {
-      margin-bottom: 0.18rem;
+      margin-bottom: 0.15rem;
     }
 
     .cv-compact-p {
       font-size: 0.88rem;
       color: var(--muted);
       line-height: 1.45;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.2rem;
     }
 
-    /* Action bar controls */
     .action-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       flex-wrap: wrap;
       gap: 0.75rem;
     }
 
-    /* ==========================================================================
-       Deterministic 1-Page A4 Print Engine
-       ========================================================================== */
+    /* Print rules — Zero !important */
     @media print {
       @page {
         size: A4 portrait;
-        margin: 10mm 12mm 10mm 12mm; /* Calibrated to prevent 2nd page spill */
+        margin: 10mm 12mm;
       }
 
-      /* Eradicate webchrome & interface scaffolding */
       header, footer, .no-print, .action-row, .nav-toggle, .nav-toggle-label {
-        display: none !important;
+        display: none;
       }
 
-      body, html {
-        background: #ffffff !important;
-        color: #000000 !important;
-        font-size: 9.3pt !important;
-        line-height: 1.32 !important;
-        overflow: visible !important;
-        padding: 0 !important;
-        margin: 0 !important;
+      html, body {
+        background: #ffffff;
+        color: #000000;
+        font-size: 9.3pt;
+        line-height: 1.32;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
       }
 
       main {
-        padding: 0 !important;
+        padding: 0;
       }
 
       .shell, .cv-sheet {
-        max-width: 100% !important;
-        border: none !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        background: transparent !important;
+        max-width: 100%;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: transparent;
       }
 
       .cv-header {
-        border-bottom: 1.5pt solid #000000 !important;
-        padding-bottom: 4pt !important;
-        margin-bottom: 6pt !important;
+        border-bottom: 1.5pt solid #000000;
+        padding-bottom: 4pt;
+        margin-bottom: 6pt;
       }
 
       .cv-header h1 {
-        font-size: 15pt !important;
-        color: #000000 !important;
-        margin-bottom: 2pt !important;
+        font-size: 15pt;
+        color: #000000;
+        margin-bottom: 2pt;
       }
 
       .cv-meta-line {
-        font-size: 8.5pt !important;
-        color: #222222 !important;
+        font-size: 8.5pt;
+        color: #222222;
       }
 
       .cv-section {
-        margin-top: 6pt !important;
+        margin-top: 6pt;
         break-inside: avoid;
       }
 
       .cv-section h2 {
-        font-size: 8.5pt !important;
-        color: #000000 !important;
-        border-bottom: 0.75pt solid #444444 !important;
-        padding-bottom: 1pt !important;
-        margin-bottom: 3pt !important;
+        font-size: 8.5pt;
+        color: #000000;
+        border-bottom: 0.75pt solid #444444;
+        padding-bottom: 1pt;
+        margin-bottom: 3pt;
       }
 
       .cv-item-title {
-        font-size: 9pt !important;
-        color: #000000 !important;
+        font-size: 9pt;
+        color: #000000;
       }
 
       .cv-item-sub, .cv-compact-p, .cv-list {
-        font-size: 8.5pt !important;
-        color: #111111 !important;
+        font-size: 8.5pt;
+        color: #111111;
       }
 
       .cv-list {
-        margin-left: 12pt !important;
+        margin-left: 12pt;
       }
 
       .cv-list li {
-        margin-bottom: 1.5pt !important;
+        margin-bottom: 1.5pt;
       }
 
       a {
-        color: #000000 !important;
-        text-decoration: none !important;
+        color: #000000;
+        text-decoration: none;
       }
 
-      /* Prevent printing full URL links which stretches line heights */
       a[href^="http"]::after {
-        content: "" !important;
+        content: "";
       }
     }
   </style>
 </head>
 <body>
 
-  <!-- Web Navigation (Automatically suppressed on Print/PDF) -->
   <header class="no-print">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
@@ -246,117 +233,98 @@
   <main>
     <div class="shell">
 
-      <!-- Action Panel -->
       <div class="action-row no-print">
-        <div style="font-size: 0.9rem; color: var(--muted);">
-          Institutional Record &bull; <strong style="color: var(--text);">Stoyan Stoyanov</strong> (Official Dossier)
+        <div>
+          Contact: <strong>stoyanov@mobikom.bg</strong> | Bulgaria
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center;">
           <button type="button" onclick="window.print()" class="nav-btn" style="cursor: pointer; border: none; font-size: 0.85rem; padding: 0.4rem 0.85rem;">
-            Print / Save 1-Page PDF &darr;
+            Print / Save PDF
           </button>
-          <a href="/stoyanov/bg/" class="lang-toggle" style="text-decoration: none;">Български (BG)</a>
+          <a href="/stoyanov/bg/" class="lang-toggle">Български (BG)</a>
         </div>
       </div>
 
-      <!-- ATS-Compliant Document Sheet -->
       <article class="cv-sheet">
 
-        <!-- 1. Header (Identity & Canonical Contact) -->
         <header class="cv-header">
           <h1>Stoyan Stoyanov</h1>
           <div class="cv-meta-line">
-            <span><strong>Location:</strong> Bulgaria</span>
+            <span>Location: Bulgaria</span>
             <span>&bull;</span>
-            <span><strong>Email:</strong> stoyanov@mobikom.bg</span>
+            <span>Email: stoyanov@mobikom.bg</span>
             <span>&bull;</span>
-            <span><strong>Dossier:</strong> mobikom.bg/stoyanov/</span>
+            <span>Web: mobikom.bg/stoyanov/</span>
           </div>
         </header>
 
-        <!-- 2. Summary & Core Competencies -->
         <section class="cv-section">
-          <h2>Summary &amp; Core Competencies</h2>
+          <h2>Competencies</h2>
           <p class="cv-compact-p">
-            Microeconomics; Macroeconomics; Marketing and Management; Hospitality &amp; Tourism Management; Hotel and Restaurant Administration; Human Resources Management; Management &amp; Advisory; Seminar Organization; Student Tutoring; International Business and Management; Intellectual Property Activities.
+            Micro economics; Macro economics; Marketing and management; Marketing and management in the hospitality and tourism; Hotel and Restaurant Management; Human resources management; Management and consultancy activities; Organization of seminars, education of students; International Business and Management, Intellectual Property activities.
           </p>
           <p class="cv-compact-p" style="font-weight: 600; color: var(--text);">
-            Doctorate (PhD) studies, discontinued due to disease with permanent disabilities.
+            Doctorate (PhD), discontinued by disease with permanent disabilities.
           </p>
         </section>
 
-        <!-- 3. Professional Experience -->
         <section class="cv-section">
-          <h2>Professional Experience</h2>
-          
+          <h2>Experience</h2>
           <div class="cv-item">
             <div class="cv-item-title">
-              <span>Mobikom Network Operations (mobikom.bg)</span>
-              <span>15+ Years (2011 &ndash; Present)</span>
+              <span>Business Management</span>
+              <span>15+ Years</span>
             </div>
-            <div class="cv-item-sub">General Manager &bull; Digital Infrastructure &amp; Media Syndication</div>
-            <ul class="cv-list">
-              <li>Directing high-availability regional media portals (dobrichnews.com, dobruja.com) and job board systems (bestjobs.bg).</li>
-              <li>Managing static, zero-tracker web infrastructure, privacy-compliant server architectures, and cluster operations.</li>
-            </ul>
+            <div class="cv-item-sub">General Manager &bull; mobikom.bg/about</div>
           </div>
-
           <div class="cv-item">
             <div class="cv-item-title">
-              <span>Albena Resort Complex (albena.bg)</span>
+              <span>Tourism Management</span>
               <span>10 Years</span>
             </div>
-            <div class="cv-item-sub">Tourism Manager &bull; Hospitality &amp; Resort Operations</div>
-            <ul class="cv-list">
-              <li>Directed operational management, service logistics, guest services, and personnel across hotel facilities.</li>
-            </ul>
+            <div class="cv-item-sub">Manager &bull; albena.bg</div>
           </div>
         </section>
 
-        <!-- 4. Education & Academic Credentials -->
         <section class="cv-section">
-          <h2>Education &amp; Credentials</h2>
+          <h2>Education and field of studies</h2>
           <ul class="cv-list">
-            <li><strong>Medical University:</strong> Academic studies and medical health sciences training.</li>
-            <li><strong>Master of Business Management (MBM):</strong> D. A. Tsenov Academy of Economics (<a href="https://uni-svishtov.bg" target="_blank" rel="noopener">uni-svishtov.bg</a>).</li>
-            <li><strong>Bachelor of Business Management (BBM):</strong> D. A. Tsenov Academy of Economics (<a href="https://uni-svishtov.bg" target="_blank" rel="noopener">uni-svishtov.bg</a>).</li>
-            <li><strong>Certificate of Tourism BTS (MHR):</strong> Lycée Hôtelier de Nice (<a href="https://lycee-hotelier-nice.fr" target="_blank" rel="noopener">lycee-hotelier-nice.fr</a>).</li>
-            <li><strong>Bachelor of Tourism &amp; Hospitality Management BA (Hons):</strong> Varna University of Management (<a href="https://vum.bg" target="_blank" rel="noopener">vum.bg</a>).</li>
-            <li><strong>Certificat DUEF C1 (French Language &amp; Culture):</strong> Varna University of Management (<a href="https://vum.bg" target="_blank" rel="noopener">vum.bg</a>).</li>
-            <li><strong>Diploma Cook &amp; Waiter-Bartender:</strong> Intermenu Center (<a href="https://intermenu.org" target="_blank" rel="noopener">intermenu.org</a>).</li>
-            <li><strong>Professional Driver's Licence (Category C):</strong> Ministry of Interior (<a href="https://mvr.bg" target="_blank" rel="noopener">mvr.bg</a>).</li>
-            <li><strong>Electrical Technician:</strong> High School "M.V. Lomonosov" (<a href="https://pglomonosov.org" target="_blank" rel="noopener">pglomonosov.org</a>).</li>
+            <li>Medical University studies and qualifications.</li>
+            <li>Master of Business Management (MBM) by <a href="https://uni-svishtov.bg" target="_blank" rel="noopener">uni-svishtov.bg</a>.</li>
+            <li>Bachelor of Business Management (BBM) by <a href="https://uni-svishtov.bg" target="_blank" rel="noopener">uni-svishtov.bg</a>.</li>
+            <li>Certificate of Tourism BTS (MHR) by <a href="https://lycee-hotelier-nice.fr/bts-mhr-hôtellerie-restauration" target="_blank" rel="noopener">lycee-hotelier-nice.fr</a>.</li>
+            <li>Bachelor of Tourism and Hospitality Management BA (Hons) by <a href="https://vum.bg/hotel-management" target="_blank" rel="noopener">vum.bg</a>.</li>
+            <li>Certificate of French Language and Culture (DUEF) C1 by <a href="https://vum.bg" target="_blank" rel="noopener">vum.bg</a>.</li>
+            <li>Diploma of Cook and Waiter-Bartender by <a href="https://intermenu.org" target="_blank" rel="noopener">intermenu.org</a>.</li>
+            <li>Driving licence: Professional category C by <a href="https://mvr.bg" target="_blank" rel="noopener">mvr.bg</a>.</li>
+            <li>Electrician by High school "M.V. Lomonosov" <a href="https://pglomonosov.org" target="_blank" rel="noopener">pglomonosov.org</a>.</li>
           </ul>
         </section>
 
-        <!-- 5. Scientific Research, Skills & Languages -->
         <section class="cv-section">
-          <h2>Scientific Interests, Skills &amp; Languages</h2>
+          <h2>Research interests, Skills &amp; Languages</h2>
           <p class="cv-compact-p">
-            <strong>Research Interests:</strong> Business, Management, Law, Marketing, Mathematics, Computer Science, Physics, Biology, Chemistry, Medicine, Languages.
+            <strong>Research interests:</strong> Business, Management, Law, Marketing, Mathematics, Computer Science, Physics, Biology, Chemistry, Medicine, Languages.
           </p>
           <p class="cv-compact-p">
-            <strong>Applied Skills:</strong> Journalism, Publicistic, PR &amp; Advertising; Research &amp; Communication; Culinary, Cocktails &amp; Oenology; Cluster Management, Accounting, Budgeting, Strategic Planning.
+            <strong>Skills and abilities:</strong> Journalism, Publicistic, PR and Advertising; Research and communication; Culinary &amp; Cocktails &amp; Oenology; Business: cluster management, accounting, budgeting and strategic planning;.
           </p>
           <p class="cv-compact-p">
-            <strong>Languages:</strong> Bulgarian (Mother tongue), French (Native), Russian (Fluent), English (Advanced), German (Proficient).
+            <strong>Languages:</strong> Mother tongue: Bulgarian, native: French, fluent: Russian, advanced: English, proficient: German.
           </p>
         </section>
 
-        <!-- 6. Institutional References -->
-        <section class="cv-section" style="margin-bottom: 0;">
-          <h2>Institutional References</h2>
+        <section class="cv-section">
+          <h2>References</h2>
           <ul class="cv-list">
-            <li><strong>C. Guillot:</strong> Hotel Owner, France (<a href="https://lecureuil.com" target="_blank" rel="noopener">lecureuil.com</a>) &bull; Ref: LT1 Tourism BTS.</li>
-            <li><strong>Assoc. Prof. H. Sirashki PhD:</strong> Course Coordinator, D. A. Tsenov Academy of Economics (<a href="https://uni-svishtov.bg" target="_blank" rel="noopener">uni-svishtov.bg</a>) &bull; Ref: LT2 MBM.</li>
-            <li><strong>V. Varbanova Prep.:</strong> Honored Editor-in-Chief, Dobruja Media Group (<a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>) &bull; Ref: LT3 EIC.</li>
+            <li>C. Guillot, Owner of a hotel in France <a href="https://lecureuil.com" target="_blank" rel="noopener">lecureuil.com</a> LT1 Tourism. BTS;</li>
+            <li>Assoc. Prof. H. Sirashki PhD, Course Coordinator at <a href="https://uni-svishtov.bg" target="_blank" rel="noopener">uni-svishtov.bg</a> Bulgaria LT2 MBM;</li>
+            <li>V. Varbanova Prep., Honored Editor-in-Chief of Dobruja Media Group at <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a> LT3 EIC.</li>
           </ul>
         </section>
 
-        <!-- ATS Document Footer -->
-        <footer style="margin-top: 0.8rem; padding-top: 0.4rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); display: flex; justify-content: space-between;">
-          <span>Stoyan Stoyanov &copy; 2026 &bull; Verified ATS Single-Sheet Standard</span>
-          <span>Web template: bestjobs.bg/kariera</span>
+        <footer style="margin-top: 0.75rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted);">
+          <p>Stoyan Stoyanov &copy; 2026 content &bull; Web page Resume CV template by <a href="https://bestjobs.bg/kariera" target="_blank" rel="noopener">bestjobs.bg/kariera</a>.</p>
         </footer>
 
       </article>
