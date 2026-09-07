@@ -1,3 +1,20 @@
+<!--
+  ==============================================================================
+  FILE: /blog/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en)
+  PATTERN: Pattern 1 (Index & Native CSS Subgrid Engine)
+  STANDARDS: HTML5 Living Standard • CSS Grid Level 2 • Schema.org JSON-LD
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
+  ==============================================================================
+  DESCRIPTION:
+  Official Insights & Technical Papers directory. Renders publication cards
+  via the 4-track subgrid engine with real-time client-side search filtering
+  and bidirectional language discovery.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +39,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Structured Data: Collection & Breadcrumbs -->
+  <!-- Schema.org Breadcrumbs & CollectionPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,9 +53,8 @@
       },
       {
         "@type": "CollectionPage",
-        "@id": "https://mobikom.bg/blog/#collection",
-        "url": "https://mobikom.bg/blog/",
         "name": "Insights & Technical Papers",
+        "url": "https://mobikom.bg/blog/",
         "description": "Technical monographs, archival studies, and web engineering principles from Mobikom.",
         "publisher": {
           "@type": "Organization",
@@ -52,7 +68,8 @@
 </head>
 <body>
 
-  <header>
+  <!-- Universal Master Header -->
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
@@ -87,12 +104,14 @@
   <main>
     <div class="shell">
       
-      <!-- Section Header -->
+      <!-- Section Hero -->
       <section class="hero">
         <span class="hero-tag">Field Notes &bull; Architecture &bull; Archive</span>
         <h1>Insights &amp; Papers</h1>
         <p class="hero-lead">Technical commentary, privacy frameworks, and regional preservation studies.</p>
-        <p>Documenting our operations, static web performance philosophies, and local Bulgarian digital assets without behavioral trackers.</p>
+        <p>
+          Documenting our operations, static web performance philosophies, and local Bulgarian digital assets without behavioral trackers.
+        </p>
       </section>
 
       <!-- Fast Search Component -->
@@ -106,12 +125,12 @@
         </form>
       </section>
 
-      <!-- Articles Grid -->
+      <!-- Articles Subgrid Engine -->
       <section>
-        <h2>Published Articles</h2>
+        <h2>Published Monographs &amp; Research</h2>
         <div class="grid-cards" id="cards-grid">
           
-          <!-- Article: Sea Stars -->
+          <!-- Article 1: Sea Stars -->
           <article class="feature-card" data-searchable="seastars sea stars pomorie lye solilug bas ban thalassotherapy balneology mineral chemistry black sea">
             <span class="card-meta">BALNEOLOGY &bull; ARCHIVES</span>
             <h3>Sea Stars &amp; Pomorie Lye: Mineral Balneology &amp; Digital Preservation</h3>
@@ -119,7 +138,7 @@
             <a href="/blog/seastars/" class="card-link">Read Full Monograph &rarr;</a>
           </article>
 
-          <!-- Article: 512-Byte Web -->
+          <!-- Article 2: 512-Byte Web -->
           <article class="feature-card" data-searchable="512-byte web manifesto minimalism static html zero-js speed latency eco battery">
             <span class="card-meta">WEB PERFORMANCE</span>
             <h3>The 512-Byte Web Principle</h3>
@@ -127,7 +146,7 @@
             <a href="/blog/manifesto-512/" class="card-link">Read Essay &rarr;</a>
           </article>
 
-          <!-- Article: Regional Media Resilience -->
+          <!-- Article 3: Regional Media Resilience -->
           <article class="feature-card" data-searchable="regional media dobrichnews dobruja decentralization syndication privacy journalism">
             <span class="card-meta">MEDIA OPERATIONS</span>
             <h3>Decentralized Media Operations in Dobruja</h3>
@@ -135,7 +154,7 @@
             <a href="/blog/regional-media-resilience/" class="card-link">Read Analysis &rarr;</a>
           </article>
 
-          <!-- Article: Telecom Chronology -->
+          <!-- Article 4: Telecom Chronology -->
           <article class="feature-card" data-searchable="nmt-450 mobifons 1992 pagers mobika telecom heritage bulgaria analog">
             <span class="card-meta">TELECOM HERITAGE</span>
             <h3>From 1992 NMT-450 Mobifons to Clean Modern Standards</h3>
@@ -158,7 +177,8 @@
     </div>
   </main>
 
-  <footer>
+  <!-- Universal Master Footer -->
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
@@ -176,8 +196,8 @@
           <ul>
             <li><a href="/">Home</a></li>
             <li><a href="/about/">About Us &amp; History</a></li>
+            <li><a href="/about/governance/">Governance</a></li>
             <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/blog/">Insights &amp; Papers</a></li>
             <li><a href="/contact/">Direct Contact</a></li>
           </ul>
         </div>
@@ -203,7 +223,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
