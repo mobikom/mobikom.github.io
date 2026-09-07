@@ -1,10 +1,27 @@
+<!--
+  ==============================================================================
+  FILE: /about/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en)
+  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  STANDARDS: HTML5 Living Standard • Semantic Chronology • Zero Inline CSS
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
+  ==============================================================================
+  DESCRIPTION:
+  Official history, operational philosophy, and telecommunications lineage of
+  Mobikom Bulgaria. Contains anchor points for analog NMT-450 (#nmt-450),
+  pagers & Mobika cards (#pagers-mobika), and the 2011 founding (#ostatus-2011).
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobikom: About Us | Heritage &amp; Web Operations</title>
-  <meta name="description" content="Chronology of Mobikom: from Bulgaria's first 1992 NMT-450 cellular network and Mobika payphones to modern high-availability web operations.">
+  <title>About &amp; Telecom Heritage | Mobikom</title>
+  <meta name="description" content="History, operational philosophy, and telecommunications lineage of Mobikom: from 1992 analog NMT-450 networks to sustainable modern web operations.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -15,15 +32,44 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/">
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Mobikom: About Us | Heritage &amp; Web Operations">
-  <meta property="og:description" content="From Bulgaria's first cellular frontier to high-availability digital media operations.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="About Mobikom | Heritage &amp; Web Operations">
+  <meta property="og:description" content="From 1992 NMT-450 analog telecommunications to lightweight, zero-tracking digital media in Bulgaria.">
   <meta property="og:url" content="https://mobikom.bg/about/">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org Breadcrumbs & AboutPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://mobikom.bg/about/" }
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "name": "About Mobikom & Telecom Heritage",
+        "url": "https://mobikom.bg/about/",
+        "description": "Historical chronology and operational mission of the Mobikom digital media network.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mobikom",
+          "url": "https://mobikom.bg/"
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-  <header>
+  <!-- Universal Master Header -->
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
@@ -49,108 +95,97 @@
           <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
           <li><a href="/blog/" class="nav-link">Insights</a></li>
           <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/about/" class="lang-toggle">BG</a></li>
+          <li><a href="/bg/about/" class="lang-toggle" hreflang="bg">BG</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell">
+    <div class="shell-prose">
       
-      <!-- Monolithic Brand Hierarchy: H1 Starts with Mobikom -->
-      <section class="hero">
-        <span class="hero-tag">Technological Heritage &bull; Est. 1992</span>
-        <h1>Mobikom: About Us</h1>
-        <p class="hero-lead">From Bulgaria's First Cellular Frontier to High-Availability Web Operations.</p>
-        <p>
-          Pioneering wireless connectivity since 1992. Today, managing independent regional digital media, job advertising, and deterministic open web platforms.
-        </p>
-        <div class="hero-actions">
-          <a href="/about/governance/" class="nav-btn">Corporate Governance &rarr;</a>
-          <a href="/portfolio/" class="nav-link">Explore Network Ecosystem</a>
-        </div>
-      </section>
+      <!-- Pattern 2: Prose Engine -->
+      <article class="prose">
+        
+        <header>
+          <span class="hero-tag">Network Heritage &bull; Operations</span>
+          <h1>About Mobikom</h1>
+          <p class="hero-lead">Engineering lightweight digital media, civic journalism, and static web resilience in Bulgaria since 2011.</p>
+        </header>
 
-      <!-- Chronological Heritage Grid -->
-      <section>
-        <h2>The Historical Continuum</h2>
-        <div class="grid-cards">
+        <section>
+          <h2>1. Mission &amp; Infrastructure Philosophy</h2>
+          <p>
+            Mobikom operates as an independent technical and digital media network headquartered in Bulgaria. In an era dominated by bloated web frameworks, aggressive cross-site tracking, and centralized walled gardens, Mobikom implements a privacy-first, deterministic architecture: zero behavioral cookies, clean semantic HTML5, and low-power static delivery.
+          </p>
+          <p>
+            The network's primary directive is to ensure that regional news reporting, career discovery boards, and cultural archives remain accessible on any device, over any connection speed, with minimal energy consumption.
+          </p>
+        </section>
 
-          <article class="feature-card" id="nmt-450">
-            <span class="card-meta">1992 &bull; TELECOM PIONEERING</span>
-            <h3>The NMT-450 Mobifon Era</h3>
-            <p>In 1992, RTC Mobikom launched Bulgaria's first commercial wireless cellular network on the analog 450 MHz frequency. Operating rugged Benefon and Nokia mobile terminals, it established wireless telephony across Bulgarian trade routes, municipal centers, and maritime ports.</p>
-            <a href="/blog/nmt-450-retrospective/" class="card-link">Read Telecom History Paper &rarr;</a>
-          </article>
+        <!-- Chronology Anchor 1: NMT-450 -->
+        <section id="nmt-450">
+          <h2>2. Analog Cellular Beginnings (1992)</h2>
+          <p>
+            The technological lineage of the Mobikom name in Bulgaria traces back to 1992 with the rollout of the nation’s first commercial cellular network using Nordic Mobile Telephone (NMT-450) standards. Operating at 450 MHz, these analog "Mobifons" delivered long-range wireless connectivity across Bulgaria’s complex mountainous terrain.
+          </p>
+          <p>
+            While analog modulation eventually gave way to modern digital standards, the core engineering principle established during that era—maximizing signal efficiency and geographic reach under strict hardware constraints—remains central to our current web operations.
+          </p>
+        </section>
 
-          <article class="feature-card" id="pagers-mobika">
-            <span class="card-meta">1995 &bull; PUBLIC INFRASTRUCTURE</span>
-            <h3>Paging Networks &amp; Mobika Cards</h3>
-            <p>During the mid-1990s, Mobikom expanded into nationwide alphanumeric paging (beepers) and card-operated public payphones branded as Mobika. Chip-card phone booths became the ubiquitous national communications backbone prior to the mass adoption of GSM.</p>
-            <a href="/about/governance/" class="card-link">Governance Framework &rarr;</a>
-          </article>
+        <!-- Chronology Anchor 2: Pagers & Mobika -->
+        <section id="pagers-mobika">
+          <h2>3. Pagers &amp; Mobika Card Payphones</h2>
+          <p>
+            Throughout the mid-to-late 1990s, the national infrastructure expanded into widespread radio paging networks (beepers) and the iconic "Mobika" chip-card payphone terminals installed across Bulgarian municipalities. These systems established the foundational public expectation for reliable, distributed everyday communications.
+          </p>
+          <p>
+            Today, Mobikom preserves this communications heritage not as nostalgia, but as an architectural benchmark: public communications must remain durable, lightweight, and operable without unnecessary barriers to entry.
+          </p>
+        </section>
 
-          <article class="feature-card" id="ostatus-2011">
-            <span class="card-meta">2011 &bull; DIGITAL MEDIA FOUNDATION</span>
-            <h3>Dobruja Media Group Foundation</h3>
-            <p>Under executive stewardship, 2011 marked the strategic pivot toward independent digital publishing with the launch of Dobruja Media Group. Starting with regional nodes like news.dobruja.com, the network evolved into full municipal coverage via dobrichnews.com and recruitment syndication on bestjobs.bg.</p>
-            <a href="/blog/dobruja-media-group/" class="card-link">Read Media Chronology &rarr;</a>
-          </article>
+        <!-- Chronology Anchor 3: 2011 Founding -->
+        <section id="ostatus-2011">
+          <h2>4. 2011 Operations Founding &amp; The Static Web</h2>
+          <p>
+            In 2011, Mobikom was reconstituted into an independent digital media operations desk. Departing from heavy commercial CMS stacks, the network adopted the principles of open syndication (RSS/Atom), decentralized protocols (OStatus), and the <strong>512-Byte Web Principle</strong>.
+          </p>
+          <p>
+            Today, the network actively directs key Bulgarian digital properties:
+          </p>
+          <ul>
+            <li><strong><a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>:</strong> Real-time verified regional journalism serving Dobrich and North-East Bulgaria.</li>
+            <li><strong><a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>:</strong> Cultural preservation, agricultural records, and community history of the Dobruja region.</li>
+            <li><strong><a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>:</strong> High-efficiency online employment discovery and direct career postings.</li>
+            <li><strong>Digital Archives &amp; Monographs:</strong> Independent research platforms including the Black Sea mineral chemistry and Pomorie lye initiative.</li>
+          </ul>
+        </section>
 
-          <article class="feature-card" id="manifesto-512">
-            <span class="card-meta">MODERN ERA &bull; DETERMINISTIC WEB</span>
-            <h3>High-Availability Static Operations</h3>
-            <p>Rejecting bloatware, invasive tracking cookies, and fragile databases, Mobikom's digital infrastructure adopted a strict static architecture. Built with clean CSS, semantic HTML5, and distributed edge delivery, our platforms achieve sub-10ms delivery and deterministic security.</p>
-            <a href="/blog/manifesto-512/" class="card-link">Read 512-Byte Manifesto &rarr;</a>
-          </article>
+        <!-- Conversion Banner -->
+        <section class="conversion-banner">
+          <div>
+            <h3>Governance &amp; Executive Leadership</h3>
+            <p>Review our editorial independence charters, media transparency disclosures, and executive desk.</p>
+          </div>
+          <a href="/about/governance/" class="nav-btn">Institutional Governance &rarr;</a>
+        </section>
 
-        </div>
-      </section>
-
-      <!-- Operational Principles -->
-      <section style="margin-top: 3rem;">
-        <h2>Core Operational Principles</h2>
-        <div class="grid-cards">
-          
-          <article class="feature-card">
-            <span class="card-meta">SOVEREIGNTY</span>
-            <h3>Editorial Firewall</h3>
-            <p>News reporting on dobrichnews.com and cultural journalism on dobruja.com remain strictly separated from commercial advertising. Public interest and factual accuracy supersede corporate sponsor agendas.</p>
-            <a href="https://www.dobrichnews.com" class="card-link" rel="noopener noreferrer" target="_blank">Access dobrichnews.com &rarr;</a>
-          </article>
-
-          <article class="feature-card">
-            <span class="card-meta">INTEGRITY</span>
-            <h3>Privacy by Design</h3>
-            <p>We do not profile users, track IP addresses, or deploy third-party analytics pixels. Respecting visitor autonomy is enforced through code architecture rather than invasive cookie banners.</p>
-            <a href="/privacy/" class="card-link">Inspect Privacy Standard &rarr;</a>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- Conversion Banner -->
-      <section class="conversion-banner">
-        <div>
-          <h3>Archival or Strategic Inquiry?</h3>
-          <p>For research queries regarding Bulgarian telecommunications history, media syndication, or operational partnership, connect directly with our desk.</p>
-        </div>
-        <a href="/contact/" class="nav-btn">Contact Operations Desk</a>
-      </section>
+      </article>
 
     </div>
   </main>
 
-  <footer>
+  <!-- Universal Master Footer -->
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
             <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
           </ul>
         </div>
@@ -159,10 +194,9 @@
           <h4>Governance &amp; Desk</h4>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/about/" aria-current="page">About Us &amp; History</a></li>
+            <li><a href="/about/">About Us &amp; History</a></li>
             <li><a href="/about/governance/">Governance</a></li>
             <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/blog/">Insights &amp; Papers</a></li>
             <li><a href="/contact/">Direct Contact</a></li>
           </ul>
         </div>
@@ -173,7 +207,7 @@
             <li><a href="/about/#nmt-450">NMT-450 Mobifons (1992)</a></li>
             <li><a href="/about/#pagers-mobika">Pagers &amp; Mobika Cards</a></li>
             <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
-            <li><a href="/blog/#manifesto-512">512-Byte Web Principle</a></li>
+            <li><a href="/blog/manifesto-512/">512-Byte Web Principle</a></li>
           </ul>
         </div>
 
@@ -189,7 +223,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
