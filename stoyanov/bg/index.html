@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Стоян Стоянов, Компетенции, Образование, Опит, Научни интереси</title>
-  <meta name="description" content="Автобиография (CV) на Стоян Стоянов: Компетенции, Стопанско управление, Туристически мениджмънт, Образование, Езици и Научни интереси.">
+  <title>Стоян Стоянов — Автобиография (CV)</title>
+  <meta name="description" content="Автобиография на Стоян Стоянов: Стопанско управление, Туристически мениджмънт, Образование и Научни интереси.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -14,38 +14,194 @@
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/stoyanov/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/stoyanov/">
 
-  <meta property="og:title" content="Стоян Стоянов — Компетенции, Образование, Опит">
-  <meta property="og:description" content="Автобиография на Стоян Стоянов. Стопанско управление, Туристически мениджмънт, Обучение и Научни изследвания.">
-  <meta property="og:url" content="https://mobikom.bg/stoyanov/bg/">
-  <meta property="og:type" content="profile">
-  <meta property="og:image" content="https://mobikom.bg/s.stoyanov.jpg">
+  <style>
+    .cv-sheet {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+      max-width: 820px;
+      margin-inline: auto;
+    }
 
-  <!-- Schema.org Person -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Стоян Стоянов",
-    "url": "https://mobikom.bg/stoyanov/bg/",
-    "image": "https://mobikom.bg/s.stoyanov.jpg",
-    "email": "stoyanov@mobikom.bg",
-    "jobTitle": "Управител",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Мобиком България",
-      "url": "https://mobikom.bg/bg/"
-    },
-    "alumniOf": [
-      { "@type": "CollegeOrUniversity", "name": "Стопанска академия „Д. А. Ценов“", "url": "https://uni-svishtov.bg" },
-      { "@type": "CollegeOrUniversity", "name": "Висше училище по мениджмънт", "url": "https://vum.bg" },
-      { "@type": "EducationalOrganization", "name": "Lycée Hôtelier de Nice", "url": "https://lycee-hotelier-nice.fr" }
-    ]
-  }
-  </script>
+    .cv-header {
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .cv-header h1 {
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 0.2rem;
+      color: var(--text);
+    }
+
+    .cv-meta-line {
+      font-size: 0.9rem;
+      color: var(--muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 0.85rem;
+    }
+
+    .cv-section {
+      margin-top: 0.85rem;
+    }
+
+    .cv-section h2 {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.15rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .cv-item {
+      margin-bottom: 0.45rem;
+    }
+
+    .cv-item-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .cv-item-sub {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .cv-list {
+      list-style: square;
+      margin-left: 1.15rem;
+      color: var(--muted);
+      font-size: 0.88rem;
+    }
+
+    .cv-list li {
+      margin-bottom: 0.15rem;
+    }
+
+    .cv-compact-p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.45;
+      margin-bottom: 0.2rem;
+    }
+
+    .action-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    /* Print Engine: Zero !important */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm 12mm;
+      }
+
+      header, footer, .no-print, .action-row, .nav-toggle, .nav-toggle-label {
+        display: none;
+      }
+
+      html, body {
+        background: #ffffff;
+        color: #000000;
+        font-size: 9.3pt;
+        line-height: 1.32;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+      }
+
+      main {
+        padding: 0;
+      }
+
+      .shell, .cv-sheet {
+        max-width: 100%;
+        border: none;
+        padding: 0;
+        margin: 0;
+        background: transparent;
+      }
+
+      .cv-header {
+        border-bottom: 1.5pt solid #000000;
+        padding-bottom: 4pt;
+        margin-bottom: 6pt;
+      }
+
+      .cv-header h1 {
+        font-size: 15pt;
+        color: #000000;
+        margin-bottom: 2pt;
+      }
+
+      .cv-meta-line {
+        font-size: 8.5pt;
+        color: #222222;
+      }
+
+      .cv-section {
+        margin-top: 6pt;
+        break-inside: avoid;
+      }
+
+      .cv-section h2 {
+        font-size: 8.5pt;
+        color: #000000;
+        border-bottom: 0.75pt solid #444444;
+        padding-bottom: 1pt;
+        margin-bottom: 3pt;
+      }
+
+      .cv-item-title {
+        font-size: 9pt;
+        color: #000000;
+      }
+
+      .cv-item-sub, .cv-compact-p, .cv-list {
+        font-size: 8.5pt;
+        color: #111111;
+      }
+
+      .cv-list {
+        margin-left: 12pt;
+      }
+
+      .cv-list li {
+        margin-bottom: 1.5pt;
+      }
+
+      a {
+        color: #000000;
+        text-decoration: none;
+      }
+
+      a[href^="http"]::after {
+        content: "";
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <header>
+  <header class="no-print">
     <div class="shell nav-bar">
       <a href="/bg/" class="brand-link" title="Мобиком България">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
@@ -67,118 +223,112 @@
           <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
           <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
           <li><a href="/bg/blog/" class="nav-link">Анализи</a></li>
-          <li><a href="/stoyanov/" class="lang-toggle" hreflang="en">ENGLISH EN</a></li>
+          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
+          <li><a href="/stoyanov/" class="lang-toggle" hreflang="en">EN</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell shell-narrow">
-      
-      <!-- Горен панел с действия -->
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.75rem;">
+    <div class="shell">
+
+      <div class="action-row no-print">
         <div>
-          <span style="font-size: 0.85rem; color: var(--muted);">Връзка чрез служебен имейл:</span>
-          <strong style="color: var(--text);"> stoyanov at mobikom.bg</strong> | България
+          Контакт: <strong>stoyanov@mobikom.bg</strong> | България
         </div>
-        <div>
-          <button type="button" onclick="window.print()" class="lang-toggle" style="cursor: pointer; background: var(--bg-alt);">ПЕЧАТ / ЗАПАЗИ КАТО PDF</button>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button type="button" onclick="window.print()" class="nav-btn" style="cursor: pointer; border: none; font-size: 0.85rem; padding: 0.4rem 0.85rem;">
+            Печат / Запис PDF
+          </button>
+          <a href="/stoyanov/" class="lang-toggle">English (EN)</a>
         </div>
       </div>
 
-      <article style="border: 1px solid var(--border); background: var(--bg-alt); border-radius: var(--radius); padding: 1.75rem;">
-        
-        <!-- Заглавие и Снимка -->
-        <header style="border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 1.5rem;">
-          <h1 style="font-size: clamp(1.8rem, 3.5vw, 2.4rem); margin-bottom: 0.35rem;">Стоян Стоянов</h1>
-          <p class="hero-lead" style="margin-bottom: 1rem;">Компетенции, Образование, Опит, Научни интереси</p>
+      <article class="cv-sheet">
 
-          <figure style="margin: 1rem 0 0 0; max-width: 420px;">
-            <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
-            <figcaption style="font-size: 0.82rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.4;">
-              Снимка: Преп. В. Върбанова, Заслужил главен редактор. Официално посещение на улицата на нобелистите в Совето, Южна Африка. Домът на Мандела и Бутрос-Гали.
-            </figcaption>
-          </figure>
+        <header class="cv-header">
+          <h1>Стоян Стоянов</h1>
+          <div class="cv-meta-line">
+            <span>Местоположение: България</span>
+            <span>&bull;</span>
+            <span>Имейл: stoyanov@mobikom.bg</span>
+            <span>&bull;</span>
+            <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
+          </div>
         </header>
 
-        <!-- Компетенции -->
-        <section style="margin-bottom: 1.75rem;">
-          <h2 style="font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">Компетенции</h2>
-          <p style="margin-top: 0.6rem; line-height: 1.6;">
-            Микроикономика; Макроикономика; Маркетинг и мениджмънт; Маркетинг и мениджмънт в туризма и хотелиерството; Хотелиерски и ресторантьорски мениджмънт; Управление на човешките ресурси; Управленска и консултантска дейност; Организиране на семинари, обучение на студенти; Международен бизнес и мениджмънт, дейности по интелектуална собственост.
+        <section class="cv-section">
+          <h2>Компетенции</h2>
+          <p class="cv-compact-p">
+            Микроикономика; Макроикономика; Маркетинг и мениджмънт; Маркетинг и мениджмънт в хотелиерството и туризма; Хотелско и Ресторантьорско управление; Управление на Човешките Ресурси; Управленски дейности; Организиране на семинари, обучение на студенти; Международен бизнес и мениджмънт; Интелектуална Собственост.
           </p>
-          <p style="margin-top: 0.5rem; font-weight: 600; color: var(--text);">
-            Докторантура (PhD), прекъсната поради заболяване с трайни увреждания.
-          </p>
-        </section>
-
-        <!-- Образование и направления на обучението -->
-        <section style="margin-bottom: 1.75rem;">
-          <h2 style="font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">Образование и направления на обучението</h2>
-          <ul style="margin-left: 1.25rem; margin-top: 0.6rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.4rem;">
-            <li>Магистър по стопанско управление (MBM) от <a href="https://uni-svishtov.bg" rel="noopener" target="_blank">uni-svishtov.bg</a>.</li>
-            <li>Бакалавър по стопанско управление (BBM) от <a href="https://uni-svishtov.bg" rel="noopener" target="_blank">uni-svishtov.bg</a>.</li>
-            <li>Сертификат по туризъм BTS (MHR) от <a href="https://lycee-hotelier-nice.fr/bts-mhr-hôtellerie-restauration" rel="noopener" target="_blank">lycee-hotelier-nice.fr/bts-mhr-hôtellerie-restauration</a>.</li>
-            <li>Бакалавър по международен туризъм и хотелиерство BA (Hons) от <a href="https://vum.bg/hotel-management" rel="noopener" target="_blank">vum.bg/hotel-management</a>.</li>
-            <li>Сертификат за френски език и култура (DUEF) C1 от <a href="https://vum.bg" rel="noopener" target="_blank">vum.bg</a>.</li>
-            <li>Диплома за готвач и сервитьор-барман от <a href="https://intermenu.org" rel="noopener" target="_blank">intermenu.org</a>.</li>
-            <li>Свидетелство за управление на МПС: Професионална категория C от <a href="https://mvr.bg" rel="noopener" target="_blank">mvr.bg</a>.</li>
-            <li>Електротехник от Професионална гимназия „М. В. Ломоносов“ <a href="https://pglomonosov.org" rel="noopener" target="_blank">pglomonosov.org</a>.</li>
-          </ul>
-        </section>
-
-        <!-- Опит в обучения и работна практика -->
-        <section style="margin-bottom: 1.75rem;">
-          <h2 style="font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">Опит в обучения и работна практика</h2>
-          <p style="margin-top: 0.6rem; font-weight: 600; color: var(--text);">Успешна професионална кариера в:</p>
-          <ul style="margin-left: 1.25rem; margin-top: 0.35rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.4rem;">
-            <li><strong>Стопанско управление:</strong> 13 години като Управител на <a href="/bg/about/">mobikom.bg/about</a>.</li>
-            <li><strong>Туристически мениджмънт:</strong> 10 години като Ръководител в <a href="https://albena.bg" rel="noopener" target="_blank">albena.bg</a>.</li>
-          </ul>
-        </section>
-
-        <!-- Научни интереси -->
-        <section style="margin-bottom: 1.75rem;">
-          <h2 style="font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">Научни интереси</h2>
-          <p style="margin-top: 0.6rem;">
-            Бизнес, Мениджмънт, Право, Маркетинг, Математика, Компютърни науки, Физика, Биология, Химия, Медицина, Езици.
+          <p class="cv-compact-p" style="font-weight: 600; color: var(--text);">
+            Докторатура (PhD), прекратен по здравословни причини с ТЕЛК.
           </p>
         </section>
 
-        <!-- Езици -->
-        <section style="margin-bottom: 1.75rem;">
-          <h2 style="font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">Езици</h2>
-          <p style="margin-top: 0.6rem;">
-            Роден език: <strong>български</strong>, роден/майчин: <strong>френски</strong>, свободно владеене: <strong>руски</strong>, напреднало: <strong>английски</strong>, работно/компетентно: <strong>немски</strong>.
+        <section class="cv-section">
+          <h2>Опит</h2>
+          <div class="cv-item">
+            <div class="cv-item-title">
+              <span>Бизнес Администрация</span>
+              <span>15+ Години</span>
+            </div>
+            <!-- Вътрешна връзка: SEO сокът остава в мрежата -->
+            <div class="cv-item-sub">Генерален Мениджър &bull; <a href="/bg/about/">mobikom.bg/about</a></div>
+          </div>
+          <div class="cv-item">
+            <div class="cv-item-title">
+              <span>Туризъм</span>
+              <span>10 Години</span>
+            </div>
+            <!-- Външен домейн: Чист текст (без изтичане на PageRank) -->
+            <div class="cv-item-sub">Мениджър &bull; albena.bg</div>
+          </div>
+        </section>
+
+        <section class="cv-section">
+          <h2>Образование и специалности</h2>
+          <ul class="cv-list">
+            <li>Обучение и специалност в Медицински университет.</li>
+            <li>Магистър по Стопанско управление (MBM) от uni-svishtov.bg.</li>
+            <li>Бакалавър по Стопанско управление (BBM) от uni-svishtov.bg.</li>
+            <li>Сертификат по Туризъм BTS (MHR) от lycee-hotelier-nice.fr.</li>
+            <li>Бакалавър по Туризъм BA (Hons) от vum.bg.</li>
+            <li>Сертификат по Френски език и култура (DUEF) C1 от vum.bg.</li>
+            <li>Диплома за Готвач, Сервитьор-Барман от intermenu.org.</li>
+            <li>Шофьорска книжка за товарни автомобили, категория C от mvr.bg.</li>
+            <li>Електротехник от Средно образование "М.В. Ломоносов" pglomonosov.org.</li>
+          </ul>
+        </section>
+
+        <section class="cv-section">
+          <h2>Научни интереси, Умения и Езици</h2>
+          <p class="cv-compact-p">
+            <strong>Научни интереси:</strong> Бизнес, мениджмънт, маркетинг, право, математика, компютърни науки, физика, биология, химия, медицина, езици.
+          </p>
+          <p class="cv-compact-p">
+            <strong>Умения и способности:</strong> Журналистика, Публицистика, PR и Реклама; Изследователски и комуникационни; Кулинария, коктейли и енология; Бизнес: управление на клъстери, счетоводство, бюджетиране и стратегическо планиране;.
+          </p>
+          <p class="cv-compact-p">
+            <strong>Езици:</strong> Роден език: български, роден: френски, свободно владеене: руски, напреднало: английски, работно/компетентно: немски.
           </p>
         </section>
 
-        <!-- Умения и способности -->
-        <section style="margin-bottom: 1.75rem;">
-          <h2 style="font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">Умения и способности</h2>
-          <ul style="margin-left: 1.25rem; margin-top: 0.6rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.4rem;">
-            <li>Журналистика, публицистика, PR и реклама;</li>
-            <li>Научноизследователска дейност и комуникация;</li>
-            <li>Кулинария, коктейли и енология;</li>
-            <li>Бизнес: клъстерен мениджмънт, счетоводство, бюджетиране и стратегическо планиране.</li>
+        <section class="cv-section">
+          <h2>Препоръки</h2>
+          <ul class="cv-list">
+            <li>C. Guillot, Собственик на хотел във Франция lecureuil.com LT1 Tourism.BTS;</li>
+            <li>Доц. д-р Х. Сирашки, Координатор на курс в СА "Д. А. Ценов" uni-svishtov.bg България LT2 MBM;</li>
+            <!-- dobruja.com е 1 от Вашите 4 домейна: Активният линк е запазен -->
+            <li>Ст. пр. В. Върбанова, Почетен Главен редактор на Медийна група "Добруджа" в <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a> LT3 EIC.</li>
           </ul>
         </section>
 
-        <!-- Препоръки -->
-        <section style="margin-bottom: 1.5rem;">
-          <h2 style="font-size: 1.25rem; border-bottom: 1px solid var(--border); padding-bottom: 0.3rem;">Препоръки</h2>
-          <ul style="margin-left: 1.25rem; margin-top: 0.6rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.4rem;">
-            <li><strong>К. Гийо (C. Guillot)</strong>, Собственик на хотел във Франция <a href="https://lecureuil.com" rel="noopener" target="_blank">lecureuil.com</a> LT1 Tourism. BTS;</li>
-            <li><strong>Доц. д-р Х. Сирашки (Assoc. Prof. H. Sirashki PhD)</strong>, Координатор на програми в СА „Д. А. Ценов“ <a href="https://uni-svishtov.bg" rel="noopener" target="_blank">uni-svishtov.bg</a> България LT2 MBM;</li>
-            <li><strong>Преп. В. Върбанова (V. Varbanova Prep.)</strong>, Заслужил главен редактор на Медийна група „Добруджа“ в <a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a> LT3 EIC.</li>
-          </ul>
-        </section>
-
-        <!-- Бележка на автобиографията -->
-        <footer style="border-top: 1px solid var(--border); padding-top: 1rem; margin-top: 2rem; font-size: 0.8rem; color: var(--muted);">
-          <p>Стоян Стоянов &copy; 2026 съдържание, Шаблон за автобиография (CV) от <a href="https://bestjobs.bg/kariera" rel="noopener" target="_blank">bestjobs.bg/kariera</a>.</p>
-          <p style="margin-top: 0.25rem;">Последна актуализация на страницата: 7 септември 2026 г.</p>
+        <footer style="margin-top: 0.75rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted);">
+          <!-- bestjobs.bg е 1 от Вашите 4 домейна: Активният линк е запазен -->
+          <p>Стоян Стоянов &copy; 2026 съдържание &bull; Шаблон за автобиография (CV) от <a href="https://bestjobs.bg/kariera" target="_blank" rel="noopener">bestjobs.bg/kariera</a>.</p>
         </footer>
 
       </article>
@@ -186,7 +336,7 @@
     </div>
   </main>
 
-  <footer>
+  <footer class="no-print">
     <div class="shell">
       <div class="footer-bottom" style="border-top: none; padding-top: 0;">
         <p>&copy; 2026 mobikom.bg &bull; Портал без бисквитки и проследяване.</p>
