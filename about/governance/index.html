@@ -15,39 +15,11 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/governance/">
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Mobikom Governance &amp; Leadership">
   <meta property="og:description" content="Operational governance, editorial independence, and executive leadership of Mobikom Bulgaria.">
   <meta property="og:url" content="https://mobikom.bg/about/governance/">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
-
-  <!-- Schema.org Graph -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
-          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://mobikom.bg/about/" },
-          { "@type": "ListItem", "position": 3, "name": "Governance", "item": "https://mobikom.bg/about/governance/" }
-        ]
-      },
-      {
-        "@type": "AboutPage",
-        "name": "Institutional Governance & Executive Leadership",
-        "url": "https://mobikom.bg/about/governance/",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mobikom",
-          "url": "https://mobikom.bg/"
-        }
-      }
-    ]
-  }
-  </script>
+  <meta property="og:image" content="https://mobikom.bg/s.stoyanov.jpg">
 </head>
 <body>
 
@@ -90,19 +62,27 @@
           <p class="hero-lead">Standards of editorial independence, data minimalism, and operational leadership across the Mobikom network.</p>
         </header>
 
-        <!-- Executive Leadership & 10-Line Bio -->
+        <!-- Executive Leadership Section with Photo & Photo Credit -->
         <section style="margin-bottom: 2.5rem; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem;">
           <span class="card-meta">EXECUTIVE MANAGEMENT</span>
           <h2 style="margin-top: 0.25rem;">Stoyan Stoyanov</h2>
-          <p style="font-weight: 600; color: var(--text); margin-bottom: 0.75rem;">Founder &amp; Network Operations Manager, Mobikom Bulgaria</p>
+          <p style="font-weight: 600; color: var(--text); margin-bottom: 1rem;">Founder &amp; General Manager, Mobikom Bulgaria</p>
+
+          <!-- Photo with official credit -->
+          <figure style="margin: 0 0 1.25rem 0; max-width: 400px;">
+            <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" style="width: 100%; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
+            <figcaption style="font-size: 0.8rem; color: var(--muted); margin-top: 0.45rem; line-height: 1.4;">
+              Photo: V. Varbanova Prep., Honored Editor-in-Chief. Official Visit to the street of the Nobelists in Soweto, South Africa. The home of Mandela and Boutros-Ghali.
+            </figcaption>
+          </figure>
           
           <!-- 10-line concise Executive Bio -->
-          <div style="line-height: 1.6; color: var(--muted); font-size: 0.98rem; display: flex; flex-direction: column; gap: 0.6rem;">
-            <p>Directing high-availability regional media distribution (dobrichnews.com, dobruja.com), career infrastructure (bestjobs.bg), and digital catalog archives since 2011.</p>
-            <p>Educational background in Business Administration and Economics (D. A. Tsenov Academy of Economics, Svishtov) and International Hospitality Management (Lycée Hôtelier de Nice, VUM).</p>
-            <p>Over a decade of executive management within Bulgarian hospitality (Albena AD) followed by 13 years managing Mobikom's decentralized digital assets.</p>
+          <div style="line-height: 1.6; color: var(--muted); font-size: 0.95rem; display: flex; flex-direction: column; gap: 0.6rem;">
+            <p>Directing high-availability regional media distribution (<a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>, <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>), career infrastructure (<a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>), and digital catalog archives since 2011.</p>
+            <p>Educational background in Business Administration and Economics (D. A. Tsenov Academy of Economics) and International Hospitality Management (Lycée Hôtelier de Nice, VUM), with continuing academic studies at Medical University.</p>
+            <p>Over a decade of executive management within Bulgarian hospitality (Albena) followed by 15+ years managing Mobikom's decentralized digital assets.</p>
             <p>Overseeing technical operations, zero-tracking web architecture, and regional news syndication across North-East Bulgaria.</p>
-            <p>Ongoing academic pursuits span law, economics, computer science, and life sciences.</p>
+            <p>Ongoing academic pursuits span law, economics, computer science, medicine, and life sciences.</p>
           </div>
 
           <!-- Link to the full living CV -->
@@ -119,7 +99,7 @@
             In accordance with Bulgarian media transparency regulations, Mobikom maintains strict legal and operational separation between technical infrastructure management, advertising syndication, and editorial newsrooms.
           </p>
           <p style="margin-bottom: 1rem;">
-            Reporting published on <strong>dobrichnews.com</strong> and <strong>dobruja.com</strong> operates under independent editorial charters, prioritizing local civic accountability, verified public interest matters, and regional cultural preservation.
+            Reporting published on <a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a> and <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a> operates under independent editorial charters, prioritizing local civic accountability, verified public interest matters, and regional cultural preservation.
           </p>
         </section>
 
@@ -132,11 +112,10 @@
           <ul style="margin-left: 1.25rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.4rem;">
             <li>No third-party behavioral profiling, tracking pixels, or cross-site tracking scripts.</li>
             <li>Deterministic static content delivery ensuring equal access regardless of device capability.</li>
-            <li>Full compliance with GDPR (EU Regulation 2016/679) by architectural design, eliminating the need for intrusive consent banners.</li>
+            <li>Full compliance with GDPR (EU Regulation 2016/679) by architectural design, eliminating intrusive consent banners.</li>
           </ul>
         </section>
 
-        <!-- Operations Desk Contact -->
         <section class="conversion-banner" style="margin-top: 2.5rem;">
           <div>
             <h3>Official Communications &amp; Legal Notices</h3>
