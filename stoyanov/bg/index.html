@@ -19,7 +19,7 @@
       background: var(--bg);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 2rem;
+      padding: 1.75rem 2rem;
       max-width: 820px;
       margin-inline: auto;
     }
@@ -27,7 +27,11 @@
     .cv-header {
       border-bottom: 2px solid var(--primary);
       padding-bottom: 0.5rem;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
     }
 
     .cv-header h1 {
@@ -36,6 +40,16 @@
       letter-spacing: -0.01em;
       margin-bottom: 0.2rem;
       color: var(--text);
+    }
+
+    .cv-thumb {
+      width: 65px;
+      height: 78px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+      display: block;
     }
 
     .cv-meta-line {
@@ -47,7 +61,7 @@
     }
 
     .cv-section {
-      margin-top: 0.85rem;
+      margin-top: 0.75rem;
     }
 
     .cv-section h2 {
@@ -58,11 +72,11 @@
       color: var(--primary);
       border-bottom: 1px solid var(--border);
       padding-bottom: 0.15rem;
-      margin-bottom: 0.35rem;
+      margin-bottom: 0.3rem;
     }
 
     .cv-item {
-      margin-bottom: 0.45rem;
+      margin-bottom: 0.4rem;
     }
 
     .cv-item-title {
@@ -88,13 +102,13 @@
     }
 
     .cv-list li {
-      margin-bottom: 0.15rem;
+      margin-bottom: 0.12rem;
     }
 
     .cv-compact-p {
       font-size: 0.88rem;
       color: var(--muted);
-      line-height: 1.45;
+      line-height: 1.4;
       margin-bottom: 0.2rem;
     }
 
@@ -107,7 +121,7 @@
       gap: 0.75rem;
     }
 
-    /* Print Engine: Zero !important */
+    /* Print Engine: Strictly 1 A4 Page, Zero !important */
     @media print {
       @page {
         size: A4 portrait;
@@ -121,8 +135,8 @@
       html, body {
         background: #ffffff;
         color: #000000;
-        font-size: 9.3pt;
-        line-height: 1.32;
+        font-size: 9.2pt;
+        line-height: 1.3;
         padding: 0;
         margin: 0;
         overflow: visible;
@@ -143,7 +157,7 @@
       .cv-header {
         border-bottom: 1.5pt solid #000000;
         padding-bottom: 4pt;
-        margin-bottom: 6pt;
+        margin-bottom: 5pt;
       }
 
       .cv-header h1 {
@@ -152,13 +166,19 @@
         margin-bottom: 2pt;
       }
 
+      .cv-thumb {
+        width: 55px;
+        height: 66px;
+        border: 1pt solid #444444;
+      }
+
       .cv-meta-line {
         font-size: 8.5pt;
         color: #222222;
       }
 
       .cv-section {
-        margin-top: 6pt;
+        margin-top: 5pt;
         break-inside: avoid;
       }
 
@@ -167,25 +187,25 @@
         color: #000000;
         border-bottom: 0.75pt solid #444444;
         padding-bottom: 1pt;
-        margin-bottom: 3pt;
+        margin-bottom: 2.5pt;
       }
 
       .cv-item-title {
-        font-size: 9pt;
+        font-size: 8.8pt;
         color: #000000;
       }
 
       .cv-item-sub, .cv-compact-p, .cv-list {
-        font-size: 8.5pt;
+        font-size: 8.3pt;
         color: #111111;
       }
 
       .cv-list {
-        margin-left: 12pt;
+        margin-left: 11pt;
       }
 
       .cv-list li {
-        margin-bottom: 1.5pt;
+        margin-bottom: 1.2pt;
       }
 
       a {
@@ -247,15 +267,19 @@
 
       <article class="cv-sheet">
 
+        <!-- Header: Side-by-side Name and Small Photo without credit -->
         <header class="cv-header">
-          <h1>Стоян Стоянов</h1>
-          <div class="cv-meta-line">
-            <span>Местоположение: България</span>
-            <span>&bull;</span>
-            <span>Имейл: stoyanov@mobikom.bg</span>
-            <span>&bull;</span>
-            <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
+          <div>
+            <h1>Стоян Стоянов</h1>
+            <div class="cv-meta-line">
+              <span>Местоположение: България</span>
+              <span>&bull;</span>
+              <span>Имейл: stoyanov@mobikom.bg</span>
+              <span>&bull;</span>
+              <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
+            </div>
           </div>
+          <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" class="cv-thumb" onerror="this.style.display='none'">
         </header>
 
         <section class="cv-section">
@@ -326,7 +350,7 @@
           </ul>
         </section>
 
-        <footer style="margin-top: 0.75rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted);">
+        <footer style="margin-top: 0.65rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted);">
           <!-- bestjobs.bg е 1 от Вашите 4 домейна: Активният линк е запазен -->
           <p>Стоян Стоянов &copy; 2026 съдържание &bull; Шаблон за автобиография (CV) от <a href="https://bestjobs.bg/kariera" target="_blank" rel="noopener">bestjobs.bg/kariera</a>.</p>
         </footer>
