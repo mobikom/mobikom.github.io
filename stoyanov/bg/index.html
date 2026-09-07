@@ -24,15 +24,24 @@
       margin-inline: auto;
     }
 
-    /* Pinned flush to the top so text pulls up */
     .cv-header {
       border-bottom: 2px solid var(--primary);
       padding-bottom: 0.5rem;
-      margin-bottom: 0.7rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 1.25rem;
+      margin-bottom: 0.75rem;
+      min-height: 95px;
+    }
+
+    .cv-thumb-right {
+      float: right;
+      width: 75px;
+      min-width: 75px;
+      max-width: 75px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      margin: 0 0 0.5rem 1rem;
+      display: block;
     }
 
     .cv-header h1 {
@@ -42,20 +51,6 @@
       margin: 0 0 0.25rem 0;
       line-height: 1.15;
       color: var(--text);
-    }
-
-    .cv-thumb {
-      width: 75px;
-      min-width: 75px;
-      max-width: 75px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      display: block;
-      margin: 0;
-      flex-shrink: 0;
-      align-self: flex-start;
     }
 
     .cv-meta-line {
@@ -69,6 +64,7 @@
 
     .cv-section {
       margin-top: 0.75rem;
+      clear: both;
     }
 
     .cv-section h2 {
@@ -128,7 +124,7 @@
       gap: 0.75rem;
     }
 
-    /* Print Engine: Strictly 1 A4 Page, Zero !important */
+    /* Print Engine: Zero !important */
     @media print {
       @page {
         size: A4 portrait;
@@ -165,7 +161,15 @@
         border-bottom: 1.5pt solid #000000;
         padding-bottom: 4pt;
         margin-bottom: 5pt;
-        align-items: flex-start;
+        min-height: 75px;
+      }
+
+      .cv-thumb-right {
+        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
+        height: 72px;
+        border: 1pt solid #444444;
       }
 
       .cv-header h1 {
@@ -173,14 +177,6 @@
         color: #000000;
         margin-bottom: 2pt;
         line-height: 1.15;
-      }
-
-      .cv-thumb {
-        width: 60px;
-        min-width: 60px;
-        max-width: 60px;
-        height: 72px;
-        border: 1pt solid #444444;
       }
 
       .cv-meta-line {
@@ -278,19 +274,17 @@
 
       <article class="cv-sheet">
 
-        <!-- Top-pinned Header: Photo on right, text aligned flush to top -->
+        <!-- Photo placed first with float:right so it is locked in top-right corner -->
         <header class="cv-header">
-          <div style="flex: 1;">
-            <h1>Стоян Стоянов</h1>
-            <div class="cv-meta-line">
-              <span>Местоположение: България</span>
-              <span>&bull;</span>
-              <span>Имейл: stoyanov@mobikom.bg</span>
-              <span>&bull;</span>
-              <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
-            </div>
+          <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="75" height="90" class="cv-thumb-right" onerror="this.style.display='none'">
+          <h1>Стоян Стоянов</h1>
+          <div class="cv-meta-line">
+            <span>Местоположение: България</span>
+            <span>&bull;</span>
+            <span>Имейл: stoyanov@mobikom.bg</span>
+            <span>&bull;</span>
+            <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
           </div>
-          <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" class="cv-thumb" onerror="this.style.display='none'">
         </header>
 
         <section class="cv-section">
