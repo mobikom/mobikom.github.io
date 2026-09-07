@@ -2,10 +2,17 @@
 # mobikom.bg — Official GitHub Sponsorship & Funding Configuration
 # ==============================================================================
 
-# Active Sponsorship Channels
-github: mobikom
-patreon: mobikom
-buy_me_a_coffee: mobikom
+# Active Sponsorship Channels:
+
+# Direct Stripe Checkout
+custom: 
+  - https://buy.stripe.com/7sYdR8epV9RP4cCfDJ2B200
+  - https://mobikom.bg/support/
 
 # Direct Corporate / Institutional Sponsorship Gateway
 custom: ['https://mobikom.bg/contact/']
+
+# Active Sponsorship Channels
+buy_me_a_coffee: mobikom
+patreon: mobikom
+github: mobikom
