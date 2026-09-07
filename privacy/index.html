@@ -1,10 +1,26 @@
+<!--
+  ==============================================================================
+  FILE: /privacy/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en)
+  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  STANDARDS: HTML5 Living Standard • Zero-Cookie Default • Schema.org WebPage
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Compliant
+  ==============================================================================
+  DESCRIPTION:
+  Official privacy policy outlining Mobikom's architectural zero-cookie policy,
+  minimalist ephemeral server log handling, and complete data isolation.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy | Mobikom Zero-Tracking Standard</title>
-  <meta name="description" content="Privacy policy of Mobikom Bulgaria: verified zero-tracking architecture, zero cookies, zero surveillance scripts, and full GDPR compliance.">
+  <title>Privacy Policy | Mobikom</title>
+  <meta name="description" content="Privacy Policy of Mobikom: Zero-cookie architecture, zero third-party tracking, and data minimalism under EU GDPR standards.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -16,14 +32,14 @@
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
   <meta property="og:title" content="Privacy Policy | Mobikom">
-  <meta property="og:description" content="Verified zero-tracking architecture, zero cookies, and full GDPR compliance.">
+  <meta property="og:description" content="Zero-cookie architecture and data minimalism under EU GDPR standards.">
   <meta property="og:url" content="https://mobikom.bg/privacy/">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
@@ -49,99 +65,84 @@
           <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
           <li><a href="/blog/" class="nav-link">Insights</a></li>
           <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/privacy/" class="lang-toggle">BG</a></li>
+          <li><a href="/bg/privacy/" class="lang-toggle" hreflang="bg">BG</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell">
-      
-      <section class="hero">
-        <span class="hero-tag">Data Protection &bull; Privacy by Design</span>
-        <h1>Privacy Policy</h1>
-        <p class="hero-lead">Deterministic Privacy Engineered Directly Into the Source Code.</p>
-        <p>
-          At Mobikom, privacy is not an afterthought or a bureaucratic consent banner—it is an architectural guarantee. Our platforms operate on a zero-tracking principle: we do not monitor, profile, monetize, or harvest personal user data.
-        </p>
-        <div class="hero-actions">
-          <a href="/gdpr/" class="nav-btn">GDPR Compliance Notice &rarr;</a>
-          <a href="/about/governance/" class="nav-link">Corporate Governance</a>
-        </div>
-      </section>
+    <div class="shell-prose">
+      <article class="prose">
+        <header>
+          <span class="hero-tag">Compliance &bull; Legal</span>
+          <h1>Privacy Policy</h1>
+          <p class="hero-lead">Privacy engineered into the architectural foundation of the network.</p>
+          <time datetime="2026-09-07" style="font-size: 0.85rem; color: var(--muted); display: block; margin-top: 0.5rem;">
+            Effective Date: September 7, 2026
+          </time>
+        </header>
 
-      <!-- Privacy Pillars Grid -->
-      <section>
-        <h2>Core Privacy Standards</h2>
-        <div class="grid-cards">
-          
-          <!-- Pillar 1: Zero Cookies -->
-          <article class="feature-card">
-            <span class="card-meta">TECHNICAL SAFEGUARD</span>
-            <h3>Zero Cookies &amp; Local Storage</h3>
-            <p>Our website uses <strong>zero cookies</strong> (neither session, persistent, nor tracking cookies). We do not store identifiers in browser <code>localStorage</code> or <code>sessionStorage</code>. Because no non-essential data is stored on your device, no cookie consent banner is required under the EU ePrivacy Directive.</p>
-          </article>
+        <section>
+          <h2>1. Fundamental Architecture: Zero Tracking Cookies</h2>
+          <p>
+            Mobikom operates on an architectural principle of data minimization. This website does not issue, store, or read tracking cookies, persistent identifiers, or local storage tokens on your device.
+          </p>
+          <p>
+            Because we do not engage in behavioral tracking or profiling, you will not encounter consent banners or intrusive popups on this portal.
+          </p>
+        </section>
 
-          <!-- Pillar 2: No Third-Party Trackers -->
-          <article class="feature-card">
-            <span class="card-meta">EXTERNAL ISOLATION</span>
-            <h3>No Third-Party Analytics or Fonts</h3>
-            <p>We do not embed third-party tracking scripts, social media pixels (e.g. Meta, TikTok), or surveillance analytics (e.g. Google Analytics). All styles are served locally; we do not fetch fonts from external CDNs, eliminating IP leakage to overseas advertising brokers.</p>
-          </article>
+        <section>
+          <h2>2. Ephemeral Server Logs</h2>
+          <p>
+            When you request resources from our network, our web servers temporarily record technical connection data strictly necessary for security, rate-limiting, and network defense:
+          </p>
+          <ul>
+            <li>Internet Protocol (IP) address.</li>
+            <li>HTTP request method, URI, and timestamp.</li>
+            <li>HTTP response status code and transferred byte volume.</li>
+            <li>User-Agent string provided by your browser.</li>
+          </ul>
+          <p>
+            These logs are maintained in an ephemeral memory ring buffer for firewall diagnostics and automated DDoS mitigation. They are never joined with external identity databases or commercial marketing profiles.
+          </p>
+        </section>
 
-          <!-- Pillar 3: Edge Delivery -->
-          <article class="feature-card">
-            <span class="card-meta">EDGE INFRASTRUCTURE</span>
-            <h3>Minimal Ephemeral Server Logs</h3>
-            <p>Requests are delivered via Cloudflare’s distributed Anycast network. Ephemeral transmission metadata (such as client IP addresses) is processed solely for network transport, DDoS mitigation, and server security. This data is not correlated with individual visitor identities or retained for commercial profiling.</p>
-          </article>
+        <section>
+          <h2>3. Direct Communications</h2>
+          <p>
+            If you contact our operations desk via email, we process your email address and message contents solely to address and resolve your direct inquiry. We do not subscribe your address to promotional marketing lists or transfer correspondence records to third-party data brokers.
+          </p>
+        </section>
 
-          <!-- Pillar 4: Email Correspondence -->
-          <article class="feature-card">
-            <span class="card-meta">COMMUNICATIONS</span>
-            <h3>Voluntary Direct Inquiries</h3>
-            <p>When you contact us via email at <code>office@mobikom.bg</code>, your email address and message contents are used strictly to reply to your inquiry. We never upload your contact information to automated cloud CRMs, marketing mailing lists, or data exchanges.</p>
-          </article>
+        <section>
+          <h2>4. Third-Party Dependencies</h2>
+          <p>
+            This portal serves 100% first-party assets. It does not load remote typefaces from Google Fonts, remote script bundles from public CDNs, or telemetry pixels from social media networks.
+          </p>
+        </section>
 
-          <!-- Pillar 5: Statutory Rights -->
-          <article class="feature-card">
-            <span class="card-meta">REGULATORY COMPLIANCE</span>
-            <h3>Your Rights Under GDPR</h3>
-            <p>Under Regulation (EU) 2016/679 (GDPR), visitors have the right to access, rectify, or request deletion of any personal data voluntarily transmitted via direct communication. Because we do not log or store browsing behavior, we possess no behavioral profiles linked to individual visitors.</p>
-          </article>
-
-          <!-- Pillar 6: Data Controller -->
-          <article class="feature-card">
-            <span class="card-meta">LEGAL GOVERNANCE</span>
-            <h3>Data Controller Identification</h3>
-            <p>The data controller responsible for operations across <code>mobikom.bg</code> is Mobikom Bulgaria, managed by Stoyan Stoyanov, MBA. For formal regulatory notices or privacy verification requests, contact our compliance desk directly at <code>office@mobikom.bg</code>.</p>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- Conversion Banner -->
-      <section class="conversion-banner">
-        <div>
-          <h3>Privacy &amp; Compliance Inquiries</h3>
-          <p>Have questions regarding our zero-tracking web architecture or regulatory standards? Contact our operations desk.</p>
-        </div>
-        <a href="/contact/" class="nav-btn">Contact Compliance Desk</a>
-      </section>
-
+        <section class="conversion-banner">
+          <div>
+            <h3>GDPR Rights Inquiries</h3>
+            <p>Review our formal legal basis, controller details, and statutory rights under EU law.</p>
+          </div>
+          <a href="/gdpr/" class="nav-btn">GDPR Compliance &rarr;</a>
+        </section>
+      </article>
     </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
             <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
           </ul>
         </div>
@@ -152,26 +153,14 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about/">About Us &amp; History</a></li>
             <li><a href="/about/governance/">Governance</a></li>
-            <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/blog/">Insights &amp; Papers</a></li>
             <li><a href="/contact/">Direct Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Chronology</h4>
-          <ul>
-            <li><a href="/about/#nmt-450">NMT-450 Mobifons (1992)</a></li>
-            <li><a href="/about/#pagers-mobika">Pagers &amp; Mobika Cards</a></li>
-            <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
-            <li><a href="/blog/#manifesto-512">512-Byte Web Principle</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Security &amp; Legal</h4>
           <ul>
-            <li><a href="/privacy/" aria-current="page">Privacy Policy</a></li>
+            <li><a href="/privacy/">Privacy Policy</a></li>
             <li><a href="/terms/">Terms of Use</a></li>
             <li><a href="/gdpr/">GDPR Compliance</a></li>
             <li><a href="/bg/privacy/">Български (BG)</a></li>
@@ -180,7 +169,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
