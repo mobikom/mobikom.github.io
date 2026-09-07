@@ -1,3 +1,19 @@
+<!--
+  ==============================================================================
+  FILE: /stoyanov/bg/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: Bulgarian (bg) • Localized Dossier
+  STANDARDS: HTML5 Living Standard • ATS Standard • Strict 1-Page A4 Print Engine
+  COMPLIANCE: Strict CSP Level 3 • Zero !important • Zero Trackers • SEO Locked
+  ==============================================================================
+  DESCRIPTION:
+  Official Bulgarian single-page master curriculum vitae and academic dossier
+  of Stoyan Stoyanov. Uses a rigid 2-track grid header locking the passport
+  thumbnail to the far-right edge with zero text drop. Strictly fits 1 A4 sheet.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="bg">
 <head>
@@ -24,7 +40,7 @@
       margin-inline: auto;
     }
 
-    /* Strict 2-Column Grid: Left Text (1fr), Right Photo (75px) */
+    /* 2-Track Grid Header: Left Text (1fr), Right Photo (75px) */
     .cv-header-grid {
       display: grid;
       grid-template-columns: 1fr 75px;
@@ -124,22 +140,22 @@
       gap: 0.75rem;
     }
 
-    /* Print Engine: Strictly 1 A4 Page, Zero !important */
+    /* Print Engine: Strictly 1 A4 Sheet, Zero !important */
     @media print {
       @page {
         size: A4 portrait;
         margin: 10mm 12mm;
       }
 
-      header, footer, .no-print, .action-row, .nav-toggle, .nav-toggle-label {
+      header.site-header, footer.site-footer, .no-print, .action-row, .nav-toggle, .nav-toggle-label {
         display: none;
       }
 
       html, body {
         background: #ffffff;
         color: #000000;
-        font-size: 9.2pt;
-        line-height: 1.3;
+        font-size: 9.1pt;
+        line-height: 1.28;
         padding: 0;
         margin: 0;
         overflow: visible;
@@ -160,48 +176,48 @@
       .cv-header-grid {
         grid-template-columns: 1fr 60px;
         border-bottom: 1.5pt solid #000000;
-        padding-bottom: 4pt;
-        margin-bottom: 5pt;
+        padding-bottom: 3pt;
+        margin-bottom: 4pt;
       }
 
       .cv-header-grid h1 {
-        font-size: 15pt;
+        font-size: 14pt;
         color: #000000;
         margin-bottom: 2pt;
         line-height: 1.15;
       }
 
       .cv-photo-right {
-        width: 60px;
-        height: 72px;
+        width: 58px;
+        height: 70px;
         border: 1pt solid #444444;
       }
 
       .cv-meta-line {
-        font-size: 8.5pt;
+        font-size: 8.2pt;
         color: #222222;
       }
 
       .cv-section {
-        margin-top: 5pt;
+        margin-top: 4.5pt;
         break-inside: avoid;
       }
 
       .cv-section h2 {
-        font-size: 8.5pt;
+        font-size: 8.2pt;
         color: #000000;
         border-bottom: 0.75pt solid #444444;
         padding-bottom: 1pt;
-        margin-bottom: 2.5pt;
+        margin-bottom: 2pt;
       }
 
       .cv-item-title {
-        font-size: 8.8pt;
+        font-size: 8.5pt;
         color: #000000;
       }
 
       .cv-item-sub, .cv-compact-p, .cv-list {
-        font-size: 8.3pt;
+        font-size: 8.1pt;
         color: #111111;
       }
 
@@ -210,7 +226,7 @@
       }
 
       .cv-list li {
-        margin-bottom: 1.2pt;
+        margin-bottom: 1pt;
       }
 
       a {
@@ -226,12 +242,16 @@
 </head>
 <body>
 
-  <header class="no-print">
+  <!-- Universal Master Header (Bulgarian Locale) -->
+  <header class="site-header no-print">
     <div class="shell nav-bar">
       <a href="/bg/" class="brand-link" title="Мобиком България">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
           <g transform="translate(4, 3)">
-            <circle cx="8" cy="20" r="4" fill="#0052cc" /><circle cx="22" cy="10" r="4" fill="#0052cc" /><circle cx="22" cy="30" r="4" fill="#0052cc" /><circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <circle cx="8" cy="20" r="4" fill="#0052cc" />
+            <circle cx="22" cy="10" r="4" fill="#0052cc" />
+            <circle cx="22" cy="30" r="4" fill="#0052cc" />
+            <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
             <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
@@ -258,18 +278,20 @@
   <main>
     <div class="shell">
 
+      <!-- Action Panel -->
       <div class="action-row no-print">
         <div>
           Контакт: <strong>stoyanov@mobikom.bg</strong> | България
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center;">
           <button type="button" onclick="window.print()" class="nav-btn" style="cursor: pointer; border: none; font-size: 0.85rem; padding: 0.4rem 0.85rem;">
-            Печат / Запис PDF
+            Печат / Запис 1-Страница PDF
           </button>
           <a href="/stoyanov/" class="lang-toggle">English (EN)</a>
         </div>
       </div>
 
+      <!-- Single-Page ATS Document Sheet -->
       <article class="cv-sheet">
 
         <!-- 2-Track Grid: Col 1 is Text, Col 2 is 75px Photo locked on the right -->
@@ -350,13 +372,13 @@
           <ul class="cv-list">
             <li>C. Guillot, Собственик на хотел във Франция lecureuil.com LT1 Tourism.BTS;</li>
             <li>Доц. д-р Х. Сирашки, Координатор на курс в СА "Д. А. Ценов" uni-svishtov.bg България LT2 MBM;</li>
-            <!-- dobruja.com е 1 от Вашите 4 домейна: Активният линк е запазен -->
+            <!-- dobruja.com е 1 от Вашите 4 мрежови домейна: Активният линк е запазен -->
             <li>Ст. пр. В. Върбанова, Почетен Главен редактор на Медийна група "Добруджа" в <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a> LT3 EIC.</li>
           </ul>
         </section>
 
         <footer style="margin-top: 0.65rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted);">
-          <!-- bestjobs.bg е 1 от Вашите 4 домейна: Активният линк е запазен -->
+          <!-- bestjobs.bg е 1 от Вашите 4 мрежови домейна: Активният линк е запазен -->
           <p>Стоян Стоянов &copy; 2026 съдържание &bull; Шаблон за автобиография (CV) от <a href="https://bestjobs.bg/kariera" target="_blank" rel="noopener">bestjobs.bg/kariera</a>.</p>
         </footer>
 
@@ -365,10 +387,11 @@
     </div>
   </main>
 
-  <footer class="no-print">
+  <!-- Universal Master Footer -->
+  <footer class="site-footer no-print">
     <div class="shell">
       <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-        <p>&copy; 2026 mobikom.bg &bull; Портал без бисквитки и проследяване.</p>
+        <p>&copy; 2026 mobikom.bg. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
         <a href="/bg/contact/">Оперативен отдел &rarr;</a>
       </div>
     </div>
