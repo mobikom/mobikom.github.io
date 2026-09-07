@@ -4,14 +4,9 @@
   PROJECT: mobikom.bg — Master Institutional Portal
   LICENSE: MIT (https://opensource.org/licenses/MIT)
   AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Dossier
-  STANDARDS: HTML5 Living Standard • ATS Standard • Strict 1-Page A4 Print Engine
-  COMPLIANCE: Strict CSP Level 3 • Zero !important • Zero Trackers • SEO Locked
-  ==============================================================================
-  DESCRIPTION:
-  Official Bulgarian single-page master curriculum vitae and academic dossier
-  of Stoyan Stoyanov. Uses a rigid 2-track grid header locking the passport
-  thumbnail to the far-right edge with zero text drop. Strictly fits 1 A4 sheet.
+  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  LAYOUT: Tested 2-Column Grid (Name Left, 75px Photo Locked to Far Right)
+  STANDARDS: ATS Compliant • 1-Page A4 Engine • Zero !important • SEO Locked
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -40,49 +35,7 @@
       margin-inline: auto;
     }
 
-    /* 2-Track Grid Header: Left Text (1fr), Right Photo (75px) */
-    .cv-header-grid {
-      display: grid;
-      grid-template-columns: 1fr 75px;
-      column-gap: 1.25rem;
-      align-items: start;
-      border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.5rem;
-      margin-bottom: 0.75rem;
-    }
-
-    .cv-header-grid h1 {
-      font-size: 1.85rem;
-      font-weight: 800;
-      letter-spacing: -0.01em;
-      margin: 0 0 0.25rem 0;
-      line-height: 1.15;
-      color: var(--text);
-    }
-
-    .cv-photo-right {
-      width: 75px;
-      height: 90px;
-      object-fit: cover;
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      display: block;
-      justify-self: end;
-    }
-
-    .cv-meta-line {
-      font-size: 0.9rem;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.35rem 0.85rem;
-      line-height: 1.35;
-    }
-
-    .cv-section {
-      margin-top: 0.75rem;
-    }
-
+    .cv-section { margin-top: 0.75rem; }
     .cv-section h2 {
       font-size: 0.85rem;
       font-weight: 800;
@@ -94,10 +47,7 @@
       margin-bottom: 0.3rem;
     }
 
-    .cv-item {
-      margin-bottom: 0.4rem;
-    }
-
+    .cv-item { margin-bottom: 0.4rem; }
     .cv-item-title {
       font-size: 0.95rem;
       font-weight: 700;
@@ -106,12 +56,7 @@
       justify-content: space-between;
       flex-wrap: wrap;
     }
-
-    .cv-item-sub {
-      font-size: 0.88rem;
-      color: var(--muted);
-      margin-bottom: 0.15rem;
-    }
+    .cv-item-sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.15rem; }
 
     .cv-list {
       list-style: square;
@@ -119,10 +64,7 @@
       color: var(--muted);
       font-size: 0.88rem;
     }
-
-    .cv-list li {
-      margin-bottom: 0.12rem;
-    }
+    .cv-list li { margin-bottom: 0.12rem; }
 
     .cv-compact-p {
       font-size: 0.88rem;
@@ -140,118 +82,31 @@
       gap: 0.75rem;
     }
 
-    /* Print Engine: Strictly 1 A4 Sheet, Zero !important */
     @media print {
-      @page {
-        size: A4 portrait;
-        margin: 10mm 12mm;
-      }
-
-      header.site-header, footer.site-footer, .no-print, .action-row, .nav-toggle, .nav-toggle-label {
-        display: none;
-      }
-
-      html, body {
-        background: #ffffff;
-        color: #000000;
-        font-size: 9.1pt;
-        line-height: 1.28;
-        padding: 0;
-        margin: 0;
-        overflow: visible;
-      }
-
-      main {
-        padding: 0;
-      }
-
-      .shell, .cv-sheet {
-        max-width: 100%;
-        border: none;
-        padding: 0;
-        margin: 0;
-        background: transparent;
-      }
-
-      .cv-header-grid {
-        grid-template-columns: 1fr 60px;
-        border-bottom: 1.5pt solid #000000;
-        padding-bottom: 3pt;
-        margin-bottom: 4pt;
-      }
-
-      .cv-header-grid h1 {
-        font-size: 14pt;
-        color: #000000;
-        margin-bottom: 2pt;
-        line-height: 1.15;
-      }
-
-      .cv-photo-right {
-        width: 58px;
-        height: 70px;
-        border: 1pt solid #444444;
-      }
-
-      .cv-meta-line {
-        font-size: 8.2pt;
-        color: #222222;
-      }
-
-      .cv-section {
-        margin-top: 4.5pt;
-        break-inside: avoid;
-      }
-
-      .cv-section h2 {
-        font-size: 8.2pt;
-        color: #000000;
-        border-bottom: 0.75pt solid #444444;
-        padding-bottom: 1pt;
-        margin-bottom: 2pt;
-      }
-
-      .cv-item-title {
-        font-size: 8.5pt;
-        color: #000000;
-      }
-
-      .cv-item-sub, .cv-compact-p, .cv-list {
-        font-size: 8.1pt;
-        color: #111111;
-      }
-
-      .cv-list {
-        margin-left: 11pt;
-      }
-
-      .cv-list li {
-        margin-bottom: 1pt;
-      }
-
-      a {
-        color: #000000;
-        text-decoration: none;
-      }
-
-      a[href^="http"]::after {
-        content: "";
-      }
+      @page { size: A4 portrait; margin: 10mm 12mm; }
+      header.site-header, footer.site-footer, .no-print, .action-row, .nav-toggle, .nav-toggle-label { display: none; }
+      html, body { background: #ffffff; color: #000000; font-size: 9.1pt; line-height: 1.28; padding: 0; margin: 0; overflow: visible; }
+      main { padding: 0; }
+      .shell, .cv-sheet { max-width: 100%; border: none; padding: 0; margin: 0; background: transparent; }
+      .cv-section { margin-top: 4.5pt; break-inside: avoid; }
+      .cv-section h2 { font-size: 8.2pt; color: #000000; border-bottom: 0.75pt solid #444444; padding-bottom: 1pt; margin-bottom: 2pt; }
+      .cv-item-title { font-size: 8.5pt; color: #000000; }
+      .cv-item-sub, .cv-compact-p, .cv-list { font-size: 8.1pt; color: #111111; }
+      .cv-list { margin-left: 11pt; }
+      .cv-list li { margin-bottom: 1pt; }
+      a { color: #000000; text-decoration: none; }
+      a[href^="http"]::after { content: ""; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Universal Master Header (Bulgarian Locale) -->
   <header class="site-header no-print">
     <div class="shell nav-bar">
       <a href="/bg/" class="brand-link" title="Мобиком България">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
           <g transform="translate(4, 3)">
-            <circle cx="8" cy="20" r="4" fill="#0052cc" />
-            <circle cx="22" cy="10" r="4" fill="#0052cc" />
-            <circle cx="22" cy="30" r="4" fill="#0052cc" />
-            <circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <circle cx="8" cy="20" r="4" fill="#0052cc" /><circle cx="22" cy="10" r="4" fill="#0052cc" /><circle cx="22" cy="30" r="4" fill="#0052cc" /><circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
             <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
@@ -278,7 +133,6 @@
   <main>
     <div class="shell">
 
-      <!-- Action Panel -->
       <div class="action-row no-print">
         <div>
           Контакт: <strong>stoyanov@mobikom.bg</strong> | България
@@ -291,22 +145,19 @@
         </div>
       </div>
 
-      <!-- Single-Page ATS Document Sheet -->
       <article class="cv-sheet">
 
-        <!-- 2-Track Grid: Col 1 is Text, Col 2 is 75px Photo locked on the right -->
-        <header class="cv-header-grid">
+        <!-- 2-TRACK GRID: Name Left, Photo 75px Locked on the Right -->
+        <header style="display: grid; grid-template-columns: 1fr 75px; column-gap: 1.25rem; align-items: start; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
           <div>
-            <h1>Стоян Стоянов</h1>
-            <div class="cv-meta-line">
-              <span>Местоположение: България</span>
-              <span>&bull;</span>
-              <span>Имейл: stoyanov@mobikom.bg</span>
-              <span>&bull;</span>
+            <h1 style="margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.85rem; font-weight: 800; color: var(--text);">Стоян Стоянов</h1>
+            <div style="font-size: 0.9rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.35rem 0.85rem; line-height: 1.35;">
+              <span>Местоположение: България</span> &bull;
+              <span>Имейл: stoyanov@mobikom.bg</span> &bull;
               <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
             </div>
           </div>
-          <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="75" height="90" class="cv-photo-right" onerror="this.style.display='none'">
+          <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="75" height="90" style="width: 75px; min-width: 75px; max-width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block; justify-self: end;" onerror="this.style.display='none'">
         </header>
 
         <section class="cv-section">
@@ -326,7 +177,6 @@
               <span>Бизнес Администрация</span>
               <span>15+ Години</span>
             </div>
-            <!-- Вътрешна връзка: SEO сокът остава в мрежата -->
             <div class="cv-item-sub">Генерален Мениджър &bull; <a href="/bg/about/">mobikom.bg/about</a></div>
           </div>
           <div class="cv-item">
@@ -334,7 +184,6 @@
               <span>Туризъм</span>
               <span>10 Години</span>
             </div>
-            <!-- Външен домейн: Чист текст (без изтичане на PageRank) -->
             <div class="cv-item-sub">Мениджър &bull; albena.bg</div>
           </div>
         </section>
@@ -372,13 +221,11 @@
           <ul class="cv-list">
             <li>C. Guillot, Собственик на хотел във Франция lecureuil.com LT1 Tourism.BTS;</li>
             <li>Доц. д-р Х. Сирашки, Координатор на курс в СА "Д. А. Ценов" uni-svishtov.bg България LT2 MBM;</li>
-            <!-- dobruja.com е 1 от Вашите 4 мрежови домейна: Активният линк е запазен -->
             <li>Ст. пр. В. Върбанова, Почетен Главен редактор на Медийна група "Добруджа" в <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a> LT3 EIC.</li>
           </ul>
         </section>
 
         <footer style="margin-top: 0.65rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted);">
-          <!-- bestjobs.bg е 1 от Вашите 4 мрежови домейна: Активният линк е запазен -->
           <p>Стоян Стоянов &copy; 2026 съдържание &bull; Шаблон за автобиография (CV) от <a href="https://bestjobs.bg/kariera" target="_blank" rel="noopener">bestjobs.bg/kariera</a>.</p>
         </footer>
 
@@ -387,7 +234,6 @@
     </div>
   </main>
 
-  <!-- Universal Master Footer -->
   <footer class="site-footer no-print">
     <div class="shell">
       <div class="footer-bottom" style="border-top: none; padding-top: 0;">
