@@ -5,7 +5,7 @@
   LICENSE: MIT (https://opensource.org/licenses/MIT)
   AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
   LANGUAGE: Bulgarian (bg) • Localized Mirror
-  LAYOUT: Bulletproof Top-Right Photo (Zero CSS Cache Dependency)
+  LAYOUT: Pure CSS Grid Level 2 (Track 1: Left 1fr min-width:0, Track 2: 75px Right)
   STANDARDS: ATS Compliant • 1-Page A4 Engine • Zero !important • SEO Locked
   ==============================================================================
 -->
@@ -147,16 +147,21 @@
 
       <article class="cv-sheet">
 
-        <!-- ZERO-FAIL RIGHT ANCHOR: Header padded on right, photo locked to absolute top-right -->
-        <header style="position: relative; min-height: 95px; padding-right: 95px; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
-          <h1 style="margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.85rem; font-weight: 800; color: var(--text);">Стоян Стоянов</h1>
-          <div style="font-size: 0.9rem; color: var(--muted); line-height: 1.4;">
-            <span>Местоположение: България</span> &bull;
-            <span>Имейл: stoyanov@mobikom.bg</span> &bull;
-            <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
+        <!-- PURE CSS GRID LEVEL 2: Track 1 (1fr, min-width:0), Track 2 (75px Right) -->
+        <header style="display: grid; grid-template-columns: 1fr 75px; column-gap: 1.25rem; align-items: start; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
+          
+          <!-- Колона 1: min-width: 0 позволява свиване без избутване на снимката -->
+          <div style="grid-column: 1; min-width: 0;">
+            <h1 style="margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.85rem; font-weight: 800; color: var(--text);">Стоян Стоянов</h1>
+            <div style="font-size: 0.9rem; color: var(--muted); line-height: 1.4;">
+              <span>Местоположение: България</span> &bull;
+              <span>Имейл: stoyanov@mobikom.bg</span> &bull;
+              <span>Уеб адрес: mobikom.bg/stoyanov/bg/</span>
+            </div>
           </div>
-          <!-- Locked to top-right corner -->
-          <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="75" height="90" style="position: absolute; top: 0; right: 0; width: 75px; min-width: 75px; max-width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
+
+          <!-- Колона 2: Снимка заключена на колона 2 ВДЯСНО -->
+          <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="75" height="90" style="grid-column: 2; width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
         </header>
 
         <section class="cv-section">
