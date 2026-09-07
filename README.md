@@ -91,9 +91,10 @@ To prevent automated profiling and spam scraping, all correspondence is handled 
 
 ---
 
-## ☕ Support Independent Infrastructure
+## ☕ Support & Sponsorship
 
-If you wish to support independent public-interest web infrastructure and zero-tracking regional journalism:
+If you wish to support independent public-interest web infrastructure, open-source standards, and zero-tracking regional journalism:
 
-* **[Direct Settlement / Banking](https://mobikom.bg/contact/)** &mdash; Official institutional transfer via the Operations Desk.
-* **[GitHub Sponsors](https://github.com/sponsors/mobikom)** &mdash; Direct open-source repository sponsorship.
+* **[Direct Stripe Settlement Checkout](https://buy.stripe.com/7sYdR8epV9RP4cCfDJ2B200)** &mdash; Fast, secure card checkout via Stripe.
+* **[Institutional Desk Wire / Banking](https://mobikom.bg/contact/)** &mdash; Direct transfer via the Operations Desk.
+* **[GitHub Sponsors](https://github.com/sponsors/mobikom)** &mdash; Direct GitHub developer sponsorship.
