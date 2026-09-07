@@ -24,13 +24,14 @@
       margin-inline: auto;
     }
 
+    /* Pinned flush to the top so text pulls up */
     .cv-header {
       border-bottom: 2px solid var(--primary);
-      padding-bottom: 0.6rem;
-      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.7rem;
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
       gap: 1.25rem;
     }
 
@@ -38,8 +39,23 @@
       font-size: 1.85rem;
       font-weight: 800;
       letter-spacing: -0.01em;
-      margin-bottom: 0.2rem;
+      margin: 0 0 0.25rem 0;
+      line-height: 1.15;
       color: var(--text);
+    }
+
+    .cv-thumb {
+      width: 75px;
+      min-width: 75px;
+      max-width: 75px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      display: block;
+      margin: 0;
+      flex-shrink: 0;
+      align-self: flex-start;
     }
 
     .cv-meta-line {
@@ -47,7 +63,8 @@
       color: var(--muted);
       display: flex;
       flex-wrap: wrap;
-      gap: 0.4rem 0.85rem;
+      gap: 0.35rem 0.85rem;
+      line-height: 1.35;
     }
 
     .cv-section {
@@ -148,12 +165,22 @@
         border-bottom: 1.5pt solid #000000;
         padding-bottom: 4pt;
         margin-bottom: 5pt;
+        align-items: flex-start;
       }
 
       .cv-header h1 {
         font-size: 15pt;
         color: #000000;
         margin-bottom: 2pt;
+        line-height: 1.15;
+      }
+
+      .cv-thumb {
+        width: 60px;
+        min-width: 60px;
+        max-width: 60px;
+        height: 72px;
+        border: 1pt solid #444444;
       }
 
       .cv-meta-line {
@@ -251,7 +278,7 @@
 
       <article class="cv-sheet">
 
-        <!-- Header: Name on left, strictly constrained small photo locked on the RIGHT -->
+        <!-- Top-pinned Header: Photo on right, text aligned flush to top -->
         <header class="cv-header">
           <div style="flex: 1;">
             <h1>Stoyan Stoyanov</h1>
@@ -263,8 +290,7 @@
               <span>Web: mobikom.bg/stoyanov/</span>
             </div>
           </div>
-          <!-- Hard-locked 75px x 90px small picture on the right -->
-          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="75" height="90" style="width: 75px; min-width: 75px; max-width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block; margin: 0; flex-shrink: 0;" onerror="this.style.display='none'">
+          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" class="cv-thumb" onerror="this.style.display='none'">
         </header>
 
         <section class="cv-section">
