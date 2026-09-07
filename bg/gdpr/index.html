@@ -1,10 +1,27 @@
+<!--
+  ==============================================================================
+  FILE: /bg/gdpr/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  STANDARDS: HTML5 Living Standard • EU Regulation 2016/679 • Zero !important
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Compliant
+  ==============================================================================
+  DESCRIPTION:
+  Official Bulgarian statutory compliance declaration under GDPR (Regulation
+  2016/679). Outlines data controller details, legal bases, rights under
+  Articles 15-22, and supervisory authority details.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="bg">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Съответствие с GDPR | Мобиком</title>
-  <meta name="description" content="Декларация за съответствие на Мобиком с Регламент (ЕС) 2016/679 (GDPR): защита на данните по подразбиране, нулево профилиране и права на потребителите.">
+  <title>GDPR Съответствие и Права | Мобиком</title>
+  <meta name="description" content="Декларация за съответствие с Регламент (ЕС) 2016/679 (GDPR): Администратор на данни, правни основания и права на субектите на данни.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -15,17 +32,17 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/gdpr/">
   <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Съответствие с GDPR | Мобиком">
-  <meta property="og:description" content="Официална декларация за съответствие с Регламент (ЕС) 2016/679 (GDPR). Технологична защита на личните данни.">
+  <meta property="og:title" content="GDPR Съответствие и Права | Мобиком">
+  <meta property="og:description" content="Декларация за съответствие с Регламент (ЕС) 2016/679 (GDPR) и упражняване на права.">
   <meta property="og:url" content="https://mobikom.bg/bg/gdpr/">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 </head>
 <body>
 
-  <header>
+  <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
@@ -34,153 +51,142 @@
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
             <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
-            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">BULGARIA</text>
+            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Меню">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
         <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
 
         <ul>
           <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/about/">За нас</a></li>
-          <li><a href="/bg/portfolio/">Портфолио</a></li>
-          <li><a href="/bg/blog/">Анализи</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Контакти</a></li>
-          <li><a href="/gdpr/" class="lang-toggle">EN</a></li>
+          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link">Анализи</a></li>
+          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
+          <li><a href="/gdpr/" class="lang-toggle" hreflang="en">EN</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell">
-      
-      <section class="hero">
-        <span class="hero-tag">Нормативна декларация &bull; Регламент (ЕС) 2016/679</span>
-        <h1>Съответствие с GDPR</h1>
-        <p class="hero-lead">Официална декларация за техническите и организационни мерки за защита на данните.</p>
-        <p>
-          Мобиком осъществява дейността си в стриктно съответствие с Регламент (ЕС) 2016/679 на Европейския парламент и на Съвета (Общ регламент относно защитата на данните). Чрез пълното изключване на потребителско проследяване, бисквитки и събиране на лични данни, нашите платформи гарантират защита директно чрез изходния код.
-        </p>
-        <div class="hero-actions">
-          <a href="/bg/privacy/" class="nav-btn">Политика за поверителност &rarr;</a>
-          <a href="/about/governance/" class="nav-link">Корпоративно управление</a>
-        </div>
-      </section>
+    <div class="shell-prose">
+      <article class="prose">
+        <header>
+          <span class="hero-tag">Регламент (ЕС) 2016/679 &bull; Законодателство</span>
+          <h1>Декларация за GDPR Съответствие</h1>
+          <p class="hero-lead">Институционална рамка за защита на личните данни, данни за администратора и упражняване на права.</p>
+          <time datetime="2026-09-07" style="font-size: 0.85rem; color: var(--muted); display: block; margin-top: 0.5rem;">
+            В сила от: 7 септември 2026 г.
+          </time>
+        </header>
 
-      <!-- Законова рамка на GDPR -->
-      <section>
-        <h2>Законови стълбове за защита на данните</h2>
-        <div class="grid-cards">
-          
-          <!-- Член 25 -->
-          <article class="feature-card">
-            <span class="card-meta">ЧЛЕН 25 &bull; СИСТЕМНА АРХИТЕКТУРА</span>
-            <h3>Защита на данните по подразбиране</h3>
-            <p>Уеб инфраструктурата ни прилага принципа за минимизиране на данните на архитектурно ниво. Не генерираме сесийни идентификатори, рекламни пиксели или проследяващи бисквитки. Поверителността на посетителите е гарантирана преди осъществяването на какъвто и да е мрежов пренос.</p>
-          </article>
+        <section>
+          <h2>1. Идентификация на администратора на лични данни</h2>
+          <p>
+            Администраторът на лични данни по смисъла на Регламент (ЕС) 2016/679 е:
+          </p>
+          <ul>
+            <li><strong>Организация:</strong> Мобиком България</li>
+            <li><strong>Представител:</strong> Стоян Стоянов (Генерален Мениджър)</li>
+            <li><strong>Служебен контакт:</strong> desk@mobikom.bg / stoyanov@mobikom.bg</li>
+            <li><strong>Юрисдикция:</strong> Република България, Европейски съюз</li>
+          </ul>
+        </section>
 
-          <!-- Член 5 -->
-          <article class="feature-card">
-            <span class="card-meta">ЧЛЕН 5 &bull; ПРИНЦИПИ НА ОБРАБОТВАНЕ</span>
-            <h3>Минимизиране на обема на данните</h3>
-            <p>Обработката е сведена до абсолютния технически минимум, необходим за преноса на трафика и киберсигурността. Спазваме принципите за ограничение на целите, ограничение на съхранението и поверителност, без да използваме системните логове за търговски цели.</p>
-          </article>
+        <section>
+          <h2>2. Правни основания за обработване (Член 6 от GDPR)</h2>
+          <p>
+            Мобиком обработва лични данни единствено на валидни нормативни основания:
+          </p>
+          <ul>
+            <li>
+              <strong>Член 6, параграф 1, буква „е“ (Легитимен интерес):</strong> Временните системни записи (IP адреси, мрежови хедъри) се обработват единствено с цел защита на мрежовата сигурност, предотвратяване на кибератаки и гарантиране на непрекъсната техническа работа.
+            </li>
+            <li>
+              <strong>Член 6, параграф 1, буква „б“ (Изпълнение на договор / Запитвания):</strong> Данните, предоставени доброволно при директна имейл кореспонденция, се обработват за целите на отговор на съответното запитване.
+            </li>
+          </ul>
+        </section>
 
-          <!-- Член 6 -->
-          <article class="feature-card">
-            <span class="card-meta">ЧЛЕН 6 &bull; ПРАВНО ОСНОВАНИЕ</span>
-            <h3>Законосъобразност на обработването</h3>
-            <p>Временната техническа обработка на мрежови данни се основава на <strong>Член 6(1)(е) (Легитимен интерес)</strong> с цел гарантиране на сигурността на мрежата и филтриране на DDoS атаки. Доброволните имейл запитвания се обработват съгласно <strong>Член 6(1)(б)</strong> за отговор на кореспонденцията.</p>
-          </article>
+        <section>
+          <h2>3. Законови права на субектите на данни (Членове 15&ndash;22)</h2>
+          <p>
+            Всеки потребител разполага със следните права по европейското законодателство:
+          </p>
+          <ul>
+            <li><strong>Право на достъп (чл. 15):</strong> Потвърждение дали се обработват Ваши данни.</li>
+            <li><strong>Право на коригиране (чл. 16):</strong> Поправка на неточни записи.</li>
+            <li><strong>Право на изтриване („право да бъдеш забравен“, чл. 17):</strong> Заличаване на данни от кореспонденция.</li>
+            <li><strong>Право на ограничаване (чл. 18) и възражение (чл. 21):</strong> Оспорване на обработване, основано на легитимен интерес.</li>
+          </ul>
+          <p>
+            Тъй като сайтът не използва бисквитки и не създава потребителски профили, не съществуват записи за онлайн поведение на посетителите. Искания относно имейл кореспонденция могат да бъдат отправяни на <strong>desk@mobikom.bg</strong>.
+          </p>
+        </section>
 
-          <!-- Член 22 -->
-          <article class="feature-card">
-            <span class="card-meta">ЧЛЕН 22 &bull; АВТОМАТИЗАЦИЯ</span>
-            <h3>Без профилиране и автоматизирани решения</h3>
-            <p>Ние не извършваме поведенчески анализ, оценяване или категоризация на посетителите. В нашите медийни сайтове и платформи за обяви за работа няма алгоритми за автоматизирано вземане на решения или системи за следене на интересите.</p>
-          </article>
+        <section>
+          <h2>4. Надзорен орган</h2>
+          <p>
+            При съмнение за неправомерно обработване на данни, имате право да подадете жалба до националния надзорен орган:
+          </p>
+          <ul>
+            <li><strong>Орган:</strong> Комисия за защита на личните данни (КЗЛД)</li>
+            <li><strong>Адрес:</strong> гр. София 1592, бул. „Проф. Цветан Лазаров“ № 2</li>
+            <li><strong>Интернет страница:</strong> cpdp.bg</li>
+          </ul>
+        </section>
 
-          <!-- Членове 15-22 -->
-          <article class="feature-card">
-            <span class="card-meta">ЧЛЕНОВЕ 15–22 &bull; ПРАВА НА СУБЕКТИТЕ</span>
-            <h3>Упражняване на правата по GDPR</h3>
-            <p>Гражданите имат право на достъп, коригиране или изтриване на предоставените от тях лични данни при директна връзка по имейл. Тъй като не записваме данни за прегледаните страници, ние не поддържаме профили, подлежащи на корекция или изтриване.</p>
-          </article>
-
-          <!-- Надзорен орган -->
-          <article class="feature-card">
-            <span class="card-meta">ЧЛЕН 77 &bull; РЕГУЛАТОРЕН НАДЗОР</span>
-            <h3>Надзорен орган в Република България</h3>
-            <p>Субектите на данни имат право да подадат жалба до компетентния надзорен орган: <strong>Комисия за защита на личните данни (КЗЛД)</strong>, бул. „Проф. Цветан Лазаров“ № 2, 1592 София (Уебсайт: <a href="https://www.cpdp.bg" target="_blank" rel="noopener noreferrer">cpdp.bg</a>).</p>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- Банер -->
-      <section class="conversion-banner">
-        <div>
-          <h3>Регулаторни и правни запитвания</h3>
-          <p>За официална институционална кореспонденция относно защитата на данните или законовия одит, свържете се с нас.</p>
-        </div>
-        <a href="mailto:office@mobikom.bg?subject=GDPR%20Запитване" class="nav-btn">Контакт с отдела</a>
-      </section>
-
+        <section class="conversion-banner">
+          <div>
+            <h3>Упражняване на права</h3>
+            <p>За искания за заличаване на кореспонденция или юридически запитвания се свържете с оперативния отдел.</p>
+          </div>
+          <a href="/bg/contact/" class="nav-btn">Към Оперативния Отдел</a>
+        </section>
+      </article>
     </div>
   </main>
 
-  <footer>
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Канал</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
+            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Управление &amp; Навигация</h4>
+          <h4>Управление и Отдел</h4>
           <ul>
             <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За нас и история</a></li>
-            <li><a href="/about/governance/">Управление</a></li>
-            <li><a href="/bg/portfolio/">Портфолио проекти</a></li>
-            <li><a href="/bg/blog/">Анализи и статии</a></li>
-            <li><a href="/bg/contact/">Бизнес контакти</a></li>
+            <li><a href="/bg/about/">За Нас и История</a></li>
+            <li><a href="/bg/about/governance/">Управление</a></li>
+            <li><a href="/bg/contact/">Контакт</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Хронология</h4>
-          <ul>
-            <li><a href="/about/#nmt-450">NMT-450 Мобифони (1992)</a></li>
-            <li><a href="/about/#pagers-mobika">Пейджинг &amp; карти Мобика</a></li>
-            <li><a href="/about/#ostatus-2011">История на мрежата 2011</a></li>
-            <li><a href="/blog/#manifesto-512">512-байтова архитектура</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Сигурност &amp; Законодателство</h4>
+          <h4>Сигурност и Законодателство</h4>
           <ul>
             <li><a href="/bg/privacy/">Поверителност</a></li>
-            <li><a href="/terms/">Условия за ползване</a></li>
-            <li><a href="/bg/gdpr/" aria-current="page">Съответствие с GDPR</a></li>
-            <li><a href="/gdpr/">English Version (EN)</a></li>
+            <li><a href="/bg/terms/">Общи Условия</a></li>
+            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
+            <li><a href="/gdpr/">English (EN)</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Портал без бисквитки. Защита на данните.</p>
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
         <a href="/bg/contact/">Оперативен отдел &rarr;</a>
       </div>
     </div>
