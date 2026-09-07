@@ -14,13 +14,15 @@
  * Contact, and Legal).
  *
  * ARCHITECTURAL MANIFESTO:
- * 1. Native Subgrid: Cards lock to parent row tracks (tag, title, description,
+ * 1. Unified Grid Boundary: All pages share an identical 1100px shell anchored
+ *    to the brand logo, eliminating horizontal jumps during navigation.
+ * 2. Native Subgrid: Cards lock to parent row tracks (tag, title, description,
  *    and action link) eliminating layout shifts without client JavaScript.
- * 2. light-dark() Tokens: Single color declarations eliminate media-query
+ * 3. light-dark() Tokens: Single color declarations eliminate media-query
  *    duplication, reducing stylesheet byte weight and parser overhead.
- * 3. Zero !important: Specificity is naturally managed through clean DOM hierarchy
+ * 4. Zero !important: Specificity is naturally managed through clean DOM hierarchy
  *    and scoped utility containers.
- * 4. Content Visibility: Off-screen elements defer rendering calculations via
+ * 5. Content Visibility: Off-screen elements defer rendering calculations via
  *    `content-visibility: auto`, saving mobile CPU cycles and battery life.
  * ==============================================================================
  */
@@ -75,21 +77,13 @@ main {
 }
 
 /* ==========================================================================
-   2. Layout Containers (The Only Two Shells on the Domain)
+   2. Unified Shell (Anchored to Brand Logo Across All Pages)
    ========================================================================== */
-
-/* Pattern 1 Shell: Used for Indexes, Grids, Portfolio, Homepage (Max 1100px) */
-.shell {
-  width: 100%;
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: 1.25rem;
-}
-
-/* Pattern 2 Shell: Used for Long-form Prose, About, Articles, Legal (Max 760px) */
+/* Both classes share the exact same 1100px boundary so content never shifts */
+.shell,
 .shell-prose {
   width: 100%;
-  max-width: var(--max-w-prose);
+  max-width: var(--max-w);
   margin-inline: auto;
   padding-inline: 1.25rem;
 }
@@ -272,7 +266,7 @@ nav ul {
 }
 
 /* ==========================================================================
-   6. PATTERN 1: Native CSS Subgrid Engine (For Cards & Indexes)
+   6. PATTERN 1: Native CSS Subgrid Engine (Cards & Directories)
    ========================================================================== */
 .grid-cards {
   display: grid;
@@ -330,7 +324,9 @@ nav ul {
    7. PATTERN 2: Universal Prose Engine (Articles, About, Legal, Governance)
    ========================================================================== */
 .prose {
+  max-width: var(--max-w-prose); /* 760px comfortable reading measure */
   line-height: 1.7;
+  /* Stays anchored flush to the left boundary of .shell under the logo */
 }
 
 .prose header {
