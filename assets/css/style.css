@@ -1,40 +1,53 @@
-/* ==========================================================================
-   mobikom.bg — Master Institutional Stylesheet (Eco-Engineered & Deterministic)
-   ==========================================================================
-   ARCHITECTURAL MANIFESTO & DESIGN RATIONALE:
-   1. Standard Grid + Flexbox: Avoids multi-pass subgrid recalculations,
-      drastically lowering CPU cycles, memory usage, and battery consumption.
-   2. Zero `!important`: Eliminates specificity wars; print styles and dark
-      mode re-scope root CSS custom properties naturally.
-   3. Stable Viewport: `scrollbar-gutter: stable` and `overflow-y: scroll`
-      prevent horizontal content shift when the scrollbar appears.
-   ========================================================================== */
+/**
+ * ==============================================================================
+ * FILE: /assets/css/style.css
+ * PROJECT: mobikom.bg — Master Institutional Design Engine
+ * LICENSE: MIT (https://opensource.org/licenses/MIT)
+ * AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+ * STANDARDS: CSS Grid Level 2 (Subgrid) • CSS Color Module 4 (light-dark)
+ * COMPLIANCE: Strict CSP Level 3 • Zero !important • GDPR Zero-Cookie Architecture
+ * PERFORMANCE: Sub-14KB Single-Pass Engine • Native System Typography
+ * ==============================================================================
+ * DESCRIPTION:
+ * The single, definitive stylesheet powering every page across the mobikom.bg
+ * domain (Homepage, Portfolio, Blog Index, Articles, About, Governance,
+ * Contact, and Legal).
+ *
+ * ARCHITECTURAL MANIFESTO:
+ * 1. Native Subgrid: Cards lock to parent row tracks (tag, title, description,
+ *    and action link) eliminating layout shifts without client JavaScript.
+ * 2. light-dark() Tokens: Single color declarations eliminate media-query
+ *    duplication, reducing stylesheet byte weight and parser overhead.
+ * 3. Zero !important: Specificity is naturally managed through clean DOM hierarchy
+ *    and scoped utility containers.
+ * 4. Content Visibility: Off-screen elements defer rendering calculations via
+ *    `content-visibility: auto`, saving mobile CPU cycles and battery life.
+ * ==============================================================================
+ */
 
 :root {
-  --bg: #ffffff;
-  --bg-alt: #f8fafc;
-  --border: #dbe2ea;
-  --text: #0f172a;
-  --muted: #475569;
-  --primary: #0052cc;
-  --primary-hover: #0747a6;
+  color-scheme: light dark;
+
+  /* CSS Color 4 light-dark() Dynamic Tokens */
+  --bg: light-dark(#ffffff, #0b0f19);
+  --bg-alt: light-dark(#f8fafc, #131b2e);
+  --border: light-dark(#dbe2ea, #1e293b);
+  --text: light-dark(#0f172a, #f1f5f9);
+  --muted: light-dark(#475569, #94a3b8);
+  --primary: light-dark(#0052cc, #38bdf8);
+  --primary-hover: light-dark(#0747a6, #7dd3fc);
+  --primary-fg: light-dark(#ffffff, #0b0f19);
+
+  /* Geometry & Typography Tokens */
   --max-w: 1100px;
+  --max-w-prose: 760px;
   --radius: 6px;
-  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b0f19;
-    --bg-alt: #131b2e;
-    --border: #1e293b;
-    --text: #f1f5f9;
-    --muted: #94a3b8;
-    --primary: #38bdf8;
-    --primary-hover: #7dd3fc;
-  }
-}
-
+/* ==========================================================================
+   1. Global Reset & Stable Viewport
+   ========================================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -61,14 +74,43 @@ main {
   padding-block: 2.5rem;
 }
 
+/* ==========================================================================
+   2. Layout Containers (The Only Two Shells on the Domain)
+   ========================================================================== */
+
+/* Pattern 1 Shell: Used for Indexes, Grids, Portfolio, Homepage (Max 1100px) */
+.shell {
+  width: 100%;
+  max-width: var(--max-w);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Pattern 2 Shell: Used for Long-form Prose, About, Articles, Legal (Max 760px) */
+.shell-prose {
+  width: 100%;
+  max-width: var(--max-w-prose);
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* ==========================================================================
+   3. Base Typography & Accessibility Focus
+   ========================================================================== */
 h1, h2, h3, h4 {
   color: var(--text);
   line-height: 1.25;
-  margin-bottom: 0.5rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
+
+h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.5rem; }
+h2 { font-size: 1.35rem; margin-block: 1.5rem 0.5rem; }
+h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
 
 p {
   color: var(--muted);
+  margin-bottom: 1rem;
 }
 
 a {
@@ -80,25 +122,18 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Unified Content Shell */
-.shell {
-  width: 100%;
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: 1.25rem;
+a:focus-visible, button:focus-visible, input:focus-visible, .nav-toggle-label:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
 }
 
-.shell-narrow {
-  width: 100%;
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: 1.25rem;
-}
-
-/* Header & Zero-JS Accessible Navigation */
-header {
+/* ==========================================================================
+   4. Universal Header & Navigation Drawer
+   ========================================================================== */
+header.site-header {
   background: var(--bg-alt);
   border-bottom: 1px solid var(--border);
+  position: relative;
 }
 
 .nav-bar {
@@ -111,7 +146,6 @@ header {
 .brand-link {
   display: inline-flex;
   align-items: center;
-  text-decoration: none;
 }
 
 .brand-logo-svg {
@@ -144,15 +178,17 @@ nav ul {
 
 .nav-btn {
   background: var(--primary);
-  color: #ffffff;
+  color: var(--primary-fg);
   font-weight: 600;
   padding: 0.45rem 0.9rem;
   border-radius: var(--radius);
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-btn:hover {
   background: var(--primary-hover);
-  color: #ffffff;
+  color: var(--primary-fg);
   text-decoration: none;
 }
 
@@ -162,9 +198,9 @@ nav ul {
   font-size: 0.85rem;
   padding: 0.25rem 0.5rem;
   border-radius: var(--radius);
+  color: var(--text);
 }
 
-/* Mobile Nav Drawer */
 @media (max-width: 768px) {
   .nav-toggle-label {
     display: flex;
@@ -186,7 +222,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 60px;
+    top: calc(100% + 1px);
     left: 1.25rem;
     right: 1.25rem;
     background: var(--bg-alt);
@@ -194,6 +230,7 @@ nav ul {
     border-radius: var(--radius);
     padding: 1rem;
     z-index: 100;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   }
 
   .nav-toggle:checked ~ ul li,
@@ -203,7 +240,9 @@ nav ul {
   }
 }
 
-/* Hero Section */
+/* ==========================================================================
+   5. Hero Sections
+   ========================================================================== */
 .hero {
   margin-bottom: 2.5rem;
 }
@@ -212,17 +251,14 @@ nav ul {
   font-size: 0.8rem;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--primary);
   display: block;
   margin-bottom: 0.4rem;
 }
 
-.hero h1 {
-  font-size: clamp(2rem, 4vw, 3rem);
-}
-
 .hero-lead {
-  font-size: 1.2rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: var(--text);
   margin-bottom: 0.5rem;
@@ -232,9 +268,104 @@ nav ul {
   display: flex;
   gap: 1rem;
   margin-top: 1.25rem;
+  flex-wrap: wrap;
 }
 
-/* Search Box */
+/* ==========================================================================
+   6. PATTERN 1: Native CSS Subgrid Engine (For Cards & Indexes)
+   ========================================================================== */
+.grid-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Track 1: Meta Tag | Track 2: Title | Track 3: Description | Track 4: Link */
+  grid-auto-rows: auto auto 1fr auto;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.feature-card {
+  display: grid;
+  grid-row: span 4;             /* Card spans all 4 parent tracks */
+  grid-template-rows: subgrid;   /* Children snap into parent tracks */
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  row-gap: 0.5rem;
+  transition: border-color 0.15s ease;
+  content-visibility: auto;     /* Defers off-screen rendering to save memory */
+}
+
+.feature-card:hover {
+  border-color: var(--primary);
+}
+
+.card-meta {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary);
+  align-self: start;
+}
+
+.feature-card h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  align-self: start;
+}
+
+.feature-card p {
+  font-size: 0.95rem;
+  margin: 0;
+  align-self: start;
+}
+
+.feature-card a.card-link {
+  font-weight: 600;
+  align-self: end;               /* All action links align to the exact bottom */
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   7. PATTERN 2: Universal Prose Engine (Articles, About, Legal, Governance)
+   ========================================================================== */
+.prose {
+  line-height: 1.7;
+}
+
+.prose header {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.prose section {
+  margin-bottom: 2rem;
+}
+
+.prose ul, .prose ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.prose figure {
+  margin-block: 1.5rem;
+}
+
+.prose figcaption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.4rem;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   8. Reusable Interface Components (Search & Banners)
+   ========================================================================== */
 .search-container {
   background: var(--bg-alt);
   border: 1px solid var(--border);
@@ -262,51 +393,6 @@ nav ul {
   border-radius: var(--radius);
 }
 
-/* Platform Cards (Single-Pass Battery-Friendly Engine) */
-.grid-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1rem;
-}
-
-.feature-card {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  display: flex;
-  flex-direction: column;
-}
-
-.feature-card:hover {
-  border-color: var(--primary);
-}
-
-.card-meta {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--primary);
-  margin-bottom: 0.35rem;
-}
-
-.feature-card h3 {
-  font-size: 1.25rem;
-}
-
-.feature-card p {
-  font-size: 0.95rem;
-  margin-bottom: 1rem;
-}
-
-.feature-card a.card-link {
-  margin-top: auto;
-  font-weight: 600;
-  display: inline-block;
-}
-
-/* Conversion Banner */
 .conversion-banner {
   margin-top: 3rem;
   background: var(--bg-alt);
@@ -320,8 +406,10 @@ nav ul {
   flex-wrap: wrap;
 }
 
-/* Institutional Footer */
-footer {
+/* ==========================================================================
+   9. Institutional Footer
+   ========================================================================== */
+footer.site-footer {
   background: var(--bg-alt);
   border-top: 1px solid var(--border);
   padding-block: 2.5rem 1.5rem;
@@ -366,10 +454,27 @@ footer {
   gap: 0.5rem;
 }
 
-/* Print Engine (Zero !important) */
+/* ==========================================================================
+   10. Deterministic Print Engine (Zero !important)
+   ========================================================================== */
 @media print {
-  header, footer, .search-container, .conversion-banner { display: none; }
-  body { background: #ffffff; color: #000000; font-size: 9pt; }
-  .feature-card { border: 1px solid #cccccc; break-inside: avoid; }
-  a { color: #000000; text-decoration: none; }
+  header.site-header, footer.site-footer, .search-container, .conversion-banner, .no-print {
+    display: none;
+  }
+
+  body {
+    background: #ffffff;
+    color: #000000;
+    font-size: 9.5pt;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .feature-card {
+    border: 1px solid #cccccc;
+    break-inside: avoid;
+  }
 }
