@@ -1,14 +1,18 @@
 <!--
   ==============================================================================
   FILE: /index.html
-  PROJECT: mobikom.bg — Open-Source Reference Architecture
+  PROJECT: mobikom.bg — Master Institutional Portal
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  STANDARDS: HTML5 Living Standard • CSS Grid Level 2 Subgrid • Schema.org JSON-LD
-  PERFORMANCE: Sub-14KB Initial Payload • Zero Third-Party Trackers • Zero Cookies
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en) • Canonical Root
+  PATTERN: Pattern 1 (Index & Native CSS Subgrid Engine)
+  STANDARDS: HTML5 Living Standard • CSS Grid Level 2 • Schema.org JSON-LD
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  The canonical root landing page. Demonstrates declarative semantic HTML, native
-  CSS subgrid card alignments, and bidirectional bilingual discovery.
+  Canonical root index for the Mobikom digital media network. Renders core network
+  platforms via a 4-track subgrid (Meta, Title, Description, Link) with instant
+  first-paint execution, deferred search, and full accessibility compliance.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -16,8 +20,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobikom | High-Availability Digital Media &amp; Web Infrastructure</title>
-  <meta name="description" content="Mobikom: Open-source reference architecture for high-speed, privacy-first web operations, regional media syndication, and digital archiving.">
+  <title>Mobikom | Digital Media Network &amp; Web Operations</title>
+  <meta name="description" content="Mobikom: High-availability network operating dobrichnews.com, dobruja.com, bestjobs.bg, and lightweight static web infrastructure.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -29,8 +33,8 @@
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Mobikom | High-Availability Digital Media Network">
-  <meta property="og:description" content="Open-source reference architecture for lightweight, zero-tracking web infrastructure.">
+  <meta property="og:title" content="Mobikom | Digital Media Network">
+  <meta property="og:description" content="High-availability digital media network in Bulgaria. Est. 2011.">
   <meta property="og:url" content="https://mobikom.bg/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
@@ -54,11 +58,11 @@
 </head>
 <body>
 
-  <!-- Accessible Site Header -->
+  <!-- Universal Master Header -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/" class="brand-link" title="Mobikom Bulgaria">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom Logo">
+      <a href="/" class="brand-link" title="Mobikom">
+        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
@@ -72,7 +76,7 @@
       </a>
 
       <nav aria-label="Primary Navigation">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation drawer">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu Toggle">
         <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
 
         <ul>
@@ -90,32 +94,32 @@
   <main>
     <div class="shell">
       
-      <!-- Primary Hero -->
+      <!-- Primary Homepage Hero -->
       <section class="hero">
         <span class="hero-tag">High-Availability Web Operations &bull; Est. 2011</span>
         <h1>Mobikom</h1>
-        <p class="hero-lead">Engineered for speed, mathematical determinism, and media reach in Bulgaria.</p>
+        <p class="hero-lead">Engineered for Speed, Scalability, and Media Reach in Bulgaria.</p>
         <p>
-          Managing regional newsrooms, employment platforms, and clean static infrastructure with zero third-party tracking.
+          Managing regional media channels, job ads board, and clean static infrastructure with zero third-party tracking.
         </p>
         <div class="hero-actions">
-          <a href="/about/" class="nav-btn">Network Architecture &rarr;</a>
+          <a href="/about/" class="nav-btn">About &amp; History &rarr;</a>
           <a href="/portfolio/" class="nav-link">Ecosystem Portfolio</a>
         </div>
       </section>
 
-      <!-- Fast Client-Side Search (Optional Progressive Enhancement) -->
+      <!-- Fast Search Component -->
       <section class="search-container">
         <form role="search" onsubmit="return false;">
           <div class="search-title-row">
-            <label for="search-input">&#128269; Search Network Assets:</label>
+            <label for="search-input">&#128269; Search Ecosystem:</label>
             <a href="/rss.xml">&#128246; RSS Feed</a>
           </div>
-          <input type="search" id="search-input" class="search-field" placeholder="Search platforms, topics, or archives..." autocomplete="off">
+          <input type="search" id="search-input" class="search-field" placeholder="Search platforms or topics (dobrichnews, bestjobs, NMT-450, Pomorie)..." autocomplete="off">
         </form>
       </section>
 
-      <!-- Core Asset Grid (Real CSS Subgrid Engine) -->
+      <!-- Core Platform Grid (Native CSS Subgrid Engine) -->
       <section>
         <h2>Core Digital Assets &amp; Platforms</h2>
         <div class="grid-cards" id="cards-grid">
@@ -123,29 +127,29 @@
           <article class="feature-card" data-searchable="dobrichnews regional media news daily dobrich municipal affairs">
             <span class="card-meta">REGIONAL MEDIA PORTAL</span>
             <h3>dobrichnews.com</h3>
-            <p>Real-time daily reporting providing independent regional journalism for North-East Bulgaria.</p>
+            <p>Real-time daily news delivering verified local reporting to North-East Bulgaria.</p>
             <a href="https://www.dobrichnews.com" class="card-link" rel="noopener" target="_blank">Access dobrichnews.com &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="dobruja regional culture journal agriculture history preservation">
             <span class="card-meta">COMMUNITY &amp; CULTURE</span>
             <h3>dobruja.com</h3>
-            <p>Cultural journal highlighting Dobruja heritage, agriculture, historical records, and civic archives.</p>
+            <p>Cultural and regional journal highlighting Dobruja agriculture, heritage, and civic archives.</p>
             <a href="https://www.dobruja.com" class="card-link" rel="noopener" target="_blank">Access dobruja.com &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="bestjobs job ads board employment vacancies careers recruitment bulgaria">
-            <span class="card-meta">EMPLOYMENT PLATFORM</span>
+            <span class="card-meta">JOB ADS BOARD</span>
             <h3>bestjobs.bg</h3>
-            <p>High-efficiency career discovery and direct vacancy boards operating across Bulgaria.</p>
+            <p>High-efficiency online job ads board for career postings and discovery across Bulgaria.</p>
             <a href="https://bestjobs.bg" class="card-link" rel="noopener" target="_blank">Access bestjobs.bg &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="seastars pomorie lye curative mineral black sea salts wellness cosmetics">
             <span class="card-meta">DIGITAL CATALOG &bull; ARCHIVE</span>
             <h3>Sea Stars Shop</h3>
-            <p>Digital archive and composition catalog for authentic Black Sea mineral salts and Pomorie lye.</p>
-            <a href="/blog/seastars/" class="card-link">Explore Monograph &rarr;</a>
+            <p>Digital archive and catalog for authentic Black Sea mineral salts and therapeutic Pomorie lye.</p>
+            <a href="/blog/seastars/" class="card-link">View Monograph &rarr;</a>
           </article>
 
           <article class="feature-card" data-searchable="history nmt-450 mobifons 1992 pagers beepers mobika telecom archive">
@@ -162,7 +166,7 @@
       <section class="conversion-banner">
         <div>
           <h3>Strategic Partnerships &amp; Syndication</h3>
-          <p>Direct advertising, media syndication, and infrastructure consulting with zero tracking cookies.</p>
+          <p>Direct advertising, media coverage, and technical advisory without tracking cookies.</p>
         </div>
         <a href="/contact/" class="nav-btn">Contact Operations Desk</a>
       </section>
@@ -170,7 +174,7 @@
     </div>
   </main>
 
-  <!-- Institutional Site Footer -->
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
@@ -190,7 +194,8 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about/">About Us &amp; History</a></li>
             <li><a href="/about/governance/">Governance</a></li>
-            <li><a href="/portfolio/">Portfolio</a></li>
+            <li><a href="/portfolio/">Project Portfolio</a></li>
+            <li><a href="/blog/">Insights &amp; Papers</a></li>
             <li><a href="/contact/">Direct Contact</a></li>
           </ul>
         </div>
@@ -217,13 +222,12 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
+        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
   </footer>
 
-  <!-- Optional Deferred Fast Search Script -->
   <script src="/assets/js/search.js" defer></script>
 </body>
 </html>
