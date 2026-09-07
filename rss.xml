@@ -1,99 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ==============================================================================
+  FILE: /rss.xml
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  STANDARDS: RSS 2.0 • Atom Namespace Extensions
+  ==============================================================================
+  DESCRIPTION:
+  Official RSS syndication feed for the mobikom.bg network insights, technical
+  monographs, and historical publications.
+  ==============================================================================
+-->
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mobikom | Insights, Technical Manifestos &amp; Network News</title>
-    <link>https://mobikom.bg/</link>
-    <description>Official RSS dispatch feed for mobikom.bg - Web performance manifestos, hardware guides, media publishing chronologies, network advertising solutions, and Bulgarian telecommunications archives.</description>
+    <title>Mobikom | Insights &amp; Technical Papers</title>
+    <link>https://mobikom.bg/blog/</link>
+    <description>Technical monographs, web performance papers, and telecom historical archives from Mobikom Bulgaria.</description>
     <language>en</language>
-    <copyright>© 2026 mobikom.bg. All rights reserved.</copyright>
-    <managingEditor>office@mobikom.bg (Stoyan Stoyanov, MBA)</managingEditor>
-    <webMaster>office@mobikom.bg (Mobikom Operations Desk)</webMaster>
-    <lastBuildDate>Sat, 05 Sep 2026 02:00:00 +0300</lastBuildDate>
-    <docs>https://www.rssboard.org/rss-specification</docs>
-    <atom:link href="https://mobikom.bg/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 07 Sep 2026 10:00:00 +0300</lastBuildDate>
+    <atom:link href="https://mobikom.bg/rss.xml" rel="self" type="application/rss+xml"/>
 
-    <!-- Article 1: Computer Memory Guide (Latest) -->
     <item>
-      <title>Computer Memory for Non-Specialists</title>
-      <link>https://mobikom.bg/blog/computer-memory/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/computer-memory/</guid>
-      <pubDate>Wed, 02 Sep 2026 10:00:00 +0300</pubDate>
-      <author>office@mobikom.bg (Stoyan Stoyanov, MBA)</author>
-      <category>Hardware Architecture</category>
-      <category>Technical Guide</category>
-      <description><![CDATA[A practical engineering guide by Stoyan Stoyanov, MBA explaining DDR RAM generations, dual-channel bus widening, CPU cache proximity laws (L1-L3), rotational hard drives (HDD), multi-disk RAID configurations, and flash storage endurance.]]></description>
-    </item>
-
-    <!-- Article 2: 512-Byte Manifesto -->
-    <item>
-      <title>About the Website Requirements &amp; Designing (The 512-Byte Manifesto)</title>
-      <link>https://mobikom.bg/blog/manifesto-512/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/manifesto-512/</guid>
-      <pubDate>Tue, 01 Sep 2026 09:00:00 +0300</pubDate>
-      <author>office@mobikom.bg (Stoyan Stoyanov, MBA)</author>
-      <category>Web Architecture</category>
-      <category>Performance</category>
-      <description><![CDATA[Less is more, simple is more secure. An architectural deep dive on eliminating runtime dependencies, third-party scripts, and databases in favor of pure HTML5 and CSS Grid Level 2 for sub-10ms delivery and native privacy.]]></description>
-    </item>
-
-    <!-- Article 3: Dobruja Media Group -->
-    <item>
-      <title>Dobruja Media Group Heritage &amp; Foundation Chronology</title>
-      <link>https://mobikom.bg/blog/dobruja-media-group/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/dobruja-media-group/</guid>
-      <pubDate>Mon, 31 Aug 2026 10:30:00 +0300</pubDate>
-      <author>office@mobikom.bg (Stoyan Stoyanov, MBA)</author>
-      <category>Media Chronology</category>
-      <category>Regional Journalism</category>
-      <description><![CDATA[The evolutionary timeline of North-East Bulgaria's independent online publishing network: tracing the 2011 launches of sport.dobruja.com and news.dobruja.com to the establishment of dobrichnews.com and bestjobs.bg integration.]]></description>
-    </item>
-
-    <!-- Article 4: Advertising Solutions -->
-    <item>
-      <title>Advertising on Our Media Network Without Tracking Telemetry</title>
-      <link>https://mobikom.bg/blog/advertising/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/advertising/</guid>
-      <pubDate>Thu, 27 Aug 2026 14:15:00 +0300</pubDate>
-      <author>office@mobikom.bg (Stoyan Stoyanov, MBA)</author>
-      <category>Advertising</category>
-      <category>Commercial Solutions</category>
-      <description><![CDATA[Explore direct sponsorships, high-impact static display placements, and verified regional reach across dobrichnews.com, dobruja.com, and bestjobs.bg with instantaneous edge delivery and zero third-party cookie consent bloat.]]></description>
-    </item>
-
-    <!-- Article 5: NMT-450 Telecom Retrospective -->
-    <item>
-      <title>The NMT-450 Mobifon &amp; Paging Revolution in Bulgaria</title>
+      <title>NMT-450 Retrospective: 1992 Cellular Architecture</title>
       <link>https://mobikom.bg/blog/nmt-450-retrospective/</link>
       <guid isPermaLink="true">https://mobikom.bg/blog/nmt-450-retrospective/</guid>
-      <pubDate>Tue, 25 Aug 2026 11:00:00 +0300</pubDate>
-      <author>office@mobikom.bg (Stoyan Stoyanov, MBA)</author>
-      <category>Telecom Archive</category>
-      <category>History</category>
-      <description><![CDATA[An engineering review of Bulgaria's first commercial wireless cellular network launched by RTC Mobikom in 1992: analog 450 MHz propagation, rugged Benefon/Nokia handsets, and nationwide paging and Mobika phonecard systems.]]></description>
+      <pubDate>Wed, 15 Jan 2025 09:30:00 +0200</pubDate>
+      <description>Engineering retrospective on Bulgaria's 1992 analog NMT-450 cellular network, radio propagation at 450 MHz, and lessons for modern web infrastructure.</description>
     </item>
 
-    <!-- Article 6: Sea Stars Pomorie Lye -->
     <item>
-      <title>Sea Stars: Pomorie Lye &amp; Natural Mineral Wellness</title>
-      <link>https://mobikom.bg/blog/sea-stars/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/sea-stars/</guid>
-      <pubDate>Fri, 21 Aug 2026 16:40:00 +0300</pubDate>
-      <author>office@mobikom.bg (Stoyan Stoyanov, MBA)</author>
-      <category>Wellness &amp; Commerce</category>
-      <category>Product Science</category>
-      <description><![CDATA[Preserving the digital catalog and product science of authentic Black Sea mineral salts and therapeutic Pomorie lake lye (луга) formulated by the Bulgarian Academy of Sciences (BAS).]]></description>
+      <title>Computer Memory Architecture &amp; The Web Bloat Penalty</title>
+      <link>https://mobikom.bg/blog/computer-memory/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/computer-memory/</guid>
+      <pubDate>Thu, 05 Dec 2024 10:00:00 +0200</pubDate>
+      <description>Technical analysis of computer memory hierarchies, CPU cache locality (L1/L2/L3), and how modern web bloat mismanages physical memory.</description>
     </item>
 
-    <!-- Dispatch 7: Security Standard -->
     <item>
-      <title>Verified Zero-Leak Privacy Audit &amp; Architecture Standard</title>
-      <link>https://mobikom.bg/privacy/</link>
-      <guid isPermaLink="true">https://mobikom.bg/privacy/</guid>
-      <pubDate>Mon, 17 Aug 2026 08:30:00 +0300</pubDate>
-      <author>office@mobikom.bg (Mobikom Compliance Desk)</author>
-      <category>Data Protection</category>
-      <category>GDPR</category>
-      <description><![CDATA[Official publication of the mobikom.bg zero-tracking security standard: zero cookies, zero localStorage, referrer protection enforcement, and Cloudflare edge IP anonymization.]]></description>
+      <title>Contextual Advertising Without Surveillance</title>
+      <link>https://mobikom.bg/blog/advertising/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/advertising/</guid>
+      <pubDate>Fri, 15 Nov 2024 09:00:00 +0200</pubDate>
+      <description>Why Mobikom operates direct contextual advertising across dobrichnews.com, dobruja.com, and bestjobs.bg without programmatic tracking cookies.</description>
+    </item>
+
+    <item>
+      <title>Dobruja Media Group: Regional Journalism &amp; Civic Archives</title>
+      <link>https://mobikom.bg/blog/dobruja/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/dobruja/</guid>
+      <pubDate>Tue, 20 Aug 2024 08:30:00 +0200</pubDate>
+      <description>Delivering verified regional news, community records, and independent editorial oversight across North-East Bulgaria.</description>
+    </item>
+
+    <item>
+      <title>The 512-Byte Web Principle</title>
+      <link>https://mobikom.bg/blog/manifesto-512/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/manifesto-512/</guid>
+      <pubDate>Mon, 10 Jun 2024 09:00:00 +0200</pubDate>
+      <description>Why reducing network round-trips and eradicating unnecessary client-side JavaScript represents the true foundation of sustainable web operations.</description>
+    </item>
+
+    <item>
+      <title>Sea Stars &amp; Pomorie Lye: Mineral Balneology &amp; Digital Preservation</title>
+      <link>https://mobikom.bg/blog/seastars/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/seastars/</guid>
+      <pubDate>Fri, 15 Mar 2024 08:00:00 +0200</pubDate>
+      <description>Scientific monograph on Black Sea mineral balneology, authentic hyper-concentrated Pomorie lye developed with the Bulgarian Academy of Sciences (IONH-BAS), and lightweight digital cataloging.</description>
     </item>
 
   </channel>
