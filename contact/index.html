@@ -1,10 +1,27 @@
+<!--
+  ==============================================================================
+  FILE: /contact/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en)
+  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  STANDARDS: HTML5 Living Standard • Semantic Directory • Zero Inline CSS
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
+  ==============================================================================
+  DESCRIPTION:
+  Official operations desk and direct inquiry routing. Provides authenticated
+  direct email channels for media syndication, technical infrastructure,
+  and regulatory governance without third-party form-tracking scripts.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Operations Desk | Mobikom</title>
-  <meta name="description" content="Direct communication channel for Mobikom Bulgaria: media syndication, job advertising inquiries on bestjobs.bg, editorial desks, and corporate governance.">
+  <title>Contact &amp; Operations Desk | Mobikom</title>
+  <meta name="description" content="Direct communication channels for Mobikom operations: media syndication, technical advisory, and institutional inquiries.">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
@@ -15,30 +32,44 @@
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/contact/">
   <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Contact Operations Desk | Mobikom">
-  <meta property="og:description" content="Direct corporate communication with Mobikom operations and media editorial desks.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact Mobikom | Operations Desk">
+  <meta property="og:description" content="Direct communication channels for media syndication, web operations, and institutional governance.">
   <meta property="og:url" content="https://mobikom.bg/contact/">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
+  <!-- Schema.org Breadcrumbs & ContactPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "name": "Contact Mobikom Operations Desk",
-    "url": "https://mobikom.bg/contact/",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Mobikom Bulgaria",
-      "email": "office@mobikom.bg",
-      "url": "https://mobikom.bg/"
-    }
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://mobikom.bg/contact/" }
+        ]
+      },
+      {
+        "@type": "ContactPage",
+        "name": "Mobikom Operations Desk & Direct Contact",
+        "url": "https://mobikom.bg/contact/",
+        "description": "Direct communication desk for technical advisory, media syndication, and governance.",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Mobikom",
+          "url": "https://mobikom.bg/"
+        }
+      }
+    ]
   }
   </script>
 </head>
 <body>
 
-  <header>
+  <!-- Universal Master Header -->
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/" class="brand-link" title="Mobikom">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
@@ -64,93 +95,105 @@
           <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
           <li><a href="/blog/" class="nav-link">Insights</a></li>
           <li><a href="/contact/" class="nav-btn" aria-current="page">Direct Inquiry</a></li>
-          <li><a href="/bg/contact/" class="lang-toggle">BG</a></li>
+          <li><a href="/bg/contact/" class="lang-toggle" hreflang="bg">BG</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell">
+    <div class="shell-prose">
       
-      <section class="hero">
-        <span class="hero-tag">Direct Channel &bull; Executive Desk</span>
-        <h1>Contact Operations</h1>
-        <p class="hero-lead">Direct Inquiries for Executive Management, Media Desks, and Commercial Inquiries.</p>
-        <p>
-          We communicate directly without third-party tracking forms, captcha trackers, or automated marketing funnels. Use the dedicated communication channels below for prompt correspondence.
-        </p>
-        <div class="hero-actions">
-          <a href="mailto:office@mobikom.bg" class="nav-btn">Open Mail Client &rarr;</a>
-          <a href="/about/governance/" class="nav-link">Governance &amp; Standards</a>
-        </div>
-      </section>
+      <!-- Pattern 2: Prose Engine -->
+      <article class="prose">
+        
+        <header>
+          <span class="hero-tag">Operations Desk &bull; Communications</span>
+          <h1>Direct Contact &amp; Desk</h1>
+          <p class="hero-lead">Direct communications channels for editorial syndication, infrastructure advisory, and institutional governance.</p>
+        </header>
 
-      <!-- Department Channels Grid -->
-      <section>
-        <h2>Direct Communication Desks</h2>
-        <div class="grid-cards">
-          
-          <!-- Desk 1: General & Executive -->
-          <article class="feature-card">
-            <span class="card-meta">EXECUTIVE STEWARDSHIP</span>
-            <h3>Operations &amp; Executive Desk</h3>
-            <p>Direct channel to executive management for corporate governance, strategic media syndication, and institutional partnerships.</p>
-            <p><strong>Email:</strong> <a href="mailto:office@mobikom.bg">office@mobikom.bg</a></p>
-            <a href="mailto:office@mobikom.bg?subject=Executive%20Inquiry" class="card-link">Contact Executive Desk &rarr;</a>
-          </article>
+        <section>
+          <h2>1. Operational Inquiries &amp; Communications</h2>
+          <p>
+            Mobikom maintains direct, authenticated communication channels. To protect visitor privacy and preserve system reliability, this portal does not deploy third-party web forms, Google reCAPTCHA tracking scripts, or marketing CRM trackers.
+          </p>
+          <p>
+            Please direct all inquiries to the appropriate operational desk below:
+          </p>
+          <ul>
+            <li>
+              <strong>General Operations &amp; Inquiries:</strong><br>
+              Email: <strong>desk@mobikom.bg</strong><br>
+              Scope: Media coverage, public interest inquiries, and network correspondence.
+            </li>
+            <li>
+              <strong>Technical Operations &amp; Web Infrastructure:</strong><br>
+              Email: <strong>ops@mobikom.bg</strong><br>
+              Scope: Server health, static architecture advisory, and security vulnerability reports.
+            </li>
+            <li>
+              <strong>Executive Desk &amp; Management:</strong><br>
+              Email: <strong>stoyanov@mobikom.bg</strong><br>
+              Scope: Institutional governance, regulatory filings, and academic collaborations.
+            </li>
+          </ul>
+        </section>
 
-          <!-- Desk 2: Commercial & Advertising -->
-          <article class="feature-card">
-            <span class="card-meta">COMMERCIAL SOLUTIONS</span>
-            <h3>Advertising &amp; Job Ads Board</h3>
-            <p>Direct display advertising on <code>dobrichnews.com</code> and <code>dobruja.com</code>, and employer vacancy postings on <code>bestjobs.bg</code>.</p>
-            <p><strong>Email:</strong> <a href="mailto:office@mobikom.bg?subject=Advertising%20Inquiry">office@mobikom.bg</a></p>
-            <a href="mailto:office@mobikom.bg?subject=Advertising%20Inquiry" class="card-link">Inquire for Placements &rarr;</a>
-          </article>
+        <section>
+          <h2>2. Network Platforms Direct Contacts</h2>
+          <p>
+            For editorial matters, press releases, or commercial advertising regarding specific properties within the network, contact the newsrooms directly:
+          </p>
+          <ul>
+            <li>
+              <strong><a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>:</strong> Regional news desk, press inquiries, and public event notices for North-East Bulgaria.
+            </li>
+            <li>
+              <strong><a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>:</strong> Cultural preservation archives, historical research submissions, and civic journal articles.
+            </li>
+            <li>
+              <strong><a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>:</strong> Career postings, employer accounts, and vacancy board operations.
+            </li>
+          </ul>
+        </section>
 
-          <!-- Desk 3: Editorial Desks -->
-          <article class="feature-card">
-            <span class="card-meta">JOURNALISTIC DISPATCH</span>
-            <h3>Editorial &amp; News Desks</h3>
-            <p>Direct correspondence for verified news tips, municipal reports, and civic notices across North-East Bulgaria.</p>
-            <p><strong>Email:</strong> <a href="mailto:office@mobikom.bg?subject=Editorial%20Tip">office@mobikom.bg</a></p>
-            <a href="mailto:office@mobikom.bg?subject=Editorial%20Tip" class="card-link">Submit Editorial Tip &rarr;</a>
-          </article>
+        <section>
+          <h2>3. Privacy &amp; Data Handling Mandate</h2>
+          <p>
+            In alignment with our zero-cookie architecture and EU GDPR (Regulation 2016/679) compliance:
+          </p>
+          <ul>
+            <li>Email communications received are used solely for the direct resolution of your inquiry.</li>
+            <li>We do not sell, rent, or syndicate correspondence data to commercial marketing brokers or third-party mailing lists.</li>
+            <li>Formal institutional disclosures can be reviewed on our <a href="/about/governance/">Governance Page</a>.</li>
+          </ul>
+        </section>
 
-          <!-- Desk 4: Compliance & Legal -->
-          <article class="feature-card">
-            <span class="card-meta">REGULATORY COMPLIANCE</span>
-            <h3>Governance &amp; GDPR Desk</h3>
-            <p>Formal notices regarding statutory compliance under Bulgarian Commercial Law, open web standards, and EU Regulation 2016/679.</p>
-            <p><strong>Email:</strong> <a href="mailto:office@mobikom.bg?subject=Legal%20Inquiry">office@mobikom.bg</a></p>
-            <a href="/gdpr/" class="card-link">Inspect GDPR Compliance &rarr;</a>
-          </article>
+        <!-- Reusable Conversion Banner -->
+        <section class="conversion-banner">
+          <div>
+            <h3>Institutional Governance &amp; Compliance</h3>
+            <p>Review our editorial independence charters, media transparency disclosures, and leadership overview.</p>
+          </div>
+          <a href="/about/governance/" class="nav-btn">Institutional Governance &rarr;</a>
+        </section>
 
-        </div>
-      </section>
-
-      <!-- Operational Privacy Notice -->
-      <section class="conversion-banner">
-        <div>
-          <h3>Zero-Surveillance Communication Guarantee</h3>
-          <p>Messages received by Mobikom are processed strictly for business correspondence. We never store inquiries in third-party profiling CRMs or share contact data with data brokers.</p>
-        </div>
-        <a href="/privacy/" class="nav-btn">Read Privacy Policy</a>
-      </section>
+      </article>
 
     </div>
   </main>
 
-  <footer>
+  <!-- Universal Master Footer -->
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener noreferrer" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener noreferrer" target="_blank">bestjobs.bg</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
             <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
           </ul>
         </div>
@@ -162,7 +205,6 @@
             <li><a href="/about/">About Us &amp; History</a></li>
             <li><a href="/about/governance/">Governance</a></li>
             <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/blog/">Insights &amp; Papers</a></li>
             <li><a href="/contact/">Direct Contact</a></li>
           </ul>
         </div>
@@ -173,7 +215,7 @@
             <li><a href="/about/#nmt-450">NMT-450 Mobifons (1992)</a></li>
             <li><a href="/about/#pagers-mobika">Pagers &amp; Mobika Cards</a></li>
             <li><a href="/about/#ostatus-2011">2011 Operations Founding</a></li>
-            <li><a href="/blog/#manifesto-512">512-Byte Web Principle</a></li>
+            <li><a href="/blog/manifesto-512/">512-Byte Web Principle</a></li>
           </ul>
         </div>
 
@@ -189,7 +231,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
         <a href="/contact/">Operations Desk &rarr;</a>
       </div>
     </div>
