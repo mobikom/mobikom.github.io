@@ -1,3 +1,20 @@
+<!--
+  ==============================================================================
+  FILE: /bg/blog/index.html
+  PROJECT: mobikom.bg — Master Institutional Portal
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  PATTERN: Pattern 1 (Index & Native CSS Subgrid Engine)
+  STANDARDS: HTML5 Living Standard • CSS Grid Level 2 • Schema.org JSON-LD
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
+  ==============================================================================
+  DESCRIPTION:
+  Official Bulgarian Insights & Papers directory. Every internal link is
+  strictly bound to the /bg/ locale. Uses the identical 4-track subgrid engine
+  with bilingual phonetic transliteration for real-time article search.
+  ==============================================================================
+-->
 <!DOCTYPE html>
 <html lang="bg">
 <head>
@@ -13,7 +30,7 @@
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/">
-  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Мобиком Анализи и Публикации">
@@ -22,7 +39,7 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Structured Data: Collection & Breadcrumbs -->
+  <!-- Schema.org Breadcrumbs & CollectionPage -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -36,9 +53,8 @@
       },
       {
         "@type": "CollectionPage",
-        "@id": "https://mobikom.bg/bg/blog/#collection",
-        "url": "https://mobikom.bg/bg/blog/",
         "name": "Анализи и Технически Публикации",
+        "url": "https://mobikom.bg/bg/blog/",
         "description": "Технически анализи, архивни изследвания и инженерни стандарти от Мобиком.",
         "publisher": {
           "@type": "Organization",
@@ -52,7 +68,8 @@
 </head>
 <body>
 
-  <header>
+  <!-- Universal Master Header (Bulgarian Locale) -->
+  <header class="site-header">
     <div class="shell nav-bar">
       <a href="/bg/" class="brand-link" title="Мобиком България">
         <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
@@ -87,12 +104,14 @@
   <main>
     <div class="shell">
       
-      <!-- Section Header -->
+      <!-- Section Hero -->
       <section class="hero">
         <span class="hero-tag">Технически Бележки &bull; Архитектура &bull; Архив</span>
         <h1>Анализи и Публикации</h1>
         <p class="hero-lead">Технически коментари, рамки за поверителност и регионални изследвания.</p>
-        <p>Документираме оперативните процеси, философията за бърз статичен уеб и българските цифрови ресурси без проследяване.</p>
+        <p>
+          Документираме оперативните процеси, философията за бърз статичен уеб и българските цифрови ресурси без проследяване.
+        </p>
       </section>
 
       <!-- Fast Search Component -->
@@ -106,12 +125,12 @@
         </form>
       </section>
 
-      <!-- Articles Grid -->
+      <!-- Articles Subgrid Engine -->
       <section>
         <h2>Публикувани Материали</h2>
         <div class="grid-cards" id="cards-grid">
           
-          <!-- Article: Sea Stars -->
+          <!-- Статия 1: Sea Stars -->
           <article class="feature-card" data-searchable="seastars sea stars поморие луга солилуг бан йонх балнеология минерална химия черно море">
             <span class="card-meta">БАЛНЕОЛОГИЯ &bull; АРХИВИ</span>
             <h3>Sea Stars и Поморийската Луга: Балнеология и Дигитално Съхранение</h3>
@@ -119,7 +138,7 @@
             <a href="/bg/blog/seastars/" class="card-link">Прочетете публикацията &rarr;</a>
           </article>
 
-          <!-- Article: 512-Byte Web -->
+          <!-- Статия 2: 512-Byte Web -->
           <article class="feature-card" data-searchable="512 байта манифест минимализъм статичен html нулев js скорост латентност батерия еко">
             <span class="card-meta">УЕБ ЕФЕКТИВНОСТ</span>
             <h3>Принципът за 512-байтовия Уеб</h3>
@@ -127,7 +146,7 @@
             <a href="/bg/blog/manifesto-512/" class="card-link">Към есето &rarr;</a>
           </article>
 
-          <!-- Article: Regional Media Resilience -->
+          <!-- Статия 3: Regional Media Resilience -->
           <article class="feature-card" data-searchable="регионални медии добрич нюз dobrichnews добруджа децентрализация синдикация журналистика">
             <span class="card-meta">МЕДИЙНИ ОПЕРАЦИИ</span>
             <h3>Децентрализирани медийни мрежи в Добруджа</h3>
@@ -135,9 +154,9 @@
             <a href="/bg/blog/regional-media-resilience/" class="card-link">Към анализа &rarr;</a>
           </article>
 
-          <!-- Article: Telecom Chronology -->
+          <!-- Статия 4: Telecom Chronology -->
           <article class="feature-card" data-searchable="nmt-450 мобифони 1992 пейджъри мобика телеком наследство българия аналогови">
-            <span class="card-meta">ТЕЛЕКОМ НАСЛЕДСТВО</span>
+            <span class="card-meta">ТЕЛЕКОМ НА СЛЕДСТВО</span>
             <h3>От аналоговите Мобифони NMT-450 (1992) до съвременния уеб</h3>
             <p>Три десетилетия телекомуникационна история в България: от ранните аналогови клетки до леките статични уеб стандарти.</p>
             <a href="/bg/about/#nmt-450" class="card-link">Разгледайте хронологията &rarr;</a>
@@ -146,7 +165,7 @@
         </div>
       </section>
 
-      <!-- Conversion Banner -->
+      <!-- Конверсионен банер -->
       <section class="conversion-banner">
         <div>
           <h3>Синдикация и Техническо Партньорство</h3>
@@ -158,7 +177,8 @@
     </div>
   </main>
 
-  <footer>
+  <!-- Universal Master Footer (Bulgarian Locale) -->
+  <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
@@ -172,12 +192,12 @@
         </div>
 
         <div class="footer-col">
-          <h4>Управление и Връзка</h4>
+          <h4>Управление и Отдел</h4>
           <ul>
             <li><a href="/bg/">Начало</a></li>
             <li><a href="/bg/about/">За Нас и История</a></li>
-            <li><a href="/bg/portfolio/">Портфолио Проекти</a></li>
-            <li><a href="/bg/blog/">Анализи и Публикации</a></li>
+            <li><a href="/bg/about/governance/">Управление</a></li>
+            <li><a href="/bg/portfolio/">Портфолио</a></li>
             <li><a href="/bg/contact/">Контакт</a></li>
           </ul>
         </div>
@@ -203,7 +223,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал без проследяващи бисквитки.</p>
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
         <a href="/bg/contact/">Оперативен отдел &rarr;</a>
       </div>
     </div>
