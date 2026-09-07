@@ -5,7 +5,7 @@
   LICENSE: MIT (https://opensource.org/licenses/MIT)
   AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
   LANGUAGE: English (en)
-  LAYOUT: Tested 2-Column Grid (Name Left, 75px Photo Locked to Far Right)
+  LAYOUT: Bulletproof Top-Right Photo (Zero CSS Cache Dependency)
   STANDARDS: ATS Compliant • 1-Page A4 Engine • Zero !important • SEO Locked
   ==============================================================================
 -->
@@ -147,17 +147,16 @@
 
       <article class="cv-sheet">
 
-        <!-- 2-TRACK GRID: Name Left, Photo 75px Locked on the Right -->
-        <header style="display: grid; grid-template-columns: 1fr 75px; column-gap: 1.25rem; align-items: start; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
-          <div>
-            <h1 style="margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.85rem; font-weight: 800; color: var(--text);">Stoyan Stoyanov</h1>
-            <div style="font-size: 0.9rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.35rem 0.85rem; line-height: 1.35;">
-              <span>Location: Bulgaria</span> &bull;
-              <span>Email: stoyanov@mobikom.bg</span> &bull;
-              <span>Web: mobikom.bg/stoyanov/</span>
-            </div>
+        <!-- ZERO-FAIL RIGHT ANCHOR: Header padded on right, photo locked to absolute top-right -->
+        <header style="position: relative; min-height: 95px; padding-right: 95px; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
+          <h1 style="margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.85rem; font-weight: 800; color: var(--text);">Stoyan Stoyanov</h1>
+          <div style="font-size: 0.9rem; color: var(--muted); line-height: 1.4;">
+            <span>Location: Bulgaria</span> &bull;
+            <span>Email: stoyanov@mobikom.bg</span> &bull;
+            <span>Web: mobikom.bg/stoyanov/</span>
           </div>
-          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="75" height="90" style="width: 75px; min-width: 75px; max-width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block; justify-self: end;" onerror="this.style.display='none'">
+          <!-- Locked to top-right corner -->
+          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="75" height="90" style="position: absolute; top: 0; right: 0; width: 75px; min-width: 75px; max-width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
         </header>
 
         <section class="cv-section">
