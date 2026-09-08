@@ -53,7 +53,42 @@ The network directs four primary domains, maintaining strict operational separat
 * **Privacy by Default:** 100% GDPR compliant by design. Zero tracking cookies, zero persistent identifiers, and no cookie consent banners needed.
 
 ---
+## 🛡️ Edge Security & Infrastructure Architecture (Mil-Spec)
 
+The public edge infrastructure for **mobikom.bg** is hardened according to **Maximum Government and Military-Grade (Zero-Trust)** isolation baselines. The domain operates entirely via an immutable serverless architecture deployed on **Cloudflare Pages**, leaving no exposed backend origin database or attack surface.
+
+Below is the definitive configuration manifest maintained at the Cloudflare Edge network layer:
+
+### 🔒 Cryptography & Transport Security
+* **Minimum TLS Version:** `TLS 1.3 Only`. Legacy handshakes (TLS 1.0, 1.1, and 1.2) are permanently dropped at the boundary, forcing Perfect Forward Secrecy (PFS).
+* **HTTP Strict Transport Security (HSTS):** Enforced with `max-age=63072000` (2 years), including `includeSubDomains` and `preload` arrays. Client endpoints are cryptographically blocked from ever initiating an unencrypted plain-text connection.
+* **DNSSEC:** Cryptographically enabled and bonded with the registry via DS (Delegation Signer) records to eliminate DNS hijacking and cache-poisoning threats.
+* **Automatic HTTPS Rewrites & Opportunistic Encryption:** Configured `ON` to mandate absolute end-to-end transport layer security.
+
+### 🛡️ Web Application Firewall (WAF) Behavioral Fencing
+The network operates two highly optimized behavior-driven perimeter rules, designed to allow **100% global organic traffic growth** while instantly dropping reconnaissance infrastructure:
+
+* **Rule 1: Global Traffic Threat Mitigation**
+  * *Expression:* `(not cf.client.bot)`
+  * *Action:* `Managed Challenge`
+  * *Purpose:* Enforces a silent browser verification check against all non-verified traffic to drop rogue automated botnets while permitting legitimate global users and whitelisted search engines.
+* **Rule 2: Anti-Reconnaissance & Asset Protection**
+  * *Expression:* `(not cf.client.bot and (http.user_agent contains "curl" or http.user_agent contains "wget" or http.user_agent contains "python" or http.request.uri.path contains ".env" or http.request.uri.path contains ".git" or http.request.uri.path contains "wp-admin"))`
+  * *Action:* `Block`
+  * *Purpose:* Instantly drops common vulnerability mapping tools and bad user-agents attempting directory traversals.
+
+### 💡 Advanced Edge Transform Rules (Privacy Sandbox)
+Custom response headers are injected directly at the edge to sandbox the visitor's browser environment and prevent metadata or telemetry leakage:
+
+* **`Permissions-Policy`:** Set to `accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), usb=(), interest-cohort=()`. Completely air-gaps the site from local hardware or tracking frameworks to eliminate device fingerprinting vectors.
+* **`Referrer-Policy`:** Set strictly to `no-referrer`. Zero internal paths or referral metadata strings are transmitted downstream when links are clicked.
+* **`X-Frame-Options`:** Set strictly to `DENY` to neutralize advanced Clickjacking and UI-redressing methods.
+* **`X-Content-Type-Options`:** Set to `nosniff` to block browser MIME-sniffing execution exploits.
+
+### 📈 SEO Continuity Framework
+All custom firewall vectors explicitly whitelist the cryptographic `cf.client.bot` identifier. This ensures that verified global indexing crawlers (Googlebot, Bingbot) navigate the lightweight, semantic HTML skeleton unimpeded, preserving and maximizing the deep historical link equity ("SEO juice") feeding child digital networks like **bestjobs.bg**, **dobrichnews.com**, and **dobruja.com**.
+
+---
 ## 🧭 Site Directory & Symmetrical Information Architecture
 
 The website provides a 1:1 symmetrical English and Bulgarian dual-mirror architecture:
