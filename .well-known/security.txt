@@ -1,6 +1,25 @@
+# ==============================================================================
+# MOBIKOM.BG — Vulnerability Disclosure & Security Policy (RFC 9116)
+# ==============================================================================
+
+# Primary Security & Vulnerability Reporting Contacts
 Contact: mailto:office@mobikom.bg
-Expires: 2027-12-31T23:59:59.000Z
-Encryption: https://mobikom.bg/pgp-key.txt
-Preferred-Languages: en
-Canonical: https://mobikom.bg/.well-known/security.txt
+Contact: https://mobikom.bg/contact/
+
+# Security, Privacy & Data Protection Policy
 Policy: https://mobikom.bg/privacy/
+
+# Canonical URI for this file (Must point to .well-known on both files)
+Canonical: https://mobikom.bg/.well-known/security.txt
+
+# Disclosure Acknowledgments
+Acknowledgments: https://mobikom.bg/about/
+
+# Associated Network Career Board
+Hiring: https://bestjobs.bg
+
+# Supported Communication Languages (ISO 639-1)
+Preferred-Languages: bg, en
+
+# Expiration Date (ISO 8601 format)
+Expires: 2027-09-01T00:00:00.000Z
