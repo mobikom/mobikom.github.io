@@ -1,0 +1,6 @@
+Contact: mailto:office@mobikom.bg
+Expires: 2027-12-31T23:59:59.000Z
+Encryption: https://mobikom.bg/pgp-key.txt
+Preferred-Languages: en
+Canonical: https://mobikom.bg/.well-known/security.txt
+Policy: https://mobikom.bg/privacy/
