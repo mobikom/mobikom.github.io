@@ -9,13 +9,17 @@ Contact: https://mobikom.bg/contact/
 # Security, Privacy & Data Protection Policy
 Policy: https://mobikom.bg/privacy/
 
-# Canonical URI for this file (Must point to .well-known on both files)
+# Canonical URI for this file
 Canonical: https://mobikom.bg/.well-known/security.txt
 
-# Disclosure Acknowledgments
+# Associated Digital Media Network & Governance
+# • Regional Media Group: https://www.dobruja.com
+# • Real-Time Daily News: https://www.dobrichnews.com
 Acknowledgments: https://mobikom.bg/about/
+Acknowledgments: https://www.dobrichnews.com
+Acknowledgments: https://www.dobruja.com
 
-# Associated Network Career Board
+# Associated Network Career Board (RFC 9116 Standard Directive)
 Hiring: https://bestjobs.bg
 
 # Supported Communication Languages (ISO 639-1)
