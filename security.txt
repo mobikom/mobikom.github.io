@@ -8,11 +8,9 @@ Contact: https://mobikom.bg/contact/
 
 # Security, Privacy & Data Protection Policy
 Policy: https://mobikom.bg/privacy/
-Policy: https://mobikom.bg/gdpr/
 
-# Canonical URL for this security.txt file
+# Canonical URI for this file (Must point to .well-known on both files)
 Canonical: https://mobikom.bg/.well-known/security.txt
-Canonical: https://mobikom.bg/security.txt
 
 # Disclosure Acknowledgments
 Acknowledgments: https://mobikom.bg/about/
@@ -20,8 +18,8 @@ Acknowledgments: https://mobikom.bg/about/
 # Associated Network Career Board
 Hiring: https://bestjobs.bg
 
-# Supported Communication Languages
-Preferred-Languages: bg, en
+# Supported Communication Languages (ISO 639-1)
+Preferred-Languages: en
 
 # Expiration Date (ISO 8601 format)
 Expires: 2027-09-01T00:00:00.000Z
