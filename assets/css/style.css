@@ -3,34 +3,23 @@
  * FILE: /assets/css/style.css
  * PROJECT: mobikom.bg — Master Institutional Design Engine
  * LICENSE: MIT (https://opensource.org/licenses/MIT)
- * AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+ * AUTHOR: Stoyan Stoyanov, MBA / Mobikom Bulgaria (mobikom.bg)
  * STANDARDS: CSS Grid Level 2 (Subgrid) • CSS Color Module 4 (light-dark)
  * COMPLIANCE: Strict CSP Level 3 • Zero !important • GDPR Zero-Cookie Architecture
- * PERFORMANCE: Sub-14KB Single-Pass Engine • Native System Typography
+ * ARCHITECTURE: Unified 800px Academic Shell • Compact Single-Pass Engine
  * ==============================================================================
  * DESCRIPTION:
- * The single, definitive stylesheet powering every page across the mobikom.bg
- * domain (Homepage, Portfolio, Blog Index, Articles, About, Governance,
- * Contact, and Legal).
- *
- * ARCHITECTURAL MANIFESTO:
- * 1. Unified Grid Boundary: All pages share an identical 1100px shell anchored
- *    to the brand logo, eliminating horizontal jumps during navigation.
- * 2. Native Subgrid: Cards lock to parent row tracks (tag, title, description,
- *    and action link) eliminating layout shifts without client JavaScript.
- * 3. light-dark() Tokens: Single color declarations eliminate media-query
- *    duplication, reducing stylesheet byte weight and parser overhead.
- * 4. Zero !important: Specificity is naturally managed through clean DOM hierarchy
- *    and scoped utility containers.
- * 5. Content Visibility: Off-screen elements defer rendering calculations via
- *    `content-visibility: auto`, saving mobile CPU cycles and battery life.
+ * The single, definitive stylesheet powering every page across mobikom.bg.
+ * 1. Unified Grid Boundary: All pages share an identical 800px academic shell.
+ * 2. Native Subgrid: Cards lock to parent row tracks eliminating layout shifts.
+ * 3. light-dark() Tokens: Adaptive theme pairs eliminating media-query bloat.
+ * 4. Zero !important: Specificity naturally resolved through clean DOM cascade.
+ * 5. Content Visibility: Off-screen elements defer rendering calculations.
  * ==============================================================================
  */
 
 :root {
   color-scheme: light dark;
-
-  /* CSS Color 4 light-dark() Dynamic Tokens */
   --bg: light-dark(#ffffff, #0b0f19);
   --bg-alt: light-dark(#f8fafc, #131b2e);
   --border: light-dark(#dbe2ea, #1e293b);
@@ -39,438 +28,127 @@
   --primary: light-dark(#0052cc, #38bdf8);
   --primary-hover: light-dark(#0747a6, #7dd3fc);
   --primary-fg: light-dark(#ffffff, #0b0f19);
-
-  /* Geometry & Typography Tokens */
-  --max-w: 1100px;
-  --max-w-prose: 760px;
+  --max-w: 800px;
   --radius: 6px;
   --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, system-ui, sans-serif;
 }
 
-/* ==========================================================================
-   1. Global Reset & Stable Viewport
-   ========================================================================== */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; overflow-y: scroll; scrollbar-gutter: stable; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; padding-block: 2.5rem; }
+.shell, .shell-prose { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: 1.25rem; }
 
-html {
-  font-family: var(--font);
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  overflow-y: scroll;
-  scrollbar-gutter: stable;
-}
+/* Base Typography & a11y Focus */
+h1, h2, h3, h4 { color: var(--text); line-height: 1.25; font-weight: 800; letter-spacing: -0.01em; text-wrap: balance; }
+h1 { font-size: clamp(1.85rem, 4vw, 2.35rem); margin-bottom: 0.5rem; }
+h2 { font-size: 1.25rem; margin-block: 1.75rem 0.75rem; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+p { color: var(--muted); margin-bottom: 1rem; text-wrap: pretty; }
+a { color: var(--primary); text-decoration: none; transition: color 0.15s ease; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, .nav-toggle-label:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-  padding-block: 2.5rem;
-}
-
-/* ==========================================================================
-   2. Unified Shell (Anchored to Brand Logo Across All Pages)
-   ========================================================================== */
-/* Both classes share the exact same 1100px boundary so content never shifts */
-.shell,
-.shell-prose {
-  width: 100%;
-  max-width: var(--max-w);
-  margin-inline: auto;
-  padding-inline: 1.25rem;
-}
-
-/* ==========================================================================
-   3. Base Typography & Accessibility Focus
-   ========================================================================== */
-h1, h2, h3, h4 {
-  color: var(--text);
-  line-height: 1.25;
-  font-weight: 800;
-  letter-spacing: -0.01em;
-}
-
-h1 { font-size: clamp(2rem, 4vw, 2.75rem); margin-bottom: 0.5rem; }
-h2 { font-size: 1.35rem; margin-block: 1.5rem 0.5rem; }
-h3 { font-size: 1.15rem; margin-bottom: 0.4rem; }
-
-p {
-  color: var(--muted);
-  margin-bottom: 1rem;
-}
-
-a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-a:focus-visible, button:focus-visible, input:focus-visible, .nav-toggle-label:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
-
-/* ==========================================================================
-   4. Universal Header & Navigation Drawer
-   ========================================================================== */
-header.site-header {
-  background: var(--bg-alt);
-  border-bottom: 1px solid var(--border);
-  position: relative;
-}
-
-.nav-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-block: 0.75rem;
-}
-
-.brand-link {
-  display: inline-flex;
-  align-items: center;
-}
-
-.brand-logo-svg {
-  width: 190px;
-  height: 42px;
-  display: block;
-}
-
-.nav-toggle, .nav-toggle-label {
-  display: none;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  list-style: none;
-}
-
-.nav-link {
-  color: var(--text);
-  font-weight: 600;
-  padding: 0.4rem 0.6rem;
-  border-radius: var(--radius);
-}
-
-.nav-link:hover, .nav-link[aria-current="page"] {
-  color: var(--primary);
-}
-
-.nav-btn {
-  background: var(--primary);
-  color: var(--primary-fg);
-  font-weight: 600;
-  padding: 0.45rem 0.9rem;
-  border-radius: var(--radius);
-  display: inline-flex;
-  align-items: center;
-}
-
-.nav-btn:hover {
-  background: var(--primary-hover);
-  color: var(--primary-fg);
-  text-decoration: none;
-}
-
-.lang-toggle {
-  border: 1px solid var(--border);
-  font-weight: 600;
-  font-size: 0.85rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--radius);
-  color: var(--text);
-}
+/* Universal Header & Nav Drawer */
+header.site-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; }
+.nav-bar { display: flex; justify-content: space-between; align-items: center; padding-block: 0.75rem; }
+.brand-link { display: inline-flex; align-items: center; text-decoration: none; }
+.brand-logo-svg { width: 180px; height: 40px; display: block; }
+.nav-toggle, .nav-toggle-label { display: none; }
+nav ul { display: flex; align-items: center; gap: 0.6rem; list-style: none; }
+.nav-link { color: var(--text); font-weight: 600; padding: 0.35rem 0.55rem; border-radius: var(--radius); text-decoration: none; }
+.nav-link:hover, .nav-link[aria-current="page"] { color: var(--primary); text-decoration: none; }
+.nav-btn { background: var(--primary); color: var(--primary-fg); font-weight: 600; padding: 0.4rem 0.85rem; border-radius: var(--radius); display: inline-flex; align-items: center; text-decoration: none; border: none; cursor: pointer; transition: background-color 0.15s ease; }
+.nav-btn:hover { background: var(--primary-hover); color: var(--primary-fg); text-decoration: none; }
+.lang-toggle { border: 1px solid var(--border); font-weight: 600; font-size: 0.85rem; padding: 0.25rem 0.5rem; border-radius: var(--radius); color: var(--text); text-decoration: none; }
+.lang-toggle:hover { border-color: var(--primary); text-decoration: none; }
 
 @media (max-width: 768px) {
-  .nav-toggle-label {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    cursor: pointer;
-    font-size: 1.3rem;
-  }
-
-  nav ul {
-    display: none;
-  }
-
-  .nav-toggle:checked ~ ul {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: calc(100% + 1px);
-    left: 1.25rem;
-    right: 1.25rem;
-    background: var(--bg-alt);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 1rem;
-    z-index: 100;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  }
-
-  .nav-toggle:checked ~ ul li,
-  .nav-toggle:checked ~ ul a {
-    width: 100%;
-    text-align: left;
-  }
+  .nav-toggle-label { display: flex; align-items: center; justify-content: center; width: 38px; height: 38px; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; font-size: 1.25rem; }
+  nav ul { display: none; }
+  .nav-toggle:checked ~ ul { display: flex; flex-direction: column; position: absolute; top: calc(100% + 1px); left: 1.25rem; right: 1.25rem; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; z-index: 100; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); }
+  .nav-toggle:checked ~ ul li, .nav-toggle:checked ~ ul a { width: 100%; text-align: left; }
 }
 
-/* ==========================================================================
-   5. Hero Sections
-   ========================================================================== */
-.hero {
-  margin-bottom: 2.5rem;
-}
+/* Hero Sections */
+.hero { margin-bottom: 2.25rem; }
+.hero-tag { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--primary); display: block; margin-bottom: 0.35rem; }
+.hero-lead { font-size: 1.12rem; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+.hero-actions { display: flex; gap: 0.85rem; margin-top: 1.15rem; flex-wrap: wrap; }
 
-.hero-tag {
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--primary);
-  display: block;
-  margin-bottom: 0.4rem;
+/* Pattern 1: Native Subgrid Cards (Strict 2 Columns on Desktop) */
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.25rem; margin-top: 1rem; }
+.feature-card { display: grid; grid-template-rows: auto auto 1fr auto; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem; row-gap: 0.45rem; transition: border-color 0.15s ease, transform 0.15s ease; content-visibility: auto; }
+@supports (grid-template-rows: subgrid) {
+  .grid-cards { grid-auto-rows: auto auto 1fr auto; }
+  .feature-card { grid-row: span 4; grid-template-rows: subgrid; }
 }
+.feature-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.card-meta { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; color: var(--primary); align-self: start; }
+.feature-card h3 { font-size: 1.12rem; margin: 0; align-self: start; }
+.feature-card p { font-size: 0.92rem; margin: 0; align-self: start; }
+.feature-card a.card-link { font-weight: 600; font-size: 0.92rem; align-self: end; margin-top: 0.4rem; }
 
-.hero-lead {
-  font-size: 1.15rem;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 0.5rem;
-}
+/* Pattern 2: Universal Prose Engine (Articles, About, Governance) */
+.prose { line-height: 1.7; }
+.prose header { border-bottom: 1px solid var(--border); padding-bottom: 1.25rem; margin-bottom: 1.75rem; }
+.prose section { margin-bottom: 2rem; }
+.prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1.25rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.4rem; }
+.prose figure { margin-block: 1.5rem; }
+.prose figcaption { font-size: 0.8rem; color: var(--muted); margin-top: 0.4rem; line-height: 1.4; }
 
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  margin-top: 1.25rem;
-  flex-wrap: wrap;
-}
+/* Pattern 3: Executive CV Engine (/stoyanov/) */
+.cv-sheet { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem 1.75rem; margin-inline: auto; }
+.cv-header-grid { display: grid; grid-template-columns: 1fr 75px; column-gap: 1.25rem; align-items: start; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
+.cv-title-group { grid-column: 1; min-width: 0; }
+.cv-title-group h1 { margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.75rem; font-weight: 800; color: var(--text); }
+.cv-contact-line { font-size: 0.88rem; color: var(--muted); line-height: 1.4; }
+.cv-photo-img { grid-column: 2; width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.cv-section { margin-top: 0.75rem; }
+.cv-section h2 { font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 0.15rem; margin-bottom: 0.3rem; }
+.cv-item { margin-bottom: 0.4rem; }
+.cv-item-title { font-size: 0.95rem; font-weight: 700; color: var(--text); display: flex; justify-content: space-between; flex-wrap: wrap; }
+.cv-item-sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.15rem; }
+.cv-list { list-style: square; margin-left: 1.15rem; color: var(--muted); font-size: 0.88rem; }
+.cv-list li { margin-bottom: 0.12rem; }
+.cv-compact-p { font-size: 0.88rem; color: var(--muted); line-height: 1.4; margin-bottom: 0.2rem; }
+.cv-bold-note { font-weight: 600; color: var(--text); }
+.action-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.75rem; }
+.action-buttons { display: flex; gap: 0.5rem; align-items: center; }
+.cv-footer { margin-top: 0.65rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted); }
 
-/* ==========================================================================
-   6. PATTERN 1: Native CSS Subgrid Engine (Cards & Directories)
-   ========================================================================== */
-.grid-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Track 1: Meta Tag | Track 2: Title | Track 3: Description | Track 4: Link */
-  grid-auto-rows: auto auto 1fr auto;
-  gap: 1.25rem;
-  margin-top: 1rem;
-}
+/* Interface Components: Banners & Audit Boxes */
+.audit-box { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 1.15rem; margin-block: 1.5rem; }
+.audit-list { list-style: none; display: flex; flex-direction: column; gap: 0.4rem; color: var(--muted); }
+.conversion-banner { margin-top: 2.75rem; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
 
-.feature-card {
-  display: grid;
-  grid-row: span 4;             /* Card spans all 4 parent tracks */
-  grid-template-rows: subgrid;   /* Children snap into parent tracks */
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.25rem;
-  row-gap: 0.5rem;
-  transition: border-color 0.15s ease;
-  content-visibility: auto;     /* Defers off-screen rendering to save memory */
-}
+/* Institutional Footer */
+footer.site-footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding-block: 2.25rem 1.25rem; font-size: 0.88rem; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 1.75rem; margin-bottom: 1.75rem; }
+.footer-col h4 { font-size: 0.92rem; margin-bottom: 0.45rem; color: var(--text); }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+.footer-col a { color: var(--muted); text-decoration: none; }
+.footer-col a:hover { color: var(--primary); text-decoration: underline; }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 1.15rem; display: flex; justify-content: space-between; color: var(--muted); font-size: 0.82rem; flex-wrap: wrap; gap: 0.5rem; }
 
-.feature-card:hover {
-  border-color: var(--primary);
-}
-
-.card-meta {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--primary);
-  align-self: start;
-}
-
-.feature-card h3 {
-  font-size: 1.2rem;
-  margin: 0;
-  align-self: start;
-}
-
-.feature-card p {
-  font-size: 0.95rem;
-  margin: 0;
-  align-self: start;
-}
-
-.feature-card a.card-link {
-  font-weight: 600;
-  align-self: end;               /* All action links align to the exact bottom */
-  margin-top: 0.5rem;
-}
-
-/* ==========================================================================
-   7. PATTERN 2: Universal Prose Engine (Articles, About, Legal, Governance)
-   ========================================================================== */
-.prose {
-  max-width: var(--max-w-prose); /* 760px comfortable reading measure */
-  line-height: 1.7;
-  /* Stays anchored flush to the left boundary of .shell under the logo */
-}
-
-.prose header {
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-.prose section {
-  margin-bottom: 2rem;
-}
-
-.prose ul, .prose ol {
-  margin-left: 1.5rem;
-  margin-bottom: 1.25rem;
-  color: var(--muted);
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.prose figure {
-  margin-block: 1.5rem;
-}
-
-.prose figcaption {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-top: 0.4rem;
-  line-height: 1.4;
-}
-
-/* ==========================================================================
-   8. Reusable Interface Components (Search & Banners)
-   ========================================================================== */
-.search-container {
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--primary);
-  border-radius: var(--radius);
-  padding: 1rem;
-  margin-bottom: 2.5rem;
-}
-
-.search-title-row {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 600;
-}
-
-.search-field {
-  width: 100%;
-  padding: 0.65rem 0.85rem;
-  font-size: 1rem;
-  background: var(--bg);
-  color: var(--text);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-}
-
-.conversion-banner {
-  margin-top: 3rem;
-  background: var(--bg-alt);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 1.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-/* ==========================================================================
-   9. Institutional Footer
-   ========================================================================== */
-footer.site-footer {
-  background: var(--bg-alt);
-  border-top: 1px solid var(--border);
-  padding-block: 2.5rem 1.5rem;
-  font-size: 0.9rem;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.footer-col h4 {
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.footer-col ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
-}
-
-.footer-col a {
-  color: var(--muted);
-}
-
-.footer-col a:hover {
-  color: var(--primary);
-}
-
-.footer-bottom {
-  border-top: 1px solid var(--border);
-  padding-top: 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  color: var(--muted);
-  font-size: 0.85rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-/* ==========================================================================
-   10. Deterministic Print Engine (Zero !important)
-   ========================================================================== */
+/* Deterministic Print Engine (Strict Zero !important • Exact 1-Page A4) */
+@page { size: A4 portrait; margin: 10mm 12mm; }
 @media print {
-  header.site-header, footer.site-footer, .search-container, .conversion-banner, .no-print {
-    display: none;
-  }
-
-  body {
-    background: #ffffff;
-    color: #000000;
-    font-size: 9.5pt;
-  }
-
-  a {
-    color: #000000;
-    text-decoration: none;
-  }
-
-  .feature-card {
-    border: 1px solid #cccccc;
-    break-inside: avoid;
-  }
+  header.site-header, footer.site-footer, .conversion-banner, .action-row, .nav-toggle, .nav-toggle-label, .no-print { display: none; }
+  html, body { background: #ffffff; color: #000000; font-size: 9.1pt; line-height: 1.28; padding: 0; margin: 0; min-height: auto; overflow: visible; }
+  main { padding: 0; }
+  .shell, .shell-prose, .cv-sheet { max-width: 100%; border: none; padding: 0; margin: 0; background: transparent; }
+  .cv-header-grid { display: grid; grid-template-columns: 1fr 75px; column-gap: 10pt; border-bottom: 1.5pt solid #0052cc; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .cv-title-group h1 { font-size: 14pt; margin: 0 0 2pt 0; color: #000000; }
+  .cv-contact-line { font-size: 8.5pt; color: #333333; }
+  .cv-photo-img { width: 65px; height: 78px; border: 0.5pt solid #cccccc; display: block; margin-left: auto; }
+  .cv-section { margin-top: 4.5pt; break-inside: avoid; }
+  .cv-section h2 { font-size: 8.2pt; color: #000000; border-bottom: 0.75pt solid #444444; padding-bottom: 1pt; margin-bottom: 2pt; letter-spacing: 0.04em; }
+  .cv-item-title { font-size: 8.5pt; color: #000000; display: flex; justify-content: space-between; }
+  .cv-item-sub, .cv-compact-p, .cv-list { font-size: 8.1pt; color: #111111; }
+  .cv-list { margin-left: 11pt; }
+  .cv-list li { margin-bottom: 1pt; }
+  a, a.card-link { color: #000000; text-decoration: none; }
+  a[href^="http"]::after { content: ""; }
+  .feature-card { border: 1px solid #cccccc; break-inside: avoid; background: transparent; }
 }
