@@ -1,19 +1,18 @@
 <!--
   ==============================================================================
   FILE: /bg/about/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледална страница За нас
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
-  STANDARDS: HTML5 Living Standard • Semantic Chronology • Zero Inline CSS
+  STANDARDS: HTML5 Living Standard • Schema.org AboutPage • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Official Bulgarian history and telecommunications chronology for Mobikom.
-  Every link is locked to the /bg/ locale. Contains the exact anchor IDs:
-  #nmt-450 (NMT-450 Мобифони), #pagers-mobika (Пейджъри и Мобика), and
-  #ostatus-2011 (Основаване през 2011 г.).
+  Историческа и институционална хроника на Мобиком: клетъчен пионер NMT-450 от
+  1992 г., пейджинг системи Motorola, улични карти Мобика, автономна Linux
+  стрийминг инфраструктура и преход към високонадеждна статична edge архитектура.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -21,47 +20,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>За Нас и Телекомуникационно Наследство | Мобиком</title>
-  <meta name="description" content="История, оперативна философия и технологично наследство на Мобиком: от аналоговите NMT-450 мрежи през 1992 г. до съвременния олекотен статичен уеб.">
+  <title>Мобиком | За нас и институционално наследство</title>
+  <meta name="description" content="Хроника на mobikom.bg: клетъчен пионер NMT-450 от 1992 г., автономни Linux стрийминг възли, медийни мрежи и институционално управление под ръководството на Стоян Стоянов, MBA.">
+  <meta name="author" content="Стоянов">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Absolute Multilingual Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/about/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/about/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/about/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="За Мобиком | Наследство и Уеб Операции">
-  <meta property="og:description" content="От аналоговите NMT-450 телекомуникации през 1992 г. до бърза дигитална медийна мрежа без проследяване.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Мобиком | За нас и институционално наследство">
+  <meta property="og:description" content="Хроника на mobikom.bg: клетъчен пионер NMT-450 от 1992 г., Linux стрийминг възли, медийни мрежи и институционално управление.">
   <meta property="og:url" content="https://mobikom.bg/bg/about/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Schema.org Breadcrumbs & AboutPage -->
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мобиком | За нас и институционално наследство">
+  <meta name="twitter:description" content="Хроника на mobikom.bg: клетъчен пионер NMT-450 от 1992 г., Linux стрийминг възли, медийни мрежи и институционално управление.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org Entity Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "За Нас", "item": "https://mobikom.bg/bg/about/" }
-        ]
+        "@type": "AboutPage",
+        "@id": "https://mobikom.bg/bg/about/#webpage",
+        "url": "https://mobikom.bg/bg/about/",
+        "name": "За Мобиком - Телекомуникационно наследство и институционална мрежа",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://mobikom.bg/#website",
+          "url": "https://mobikom.bg/bg/",
+          "name": "Мобиком"
+        }
       },
       {
-        "@type": "AboutPage",
-        "name": "За Мобиком и Телекомуникационното Наследство",
-        "url": "https://mobikom.bg/bg/about/",
-        "description": "Историческа хронология и оперативна мисия на дигиталната мрежа Мобиком.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
+        "@type": "Organization",
+        "@id": "https://mobikom.bg/#organization",
+        "name": "Мобиком",
+        "legalName": "Мобиком България",
+        "url": "https://mobikom.bg/bg/",
+        "foundingDate": "1992-12",
+        "sameAs": [
+          "https://www.dobrichnews.com",
+          "https://www.dobruja.com",
+          "https://bestjobs.bg",
+          "https://github.com/mobikom"
+        ]
       }
     ]
   }
@@ -69,163 +90,219 @@
 </head>
 <body>
 
-  <!-- Universal Master Header (Bulgarian Locale) -->
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link" aria-current="page">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/about/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" aria-current="page" title="Текуща: История на телекомуникациите и наследство">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/about/" class="lang-toggle" hreflang="en" title="Switch to the English version of About Us">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
-      
-      <!-- Pattern 2: Prose Engine -->
+    <div class="shell">
       <article class="prose">
         
         <header>
-          <span class="hero-tag">Мрежово Наследство &bull; Операции</span>
-          <h1>За Мобиком</h1>
-          <p class="hero-lead">Изграждане на олекотени дигитални медии, гражданска журналистика и устойчива статична уеб инфраструктура в България от 2011 г.</p>
+          <span class="hero-tag">ЕНЦИКЛОПЕДИЧНА ХРОНИКА &bull; ОТ 1992 Г. ДО ДНЕС</span>
+          <h1>За Мобиком: История и институционално наследство</h1>
+          <p class="hero-lead">
+            От клетъчен пионер в телекомуникациите до автономна Linux инфраструктура, регионални медийни мрежи и високонадеждни уеб стандарти.
+          </p>
+          <p>
+            Документиране на технологичния път на уеб домейна <code>mobikom.bg</code> — от създаването на първата аналогова мобилна мрежа по стандарта NMT-450 през 1992 г., през автономна Linux сървърна инфраструктура (Web, Mail, FTP, бази данни, Red5 медиен стрийминг), интернет телевизионните излъчвания на Медийна група Добруджа от Кан и дома на Нелсън Мандела в Йоханесбург, до преструктурирането на домейна през 2011 г. в независима институционална дигитална мрежа под управлението на Стоян Стоянов, MBA.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Мисия и оперативна философия</h2>
+        <!-- Блок: Корпоративно управление (Сочи строго към Стъпка 3: Управление) -->
+        <section class="audit-box" id="leadership" aria-labelledby="leadership-heading-bg">
+          <h2 id="leadership-heading-bg">Корпоративно управление и директорат</h2>
           <p>
-            Мобиком функционира като независима техническа и медийна дигитална мрежа с централа в България. В епоха, доминирана от претоварени платформи, агресивно междусайтово проследяване и затворени екосистеми, Мобиком прилага инженерни принципи за пълна защита на личните данни: нулеви бисквитки, чист семантичен HTML5 и нискоенергийно статично доставяне на съдържанието.
+            Корпоративното управление, редакционната етика и инфраструктурните стандарти на <strong>dobrichnews.com</strong>, <strong>dobruja.com</strong> и <strong>bestjobs.bg</strong> се ръководят от управителя <strong>Стоян Стоянов, MBA</strong>, в координация с почетния главен редактор <strong>преп. Виолета Върбанова</strong> и журналиста <strong>Руслан Николов</strong>.
           </p>
           <p>
-            Основната цел на мрежата е регионалните новини, платформите за кариерно развитие и културните архиви да останат бързо достъпни от всяко устройство, при всякаква скорост на връзката и с минимален разход на енергия.
+            <a href="/bg/about/governance/" class="nav-btn" title="Преглед на корпоративното управление и ръководство">
+              Корпоративно управление &rarr;
+            </a>
           </p>
         </section>
 
-        <!-- Хронологична котва 1: NMT-450 -->
+        <!-- Публично архивно съобщение -->
+        <section class="audit-box" aria-labelledby="archival-notice-heading-bg">
+          <h3 id="archival-notice-heading-bg">Публично архивно и образователно съобщение</h3>
+          <p>
+            Историческите телекомуникационни марки (РТК Мобиком, Мобифон, пейджинг системи, Мобика), международните трудови архиви (Neogen Group, BestJobs International) и мултимедийните излъчвания (Медийна група Добруджа, Red5 стрийминг възли, филмови излъчвания от Кан, репортажи от резиденцията на Нелсън Мандела) са документирани на този портал за образователна, културна и историческа справка. Домейнът mobikom.bg е придобит през 2011 г. и структуриран от Мобиком България за независими дигитални уеб операции.
+          </p>
+        </section>
+
+        <!-- Секция 1: Ерата на NMT-450 -->
         <section id="nmt-450">
-          <h2>2. Начало на клетъчните комуникации (1992 г.)</h2>
+          <h2>1. 1992 &ndash; 2005: Пионерът на клетъчните мрежи NMT-450</h2>
           <p>
-            Технологичният корен на името Мобиком в България започва през 1992 г. с изграждането на първата национална клетъчна мрежа по аналоговия скандинавски стандарт NMT-450 (Nordic Mobile Telephone). Работейки на честота 450 MHz, легендарните „Мобифони“ осигуряваха безжична връзка с широк обхват дори в най-трудните планински релефи на страната.
-          </p>
-          <p>
-            Макар аналоговите честоти отдавна да отстъпиха място на цифровите стандарти, основният инженерен принцип от онази епоха – максимална ефективност на сигнала и широк географски обхват при ограничени хардуерни ресурси – остава водещ в съвременната ни уеб архитектура.
-          </p>
-        </section>
-
-        <!-- Хронологична котва 2: Пейджъри и Мобика -->
-        <section id="pagers-mobika">
-          <h2>3. Пейджъри и улични фонокарти „Мобика“</h2>
-          <p>
-            През средата и края на 90-те години инфраструктурата се разшири в масова радиопейджинг мрежа (пейджъри) и разпознаваемите улични телефонни апарати с чип-карти „Мобика“, разположени във всички български общини. Тези системи създадоха обществения стандарт за надеждни и децентрализирани ежедневни съобщения.
-          </p>
-          <p>
-            Днес Мобиком съхранява това телекомуникационно наследство като професионален критерий: публичните комуникации трябва да бъдат здрави, достъпни и работещи без излишни бариери за гражданите.
-          </p>
-        </section>
-
-        <!-- Хронологична котва 3: Основаване през 2011 г. -->
-        <section id="ostatus-2011">
-          <h2>4. Учредяване през 2011 г. и статичният уеб</h2>
-          <p>
-            През 2011 г. Мобиком бе преструктуриран като независим център за дигитални медийни операции. Отказвайки се от тежки комерсиални CMS системи, мрежата възприе стандартите за отворена синдикация (RSS/Atom), децентрализираните протоколи (OStatus) и <strong>Принципа за 512-байтовия уеб</strong>.
-          </p>
-          <p>
-            Към днешна дата мрежата активно ръководи ключови български дигитални активи:
+            През декември 1992 г. Радиокомуникационна компания (РТК) Мобиком стартира като историческо международно съвместно предприятие между британския телеком гигант <strong>Cable &amp; Wireless (49%)</strong>, държавната <strong>Българска телекомуникационна компания (БТК, 39%)</strong> и <strong>Радиоелектронни системи (12%)</strong>. Дружеството се превърна в първия търговски мобилен оператор в България.
           </p>
           <ul>
-            <li><strong><a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>:</strong> Ежедневни проверени регионални новини за Добрич и Североизточна България.</li>
-            <li><strong><a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>:</strong> Културно наследство, земеделски архиви и регионална история на Добруджа.</li>
-            <li><strong><a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>:</strong> Високоефективна платформа за обяви за работа и кариерно развитие.</li>
-            <li><strong>Дигитални каталози и монографии:</strong> Научни публикации и архиви, включително инициативата за черноморска минерална химия и поморийска луга.</li>
+            <li><strong>Стандартът NMT-450i:</strong> Работейки в аналоговия честотен диапазон 450 MHz, Мобиком изгради базови станции с огромен радиус на покритие от 30 до 40 километра, осигурявайки над 95% териториално покритие по основните магистрали, планинските масиви и Черноморието.</li>
+            <li><strong>Мобифони и телефонни кодове:</strong> Достигайки над 196 000 активни абонати, операторът първоначално използваше националния код <code>0799</code> с 5-цифрени номера, а по-късно премина към емблематичния префикс <code>048</code> с 6-цифрено избиране.</li>
           </ul>
         </section>
 
-        <!-- Конверсионен банер -->
-        <section class="conversion-banner">
-          <div>
-            <h3>Институционално управление и прозрачност</h3>
-            <p>Запознайте се с редакционните стандарти, декларациите за медийна собственост и ръководството.</p>
-          </div>
-          <a href="/bg/about/governance/" class="nav-btn">Към Управлението &rarr;</a>
+        <!-- Секция 2: Мобифони, пейджинг и карти Мобика -->
+        <section id="handset-models">
+          <h2>2. Апарати, пейджинг системи и колекционерски карти Мобика</h2>
+          <p>
+            Аналоговите NMT-450 мобифони се програмираха хардуерно в сервизните центрове на Мобиком чрез уникален сериен номер (ESN). Легендарните модели включваха култовия <strong>Benefon Sigma и Sigma Gold</strong> (масовата сензация от Световното първенство по футбол през 1994 г.), неразрушимия <strong>Benefon Dragon</strong>, <strong>Benefon Delta и Spica</strong>, както и серията <strong>Nokia 440, 450, 540, 640 и 650</strong>.
+          </p>
+          <p>
+            Паралелно с това операторът управляваше националната буквено-цифрова пейджинг мрежа (пейджъри <strong>Motorola Advisor</strong> и <strong>Motorola Bravo</strong>), както и десетки хиляди улични телефонни кабини под марката <strong>„Мобика“</strong> (фонокарти от 25, 50, 100, 200 и 400 импулса), дали тласък на националното колекционерско движение <em>фонокартия</em>.
+          </p>
+        </section>
+
+        <!-- Секция 3: Преход към софтуерни протоколи -->
+        <section id="open-web-protocols">
+          <h2>3. 2007 &ndash; 2012: Преход към софтуерни протоколи и федеративни мрежи</h2>
+          <p>
+            След спирането на аналоговата NMT-450 мрежа на 5 август 2008 г., парадигмата се премести от физическия радиочестотен спектър към разпределен софтуер, отворени уеб стандарти и децентрализирани услуги. Домейнът <code>mobikom.bg</code> бе придобит през 2011 г. и структуриран от Мобиком България под ръководството на <strong>Стоян Стоянов, MBA</strong> с цел развитие на тези нови технологии:
+          </p>
+          <ul>
+            <li><strong>2007 &ndash; Общността moutarde.org:</strong> Ранни ентусиасти на свободното споделяне се обединяват около платформата <code>moutarde.org</code>, изследвайки обмен на съобщения в реално време извън затворените корпоративни платформи.</li>
+            <li><strong>Придобиване на mobikom.bg и OStatus стандарт:</strong> Инфраструктурата интегрира пионерската работа на Evan Prodromou (създател на StatusNet, identi.ca и водещ автор на стандарта OStatus), внедрявайки <code>mobikom.bg</code> като отворен микроблогинг възел с локализирано индексиране на потоци.</li>
+            <li><strong>pump.io и федеративната екосистема Diaspora*:</strong> Инфраструктурата тества следващото поколение <strong>pump.io</strong> (архитектурната основа на стандарта W3C ActivityPub), заедно с мостове към децентрализираната мрежа <strong>Diaspora*</strong> — преки предшественици на днешния Fediverse.</li>
+          </ul>
+        </section>
+
+        <!-- Секция 4: Сървърна инфраструктура и медийни партньорства -->
+        <section id="ostatus-2011">
+          <h2>4. 2011 &ndash; 2015: Сървърна инфраструктура, Интернет ТВ и дестинационни медии</h2>
+          <p>
+            Под шапката на Мобиком България този период бе белязан от изграждане на хардуерна и софтуерна сървърна база, подкрепяща прехода на <strong>Медийна група Добруджа</strong> от традиционен печат към интерактивни уеб медии, живи ТВ излъчвания и медийни партньорства:
+          </p>
+          <ul>
+            <li><strong>Автономна Linux сървърна инфраструктура:</strong> Внедряване и управление на физически и виртуализирани Linux сървърни клъстери (Debian, Ubuntu, CentOS, RedHat), поддържащи уеб сървъри (Nginx, Apache), пощенски сървъри (Postfix, Dovecot), защитени FTP сървъри (ProFTPD) и бази данни (MySQL, MariaDB).</li>
+            <li><strong>Red5 медиен стрийминг:</strong> Инженеринг на стрийминг канали в реално време (RTMP, RTSP, HLS) чрез отворения сървър <strong>Red5 Media Server</strong> и транскодиране с FFmpeg за разпространение на документални филми и камери на живо.</li>
+            <li><strong>Черноморски туризъм и дестинационни медии:</strong> Отразяване на курортния живот и партньорство с водещи дестинации, включително ваканционно селище Албена и Св. Св. Константин и Елена, в журналистическо сътрудничество с Руслан Николов.</li>
+            <li><strong>Спортна журналистика и дигитални аудиокниги:</strong> Стартиране на <code>sport.dobruja.com</code> (1 август 2011 г.) паралелно с литературната стрийминг платформа <code>audiobooks.dobruja.com</code>.</li>
+            <li><strong>Международни излъчвания и филми от Кан:</strong> Излъчване на кинопредавания от Кан, Франция, както и канали като <strong>africa.dobruja.com</strong> с историческо отразяване от Йоханесбург (включително посещение на дома на нобеловия лауреат Нелсън Мандела).</li>
+            <li><strong>Медийна синдикация и партньорства:</strong> Под редакционното ръководство на почетния главен редактор <strong>преп. Виолета Върбанова</strong> медийната група изгради сътрудничество с водещи телевизионни мрежи: <strong>bTV</strong>, <strong>Нова Нюз</strong>, <strong>ТВ7</strong>, Българска национална телевизия (<strong>БНТ</strong>), <strong>Deutsche Welle (DW)</strong>, <strong>Associated Press (AP)</strong>, <strong>CNN</strong>, водещи новинарски агенции и български печатни издания в Лондон.</li>
+          </ul>
+        </section>
+
+        <!-- Секция 5: Наследството на bestjobs.bg от Neogen Group -->
+        <section id="bestjobs-heritage">
+          <h2>5. Еволюцията на bestjobs.bg &bull; Директни кариерни обяви</h2>
+          <p>
+            Направлението за обяви за работа стъпва върху дълбоки корени в източноевропейския дигитален сектор:
+          </p>
+          <ul>
+            <li><strong>Произход в рамките на Neogen Group:</strong> <strong>bestjobs.bg</strong> стартира като част от регионалната мрежа за кариерно развитие на <strong>Neogen Group</strong> (основана от предприемача Кълин Фусу), развила платформите в Румъния, Сърбия и Молдова.</li>
+            <li><strong>Регионално търсене през jobs.dobruja.com:</strong> Под шапката на Медийна група Добруджа регионалният портал демонстрира силно пазарно търсене на директни и достъпни обяви за работа в България.</li>
+            <li><strong>Консолидация и техническа независимост (15 август 2013 г. &ndash; днес):</strong> На 15 август 2013 г. управлението и инфраструктурата на <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на директни обяви за работа в bestjobs.bg"><strong>bestjobs.bg</strong></a> се обединяват под шапката на Мобиком България. Днес <code>bestjobs.bg</code> функционира като сайт за обяви за работа с директен контакт с работодателя без посредници и такси по ЗНЗ.</li>
+          </ul>
+        </section>
+
+        <!-- Секция 6: Съвременна институционална мрежа -->
+        <section id="ecosystem">
+          <h2>6. Настояще: Високонадеждна институционална мрежа</h2>
+          <p>
+            Днес Мобиком функционира като централен институционален шлюз, управляващ дигитални издателски платформи, кариерни системи за директно наемане и приложни изследвания:
+          </p>
+          <ul>
+            <li><a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на директни обяви за работа в bestjobs.bg"><strong>bestjobs.bg:</strong></a> Сайт за обяви за работа с директен контакт с работодателя в цяла България без такси за посредничество.</li>
+            <li><a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com:</strong></a> Регионален всекидневник и аналитичен журнал за Североизточна България в реално време.</li>
+            <li><a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалния културен и стопански журнал dobruja.com"><strong>dobruja.com:</strong></a> Културен алманах, стопански преглед и общностен исторически архив за Добруджанския регион.</li>
+            <li><a href="/bg/portfolio/#seastars" class="card-link" title="Преглед на монографа за поморийската луга в портфолиото"><strong>Монограф Sea Stars:</strong></a> Дигитален архив и казус за лечебните свойства на поморийската езерна луга и черноморските минерали на БАН.</li>
+          </ul>
         </section>
 
       </article>
 
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Имате проект или медийно запитване?</h3>
+          <p>Свържете се директно с нашия отдел за корпоративни комуникации за реклама, синдикация на съдържание или технически консултации.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с отдела за корпоративни комуникации">Корпоративен контакт &rarr;</a>
+      </section>
+
     </div>
   </main>
 
-  <!-- Universal Master Footer (Bulgarian Locale) -->
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Управление и Отдел</h4>
+          <h4>Управление и контакти</h4>
           <ul>
-            <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За Нас и История</a></li>
-            <li><a href="/bg/about/governance/">Управление</a></li>
-            <li><a href="/bg/portfolio/">Портфолио</a></li>
-            <li><a href="/bg/contact/">Контакт</a></li>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и корпоративна кореспонденция">Търговски отдел контакти</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Хронология</h4>
           <ul>
-            <li><a href="/bg/about/#nmt-450">NMT-450 Мобифони (1992)</a></li>
-            <li><a href="/bg/about/#pagers-mobika">Пейджъри и карти Мобика</a></li>
-            <li><a href="/bg/about/#ostatus-2011">Основаване през 2011 г.</a></li>
-            <li><a href="/bg/blog/manifesto-512/">512-байтовият Принцип</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Сигурност и Законодателство</h4>
-          <ul>
-            <li><a href="/bg/privacy/">Поверителност</a></li>
-            <li><a href="/bg/terms/">Общи Условия</a></li>
-            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
-            <li><a href="/about/">English (EN)</a></li>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
           </ul>
         </div>
       </div>
 
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/about/" hreflang="en" title="Switch to the English canonical version of About Us">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към отдела за корпоративни комуникации">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
