@@ -1,18 +1,19 @@
 <!--
   ==============================================================================
   FILE: /bg/contact/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
-  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
-  STANDARDS: HTML5 Living Standard • Semantic Directory • Zero Inline CSS
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледална контактна страница
+  PATTERN: Institutional Communications Engine (Unified 800px Boundary)
+  STANDARDS: HTML5 Living Standard • Schema.org ContactPage • Zero Inline CSS
+  SEO: Fully Qualified Hreflang • Non-Duplicated Semantic Anchors & Explicit Titles
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Official Bulgarian contact desk and direct inquiry routing. Every internal link
-  is strictly bound to the /bg/ locale. Operates direct email channels without
-  third-party form-tracking scripts or tracking cookies.
+  Официален отдел за корпоративни комуникации и стратегически партньорства на Мобиком.
+  Управлява оперативната кореспонденция чрез info@mobikom.bg и въпроси към
+  управлението чрез stoyanov@mobikom.bg при гарантирана конфиденциалност и нулев тракинг.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -20,47 +21,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Контакт и Оперативен Отдел | Мобиком</title>
-  <meta name="description" content="Директни комуникационни канали на Мобиком: медийна синдикация, техническо консултиране и институционални запитвания.">
+  <title>Мобиком | Корпоративни комуникации и институционален отдел</title>
+  <meta name="description" content="Официален отдел за корпоративни комуникации на Мобиком: Регионална медийна реклама в dobrichnews.com и dobruja.com, обяви за работа в bestjobs.bg и стратегически партньорства.">
+  <meta name="author" content="Стоянов">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Absolute Multilingual Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/contact/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/contact/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/contact/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/contact/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Контакт с Мобиком | Оперативен Отдел">
-  <meta property="og:description" content="Директни канали за медийна синдикация, уеб операции и институционално управление.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Мобиком | Корпоративни комуникации и институционален отдел">
+  <meta property="og:description" content="Директна делови кореспонденция, задания за регионална медийна реклама и институционални запитвания.">
   <meta property="og:url" content="https://mobikom.bg/bg/contact/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+  
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мобиком | Корпоративни комуникации и институционален отдел">
+  <meta name="twitter:description" content="Директна делови кореспонденция, задания за регионална медийна реклама и институционални запитвания.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Schema.org Breadcrumbs & ContactPage -->
+  <!-- Structured Data: ContactPage & Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Контакт", "item": "https://mobikom.bg/bg/contact/" }
-        ]
+        "@type": "ContactPage",
+        "@id": "https://mobikom.bg/bg/contact/#webpage",
+        "url": "https://mobikom.bg/bg/contact/",
+        "name": "Отдел за корпоративни комуникации на Мобиком",
+        "isPartOf": {
+          "@type": "WebSite",
+          "@id": "https://mobikom.bg/#website",
+          "url": "https://mobikom.bg/",
+          "name": "Мобиком"
+        }
       },
       {
-        "@type": "ContactPage",
-        "name": "Мобиком Оперативен Отдел и Контакт",
-        "url": "https://mobikom.bg/bg/contact/",
-        "description": "Директен оперативен отдел за техническо сътрудничество, новинарска синдикация и управление.",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
+        "@type": "Organization",
+        "@id": "https://mobikom.bg/#organization",
+        "name": "Мобиком България",
+        "url": "https://mobikom.bg/bg/",
+        "email": "info@mobikom.bg",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "contactType": "корпоративни комуникации",
+            "email": "info@mobikom.bg",
+            "availableLanguage": ["Bulgarian", "English"],
+            "areaServed": "BG"
+          }
+        ]
       }
     ]
   }
@@ -68,184 +93,149 @@
 </head>
 <body>
 
-  <!-- Universal Master Header (Bulgarian Locale) -->
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn" aria-current="page">Запитване</a></li>
-          <li><a href="/contact/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" aria-current="page" title="Текуща: Директен контакт с корпоративния отдел">Директен контакт</a></li>
+          <li><a href="/contact/" class="lang-toggle" hreflang="en" title="Switch to the English contact desk">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       
-      <!-- Pattern 2: Prose Engine -->
-      <article class="prose">
-        
-        <header>
-          <span class="hero-tag">Оперативен Отдел &bull; Комуникации</span>
-          <h1>Контакт и Връзка</h1>
-          <p class="hero-lead">Директни канали за комуникация, медийна синдикация, техническо консултиране и институционални въпроси.</p>
-        </header>
+      <!-- Primary Contact Hero -->
+      <section class="hero">
+        <span class="hero-tag">ИНСТИТУЦИОНАЛЕН ОТДЕЛ &bull; СТРАТЕГИЧЕСКИ КОМУНИКАЦИИ</span>
+        <h1>Корпоративни комуникации и институционален отдел</h1>
+        <p class="hero-lead">Директна търговска кореспонденция, медийна синдикация и институционални партньорства.</p>
+        <p>
+          Мобиком координира стратегически рекламни кампании, регионално медийно отразяване и B2B технологични консултации. За да гарантираме пълна конфиденциалност, отсъствие на проследяващи механизми и бърза реакция, цялата кореспонденция се управлява директно през официалните ни служебни пощенски кутии.
+        </p>
+      </section>
 
-        <section>
-          <h2>1. Директни оперативни направления</h2>
-          <p>
-            Мобиком поддържа защитени, директни канали за връзка. За да гарантираме сигурността на кореспонденцията и пълната защита на личните данни, порталът не използва контактни форми от трети страни, проследяващи маркетинг скриптове или Google reCAPTCHA.
-          </p>
-          <p>
-            Моля, насочвайте запитванията си към съответния отдел:
-          </p>
-          <ul>
-            <li>
-              <strong>Оперативен отдел и общи запитвания:</strong><br>
-              Имейл: <strong>desk@mobikom.bg</strong><br>
-              Обхват: Медийно отразяване, обществени въпроси и институционална кореспонденция.
-            </li>
-            <li>
-              <strong>Технически операции и уеб инфраструктура:</strong><br>
-              Имейл: <strong>ops@mobikom.bg</strong><br>
-              Обхват: Мониторинг на сървърите, статична архитектура и доклади за сигурност.
-            </li>
-            <li>
-              <strong>Ръководство и управление:</strong><br>
-              Имейл: <strong>stoyanov@mobikom.bg</strong><br>
-              Обхват: Корпоративно управление, регулаторни въпроси и академични партньорства.
-            </li>
-          </ul>
-        </section>
+      <!-- Primary Commercial Communications Hub -->
+      <div class="audit-box">
+        <h2>Търговско сътрудничество и комуникационна поща</h2>
+        <p>
+          Директни запитвания относно рекламни кампании, обяви за работа и технически консултации се приемат на:
+        </p>
+        <p>
+          <a href="mailto:info@mobikom.bg?subject=Запитване%20за%20партньорство%20-%20Mobikom.bg" class="nav-btn" title="Изпратете директен имейл до корпоративния отдел на Мобиком">
+            info@mobikom.bg &rarr;
+          </a>
+        </p>
+        <ul class="audit-list">
+          <li>
+            <strong>Регионална медийна реклама:</strong> Банерни позиции, проверени граждански съобщения и спонсорирани публикации в <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com</strong></a> и <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалния културен и стопански журнал dobruja.com"><strong>dobruja.com</strong></a>.
+          </li>
+          <li>
+            <strong>Обяви за работа:</strong> Публикуване на работни позиции и представяне на компании в <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на обяви за работа в bestjobs.bg"><strong>bestjobs.bg</strong></a> без такси за посредничество.
+          </li>
+          <li>
+            <strong>Въпроси към корпоративното управление:</strong> Запитвания относно управление на активи и инфраструктура се насочват към <a href="mailto:stoyanov@mobikom.bg" class="card-link" title="Директна кореспонденция с управителя Стоян Стоянов, MBA"><strong>stoyanov@mobikom.bg</strong></a>.
+          </li>
+        </ul>
+      </div>
 
-        <section>
-          <h2>2. Директни контакти с платформите в мрежата</h2>
-          <p>
-            За редакционни теми, пресрелизи или търговска реклама относно конкретни издания от мрежата, се свържете директно с техните редакции:
-          </p>
-          <ul>
-            <li>
-              <strong><a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>:</strong> Новинарска редакция, медийни запитвания и регионални събития за Добрич и региона.
-            </li>
-            <li>
-              <strong><a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>:</strong> Културни архиви, краеведски публикации и материали за историята на Добруджа.
-            </li>
-            <li>
-              <strong><a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>:</strong> Обяви за работа, клиентски профили и управление на кариерната платформа.
-            </li>
-          </ul>
-        </section>
+      <!-- Service Level & Operational Commitments -->
+      <div class="audit-box">
+        <h2>Институционални ангажименти и локация</h2>
+        <ul class="audit-list">
+          <li><strong>Гарантиран отговор:</strong> Всички проверени бизнес, медийни и кариерни запитвания получават писмен отговор в рамките на 24 работни часа.</li>
+          <li><strong>Пълна конфиденциалност:</strong> Нулево споделяне на данни с външни брокери, липса на бисквитки и строга фирмена дискретност.</li>
+          <li><strong>Локация и работно време:</strong> София, България (EET / EEST) &bull; Понеделник &ndash; Петък, 09:00 &ndash; 18:00 ч.</li>
+        </ul>
+      </div>
 
-        <section>
-          <h2>3. Политика за сигурност и съхранение на данните</h2>
-          <p>
-            В съответствие с архитектурата без бисквитки и изискванията на Регламент (ЕС) 2016/679 (GDPR):
-          </p>
-          <ul>
-            <li>Получената кореспонденция се използва единствено за целите на отговор на Вашето запитване.</li>
-            <li>Не предоставяме, не продаваме и не споделяме данни с маркетингови платформи или рекламни агенции.</li>
-            <li>Официалните институционални декларации за управление могат да бъдат прегледани на страницата <a href="/bg/about/governance/">Управление</a>.</li>
-          </ul>
-        </section>
-
-        <!-- Секция 4: Директни плащания през Stripe -->
-        <section>
-          <h2>4. Институционална подкрепа и директни плащания</h2>
-          <p>
-            За финансова подкрепа на независимата регионална журналистика, спонсорство на отворената уеб инфраструктура или заплащане по издадени фактури:
-          </p>
-          <p style="margin-top: 1rem;">
-            <a href="https://buy.stripe.com/7sYdR8epV9RP4cCfDJ2B200" class="nav-btn" target="_blank" rel="nofollow noopener sponsored">
-              Сигурно плащане през Stripe &rarr;
-            </a>
-          </p>
-        </section>
-
-        <!-- Конверсионен банер -->
-        <section class="conversion-banner">
-          <div>
-            <h3>Институционално управление и прозрачност</h3>
-            <p>Прегледайте редакционните стандарти, декларациите за медийна собственост и ръководството.</p>
-          </div>
-          <a href="/bg/about/governance/" class="nav-btn">Към Управлението &rarr;</a>
-        </section>
-
-      </article>
+      <!-- Conversion Banner -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Готови ли сте за ново партньорство или кампания?</h3>
+          <p>Изпратете вашето рекламно задание, медиен график или технически изисквания директно до нашия екип.</p>
+        </div>
+        <a href="mailto:info@mobikom.bg?subject=Търговско%20предложение%20-%20Mobikom.bg" class="nav-btn" title="Изпратете търговско предложение по имейл">Пишете на корпоративния отдел &rarr;</a>
+      </section>
 
     </div>
   </main>
 
-  <!-- Universal Master Footer (Bulgarian Locale) -->
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Управление и Отдел</h4>
+          <h4>Управление и контакти</h4>
           <ul>
-            <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За Нас и История</a></li>
-            <li><a href="/bg/about/governance/">Управление</a></li>
-            <li><a href="/bg/portfolio/">Портфолио</a></li>
-            <li><a href="/bg/contact/">Контакт</a></li>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и корпоративна кореспонденция">Търговски отдел контакти</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Хронология</h4>
           <ul>
-            <li><a href="/bg/about/#nmt-450">NMT-450 Мобифони (1992)</a></li>
-            <li><a href="/bg/about/#pagers-mobika">Пейджъри и карти Мобика</a></li>
-            <li><a href="/bg/about/#ostatus-2011">Основаване през 2011 г.</a></li>
-            <li><a href="/bg/blog/manifesto-512/">512-байтовият Принцип</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Сигурност и Законодателство</h4>
-          <ul>
-            <li><a href="/bg/privacy/">Поверителност</a></li>
-            <li><a href="/bg/terms/">Общи Условия</a></li>
-            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
-            <li><a href="/contact/">English (EN)</a></li>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
           </ul>
         </div>
       </div>
 
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/contact/" hreflang="en" title="Switch to the English corporate contact desk">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License (github.com/mobikom). Zero-cookie architecture.</p>
+        <a href="/bg/" title="Обратно към началния институционален портал">&larr; Обратно към началния портал</a>
       </div>
     </div>
   </footer>
