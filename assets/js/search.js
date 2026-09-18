@@ -1,164 +1,183 @@
 /**
  * ==============================================================================
- * FILE: /assets/js/search.js
- * PROJECT: mobikom.bg — Master Institutional Portal
+ * FILE: /assets/css/style.css
+ * PROJECT: mobikom.bg — Master Institutional Design Engine
  * LICENSE: MIT (https://opensource.org/licenses/MIT)
  * AUTHOR: Stoyan Stoyanov, MBA / Mobikom Bulgaria (mobikom.bg)
- * STANDARDS: Vanilla ECMAScript • WAI-ARIA 1.2 • Strict CSP Level 3 Compliant
- * PERFORMANCE: Zero Layout Reflows (textContent) • Precomputed Index • Zero Dependencies
+ * STANDARDS: CSS Grid Level 2 (Subgrid) • CSS Color Module 4 (light-dark)
+ * COMPLIANCE: Strict CSP Level 3 • Zero !important • GDPR Zero-Cookie Architecture
+ * ARCHITECTURE: Unified 800px Institutional Shell • High-Legibility Typography
  * ==============================================================================
  * DESCRIPTION:
- * Ultra-lightweight, battery-friendly client-side search engine featuring:
- * 1. Bidirectional phonetic transliteration (Bulgarian Cyrillic <-> Latin).
- * 2. Multi-token AND logic (e.g., "добрич news" matches both tokens simultaneously).
- * 3. Native CSS Subgrid compatibility (cleanly collapses hidden card tracks).
- * 4. Screen-reader live updates via role="status" and aria-live="polite".
+ * The single, definitive stylesheet powering every page across the mobikom.bg
+ * domain. Implements adaptive light-dark() pairs, hardware-accelerated CSS
+ * Subgrid alignment, and a strict deterministic A4 print engine for CVs.
  * ==============================================================================
  */
 
-document.addEventListener('DOMContentLoaded', () => {
-  const searchInput = document.getElementById('search-input');
-  const cardsGrid = document.getElementById('cards-grid') || document.getElementById('cards-grid-core') || document.getElementById('cards-grid-monographs');
+:root {
+  color-scheme: light dark;
 
-  // Gracefully exit if search interface elements are not present on the page
-  if (!searchInput || !cardsGrid) return;
+  /* CSS Color 4 light-dark() Dynamic Tokens */
+  --bg: light-dark(#ffffff, #0b0f19);
+  --bg-alt: light-dark(#f8fafc, #131b2e);
+  --border: light-dark(#dbe2ea, #1e293b);
+  --text: light-dark(#0f172a, #f1f5f9);
+  --muted: light-dark(#334155, #94a3b8);
+  --primary: light-dark(#0052cc, #38bdf8);
+  --primary-hover: light-dark(#0747a6, #7dd3fc);
+  --primary-fg: light-dark(#ffffff, #0b0f19);
 
-  // Gather all feature cards on the page (supports multiple grid sections)
-  const cards = Array.from(document.querySelectorAll('.feature-card'));
-  if (cards.length === 0) return;
+  /* Geometry & Typography Tokens */
+  --max-w: 800px;
+  --radius: 6px;
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Ubuntu, Cantarell, sans-serif;
+}
 
-  /* ==========================================================================
-     1. Transliteration Dictionaries (Bulgarian Transliteration Law / ISO 9)
-     ========================================================================== */
-  const bgToEnMap = {
-    'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd', 'е': 'e', 'ж': 'zh',
-    'з': 'z', 'и': 'i', 'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
-    'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't', 'у': 'u', 'ф': 'f',
-    'х': 'h', 'ц': 'ts', 'ч': 'ch', 'ш': 'sh', 'щ': 'sht', 'ъ': 'a', 'ь': 'y',
-    'ю': 'yu', 'я': 'ya'
-  };
+/* ==========================================================================
+   1. Global Reset & Stable Viewport
+   ========================================================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.65; overflow-y: scroll; scrollbar-gutter: stable; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-size: 16px; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; padding-block: 2.5rem; }
+.shell, .shell-prose { width: 100%; max-width: var(--max-w); margin-inline: auto; padding-inline: 1.25rem; }
 
-  const enToBgDigraphs = [
-    ['sht', 'щ'], ['zh', 'ж'], ['ch', 'ч'], ['sh', 'ш'],
-    ['yu', 'ю'], ['ya', 'я'], ['ts', 'ц']
-  ];
+/* ==========================================================================
+   2. Base Typography & Accessibility Focus
+   ========================================================================== */
+h1, h2, h3, h4 { color: var(--text); line-height: 1.25; font-weight: 800; letter-spacing: -0.01em; text-wrap: balance; }
+h1 { font-size: clamp(1.95rem, 4.5vw, 2.5rem); margin-bottom: 0.6rem; }
+h2 { font-size: 1.35rem; margin-block: 2rem 0.85rem; border-bottom: 1px solid var(--border); padding-bottom: 0.35rem; }
+h3 { font-size: 1.18rem; margin-bottom: 0.45rem; }
+p { color: var(--muted); margin-bottom: 1.15rem; text-wrap: pretty; font-size: 1.05rem; }
+a { color: var(--primary); text-decoration: none; transition: color 0.15s ease; font-weight: 600; }
+a:hover { text-decoration: underline; }
+a:focus-visible, button:focus-visible, input:focus-visible, .nav-toggle-label:focus-visible { outline: 2px solid var(--primary); outline-offset: 2px; }
 
-  const enToBgSingle = {
-    'a': 'а', 'b': 'б', 'v': 'в', 'w': 'в', 'g': 'г', 'd': 'д', 'e': 'е',
-    'z': 'з', 'i': 'и', 'j': 'й', 'k': 'к', 'l': 'л', 'm': 'м', 'n': 'н',
-    'o': 'о', 'p': 'п', 'r': 'р', 's': 'с', 't': 'т', 'u': 'у', 'f': 'ф',
-    'h': 'х', 'c': 'к', 'y': 'й', 'q': 'к', 'x': 'кс'
-  };
+/* ==========================================================================
+   3. Universal Header & Navigation Drawer
+   ========================================================================== */
+header.site-header { background: var(--bg-alt); border-bottom: 1px solid var(--border); position: relative; }
+.nav-bar { display: flex; justify-content: space-between; align-items: center; padding-block: 0.75rem; }
+.brand-link { display: inline-flex; align-items: center; text-decoration: none; }
+.brand-logo-svg { width: 180px; height: 40px; display: block; }
+.nav-toggle, .nav-toggle-label { display: none; }
+nav ul { display: flex; align-items: center; gap: 0.6rem; list-style: none; }
+.nav-link { color: var(--text); font-weight: 600; font-size: 0.95rem; padding: 0.4rem 0.6rem; border-radius: var(--radius); text-decoration: none; }
+.nav-link:hover, .nav-link[aria-current="page"] { color: var(--primary); text-decoration: none; }
+.nav-btn { background: var(--primary); color: var(--primary-fg); font-weight: 700; font-size: 0.95rem; padding: 0.45rem 0.95rem; border-radius: var(--radius); display: inline-flex; align-items: center; text-decoration: none; border: none; cursor: pointer; transition: background-color 0.15s ease; }
+.nav-btn:hover { background: var(--primary-hover); color: var(--primary-fg); text-decoration: none; }
+.lang-toggle { border: 1px solid var(--border); font-weight: 700; font-size: 0.88rem; padding: 0.3rem 0.55rem; border-radius: var(--radius); color: var(--text); text-decoration: none; }
+.lang-toggle:hover { border-color: var(--primary); text-decoration: none; }
 
-  /**
-   * Generates both Latin and Cyrillic phonetic variants for a given search token.
-   * @param {string} term Single search word
-   * @returns {string[]} Array of unique phonetic string variants
-   */
-  function getBilingualVariants(term) {
-    const variants = new Set([term]);
+@media (max-width: 768px) {
+  .nav-toggle-label { display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: var(--radius); cursor: pointer; font-size: 1.35rem; }
+  nav ul { display: none; }
+  .nav-toggle:checked ~ ul { display: flex; flex-direction: column; position: absolute; top: calc(100% + 1px); left: 1.25rem; right: 1.25rem; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.15rem; z-index: 100; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); gap: 0.5rem; }
+  .nav-toggle:checked ~ ul li, .nav-toggle:checked ~ ul a { width: 100%; text-align: left; }
+}
 
-    // Cyrillic -> Latin pass
-    let toLatin = term;
-    for (const [cyr, lat] of Object.entries(bgToEnMap)) {
-      toLatin = toLatin.replaceAll(cyr, lat);
-    }
-    variants.add(toLatin);
+/* ==========================================================================
+   4. Hero Sections
+   ========================================================================== */
+.hero { margin-bottom: 2.5rem; }
+.hero-tag { font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--primary); display: block; margin-bottom: 0.4rem; }
+.hero-lead { font-size: 1.22rem; font-weight: 700; color: var(--text); margin-bottom: 0.65rem; line-height: 1.45; }
+.hero-actions { display: flex; gap: 0.95rem; margin-top: 1.25rem; flex-wrap: wrap; }
 
-    // Latin -> Cyrillic pass
-    let toCyrillic = term;
-    for (const [lat, cyr] of enToBgDigraphs) {
-      toCyrillic = toCyrillic.replaceAll(lat, cyr);
-    }
-    for (const [lat, cyr] of Object.entries(enToBgSingle)) {
-      toCyrillic = toCyrillic.replaceAll(lat, cyr);
-    }
-    variants.add(toCyrillic);
+/* ==========================================================================
+   5. PATTERN 1: Native CSS Subgrid Engine (Strictly 2 Columns on Desktop)
+   ========================================================================== */
+.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.35rem; margin-top: 1rem; }
+.feature-card { display: grid; grid-template-rows: auto auto 1fr auto; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.35rem; row-gap: 0.5rem; transition: border-color 0.15s ease, transform 0.15s ease; content-visibility: auto; }
+@supports (grid-template-rows: subgrid) {
+  .grid-cards { grid-auto-rows: auto auto 1fr auto; }
+  .feature-card { grid-row: span 4; grid-template-rows: subgrid; }
+}
+.feature-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.card-meta { font-size: 0.78rem; font-weight: 800; text-transform: uppercase; color: var(--primary); align-self: start; letter-spacing: 0.04em; }
+.feature-card h3 { font-size: 1.22rem; margin: 0; align-self: start; }
+.feature-card p { font-size: 1rem; margin: 0; align-self: start; line-height: 1.55; }
+.feature-card a.card-link { font-weight: 700; font-size: 0.98rem; align-self: end; margin-top: 0.5rem; }
 
-    return Array.from(variants);
-  }
+/* ==========================================================================
+   6. PATTERN 2: Universal Prose Engine (Articles, About, Governance)
+   ========================================================================== */
+.prose { line-height: 1.75; font-size: 1.08rem; }
+.prose header { border-bottom: 1px solid var(--border); padding-bottom: 1.35rem; margin-bottom: 1.85rem; }
+.prose section { margin-bottom: 2.25rem; }
+.prose ul, .prose ol { margin-left: 1.5rem; margin-bottom: 1.35rem; color: var(--muted); display: flex; flex-direction: column; gap: 0.5rem; font-size: 1.05rem; }
 
-  /* ==========================================================================
-     2. Pre-index Cards (Zero Reflow: textContent instead of innerText)
-     ========================================================================== */
-  const cardIndex = cards.map(card => {
-    const dataMeta = card.getAttribute('data-searchable') || '';
-    const visibleText = card.textContent || '';
-    const combinedIndex = `${dataMeta} ${visibleText}`.toLowerCase();
-    return {
-      element: card,
-      content: combinedIndex
-    };
-  });
+/* ==========================================================================
+   7. PATTERN 3: Executive CV Engine (/stoyanov/)
+   ========================================================================== */
+.cv-sheet { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.65rem 1.85rem; margin-inline: auto; font-size: 1rem; }
+.cv-header-grid { display: grid; grid-template-columns: 1fr 75px; column-gap: 1.25rem; align-items: start; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem; }
+.cv-title-group { grid-column: 1; min-width: 0; }
+.cv-title-group h1 { margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.85rem; font-weight: 800; color: var(--text); }
+.cv-contact-line { font-size: 0.92rem; color: var(--muted); line-height: 1.4; }
+.cv-photo-img { grid-column: 2; width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block; }
+.cv-section { margin-top: 0.75rem; }
+.cv-section h2 { font-size: 0.9rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--primary); border-bottom: 1px solid var(--border); padding-bottom: 0.15rem; margin-bottom: 0.35rem; }
+.cv-item { margin-bottom: 0.45rem; }
+.cv-item-title { font-size: 1rem; font-weight: 700; color: var(--text); display: flex; justify-content: space-between; flex-wrap: wrap; }
+.cv-item-sub { font-size: 0.92rem; color: var(--muted); margin-bottom: 0.15rem; }
+.cv-list { list-style: square; margin-left: 1.15rem; color: var(--muted); font-size: 0.92rem; }
+.cv-list li { margin-bottom: 0.15rem; }
+.cv-compact-p { font-size: 0.92rem; color: var(--muted); line-height: 1.45; margin-bottom: 0.25rem; }
+.action-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.15rem; flex-wrap: wrap; gap: 0.75rem; font-size: 0.95rem; }
+.action-buttons { display: flex; gap: 0.5rem; align-items: center; }
+.cv-footer { margin-top: 0.75rem; padding-top: 0.4rem; border-top: 1px solid var(--border); font-size: 0.8rem; color: var(--muted); }
 
-  /* ==========================================================================
-     3. Accessible Empty State Node (Subgrid & WAI-ARIA Compliant)
-     ========================================================================== */
-  let noResults = document.getElementById('search-empty-msg');
-  if (!noResults) {
-    noResults = document.createElement('div');
-    noResults.id = 'search-empty-msg';
-    noResults.className = 'search-empty-msg';
-    noResults.setAttribute('role', 'status');
-    noResults.setAttribute('aria-live', 'polite');
-    noResults.style.display = 'none';
-    noResults.textContent = 'No matching platforms found. / Няма намерени резултати.';
-    
-    // Append after the search container so it doesn't break CSS grids
-    const searchContainer = document.querySelector('.search-container');
-    if (searchContainer) {
-      searchContainer.parentNode.insertBefore(noResults, searchContainer.nextSibling);
-    }
-  }
+/* ==========================================================================
+   8. Reusable Interface Components & Audit Boxes
+   ========================================================================== */
+.search-container { background: var(--bg-alt); border: 1px solid var(--border); border-left: 3px solid var(--primary); border-radius: var(--radius); padding: 1rem; margin-bottom: 2.5rem; }
+.search-title-row { display: flex; justify-content: space-between; margin-bottom: 0.5rem; font-size: 0.9rem; font-weight: 600; }
+.search-field { width: 100%; padding: 0.65rem 0.85rem; font-size: 1rem; background: var(--bg); color: var(--text); border: 1px solid var(--border); border-radius: var(--radius); }
+.search-empty-msg { text-align: center; padding: 2.5rem 1rem; color: var(--muted); font-size: 1.05rem; background: var(--bg-alt); border: 1px dashed var(--border); border-radius: var(--radius); margin-bottom: 2.5rem; }
 
-  /* ==========================================================================
-     4. High-Performance Input Listener (Sub-Millisecond Keystroke Response)
-     ========================================================================== */
-  let animationFrameId = null;
+.audit-box { background: var(--bg-alt); border: 1px solid var(--border); border-left: 4px solid var(--primary); border-radius: var(--radius); padding: 1.35rem; margin-block: 1.75rem; }
+.audit-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; color: var(--muted); font-size: 1.02rem; }
+.conversion-banner { margin-top: 3rem; background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.65rem; display: flex; justify-content: space-between; align-items: center; gap: 1.35rem; flex-wrap: wrap; }
 
-  searchInput.addEventListener('input', (e) => {
-    if (animationFrameId) {
-      cancelAnimationFrame(animationFrameId);
-    }
+/* ==========================================================================
+   9. Institutional Footer
+   ========================================================================== */
+footer.site-footer { background: var(--bg-alt); border-top: 1px solid var(--border); padding-block: 2.5rem 1.35rem; font-size: 0.92rem; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem; }
+.footer-col h4 { font-size: 0.98rem; margin-bottom: 0.55rem; color: var(--text); font-weight: 800; }
+.footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.45rem; }
+.footer-col a { color: var(--muted); text-decoration: none; font-weight: 500; }
+.footer-col a:hover { color: var(--primary); text-decoration: underline; }
 
-    animationFrameId = requestAnimationFrame(() => {
-      const rawQuery = e.target.value.toLowerCase().trim();
+.footer-legal-bar { border-top: 1px solid var(--border); padding-block: 1rem; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.75rem; font-size: 0.88rem; }
+.footer-legal-bar a { color: var(--muted); text-decoration: none; font-weight: 600; }
+.footer-legal-bar a:hover { color: var(--primary); text-decoration: underline; }
+.legal-sep { color: var(--border); user-select: none; }
+.footer-bottom { border-top: 1px solid var(--border); padding-top: 1.15rem; display: flex; justify-content: space-between; color: var(--muted); font-size: 0.84rem; flex-wrap: wrap; gap: 0.5rem; }
 
-      // If search input is cleared, restore all cards immediately
-      if (!rawQuery) {
-        for (let i = 0; i < cardIndex.length; i++) {
-          cardIndex[i].element.style.display = '';
-        }
-        noResults.style.display = 'none';
-        return;
-      }
-
-      // Split query into discrete words: "добрич news" -> ["добрич", "news"]
-      const queryTokens = rawQuery.split(/\s+/).filter(Boolean);
-
-      // Precompute bilingual variants ONCE per keystroke
-      const tokenVariantsList = queryTokens.map(getBilingualVariants);
-      let visibleCount = 0;
-
-      // Single-pass evaluation against the precomputed card index
-      for (let i = 0; i < cardIndex.length; i++) {
-        const item = cardIndex[i];
-
-        // Multi-token AND logic: Card must match EVERY query token
-        const matchesAllTokens = tokenVariantsList.every(variants =>
-          variants.some(variant => item.content.includes(variant))
-        );
-
-        if (matchesAllTokens) {
-          item.element.style.display = '';
-          visibleCount++;
-        } else {
-          item.element.style.display = 'none'; // Subgrid cleanly collapses hidden tracks
-        }
-      }
-
-      // Toggle accessible empty-state notification
-      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
-    });
-  }, { passive: true });
-});
+/* ==========================================================================
+   10. Deterministic Print Engine (Strict Zero !important • Exact 1-Page A4)
+   ========================================================================== */
+@page { size: A4 portrait; margin: 10mm 12mm; }
+@media print {
+  header.site-header, footer.site-footer, .conversion-banner, .action-row, .nav-toggle, .nav-toggle-label, .search-container, .no-print { display: none; }
+  html, body { background: #ffffff; color: #000000; font-size: 9.1pt; line-height: 1.28; padding: 0; margin: 0; min-height: auto; overflow: visible; }
+  main { padding: 0; }
+  .shell, .shell-prose, .cv-sheet { max-width: 100%; border: none; padding: 0; margin: 0; background: transparent; }
+  .cv-header-grid { display: grid; grid-template-columns: 1fr 75px; column-gap: 10pt; border-bottom: 1.5pt solid #0052cc; padding-bottom: 4pt; margin-bottom: 6pt; }
+  .cv-title-group h1 { font-size: 14pt; margin: 0 0 2pt 0; color: #000000; }
+  .cv-contact-line { font-size: 8.5pt; color: #333333; }
+  .cv-photo-img { width: 65px; height: 78px; border: 0.5pt solid #cccccc; display: block; margin-left: auto; }
+  .cv-section { margin-top: 4.5pt; break-inside: avoid; }
+  .cv-section h2 { font-size: 8.2pt; color: #000000; border-bottom: 0.75pt solid #444444; padding-bottom: 1pt; margin-bottom: 2pt; letter-spacing: 0.04em; }
+  .cv-item-title { font-size: 8.5pt; color: #000000; display: flex; justify-content: space-between; }
+  .cv-item-sub, .cv-compact-p, .cv-list { font-size: 8.1pt; color: #111111; }
+  .cv-list { margin-left: 11pt; }
+  .cv-list li { margin-bottom: 1pt; }
+  a, a.card-link { color: #000000; text-decoration: none; }
+  a[href^="http"]::after { content: ""; }
+  .feature-card { border: 1px solid #cccccc; break-inside: avoid; background: transparent; }
+}
