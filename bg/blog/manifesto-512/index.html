@@ -1,17 +1,18 @@
 <!--
   ==============================================================================
   FILE: /bg/blog/manifesto-512/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледален монограф
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Инженерен манифест за Принципа за 512-байтовия уеб: оптимизация на пакетите,
-  премахване на излишния JavaScript и енергийно ефективна уеб архитектура.
+  Технологичен манифест за Принципа 512 байта: ефективност на пакетния бюджет,
+  елиминиране на клиентския софтуерен баласт, волатилно RAM изпълнение и
+  устойчива статична доставка.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -19,189 +20,378 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Принципът за 512-байтовия Уеб | Мобиком</title>
-  <meta name="description" content="Инженерен манифест за устойчива уеб архитектура: TCP пакетна дисциплина, нулево претоварване на процесора и икономия на енергия.">
+  <title>Принципът 512 байта | Инженерен манифест на Мобиком</title>
+  <meta name="description" content="Технологичен манифест за Принципа 512 байта: ефективност на пакетния бюджет, елиминиране на клиентския софтуерен баласт, волатилно RAM изпълнение и устойчива статична доставка.">
+  <meta name="author" content="Стоян Стоянов, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Multilingual Canonical Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/blog/manifesto-512/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/manifesto-512/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/manifesto-512/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/manifesto-512/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Принципът за 512-байтовия Уеб | Мобиком">
-  <meta property="og:description" content="Защо олекотената статична архитектура и TCP дисциплината са бъдещето на устойчивите уеб системи.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Принципът 512 байта | Инженерен манифест на Мобиком">
+  <meta property="og:description" content="Технологичен манифест за Принципа 512 байта: ефективност на пакетния бюджет, елиминиране на клиентския софтуерен баласт, волатилно RAM изпълнение и устойчива статична доставка.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/manifesto-512/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Принципът 512 байта | Инженерен манифест на Мобиком">
+  <meta name="twitter:description" content="Технологичен манифест за Принципа 512 байта: ефективност на пакетния бюджет, елиминиране на клиентския софтуерен баласт, волатилно RAM изпълнение и устойчива статична доставка.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "512-байтовият Принцип", "item": "https://mobikom.bg/bg/blog/manifesto-512/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Принципът за 512-байтовия Уеб",
-        "description": "Инженерен манифест за устойчива уеб архитектура, TCP пакетна дисциплина и олекотено доставяне на съдържание.",
-        "url": "https://mobikom.bg/bg/blog/manifesto-512/",
-        "datePublished": "2024-06-10T09:00:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "Принципът 512 байта: Архитектурен детерминизъм, транспортна физика и ефемерна поверителност във високонадеждни уеб операции",
+    "description": "Технологичен манифест за Принципа 512 байта: ефективност на пакетния бюджет, елиминиране на клиентския софтуерен баласт, волатилно RAM изпълнение и устойчива статична доставка.",
+    "url": "https://mobikom.bg/bg/blog/manifesto-512/",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-18",
+    "inLanguage": "bg",
+    "keywords": "TCP Slow Start, InitCwnd, RFC 6928, RFC 9000, WHATWG MIME Sniffing, Антифорензика, Волатилна памет, CSS Subgrid, Нискоенергиен софтуер",
+    "author": {
+      "@type": "Person",
+      "name": "Стоян Стоянов, MBA",
+      "jobTitle": "Управител",
+      "url": "https://mobikom.bg/stoyanov/bg/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мобиком България",
+      "url": "https://mobikom.bg/bg/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/bg/blog/manifesto-512/"
+    }
   }
   </script>
 </head>
 <body>
 
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link" aria-current="page">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/blog/manifesto-512/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/blog/manifesto-512/" class="lang-toggle" hreflang="en" title="Switch to the English version of this manifesto">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Инженерен Манифест &bull; Уеб Ефективност</span>
-          <h1>Принципът за 512-байтовия Уеб</h1>
-          <p class="hero-lead">Защо редуцирането на мрежовите пакети и премахването на ненужния JavaScript представляват истинската основа на устойчивите системи.</p>
-          <time datetime="2026-09-07">Публикувано в Анализи &bull; Поддържано от Мобиком</time>
+          <span class="hero-tag">ТЕХНОЛОГИЧЕН МАНИФЕСТ &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Принципът 512 байта</h1>
+          <p class="hero-lead">
+            Ефективност на пакетния бюджет, елиминиране на клиентския софтуерен баласт, транспортна физика и екологична статична доставка.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Претоварването на съвременния уеб</h2>
+        <!-- Абстракт и методологичен обхват -->
+        <section class="audit-box" aria-labelledby="abstract-heading-bg">
+          <h3 id="abstract-heading-bg">Абстракт и методологичен обхват</h3>
           <p>
-            Съвременният интернет страда от тежък архитектурен дълг. Обикновени уебсайтове за новини или корпоративни каталози рутинно зареждат от 5 до 15 мегабайта JavaScript библиотеки, маркетингови тракери, външни шрифтове и тежки рамки.
-          </p>
-          <p>
-            Това натоварва мобилните връзки, изтощава батерията на устройствата чрез тежки процесорни изчисления и нарушава неприкосновеността на потребителите.
+            Този монограф формализира Принципа 512 байта — архитектурна доктрина, доказваща, че истинската производителност, сигурност и устойчивост в уеб произтичат от стриктната обемна минимизация и доставката на код без зависимости. Роден от практическия опит с вградени системи в паметта на рутер, трудът моделира мрежовата латентност по IETF стандартите (RFC 6928, RFC 9000), демонстрира индексирането под спецификациите за MIME sniffing на WHATWG и установява ефемерна архитектура, изпълнявана единствено във волатилната RAM памет с нулев запис върху диска.
           </p>
         </section>
 
+        <!-- Секция 1: Генезисът в рутера -->
         <section>
-          <h2>2. Физиката на началния TCP прозорец (InitCwnd)</h2>
+          <h2>1. Школата на вградените системи: Генезис върху ограничен хардуер</h2>
           <p>
-            При всяка заявка през HTTPS началният пренос на данни се управлява от стартовия капацитет на връзката (InitCwnd). Обикновено той позволява предаването на около 14.6 килобайта (приблизително 10 TCP сегмента), преди сървърът да спре и да изчака потвърждение от браузъра.
+            Фундаменталните пробиви на компютърните науки бяха изковани не в комфорта на свръхголеми сървърни клъстери с терабайти памет, а в строгите физически ограничения на вградените системи. Принципът 512 байта се роди от пряка експлоатационна реалност: хостване и поддържане на уеб възли в ограничената флаш памет (16 до 64 мегабайта) и нискоенергийната MIPS/ARM архитектура на физически мрежов рутер.
           </p>
           <p>
-            Ако HTML документът се побере в този начален прозорец:
+            Вграденият шлюз — действащ едновременно като защитна стена и мост на работеща мрежа — не търпи софтуерен баласт:
           </p>
           <ul>
-            <li><strong>Без мрежово забавяне:</strong> Клиентът получава цялостната структура на страницата в един-единствен пакетен импулс.</li>
-            <li><strong>Моментално първо визуализиране:</strong> Браузърът изчертава съдържанието без прекъсвания за допълнителни мрежови заявки.</li>
-            <li><strong>Математическа сигурност:</strong> Скоростта остава под 1 секунда, независимо от географското разстояние до сървъра.</li>
+            <li><strong>Хардуерна невъзможност за интерпретатори:</strong> Динамични среди (Node.js, Python, Ruby, PHP) не могат да работят на микроконтролери без да предизвикат срив на паметта (OOM kernel panics) и прегряване на процесора.</li>
+            <li><strong>Чистота на нативния демон:</strong> За да се гарантира непрекъсната маршрутизация паралелно със стабилен уеб сървър, интерфейсът бе сведен до чистия му семантичен скелет: компилиран статичен HTML, нулеви външни библиотеки, нативни CSS правила и плоска директорийна структура (<code>/папка/index.html</code>).</li>
+            <li><strong>Периметрова защита:</strong> Вграденият рутер посреща мрежовите атаки и сканиращите ботове непрекъснато. Всеки излишен демон, динамичен парсър или външна библиотека представлява потенциална пробойна. Минимизирането на обема корелира пряко с физическото оцеляване на системата.</li>
+          </ul>
+          <p>
+            Когато архитектурна доктрина, проектирана да лети в RAM паметта на рутер, се пренесе върху глобалната Anycast Edge мрежа на Cloudflare и GitHub Pages, резултатът е теоретичният хардуерен максимум: скорост на доставка, ограничена единствено от законите на светлината и силиция.
+          </p>
+        </section>
+
+        <!-- Секция 2: Термодинамика и зелен уеб -->
+        <section>
+          <h2>2. Термодинамичната дисипация и цената на съвременния софтуерен баласт</h2>
+          <p>
+            Съвременната световна мрежа се отклони в структурен упадък. Доставянето на обикновен текст, проверена регионална журналистика и структурирани каталози днес рутинно изисква трансфер на 5 до 15 мегабайта компилиран JavaScript код, клиентски библиотеки и телеметрия за следене.
+          </p>
+          <p>
+            От гледна точка на физиката на информацията — стъпваща върху принципа на Ландауер за минималната енергийна дисипация при превключване на бит информация ($E \ge k_B T \ln 2$) — обработката на мегабайти неоптимизиран скрипт товари потребителския хардуер със сериозни физически санкции:
+          </p>
+          <ul>
+            <li><strong>Претоварване на главната нишка на процесора:</strong> Сложни JIT компилации, изграждане на синтактични дървета (AST) и тежки цикли за почистване на паметта, които карат мобилните процесори да работят на висока честота, прегрявайки устройството и изчерпвайки батерията.</li>
+            <li><strong>Износване на радиомодула (RRC Cycling):</strong> Фрагментираните мрежови преноси принуждават клетъчните модеми да превключват непрекъснато между активни състояния с висока мощност (<code>RRC_CONNECTED</code>) и състояния на покой (<code>RRC_IDLE</code>), хабейки радио енергия.</li>
+            <li><strong>Натрапчиво наблюдение:</strong> Постоянна монетизация на потребителското поведение от брокери на данни чрез динамични скриптове.</li>
+          </ul>
+          <p>
+            В пълен контраст, спазването на строга обемна дисциплина отговаря изцяло на <strong>W3C Web Sustainability Guidelines (WSG)</strong>. Докато един масов сайт отделя около 1.5 грама CO2 на всяко зареждане, олекотен документ под 14 килобайта отделя по-малко от <strong>0.02 грама CO2</strong>. Структурната ефективност е едновременно екологичен и оперативен императив.
+          </p>
+        </section>
+
+        <!-- Секция 3: Транспортна физика (RFC 6928 и RFC 9000) -->
+        <section>
+          <h2>3. Физиката на транспортния слой: Математическо моделиране по RFC 6928 и RFC 9000</h2>
+          <p>
+            Мрежовата скорост е подчинена на физически ограничения: скоростта на светлината в оптичните влакна (~200,000 km/s) и математическите алгоритми за контрол на трафика.
+          </p>
+          <p>
+            При класическия алгоритъм <strong>TCP Slow Start</strong> новата връзка няма предварителна информация за пропускателната способност на трасето. Стандартизиран от IETF в <strong>RFC 6928</strong> (<em>Increasing TCP's Initial Window</em>), началният прозорец (<code>InitCwnd</code>) е фиксиран на 10 сегмента (MSS), което осигурява около <strong>14.6 килобайта</strong> начален полезен товар.
+          </p>
+          <p>
+            Математическата латентност <code>D</code>, необходима за пренос на сериализиран обем <code>S</code> при двупосочно време <code>RTT</code> и коефициент <code>&gamma;</code>, се изразява като:
+          </p>
+          <p>
+            <code>D = RTT &bull; &lceil; log<sub>&gamma;</sub> (S / InitCwnd) &rceil;</code>
+          </p>
+          <p>
+            Когато целият HTML документ, критичните стилове и векторен брандинг се поберат в рамките на тези 14.6 KB (<code>S &le; InitCwnd</code>), уравнението се редуцира детерминирано до:
+          </p>
+          <p>
+            <code>D = 1 &bull; RTT</code>
+          </p>
+          <p>
+            Трансферът приключва в <strong>един-единствен мрежов залп</strong>. Браузърният енджин рендира документа мигновено, без да прави паузи за изчакване на пакети за потвърждение (ACK).
+          </p>
+          <p>
+            Дори при пренос през HTTP/3 и QUIC (стандартизирани под <strong>RFC 9000</strong>) и минималния IPv6 праг от 1280 октета (стандартизиран под <strong>RFC 8200</strong>), правилото остава неизменно: малкият начален обем елиминира фрагментацията на пакети, препълването на буферите и мрежовия застой.
+          </p>
+        </section>
+
+        <!-- Секция 4: Семантична плътност и Wave 1 SEO -->
+        <section>
+          <h2>4. Семантична плътност на първия байт и детерминирано Wave 1 индексиране (WHATWG &sect;7)</h2>
+          <p>
+            Прагът от 512 байта представлява точна техническа граница в уеб стандартите. По силата на <strong>WHATWG и W3C MIME Sniffing стандартите (&sect;7)</strong>, търсещите ботове и браузърните енджини инспектират точно <strong>първите 512 октета</strong> от входящия поток данни, за да определят авторитетния тип съдържание, кодировката (<code>UTF-8</code>) и валидността на документа.
+          </p>
+          <p>
+            Търсачките обработват страниците на два етапа:
+          </p>
+          <ul>
+            <li>
+              <strong>Първа вълна (Моментален лексикален анализ / Wave 1):</strong> Стрийминг парсърите четат чистия HTML поток на мига. Когато ключовите метаданни — кодировка, авторитетни заглавия, мета описания, езикови директиви, канонични адреси и основното заглавие — са концентрирани в първите 512 до 1024 байта, индексирането се извършва в първата вълна за милисекунди.
+            </li>
+            <li>
+              <strong>Втора вълна (Опашка за рендиране на тежък скрипт / Wave 2):</strong> Страниците с клиентски JavaScript не могат да бъдат разчетени веднага. Те се насочват към виртуални браузърни опашки, което бави индексацията със седмици и изчерпва лимита за обхождане на сайта (Crawl Budget).
+            </li>
+          </ul>
+          <p>
+            Високата семантична плътност в началните байтове гарантира моментално възприемане на авторитета на домейна без чакане в опашки за рендиране.
+          </p>
+        </section>
+
+        <!-- Секция 5: Ефемерна архитектура и нулев отпечатък -->
+        <section>
+          <h2>5. Ефемерна архитектура: Работа само в RAM паметта и антифорензика</h2>
+          <p>
+            Истинската оперативна поверителност (OpSec) изисква пълна техническа липса на форензични следи. Платформи, които твърдят, че пазят данните, но пишат бисквитки или локални бази, оставят перманентни следи върху хардуера.
+          </p>
+          <p>
+            Принципът 512 байта налага <strong>Нулев запис върху дисковото пространство (Stateless Edge Operations)</strong>:
+          </p>
+          <ul>
+            <li><strong>Пълно отсъствие на локални записи:</strong> Платформата не записва нищо на физическия носител — без бисквитки, без <code>localStorage</code>, без <code>sessionStorage</code>, без <code>IndexedDB</code> и без фонови <code>Service Workers</code>. Това предпазва флаш паметта (NAND/NVMe) на потребителя от износване.</li>
+            <li><strong>Изолация във волатилната RAM памет:</strong> Цялата структура, стилове и брандинг живеят единствено в анонимни виртуални страници памет, заделени от ядрото на операционната система по време на сесията.</li>
+            <li><strong>Моментално освобождаване на паметта:</strong> В секундата, в която потребителят затвори таба, операционната система освобождава паметта. На диска не остават технически маркери, сесийни идентификатори или следи за профилиране.</li>
+          </ul>
+          <p>
+            Този модел защитава едновременно читателя и издателя: без локални данни външните брокери не могат да следят посетителите, нито външни лица могат да анализират трафика на мрежата.
+          </p>
+        </section>
+
+        <!-- Секция 6: Периметрова сигурност (OWASP и DNSSEC) -->
+        <section>
+          <h2>6. Декуплирана периметрова сигурност: DNSSEC и защита от най-висок клас</h2>
+          <p>
+            Според принципите на <strong>OWASP</strong> в киберсигурността, най-непробиваемата защита не е сложният антивирус, а пълното елиминиране на уязвимата повърхност.
+          </p>
+          <p>
+            Платформата постига пълно разделение между защитния шлюз на домейна и статичното хранилище за файлове:
+          </p>
+          <ul>
+            <li><strong>Криптографско доверие чрез DNSSEC:</strong> На ниво национален регистър (Register.bg) цифрови подписи гарантират автентичността на маршрутизацията, правейки подмяната на IP адреси невъзможна.</li>
+            <li><strong>Защита на ниво протокол:</strong> Защитните заглавки — <code>Strict-Transport-Security</code>, <code>X-Frame-Options: DENY</code>, <code>X-Content-Type-Options: nosniff</code> и <code>Permissions-Policy</code> — се налагат на ниво мрежов сокет от Cloudflare преди първия байт от сайта.</li>
+            <li><strong>Елиминиране на сървърните пробиви:</strong> Липсата на бази данни на предна линия премахва SQL инжекциите; липсата на сървърен скриптов интерпретатор (PHP, Python, Node.js) премахва отдалеченото изпълнение на команди.</li>
+            <li><strong>Елиминиране на риска по веригата (Supply Chain):</strong> Липсата на външни библиотеки осигурява пълен имунитет срещу цифрово подслушване (Magecart) и компрометирани външни ресурси.</li>
+            <li><strong>Елиминиране на клиентските инжекции:</strong> Липсата на динамична манипулация на DOM дървото предотвратява DOM XSS атаки.</li>
           </ul>
         </section>
 
+        <!-- Секция 7: Pure CSS Subgrid срещу остарял Flexbox и !important -->
         <section>
-          <h2>3. Оперативна дисциплина: Уеб без излишен JavaScript</h2>
+          <h2>7. Нативни Subgrid оформления и дисциплина на специфичността (Zero !important)</h2>
           <p>
-            Принципът за 512-байтовия уеб е инженерна философия: всеки байт трябва да има техническа обосновка:
+            Оформлението на интерфейса трябва да се изчислява нативно от графичния енджин на браузъра (на C++), а не чрез скриптове или хакове:
           </p>
           <ul>
-            <li><strong>Вграден CSS Subgrid:</strong> Замества тежките скриптови изчисления за оформление с нативни браузърни редове.</li>
-            <li><strong>CSS light-dark():</strong> Премахва дублирането на медийни заявки с кратки и бързи променливи за цвят.</li>
-            <li><strong>Системна типография:</strong> Използването на `system-ui` елиминира изтеглянето на шрифтове и разместването на текста.</li>
-            <li><strong>Без бисквитки:</strong> Липсата на проследяване премахва нуждата от банери за съгласие и натрапчиви известия.</li>
+            <li><strong>Native CSS Grid Level 2 (Subgrid):</strong> Традиционните Flexbox модели изискват изкуствени контейнери и скриптове за уеднаквяване на височината на картите. Subgrid заключва вътрешните елементи директно към пистите на родителския грид (Таг &rarr; Заглавие &rarr; Описание &rarr; Бутон), осигурявайки перфектно подравняване без скриптове.</li>
+            <li><strong>Пълна липса на !important:</strong> Насилственото презаписване на каскадата е архитектурна грешка. Спазването на плоска семантична йерархия позволява на естествената каскада да управлява стиловете с нулев излишен код.</li>
+            <li><strong>CSS Color Module 4 (<code>light-dark()</code>):</strong> Динамичните цветови преходи използват нативната функция <code>light-dark()</code>, спестявайки двойни медийни заявки.</li>
+            <li><strong>Нативна системна типография:</strong> Използването на системни шрифтове спестява стотици килобайти трансфер и напълно елиминира разместването на текста при зареждане (CLS).</li>
           </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Запознайте се с мрежовата архитектура</h3>
-            <p>Разгледайте телекомуникационната история, оперативните принципи и екосистемата на Мобиком.</p>
-          </div>
-          <a href="/bg/about/" class="nav-btn">За Нас и История &rarr;</a>
+        <!-- Секция 8: Достъпност и симетрична архитектура -->
+        <section>
+          <h2>8. Универсална достъпност (WCAG 2.2 AAA) и директорийна изолация</h2>
+          <p>
+            Техническият минимализъм работи в пълна хармония с достъпността за хора с увреждания:
+          </p>
+          <ul>
+            <li><strong>Пълна достъпност (WCAG 2.2 AAA):</strong> Всяка интерактивна връзка съдържа уникален и описателен <code>title</code> атрибут и семантични ARIA роли, улесняващи софтуера за гласово четене.</li>
+            <li><strong>Директорийна изолация (<code>/папка/index.html</code>):</strong> Всяка секция живее в самостоятелна папка с собствен индексен файл. Това гарантира чисти канонични адреси, премахва разширенията на файлове и капсулира съдържанието.</li>
+            <li><strong>Директна симетрична навигация:</strong> Отказ от JavaScript менюта в полза на нативни, мигновени хипервръзки през чисти пътища с пълни езикови дефиниции.</li>
+          </ul>
         </section>
+
+        <!-- Секция 9: Внедряване в мрежата на Мобиком -->
+        <section>
+          <h2>9. Производствено внедряване в мрежата на Мобиком</h2>
+          <p>
+            Принципът 512 байта е активният инженерен стандарт, внедрен във всички действащи платформи под шапката на <a href="/bg/" class="card-link" title="Към началния институционален портал на Мобиком"><strong>mobikom.bg</strong></a>:
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com:</strong></a> Регионална журналистика в реално време, проектирана да се зарежда мигновено дори при компрометирана 3G и EDGE мобилна връзка в Североизточна България.
+            </li>
+            <li>
+              <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалния културен и стопански журнал dobruja.com"><strong>dobruja.com:</strong></a> Дълбоки обществени архиви, аграрни анализи и историческа памет, съхранени в чист HTML без зависимост от платформи.
+            </li>
+            <li>
+              <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на директни обяви за работа в bestjobs.bg"><strong>bestjobs.bg:</strong></a> Високоефективен сайт за обяви за работа с директен контакт с работодателя без посредници и такси по ЗНЗ.
+            </li>
+          </ul>
+          <p>
+            Чрез съчетаване на телекомуникационното наследство от 1992 г. с безкомпромисен софтуерен минимализъм, мрежата улавя органичния трафик на търсачките без забавяне от бази данни и без инфраструктурна чупливост.
+          </p>
+        </section>
+
+        <!-- Секция 10: Каре за цитиране -->
+        <section class="audit-box" aria-labelledby="citation-heading-bg">
+          <h3 id="citation-heading-bg">Как да цитирате този труд &bull; Academic Citation</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "The 512-Byte Web Principle: Transport Layer Physics, First-Byte Semantic Density, and Ephemeral Volatile Execution," <em>Mobikom Engineering Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/manifesto-512/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>The 512-Byte Web Principle: Architectural Determinism, Semantic Density, and Sustainable Web Operations</em>. Mobikom Insights. <code>https://mobikom.bg/blog/manifesto-512/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026manifesto512, author={Stoyanov, Stoyan}, title={The 512-Byte Web Principle}, journal={Mobikom Engineering Monograph}, year={2026}, url={https://mobikom.bg/blog/manifesto-512/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Стратегически партньорства и технологично консултиране</h3>
+          <p>Директна реклама, медийно отразяване и технически консултации без проследяващи бисквитки.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел за медийни кампании и партньорства">Връзка с бизнес отдела &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Управление и Отдел</h4>
+          <h4>Управление и контакти</h4>
           <ul>
-            <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За Нас и История</a></li>
-            <li><a href="/bg/about/governance/">Управление</a></li>
-            <li><a href="/bg/portfolio/">Портфолио</a></li>
-            <li><a href="/bg/contact/">Контакт</a></li>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и оперативна кореспонденция">Търговски отдел контакти</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Основни Публикации</h4>
+          <h4>Хронология</h4>
           <ul>
-            <li><a href="/bg/blog/seastars/">Sea Stars и Поморийската Луга</a></li>
-            <li><a href="/bg/blog/manifesto-512/">512-байтовият Принцип</a></li>
-            <li><a href="/bg/about/#nmt-450">NMT-450 Наследство (1992)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Сигурност и Законодателство</h4>
-          <ul>
-            <li><a href="/bg/privacy/">Поверителност</a></li>
-            <li><a href="/bg/terms/">Общи Условия</a></li>
-            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
-            <li><a href="/blog/manifesto-512/">English (EN)</a></li>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/manifesto-512/" hreflang="en" title="Switch to the English version of this technical manifesto">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Портал с нулеви бисквитки и гарантирана сигурност.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към оперативния отдел">Оперативен отдел &rarr;</a>
       </div>
     </div>
   </footer>
