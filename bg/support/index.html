@@ -1,0 +1,92 @@
+<!--
+  ==============================================================================
+  FILE: /bg/support/index.html
+  PROJECT: mobikom.bg — Институционален портал
+  LICENSE: MIT (https://opensource.org/licenses/MIT)
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледален шлюз за разплащания
+  PATTERN: Institutional Bridge Engine (Zero-JS Meta Refresh)
+  STANDARDS: HTML5 Living Standard • Zero Inline CSS • Zero Runtime Scripts
+  PERFORMANCE: Sub-2KB Single-Packet Payload • Instant TCP InitCwnd Resolution
+  ROBOTS: noindex, nofollow (Защита на SEO авторитета на домейна)
+  ==============================================================================
+  DESCRIPTION:
+  Защитен шлюз за разплащания. Пренасочва автоматично към криптираната Stripe каса
+  без разкриване на външни търговски адреси пред търсещите ботове.
+  ==============================================================================
+-->
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Директно разплащане и подкрепа | Мобиком</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0052cc">
+  
+  <!-- Моментално нативно пренасочване към Stripe Checkout -->
+  <meta http-equiv="refresh" content="0; url=https://buy.stripe.com/7sYdR8epV9RP4cCfDJ2B200">
+  
+  <!-- Production Stylesheet -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <!-- Universal Master Header с българско лого -->
+  <header class="site-header">
+    <div class="shell nav-bar">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
+          <g transform="translate(4, 3)">
+            <circle cx="8" cy="20" r="4" fill="#0052cc" />
+            <circle cx="22" cy="10" r="4" fill="#0052cc" />
+            <circle cx="22" cy="30" r="4" fill="#0052cc" />
+            <circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
+            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
+          </g>
+        </svg>
+      </a>
+      
+      <nav aria-label="Бърза навигация за връщане">
+        <ul>
+          <li><a href="/bg/" class="nav-link" title="Обратно към началния портал">Начален портал</a></li>
+          <li><a href="/support/" class="lang-toggle" hreflang="en" title="Switch to the English payment bridge">English (EN)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="shell">
+      <section class="hero">
+        <span class="hero-tag">СИГУРЕН ПЛАТЕЖЕН ШЛЮЗ</span>
+        <h1>Пренасочване към защитената Stripe каса...</h1>
+        <p class="hero-lead">Директна връзка с 256-битова криптирана платежна инфраструктура.</p>
+        <p>
+          Ако браузърът ви не ви пренасочи автоматично до няколко секунди, натиснете бутона по-долу:
+        </p>
+        
+        <div class="hero-actions">
+          <a href="https://buy.stripe.com/7sYdR8epV9RP4cCfDJ2B200" class="nav-btn" rel="nofollow noopener" title="Преминаване към криптираното плащане през Stripe">
+            Към сигурно плащане &rarr;
+          </a>
+          <a href="/bg/" class="nav-link" title="Отказ и връщане към началната страница">Отказ и връщане</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Universal Master Footer -->
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
