@@ -1,18 +1,18 @@
 <!--
   ==============================================================================
-  FILE: /bg/blog/dobruja/index.html  (Alternative webroot: /bg/dobruja/index.html)
-  PROJECT: mobikom.bg — Master Institutional Portal
+  FILE: /bg/blog/dobruja/index.html
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg)
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Монография за Медийна група „Добруджа“ (dobruja.com, dobrichnews.com):
-  независима регионална журналистика, гражданска отчетност, културна памет и
-  редакционно ръководство на Заслужилия главен редактор Преп. В. Върбанова.
+  Исторически и технически монограф, документиращ развитието на Медийна група
+  Добруджа, нейната автономна Linux стрийминг инфраструктура и националните ѝ
+  туристически и медийни партньорства.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -20,195 +20,261 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Медийна Група „Добруджа“: Журналистика и Регионална Памет | Мобиком</title>
-  <meta name="description" content="История и дейност на Медийна група „Добруджа“: независима регионална журналистика на dobrichnews.com, културни архиви на dobruja.com и свобода на словото.">
+  <title>Медийна група Добруджа | Исторически монограф на Мобиком</title>
+  <meta name="description" content="Исторически монограф за Медийна група Добруджа: Red5 Linux стрийминг инфраструктура, туристически медии и преход към статичен уеб.">
+  <meta name="author" content="Стоян Стоянов, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Multilingual Canonical Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/blog/dobruja/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/dobruja/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/dobruja/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/dobruja/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Медийна Група „Добруджа“: Журналистика и Регионална Памет">
-  <meta property="og:description" content="Независима регионална журналистика на dobrichnews.com, културни архиви на dobruja.com и свобода на словото.">
+  <meta property="og:title" content="Медийна група Добруджа | Исторически монограф на Мобиком">
+  <meta property="og:description" content="Еволюцията от регионален печат към автономна стрийминг инфраструктура и уеб архитектура.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/dobruja/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Schema.org Breadcrumbs & BlogPosting -->
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Медийна група Добруджа | Исторически монограф на Мобиком">
+  <meta name="twitter:description" content="Еволюцията от регионален печат към автономна стрийминг инфраструктура и уеб архитектура.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Медийна Група Добруджа", "item": "https://mobikom.bg/bg/blog/dobruja/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Медийна Група „Добруджа“: Журналистика и Регионална Памет",
-        "description": "История и дейност на Медийна група „Добруджа“: независима регионална журналистика на dobrichnews.com и културни архиви на dobruja.com.",
-        "url": "https://mobikom.bg/bg/blog/dobruja/",
-        "datePublished": "2024-08-20T08:30:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "От регионален печат към видео стрийминг в реално време: Хроника на Медийна група Добруджа",
+    "description": "Исторически и технически монограф, документиращ развитието на Медийна група Добруджа, нейната автономна Linux стрийминг инфраструктура и националните ѝ партньорства.",
+    "url": "https://mobikom.bg/bg/blog/dobruja/",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-18",
+    "inLanguage": "bg",
+    "keywords": "Медийна група Добруджа, Linux сървъри, Red5 Streaming, Курортни медии, Медийни партньорства",
+    "author": {
+      "@type": "Person",
+      "name": "Стоян Стоянов, MBA",
+      "jobTitle": "Управител",
+      "url": "https://mobikom.bg/stoyanov/bg/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мобиком България",
+      "url": "https://mobikom.bg/bg/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/bg/blog/dobruja/"
+    }
   }
   </script>
 </head>
 <body>
 
-  <!-- Universal Master Header (Bulgarian Locale) -->
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link" aria-current="page">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/blog/dobruja/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/blog/dobruja/" class="lang-toggle" hreflang="en" title="Switch to the English version of this monograph">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
-      
-      <!-- Pattern 2: Prose Engine -->
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Медийни Операции &bull; Регионална Журналистика</span>
-          <h1>Медийна Група „Добруджа“</h1>
-          <p class="hero-lead">Проверени регионални новини, обществена памет и независима редакционна политика в Североизточна България.</p>
-          <time datetime="2026-09-07">Публикувано в Анализи &bull; Поддържано от Мобиком</time>
+          <span class="hero-tag">МЕДИЙНА ХРОНИКА &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Медийна група Добруджа</h1>
+          <p class="hero-lead">
+            Автономна Linux инфраструктура, интернет телевизия и еволюцията на регионалната журналистика.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Традиция и обществена отговорност</h2>
+        <!-- Абстракт -->
+        <section class="audit-box" aria-labelledby="abstract-heading-bg">
+          <h3 id="abstract-heading-bg">Абстракт и исторически обхват</h3>
           <p>
-            <strong>Медийна група „Добруджа“</strong> е сред най-утвърдените институции за регионална журналистика в Североизточна България. Дълбоко свързана със селското стопанство, икономиката и традициите на Златна Добруджа, медийната група неотклонно отстоява принципите на свободната регионална преса и обществената отчетност.
-          </p>
-          <p>
-            Под дългогодишното ръководство на <strong>Заслужилия главен редактор Преп. В. Върбанова</strong>, изданията на групата наложиха висок професионален стандарт: репортажи от първо лице, проверка на първичните източници и безкомпромисна защита на обществения интерес в Добрич и региона.
+            Този монограф документира оперативния и технологичен преход на Медийна група Добруджа (2011–2015 г.) от традиционен регионален печат към богата интерактивна мрежа за интернет телевизия. Под изпълнителното ръководство на Стоян Стоянов, MBA и редакционното ръководство на преп. Виолета Върбанова, групата изгражда собствени физически Linux сървърни клъстери, внедрява отворения сървър Red5 за видео стрийминг и изгражда безпрецедентни партньорства за медийна синдикация в българското и международното дигитално пространство.
           </p>
         </section>
 
+        <!-- Секция 1: Инфраструктура -->
         <section>
-          <h2>2. Двете основни платформи: Новини и Култура</h2>
+          <h2>1. Автономна сървърна Linux инфраструктура</h2>
           <p>
-            В рамките на техническата мрежа на Мобиком, Медийна група „Добруджа“ оперира чрез два специализирани дигитални ресурса:
+            За постигане на независимост от рестриктивни комерсиални хостинг доставчици, мрежата внедрява собствени физически (bare-metal) и виртуализирани сървърни клъстери, базирани изцяло на отворени Linux дистрибуции (Debian, Ubuntu, CentOS, RedHat).
+          </p>
+          <p>
+            Тази фундаментална архитектура поддържаше високонадеждни уеб демони (Nginx, Apache), корпоративно маршрутизиране на поща (Postfix, Dovecot), защитен трансфер на файлове (ProFTPD) и оптимизирани релационни бази данни (MySQL, MariaDB). Този суверенен сървърен стек гарантираше, че местната журналистика може да се мащабира динамично по време на пиков трафик без прекъсване на услугата.
+          </p>
+        </section>
+
+        <!-- Секция 2: Red5 Streaming -->
+        <section>
+          <h2>2. Red5 медиен стрийминг и видеопродукция</h2>
+          <p>
+            Предвиждайки скока в потреблението на интернет видео, инженерният екип проектира канали за предаване в реално време (RTMP, RTSP, HLS). Чрез използването на софтуера с отворен код <strong>Red5 Media Server</strong>, съчетан с автоматично транскодиране чрез FFmpeg, мрежата успешно излъчваше програмирана телевизия, документални филми и камери на живо.
+          </p>
+          <p>
+            Ключовите дигитални етапи през този период включват стартирането на <code>news.dobruja.com</code> (17 ноември 2011 г.), създаването на ежедневния новинарски портал <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com</strong></a> (15 юли 2012 г.) и премиерата на <strong>tv.dobruja.com</strong> (3 декември 2013 г.).
+          </p>
+        </section>
+
+        <!-- Секция 3: Туристически партньорства -->
+        <section>
+          <h2>3. Туристически партньорства и дестинационни медии</h2>
+          <p>
+            Стрийминг инфраструктурата осигури надежден гръбнак за специализирани партньорства за излъчване:
           </p>
           <ul>
-            <li>
-              <strong><a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>:</strong> Платформа за ежедневни регионални новини в реално време. Фокусирана стриктно върху актуалните събития, дейността на общинските съвети, инфраструктурата и обществените въпроси в област Добрич.
-            </li>
-            <li>
-              <strong><a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>:</strong> Културен алманах и краеведски архив. Посветен на съхраняването на добруджанската памет, историята на земеделието, етнографията и регионалните личности.
-            </li>
+            <li><strong>Отразяване на дестинации:</strong> Обширно медийно покритие на курортите, промотиращо водещите дестинации по Българското Черноморие, включително Албена и Св. Св. Константин и Елена, в координация с туристически журналисти като Руслан Николов.</li>
+            <li><strong>Спорт и аудио:</strong> Мрежата стартира <code>sport.dobruja.com</code> и литературната стрийминг платформа за аудиокниги <code>audiobooks.dobruja.com</code>.</li>
           </ul>
         </section>
 
+        <!-- Секция 4: Международни канали -->
         <section>
-          <h2>3. Оперативна независимост и уеб без проследяване</h2>
+          <h2>4. Международни канали и глобални излъчвания (2013&ndash;2015)</h2>
           <p>
-            За разлика от масовите новинарски портали, които натоварват читателите с рекламни пиксели и междусайтови тракери, платформите на Медийна група „Добруджа“ работят върху чистата статична инфраструктура на Мобиком:
+            Управлението на силно мащабируеми сървъри позволи на Медийна група Добруджа да хоства специализирани международни канали за стрийминг. Сред тях бяха <strong>africa.dobruja.com</strong>, който излъчваше природни канали и исторически репортажи директно от Йоханесбург, включително посещения в резиденцията на нобеловия лауреат за мир Нелсън Мандела. Други възли като <strong>planet.dobruja.com</strong> обслужваха руски телевизионни пакети, а <strong>mia.dobruja.com</strong> излъчваше HD канали от Маями, Флорида, както и премиери на живо от Филмовия фестивал в Кан.
           </p>
-          <ul>
-            <li><strong>Пълна липса на бисквитки:</strong> Потребителите четат новини свободно, без поведенческо профилиране или маркетингови тракери.</li>
-            <li><strong>Отворена RSS синдикация:</strong> Всеки гражданин или институция може да следи новините директно чрез RSS емисии, без зависимост от алгоритмите на социалните мрежи.</li>
-            <li><strong>Висока устойчивост при натоварване:</strong> Статично кешираните ресурси гарантират мигновено зареждане дори при интензивен трафик по време на извънредни събития.</li>
-          </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Разгледайте пълното портфолио</h3>
-            <p>Запознайте се с всички активни новинарски редакции, платформи за работа и архиви в мрежата.</p>
-          </div>
-          <a href="/bg/portfolio/" class="nav-btn">Към Портфолиото &rarr;</a>
+        <!-- Секция 5: Синдикация -->
+        <section>
+          <h2>5. Медийна синдикация и институционални партньорства</h2>
+          <p>
+            Под редакционното ръководство на почетния главен редактор Виолета Върбанова, групата създаде безпрецедентно сътрудничество за обмен на съдържание и новини с водещи телевизионни мрежи и агенции. Партньорската мрежа включваше <strong>bTV</strong>, <strong>Нова Нюз</strong>, <strong>ТВ7</strong>, Българската национална телевизия (<strong>БНТ</strong>), <strong>Deutsche Welle (DW)</strong>, <strong>Associated Press (AP)</strong> и <strong>CNN</strong>, както и водещи национални новинарски агенции и лондонски вестници, обслужващи българската диаспора в Обединеното кралство.
+          </p>
         </section>
+
+        <!-- Секция 6: Настояща еволюция -->
+        <section>
+          <h2>6. Настояща еволюция: Високонадеждни Edge архитектури</h2>
+          <p>
+            Днес наследството на Медийна група Добруджа е запазено в общностния архив на <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалния културен и стопански журнал dobruja.com"><strong>dobruja.com</strong></a> и активния ежедневен портал <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com</strong></a>. Проектирани съгласно модерния Принцип на 512-те байта, тези активи преминаха от ресурсоемки системи за динамичен стрийминг към високосигурни статични edge архитектури без зависимости, гарантиращи вечното съхранение на местната история.
+          </p>
+        </section>
+
+        <!-- Секция 7: Каре за цитиране -->
+        <section class="audit-box" aria-labelledby="citation-heading-bg">
+          <h3 id="citation-heading-bg">Как да цитирате този труд &bull; Academic Citation</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "Dobruja Media Group: From Regional Print to Real-Time Streaming," <em>Mobikom Technical Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/dobruja/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>Dobruja Media Group Chronicle: Autonomous Linux Infrastructure and Internet Television Networks</em>. Mobikom Insights. <code>https://mobikom.bg/blog/dobruja/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026dobrujamedia, author={Stoyanov, Stoyan}, title={Dobruja Media Group: From Regional Print to Real-Time Streaming}, journal={Mobikom Technical Monograph}, year={2026}, url={https://mobikom.bg/blog/dobruja/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Стратегически партньорства и технологично консултиране</h3>
+          <p>Директна реклама, медийно отразяване и технически консултации без комерсиално профилиране.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел за медийни кампании и партньорства">Връзка с бизнес отдела &rarr;</a>
+      </section>
 
     </div>
   </main>
 
-  <!-- Universal Master Footer (Bulgarian Locale) -->
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Управление и Отдел</h4>
+          <h4>Управление и контакти</h4>
           <ul>
-            <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За Нас и История</a></li>
-            <li><a href="/bg/about/governance/">Управление</a></li>
-            <li><a href="/bg/portfolio/">Портфолио</a></li>
-            <li><a href="/bg/contact/">Контакт</a></li>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и оперативна кореспонденция">Търговски отдел контакти</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Основни Публикации</h4>
+          <h4>Хронология</h4>
           <ul>
-            <li><a href="/bg/blog/seastars/">Sea Stars и Поморийската Луга</a></li>
-            <li><a href="/bg/blog/manifesto-512/">512-байтовият Принцип</a></li>
-            <li><a href="/bg/about/#nmt-450">NMT-450 Наследство (1992)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Сигурност и Законодателство</h4>
-          <ul>
-            <li><a href="/bg/privacy/">Поверителност</a></li>
-            <li><a href="/bg/terms/">Общи Условия</a></li>
-            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
-            <li><a href="/blog/dobruja/">English (EN)</a></li>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/dobruja/" hreflang="en" title="Switch to the English version of this monograph">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
