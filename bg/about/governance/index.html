@@ -1,12 +1,17 @@
 <!--
   ==============================================================================
   FILE: /bg/about/governance/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
-  LAYOUT: CSS Grid Level 2 (Track 1: Bio Left, Track 2: Photo Right)
-  STANDARDS: HTML5 Living Standard • CSS Subgrid • Zero Flexbox
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледална страница Корпоративно управление
+  PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
+  STANDARDS: HTML5 Living Standard • Schema.org Organization • Zero Inline CSS
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
+  ==============================================================================
+  DESCRIPTION:
+  Корпоративна управленска структура, редакционни стандарти и институционална
+  рамка на Мобиком, Медийна група Добруджа и свързаните платформи.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -14,50 +19,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Институционално Управление и Ръководство | Мобиком</title>
-  <meta name="description" content="Управленска рамка, стандарти за редакционна независимост, защита на личните данни и ръководство на мрежата Мобиком.">
+  <title>Мобиком | Корпоративно управление и директорат</title>
+  <meta name="description" content="Корпоративно ръководство, редакционни стандарти и институционално управление на Мобиком и Медийна група Добруджа под ръководството на Стоян Стоянов, MBA.">
+  <meta name="author" content="Стоянов">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Absolute Multilingual Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/about/governance/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/about/governance/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/about/governance/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/about/governance/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Мобиком Управление и Ръководство">
-  <meta property="og:description" content="Институционално управление, редакционна независимост и ръководство на Мобиком България.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Мобиком | Корпоративно управление и директорат">
+  <meta property="og:description" content="Корпоративна управленска структура, редакционни стандарти и институционално управление на Мобиком.">
   <meta property="og:url" content="https://mobikom.bg/bg/about/governance/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://mobikom.bg/s.stoyanov.jpg">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
+  <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мобиком | Корпоративно управление и директорат">
+  <meta name="twitter:description" content="Корпоративна управленска структура, редакционни стандарти и институционално управление на Мобиком.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org Entity Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://mobikom.bg/#organization",
+        "name": "Мобиком",
+        "legalName": "Мобиком България",
+        "url": "https://mobikom.bg/bg/",
+        "employee": [
+          {
+            "@type": "Person",
+            "@id": "https://mobikom.bg/stoyanov/bg/#person",
+            "name": "Стоян Стоянов, MBA",
+            "jobTitle": "Управител",
+            "url": "https://mobikom.bg/stoyanov/bg/"
+          },
+          {
+            "@type": "Person",
+            "name": "Преп. Виолета Върбанова",
+            "jobTitle": "Почетен главен редактор"
+          }
+        ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Начален портал",
+            "item": "https://mobikom.bg/bg/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "За нас",
+            "item": "https://mobikom.bg/bg/about/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Корпоративно управление",
+            "item": "https://mobikom.bg/bg/about/governance/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
-            <circle cx="8" cy="20" r="4" fill="#0052cc" /><circle cx="22" cy="10" r="4" fill="#0052cc" /><circle cx="22" cy="30" r="4" fill="#0052cc" /><circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <circle cx="8" cy="20" r="4" fill="#0052cc" />
+            <circle cx="22" cy="10" r="4" fill="#0052cc" />
+            <circle cx="22" cy="30" r="4" fill="#0052cc" />
+            <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/about/governance/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/about/governance/" class="lang-toggle" hreflang="en" title="Switch to the English governance framework">English (EN)</a></li>
         </ul>
       </nav>
     </div>
@@ -65,83 +142,127 @@
 
   <main>
     <div class="shell">
-      <article class="prose" style="max-width: 100%;">
+      <article class="prose">
         
         <header>
-          <span class="hero-tag">Институционална Прозрачност &bull; Съответствие</span>
-          <h1>Управление и Оперативен Отдел</h1>
-          <p class="hero-lead">Стандарти за редакционна независимост, минимализъм на данните и оперативно ръководство на Мобиком.</p>
+          <span class="hero-tag">ИНСТИТУЦИОНАЛНО УПРАВЛЕНИЕ &bull; СТЪПКА 3</span>
+          <h1>Корпоративно управление и директорат</h1>
+          <p class="hero-lead">
+            Изпълнително ръководство, редакционни стандарти и инфраструктурна рамка.
+          </p>
+          <p>
+            Управленската структура на <code>mobikom.bg</code> и Медийна група Добруджа съчетава независима мениджърска отговорност с проверена регионална журналистика, етична медийна синдикация и статични edge архитектури без зависимости.
+          </p>
         </header>
 
-        <!-- CSS GRID LEVEL 2: Колона 1 е Текст, Колона 2 е Снимка вдясно -->
-        <section style="display: grid; grid-template-columns: 1fr 260px; column-gap: 2rem; align-items: start; margin-bottom: 2.5rem;">
-          
-          <!-- Колона 1: min-width: 0 гарантира, че колоната се свива и снимката остава вдясно -->
-          <div style="grid-column: 1; min-width: 0;">
-            <span class="hero-tag">Оперативно Ръководство</span>
-            <h2>Стоян Стоянов</h2>
-            <p><strong>Основател и Генерален Мениджър, Мобиком България</strong></p>
-            
-            <p>Ръководител на дигиталната мрежа за регионални медии (<a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>, <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>), кариерната платформа (<a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>) и каталожните архиви от 2011 г.</p>
-            <p>Образователна подготовка по стопанско управление и икономика (СА „Д. А. Ценов“) и международен хотелиерски мениджмънт (Lycée Hôtelier de Nice, ВУМ), с продължаващо обучение в Медицински университет.</p>
-            <p>Над 10 години ръководен опит в туризма („Албена“), последвани от 15+ години управление на независимата инфраструктура на Мобиком.</p>
-            <p>Обезпечава техническата устойчивост, уеб архитектурата с нулев тракинг и новинарската синдикация за Североизточна България.</p>
-            <p>Текущите научни и изследователски интереси обхващат право, икономика, компютърни науки, медицина и природни науки.</p>
-
-            <p style="margin-top: 1.25rem;">
-              <a href="/stoyanov/bg/" class="nav-btn">Пълна официална автобиография (BG) &rarr;</a>
-            </p>
-          </div>
-
-          <!-- Колона 2: Заключена вдясно на колона 2 -->
-          <figure style="grid-column: 2; width: 260px; margin: 0;">
-            <img src="/s.stoyanov.jpg" alt="Стоян Стоянов" width="260" height="312" style="width: 260px; height: auto; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
-            <figcaption style="font-size: 0.8rem; color: var(--muted); margin-top: 0.5rem; line-height: 1.4;">
-              Снимка: Преп. В. Върбанова, Заслужил главен редактор. Официално посещение на улицата на нобелистите в Совето, Южна Африка. Домът на Мандела и Бутрос-Гали.
-            </figcaption>
-          </figure>
-
-        </section>
-
-        <section style="max-width: var(--max-w-prose);">
-          <h2>1. Редакционна независимост и прозрачност</h2>
+        <!-- Профил: Стоян Стоянов, MBA (Линк към Стъпка 4: Автобиография) -->
+        <section class="audit-box" aria-labelledby="executive-leadership-heading-bg">
+          <h2 id="executive-leadership-heading-bg">Активно изпълнително лидерство</h2>
+          <h3>Стоян Стоянов, MBA</h3>
           <p>
-            В съответствие със законовите изисквания за прозрачност на медийната собственост в България, Мобиком спазва стриктно разделение между управлението на техническата инфраструктура, рекламната дейност и новинарските редакции.
+            <strong>Управител &bull; Технологии и управление</strong>
           </p>
           <p>
-            Публикациите в <a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a> и <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a> се изготвят под независим редакционен контрол, с фокус върху местната обществена отчетност и съхранението на регионалната култура.
+            Ръководи цялостното корпоративно управление, уеб архитектурата и търговската синдикация за Мобиком България и Медийна група Добруджа. Управлява прехода към високоскоростна доставка на съдържание без зависимости, автономни Linux медийни стрийминг клъстери и оперативната координация на <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на директни обяви за работа в bestjobs.bg"><strong>bestjobs.bg</strong></a>, <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com</strong></a> и <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалния културен и стопански журнал dobruja.com"><strong>dobruja.com</strong></a>.
+          </p>
+          <p>
+            Директна комуникация с управителя: <a href="mailto:stoyanov@mobikom.bg" class="card-link" title="Директна служебна кореспонденция с управителя Стоян Стоянов, MBA"><strong>stoyanov@mobikom.bg</strong></a>
+          </p>
+          <p>
+            <a href="/stoyanov/bg/" class="nav-btn" title="Преглед на професионалната автобиография на Стоян Стоянов, MBA">
+              Вижте онлайн автобиография (Стъпка 4) &rarr;
+            </a>
           </p>
         </section>
 
-        <section style="max-width: var(--max-w-prose);">
-          <h2>2. Политика за нулев тракинг и защита на данните</h2>
+        <!-- Редакционно признание: Преп. Виолета Върбанова -->
+        <section class="audit-box" aria-labelledby="editorial-leadership-heading-bg">
+          <h2 id="editorial-leadership-heading-bg">Редакционно признание и исторически принос</h2>
+          <h3>Преп. Виолета Върбанова</h3>
           <p>
-            Мрежата прилага принципи на пълен минимализъм по отношение на личните данни:
+            <strong>Почетен главен редактор</strong>
           </p>
+          <p>
+            Дългогодишен почетен главен редактор, изградил професионалните журналистически стандарти, етиката и договорите за телевизионна синдикация в Медийна група Добруджа (включително национални партньорства с bTV, Нова Нюз, ТВ7 и БНТ). Основните редакционни принципи остават непреходен стълб в дейността на медийната мрежа.
+          </p>
+        </section>
+
+        <!-- Рамка за управление и оперативни стандарти -->
+        <section>
+          <h2>Рамка за управление и оперативни стандарти</h2>
           <ul>
-            <li>Без проследяващи бисквитки (cookies), маркетингови пиксели и междусайтово профилиране на потребителите.</li>
-            <li>Детерминистично статично доставяне на съдържание за максимална скорост и енергийна ефективност.</li>
-            <li>Пълно съответствие с изискванията на GDPR (Регламент 2016/679 на ЕС) на архитектурно ниво, премахващо нуждата от банери за съгласие.</li>
+            <li><strong>Независима частна собственост:</strong> Управление с пълна редакционна и финансова автономност от 2011 г. насам под ръководството на управителя Стоян Стоянов, MBA.</li>
+            <li><strong>Архитектура с фокус върху поверителността:</strong> Институционален ангажимент за минимизиране на данните, волатилно изпълнение в RAM и пълно отсъствие на маркетингови бисквитки във всички платформи.</li>
+            <li><strong>Директни обяви без посредници:</strong> Кариерни обяви в <strong>bestjobs.bg</strong> с директен контакт между кандидат и работодател без трудови комисиони и посреднически такси по ЗНЗ.</li>
+            <li><strong>Анонимни B2B консултации:</strong> Високосигурни консултации за устойчив софтуерен инженеринг (Green Computing) и одит на заплахи при пълно спазване на конфиденциалността. Архитектурата и проектите на клиентите никога не се излагат публично.</li>
           </ul>
         </section>
 
-        <section class="conversion-banner" style="max-width: var(--max-w-prose);">
-          <div>
-            <h3>Официална институционална кореспонденция</h3>
-            <p>За въпроси относно корпоративното управление и нормативното съответствие:</p>
-          </div>
-          <a href="/bg/contact/" class="nav-btn">Към Оперативния Отдел</a>
-        </section>
-
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Стратегически партньорства и технологично консултиране</h3>
+          <p>Директна реклама, медийно отразяване и технически консултации без проследяващи бисквитки.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел за медийни кампании и партньорства">Връзка с бизнес отдела &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Мрежа Мобиком</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Управление и контакти</h4>
+          <ul>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и корпоративна кореспонденция">Търговски отдел контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Хронология</h4>
+          <ul>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/about/governance/" hreflang="en" title="Switch to the English governance framework">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
