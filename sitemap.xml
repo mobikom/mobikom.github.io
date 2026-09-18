@@ -7,8 +7,8 @@
   STANDARDS: Sitemaps Protocol 0.9 • W3C XHTML Hreflang Extensions
   ==============================================================================
   DESCRIPTION:
-  Exhaustive search engine index covering all 34 English and Bulgarian canonical
-  endpoints (32 HTML pages + 2 standalone A4 PDF CV documents) with 1:1 validation.
+  Exhaustive search engine index covering all 36 canonical endpoints
+  (34 HTML pages + 2 standalone A4 PDF CV documents) with 1:1 validation.
   ==============================================================================
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -254,7 +254,7 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- 13. Official PDF Documents (Direct Standalone Indexation) -->
+  <!-- 13. Official PDF Documents (Direct Indexation) -->
   <url>
     <loc>https://mobikom.bg/stoyanov/stoyan-stoyanov-cv.pdf</loc>
     <lastmod>2026-09-18</lastmod>
@@ -288,7 +288,27 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- 15. Legal: Privacy Policy -->
+  <!-- 15. Support & Settlement Gateway -->
+  <url>
+    <loc>https://mobikom.bg/support/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/support/"/>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/support/"/>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mobikom.bg/bg/support/</loc>
+    <xhtml:link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/support/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/support/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://mobikom.bg/support/"/>
+    <lastmod>2026-09-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- 16. Legal: Privacy Policy -->
   <url>
     <loc>https://mobikom.bg/privacy/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/privacy/"/>
@@ -308,7 +328,7 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- 16. Legal: Terms of Use -->
+  <!-- 17. Legal: Terms of Use -->
   <url>
     <loc>https://mobikom.bg/terms/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/terms/"/>
@@ -328,7 +348,7 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- 17. Legal: GDPR Compliance -->
+  <!-- 18. Legal: GDPR Compliance -->
   <url>
     <loc>https://mobikom.bg/gdpr/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://mobikom.bg/gdpr/"/>
