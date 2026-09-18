@@ -1,18 +1,17 @@
 <!--
   ==============================================================================
-  FILE: /blog/dobruja/index.html  (Alternative webroot: /dobruja/index.html)
+  FILE: /blog/dobruja/index.html
   PROJECT: mobikom.bg — Master Institutional Portal
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  AUTHOR: Stoyan Stoyanov, MBA / Mobikom Bulgaria (mobikom.bg)
   LANGUAGE: English (en)
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Monograph on Dobruja Media Group (dobruja.com, dobrichnews.com): independent
-  regional journalism, civic accountability, cultural preservation, and the
-  editorial stewardship of Honored Editor-in-Chief V. Varbanova Prep.
+  Historical and technical monograph documenting the evolution of Dobruja Media Group,
+  its autonomous Linux streaming infrastructure, and national syndication networks.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -20,52 +19,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dobruja Media Group: Regional Journalism &amp; Civic Archives | Mobikom</title>
-  <meta name="description" content="History and operations of Dobruja Media Group: independent regional news reporting on dobrichnews.com, cultural archives on dobruja.com, and editorial independence.">
+  <title>Dobruja Media Group Chronicle | Mobikom Engineering Monograph</title>
+  <meta name="description" content="Historical monograph on Dobruja Media Group: Red5 Linux streaming, resort destination media, and the transition to high-availability static web operations.">
+  <meta name="author" content="Stoyan Stoyanov, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Multilingual Canonical Indexation -->
   <link rel="canonical" href="https://mobikom.bg/blog/dobruja/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/dobruja/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/dobruja/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/dobruja/">
-  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
+
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom Syndicated RSS Feed" href="https://mobikom.bg/rss.xml">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Dobruja Media Group: Regional Journalism &amp; Civic Archives">
-  <meta property="og:description" content="Independent regional reporting on dobrichnews.com, cultural archives on dobruja.com, and editorial independence.">
+  <meta property="og:title" content="Dobruja Media Group Chronicle | Historical Monograph">
+  <meta property="og:description" content="The technical and editorial evolution from regional broadcast to autonomous edge-delivered web architecture.">
   <meta property="og:url" content="https://mobikom.bg/blog/dobruja/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mobikom">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
-  <!-- Schema.org Breadcrumbs & BlogPosting -->
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Dobruja Media Group Chronicle | Historical Monograph">
+  <meta name="twitter:description" content="The technical and editorial evolution from regional broadcast to autonomous edge-delivered web architecture.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://mobikom.bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Dobruja Media Group", "item": "https://mobikom.bg/blog/dobruja/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Dobruja Media Group: Regional Journalism & Civic Archives",
-        "description": "History and operations of Dobruja Media Group: independent regional reporting on dobrichnews.com and cultural archives on dobruja.com.",
-        "url": "https://mobikom.bg/blog/dobruja/",
-        "datePublished": "2024-08-20T08:30:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mobikom",
-          "url": "https://mobikom.bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "From Regional Print to Real-Time Streaming: The Dobruja Media Group Chronicle",
+    "description": "Historical and technical monograph documenting the evolution of Dobruja Media Group, its autonomous Linux streaming infrastructure, and national syndication networks.",
+    "url": "https://mobikom.bg/blog/dobruja/",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-18",
+    "inLanguage": "en",
+    "keywords": "Dobruja Media Group, Linux Server Infrastructure, Red5 Streaming, Broadcast Syndication",
+    "author": {
+      "@type": "Person",
+      "name": "Stoyan Stoyanov, MBA",
+      "jobTitle": "General Manager",
+      "url": "https://mobikom.bg/stoyanov/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mobikom",
+      "url": "https://mobikom.bg/"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/blog/dobruja/"
+    }
   }
   </script>
 </head>
@@ -74,8 +87,8 @@
   <!-- Universal Master Header -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/" class="brand-link" title="Mobikom">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
+      <a href="/" class="brand-link" title="Mobikom Bulgaria — Institutional Gateway Home">
+        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom Bulgaria Logo">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
@@ -89,78 +102,123 @@
       </a>
 
       <nav aria-label="Primary Navigation">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu Toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Drawer">
+        <label for="nav-toggle" class="nav-toggle-label" title="Open Navigation Menu">&#9776;</label>
 
         <ul>
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
-          <li><a href="/blog/" class="nav-link" aria-current="page">Insights</a></li>
-          <li><a href="/about/" class="nav-link">About</a></li>
-          <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/blog/dobruja/" class="lang-toggle" hreflang="bg">BG</a></li>
+          <li><a href="/" class="nav-link" title="Navigate to Mobikom Central Gateway">Home Gateway</a></li>
+          <li><a href="/portfolio/" class="nav-link" title="Explore Active Network Properties and Platforms">Project Portfolio</a></li>
+          <li><a href="/blog/" class="nav-link" aria-current="page" title="Read Technical Manifestos and Historical Analyses">Technical Insights</a></li>
+          <li><a href="/about/" class="nav-link" title="Discover Telecom Heritage from 1992 to Present">About History</a></li>
+          <li><a href="/contact/" class="nav-btn" title="Initiate Partnership or Business Inquiry">Direct Contact</a></li>
+          <li><a href="/bg/blog/dobruja/" class="lang-toggle" hreflang="bg" title="Превключете към българската версия">Български (BG)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
-      
-      <!-- Pattern 2: Prose Engine -->
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Media Operations &bull; Regional Journalism</span>
-          <h1>Dobruja Media Group</h1>
-          <p class="hero-lead">Delivering verified regional news, community records, and independent editorial oversight across North-East Bulgaria.</p>
-          <time datetime="2026-09-07">Published in Insights &bull; Monitored by Mobikom Operations</time>
+          <span class="hero-tag">MEDIA HISTORY MONOGRAPH &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Dobruja Media Group: From Print to Real-Time Streaming</h1>
+          <p class="hero-lead">
+            Autonomous Linux Infrastructure, Internet Television Networks, and the Evolution of Regional Journalism.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Editorial Lineage &amp; Regional Heritage</h2>
+        <!-- Abstract Box -->
+        <section class="audit-box" aria-labelledby="abstract-heading">
+          <h3 id="abstract-heading">Abstract &amp; Historical Scope</h3>
           <p>
-            <strong>Dobruja Media Group</strong> represents one of the most established regional journalistic traditions in Northeastern Bulgaria. Rooted in the rich agricultural, economic, and cultural heartland of Dobruja, the organization has consistently championed verified public-interest journalism, municipal transparency, and civic accountability.
-          </p>
-          <p>
-            Under the longtime editorial leadership and stewardship of <strong>Honored Editor-in-Chief V. Varbanova Prep.</strong>, the publication established strict standards of regional reporting: primary-source verification, protection of public records, and dedicated coverage of municipal and civic affairs across Dobrich and the wider Dobruja basin.
+            This monograph details the operational and technological transition of Dobruja Media Group (2011–2015) from traditional regional publishing to a rich interactive internet broadcasting network. Under the executive direction of Stoyan Stoyanov, MBA, and the editorial leadership of Prep. Violeta Varbanova, the group engineered proprietary Linux bare-metal server clusters, deployed open-source Red5 streaming endpoints, and forged unprecedented media syndication partnerships across the Bulgarian and international digital landscape.
           </p>
         </section>
 
+        <!-- Section 1: Autonomous Infrastructure -->
         <section>
-          <h2>2. The Two Core Platforms: News &amp; Culture</h2>
+          <h2>1. Autonomous Linux Server Infrastructure</h2>
           <p>
-            Within the Mobikom technical network, Dobruja Media Group operates through two distinct, specialized digital properties:
+            To achieve independence from restrictive commercial hosting providers, the network deployed proprietary bare-metal and virtualized server clusters operating entirely on open-source Linux distributions (Debian, Ubuntu, CentOS, RedHat). 
+          </p>
+          <p>
+            This foundational architecture supported high-availability web daemons (Nginx, Apache), enterprise-grade mail routing (Postfix, Dovecot), secure file transport (ProFTPD), and optimized relational databases (MySQL, MariaDB). This self-sovereign server stack guaranteed that local journalism could scale dynamically during traffic spikes without localized downtime.
+          </p>
+        </section>
+
+        <!-- Section 2: Red5 Media Streaming -->
+        <section>
+          <h2>2. Red5 Media Streaming &amp; Video Production</h2>
+          <p>
+            Anticipating the surge in internet video consumption, the engineering team architected real-time RTMP, RTSP, and HLS streaming pipelines. By utilizing the open-source <strong>Red5 Media Server</strong> combined with automated FFmpeg transcoding, the network successfully broadcast scheduled mixed TV programming, documentary features, and live camera streams.
+          </p>
+          <p>
+            Key digital milestones during this expansion included the launch of <code>news.dobruja.com</code> (November 17, 2011), the establishment of the daily news portal <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Launch DobrichNews.com daily regional news publication"><strong>dobrichnews.com</strong></a> (July 15, 2012), and the premiere of <strong>tv.dobruja.com</strong> (December 3, 2013).
+          </p>
+        </section>
+
+        <!-- Section 3: Tourism Partnerships -->
+        <section>
+          <h2>3. Tourism Partnerships &amp; Destination Media</h2>
+          <p>
+            The streaming infrastructure provided a robust backbone for specialized broadcasting partnerships:
           </p>
           <ul>
-            <li>
-              <strong><a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>:</strong> Real-time regional daily news delivery. Focuses strictly on breaking developments, municipal governance, public interest investigations, and institutional announcements in Dobrich and the surrounding district.
-            </li>
-            <li>
-              <strong><a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>:</strong> Regional cultural review and historical archive. Dedicated to preserving agricultural traditions, ethnography, local historical monographs, and community memory.
-            </li>
+            <li><strong>Destination Coverage:</strong> Provided extensive resort media coverage promoting premier Bulgarian Black Sea destinations, including Albena Resort and St. St. Constantine &amp; Helena, coordinated with tourism journalists like Ruslan Nikolov.</li>
+            <li><strong>Sports &amp; Audio:</strong> The network launched <code>sport.dobruja.com</code> and the literary audio streaming platform <code>audiobooks.dobruja.com</code>.</li>
           </ul>
         </section>
 
+        <!-- Section 4: Global Broadcasts -->
         <section>
-          <h2>3. Operational Independence &amp; Zero-Tracker Architecture</h2>
+          <h2>4. International Channels &amp; Global Broadcasts (2013&ndash;2015)</h2>
           <p>
-            Unlike commercial media portals that compromise reader privacy with aggressive third-party ad exchanges and behavioral tracking pixels, Dobruja Media Group platforms run on Mobikom’s privacy-first static infrastructure:
+            Operating highly scalable servers allowed Dobruja Media Group to host specialized international streaming endpoints. These included <strong>africa.dobruja.com</strong>, which broadcast nature channels and historical coverage directly from Johannesburg—featuring visits to the residence of Nobel Peace Prize laureate Nelson Mandela. Additional endpoints like <strong>planet.dobruja.com</strong> served Russian television packages, while <strong>mia.dobruja.com</strong> broadcast HD channels from Miami, Florida, along with live cinema releases from the Cannes Film Festival.
           </p>
-          <ul>
-            <li><strong>Zero Behavioral Cookies:</strong> Readers access verified regional news without commercial profiling or cross-site telemetry.</li>
-            <li><strong>Open Syndication:</strong> Full RSS and Atom feed distribution allows citizens, municipal offices, and researchers to receive news directly without social media algorithmic filtering.</li>
-            <li><strong>High-Availability Static Delivery:</strong> Engineered to remain online and responsive under extreme regional traffic surges during municipal emergencies.</li>
-          </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Explore the Network Portfolio</h3>
-            <p>Access our complete directory of active regional newsrooms, job boards, and digital archives.</p>
-          </div>
-          <a href="/portfolio/" class="nav-btn">Project Portfolio &rarr;</a>
+        <!-- Section 5: Syndication Networks -->
+        <section>
+          <h2>5. Broadcaster Syndication &amp; Institutional Partnerships</h2>
+          <p>
+            Under the editorial guidance of Honorary Editor-in-Chief Violeta Varbanova, the group established unparalleled content sharing and news cooperation with major television networks and news agencies. Partner networks included <strong>bTV</strong>, <strong>Nova News</strong>, <strong>TV7</strong>, the Bulgarian National Television (<strong>BNT</strong>), <strong>Deutsche Welle (DW)</strong>, <strong>Associated Press (AP)</strong>, and <strong>CNN</strong>, as well as leading national news agencies and London-based newspapers serving the UK Bulgarian diaspora.
+          </p>
         </section>
+
+        <!-- Section 6: Present Day Evolution -->
+        <section>
+          <h2>6. Present Evolution: High-Availability Edge Architectures</h2>
+          <p>
+            Today, the legacy of Dobruja Media Group is preserved within the <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Explore Dobruja regional cultural journal and agrarian archive"><strong>dobruja.com</strong></a> community archive and the active <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Launch DobrichNews.com daily regional news publication"><strong>dobrichnews.com</strong></a> daily portal. Engineered under the modern 512-Byte Principle, these properties have transitioned from resource-heavy dynamic streaming engines into highly secure, zero-dependency static edge architectures, ensuring the permanent preservation of local history.
+          </p>
+        </section>
+
+        <!-- Section 7: Citation Box -->
+        <section class="audit-box" aria-labelledby="citation-heading">
+          <h3 id="citation-heading">How to Cite This Work &bull; Academic Citation</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "Dobruja Media Group: From Regional Print to Real-Time Streaming," <em>Mobikom Technical Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/dobruja/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>Dobruja Media Group Chronicle: Autonomous Linux Infrastructure and Internet Television Networks</em>. Mobikom Insights. <code>https://mobikom.bg/blog/dobruja/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026dobrujamedia, author={Stoyanov, Stoyan}, title={Dobruja Media Group: From Regional Print to Real-Time Streaming}, journal={Mobikom Technical Monograph}, year={2026}, url={https://mobikom.bg/blog/dobruja/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Conversion Banner -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading">
+        <div>
+          <h3 id="conversion-heading">Strategic Partnerships &amp; Technical Advisory</h3>
+          <p>Direct advertising, media coverage, and technical advisory without tracking cookies.</p>
+        </div>
+        <a href="/contact/" class="nav-btn" title="Contact operations desk for media coverage and sponsorships">Contact Corporate Desk &rarr;</a>
+      </section>
 
     </div>
   </main>
@@ -172,43 +230,50 @@
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Northeastern Bulgarian daily municipal and civic reporting">dobrichnews.com &bull; Regional News</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Agricultural preservation, regional traditions and community media">dobruja.com &bull; Cultural Journal</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Direct employment advertisements and job listings in Bulgaria">bestjobs.bg &bull; Job Ads Board</a></li>
+            <li><a href="/rss.xml" title="Subscribe to syndicated XML news and operations feed">&#128246; Syndicated RSS Feed</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Governance &amp; Desk</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About Us &amp; History</a></li>
-            <li><a href="/about/governance/">Governance</a></li>
-            <li><a href="/portfolio/">Project Portfolio</a></li>
-            <li><a href="/contact/">Direct Contact</a></li>
+            <li><a href="/" title="Return to primary institutional landing page">Gateway Overview</a></li>
+            <li><a href="/about/" title="Full history of Bulgarian wireless communications and 2011 founding">Historical Chronicle</a></li>
+            <li><a href="/about/governance/" title="Corporate governance structure and editorial guidelines">Corporate Governance</a></li>
+            <li><a href="/portfolio/" title="Directory of active web publishing platforms and digital properties">All Digital Properties</a></li>
+            <li><a href="/blog/" title="Technical manifestos on performance, 512-byte principle and hardware">Insights &amp; Whitepapers</a></li>
+            <li><a href="/contact/" title="Official contact email and corporate desk communications">Commercial Communications Desk</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Key Papers</h4>
+          <h4>Chronology</h4>
           <ul>
-            <li><a href="/blog/seastars/">Sea Stars &amp; Pomorie Lye</a></li>
-            <li><a href="/blog/manifesto-512/">512-Byte Web Principle</a></li>
-            <li><a href="/about/#nmt-450">NMT-450 Heritage (1992)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Security &amp; Legal</h4>
-          <ul>
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/gdpr/">GDPR Compliance</a></li>
-            <li><a href="/bg/blog/dobruja/">Български (BG)</a></li>
+            <li><a href="/about/#nmt-450" title="The 1992 foundation of RTC Mobikom with Cable &amp; Wireless and BTC">1992 Cellular Pioneer</a></li>
+            <li><a href="/about/#pagers-mobika" title="Motorola Advisor paging systems and collectible Mobika phonecards">Pagers &amp; Mobika Cards</a></li>
+            <li><a href="/about/#ostatus-2011" title="Autonomous Linux server clusters, Red5 streaming and news media founding">2011 Operations Founding</a></li>
+            <li><a href="/blog/manifesto-512/" title="Engineering manifesto for zero-dependency static web delivery">512-Byte Web Architecture</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Horizontal Security, Legal & Language Bar -->
+      <nav class="footer-legal-bar" aria-label="Legal &amp; Policy Navigation">
+        <a href="/privacy/" title="Zero-cookie architecture and strict no-tracking privacy notice">Privacy Policy</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/terms/" title="Operational guidelines and intellectual property usage terms">Terms of Use</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/gdpr/" title="Regulation (EU) 2016/679 compliance declaration and CPDP rights">GDPR Compliance</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/blog/dobruja/" hreflang="bg" title="Преминете към българския вариант на монографа">Български Вариант (BG)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
-        <a href="/contact/">Operations Desk &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License (github.com/mobikom). Zero-cookie architecture.</p>
+        <a href="/contact/" title="Direct communication channel to executive corporate communications">Reach Corporate Desk &rarr;</a>
       </div>
     </div>
   </footer>
