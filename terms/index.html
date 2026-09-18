@@ -3,15 +3,16 @@
   FILE: /terms/index.html
   PROJECT: mobikom.bg — Master Institutional Portal
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: English (en)
+  AUTHOR: Stoyan Stoyanov, MBA / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en) • Canonical Terms of Use
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
-  STANDARDS: HTML5 Living Standard • Schema.org WebPage • Zero !important
+  STANDARDS: HTML5 Living Standard • Institutional Governance • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Official Terms of Use governing access to mobikom.bg, open-source code
-  licensing under the MIT License, and editorial content copyright.
+  Official Terms of Use and operational guidelines governing mobikom.bg.
+  Defines open-source software licensing (MIT), editorial intellectual property,
+  prohibited network exploitation, and independent platform governance.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -19,30 +20,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms of Use | Mobikom</title>
-  <meta name="description" content="Terms of Use for mobikom.bg: Open-source MIT code licensing, editorial content copyright, and acceptable infrastructure usage.">
+  <title>Mobikom | Terms of Use &amp; Institutional Governance</title>
+  <meta name="description" content="Official Terms of Use for mobikom.bg: Open-source software licensing under MIT, editorial intellectual property, network governance, and acceptable use policies.">
+  <meta name="author" content="Stoyanov">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Absolute Multilingual Indexation -->
   <link rel="canonical" href="https://mobikom.bg/terms/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/terms/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/terms/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/terms/">
-  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Terms of Use | Mobikom">
-  <meta property="og:description" content="Open-source MIT code licensing and acceptable infrastructure usage terms.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom Syndicated RSS Feed" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Mobikom | Terms of Use &amp; Institutional Governance">
+  <meta property="og:description" content="Operational guidelines, MIT software licensing, and intellectual property terms for the Mobikom institutional network.">
   <meta property="og:url" content="https://mobikom.bg/terms/">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mobikom">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mobikom | Terms of Use &amp; Institutional Governance">
+  <meta name="twitter:description" content="Operational guidelines, MIT software licensing, and intellectual property terms for the Mobikom institutional network.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org WebPage Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Mobikom Terms of Use & Operational Guidelines",
+    "url": "https://mobikom.bg/terms/",
+    "description": "Comprehensive terms of use defining open-source codebase licensing, editorial content copyrights, and network acceptable use standards.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mobikom",
+      "url": "https://mobikom.bg/",
+      "email": "info@mobikom.bg",
+      "sameAs": ["https://github.com/mobikom"]
+    }
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Universal Master Header -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/" class="brand-link" title="Mobikom">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
+      <a href="/" class="brand-link" title="Mobikom Bulgaria — Institutional Gateway Home">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Mobikom Bulgaria Logo">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
@@ -56,127 +91,174 @@
       </a>
 
       <nav aria-label="Primary Navigation">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu Toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Drawer">
+        <label for="nav-toggle" class="nav-toggle-label" title="Open Navigation Menu">&#9776;</label>
 
         <ul>
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
-          <li><a href="/blog/" class="nav-link">Insights</a></li>
-          <li><a href="/about/" class="nav-link">About</a></li>
-          <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/terms/" class="lang-toggle" hreflang="bg">BG</a></li>
+          <li><a href="/" class="nav-link" title="Navigate to Mobikom Central Gateway">Home Gateway</a></li>
+          <li><a href="/portfolio/" class="nav-link" title="Explore Active Network Properties and Platforms">Project Portfolio</a></li>
+          <li><a href="/blog/" class="nav-link" title="Read Technical Manifestos and Historical Analyses">Technical Insights</a></li>
+          <li><a href="/about/" class="nav-link" title="Discover Telecom Heritage from 1992 to Present">About History</a></li>
+          <li><a href="/contact/" class="nav-btn" title="Initiate Partnership or Business Inquiry">Direct Contact</a></li>
+          <li><a href="/bg/terms/" class="lang-toggle" hreflang="bg" title="Превключете към българските общи условия">Български (BG)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Governance &bull; Legal</span>
-          <h1>Terms of Use</h1>
-          <p class="hero-lead">Standards of open-source licensing, intellectual property, and network access.</p>
-          <time datetime="2026-09-07" style="font-size: 0.85rem; color: var(--muted); display: block; margin-top: 0.5rem;">
-            Effective Date: September 7, 2026
-          </time>
+          <span class="hero-tag">LEGAL FRAMEWORK &bull; INSTITUTIONAL GOVERNANCE</span>
+          <h1>Terms of Use &amp; Operational Standards</h1>
+          <p class="hero-lead">
+            Intellectual Property Rights, Software Licensing Under MIT, Acceptable Use Policies, and Ecosystem Disclaimers.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Acceptance of Terms</h2>
+        <!-- Summary Notice -->
+        <section class="audit-box" aria-labelledby="terms-summary-heading">
+          <h3 id="terms-summary-heading">Scope &amp; Acceptance of Terms</h3>
           <p>
-            By accessing or browsing the institutional web portal at <strong>mobikom.bg</strong>, you agree to comply with and be bound by these Terms of Use and all applicable laws of the Republic of Bulgaria and the European Union.
+            By accessing, reading, or referencing the static documents and digital properties hosted across <code>mobikom.bg</code>, you agree to comply with the following institutional guidelines. This platform operates as an independent informational portal, technical research repository, and digital network gateway.
           </p>
         </section>
 
+        <!-- Section 1: Intellectual Property & Dual-Licensing -->
         <section>
-          <h2>2. Open-Source Codebase (MIT License)</h2>
+          <h2>1. Intellectual Property &amp; Dual-Licensing Model</h2>
           <p>
-            The underlying structural source code of this portal—including the HTML5 templates, the `/assets/css/style.css` stylesheet, and the client-side search script—is licensed under the permissive <strong>MIT License</strong>.
-          </p>
-          <p>
-            You are free to inspect, fork, adapt, and reuse this code for personal or commercial projects, provided that the original copyright notice and license text remain included.
-          </p>
-        </section>
-
-        <section>
-          <h2>3. Editorial Content &amp; Media Trademarks</h2>
-          <p>
-            While website source code is open source, editorial journalism, original photographic assets, historical monographs, and network brand marks (including <a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>, <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>, and <a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>) remain protected under national and international copyright law.
-          </p>
-          <p>
-            Reprinting or syndicating journalistic articles requires formal attribution and an active canonical reference to the source publication.
-          </p>
-        </section>
-
-        <section>
-          <h2>4. Acceptable Infrastructure Use</h2>
-          <p>
-            Users and automated agents must not engage in activity that impairs network stability or security:
+            To foster educational transparency while preserving corporate brand integrity, Mobikom operates under an explicit dual-licensing framework:
           </p>
           <ul>
-            <li>No distributed denial-of-service (DDoS) testing or bandwidth exhaustion attacks.</li>
-            <li>No automated scraping that bypasses reasonable rate-limits or robots.txt directives.</li>
-            <li>No attempts to bypass network firewalls or inject unauthorized code into network endpoints.</li>
+            <li>
+              <strong>Source Code &amp; Layout Engine (MIT License):</strong> The underlying HTML5 markup structures, CSS Grid Level 2 Subgrid engine, and native layout rules are open-source software licensed under the <strong>MIT License</strong>. Developers, researchers, and students are free to inspect, study, fork, and reuse the technical code for educational or commercial purposes, subject to retaining the original copyright notice.
+            </li>
+            <li>
+              <strong>Editorial Content &amp; Historical Monographs (All Rights Reserved):</strong> All written journalistic articles, technical dissertations, biographical dossiers, photography, and original research published on this portal are protected under international copyright legislation. Reproduction or redistribution of full-text articles without explicit attribution is prohibited.
+            </li>
+            <li>
+              <strong>Trademarks &amp; Brand Heritage:</strong> The names "Mobikom", "Медийна група Добруджа", and associated insignia are protected institutional marks. Historical telecommunications references (such as NMT-450, Mobifon, and Mobika) are documented strictly for cultural, archival, and educational review.
+            </li>
           </ul>
         </section>
 
+        <!-- Section 2: Acceptable Use Policy -->
         <section>
-          <h2>5. Disclaimer of Warranties</h2>
+          <h2>2. Acceptable Network Use &amp; Security Protections</h2>
           <p>
-            This portal is delivered on an "as is" and "as available" basis without warranties of any kind, whether express or implied. Mobikom does not warrant that static asset delivery will be completely uninterrupted or error-free.
+            To guarantee uninterrupted accessibility for human readers across constrained mobile connections, the following activities are strictly forbidden:
+          </p>
+          <ul>
+            <li><strong>Denial-of-Service (DoS/DDoS):</strong> Transmitting high-frequency automated request floods, stress-testing edge endpoints, or attempting to exhaust network bandwidth.</li>
+            <li><strong>Automated Scraping Bloat:</strong> Executing aggressive, unthrottled scraping bots that bypass caching headers and consume infrastructure resources. Standard search engine indexing bots complying with <code>robots.txt</code> are welcomed.</li>
+            <li><strong>Protocol &amp; Security Tampering:</strong> Attempting to bypass HTTP security headers, framing endpoints via clickjacking techniques, or probing edge gateways for vulnerabilities outside of our responsible disclosure policy.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Network Properties & Disclaimers -->
+        <section>
+          <h2>3. Autonomous Network Properties &amp; Third-Party Services</h2>
+          <p>
+            The Mobikom gateway interfaces with independent platforms operating within our digital media ecosystem:
+          </p>
+          <ul>
+            <li>
+              <strong>Regional Media Reporting:</strong> Content delivered via <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Open DobrichNews.com daily regional media publication"><strong>dobrichnews.com</strong></a> and <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Explore Dobruja regional cultural journal and agrarian archive"><strong>dobruja.com</strong></a> is managed under independent editorial standards.
+            </li>
+            <li>
+              <strong>Direct Job Advertising:</strong> <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Browse direct job advertisements on BestJobs.bg"><strong>bestjobs.bg</strong></a> functions solely as an informational board for direct employment advertisements. It does not act as an employment agency, does not charge placement fees, and assumes no liability for employment contracts negotiated directly between candidates and employers.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Section 4: Limitation of Liability -->
+        <section>
+          <h2>4. Warranty Disclaimer &amp; Limitation of Liability</h2>
+          <p>
+            All information, technical monographs, and architectural blueprints published on <code>mobikom.bg</code> are provided on an "as is" and "as available" basis for informational and educational purposes. While we maintain 99.9% edge availability and rigorous data accuracy:
+          </p>
+          <ul>
+            <li>We make no express or implied warranties regarding continuous uptime or technical fitness for a particular external implementation.</li>
+            <li>In no event shall the authors, managers, or contributors be held liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the architectural code or educational documents provided.</li>
+          </ul>
+        </section>
+
+        <!-- Section 5: Governing Law -->
+        <section>
+          <h2>5. Governing Law &amp; Dispute Resolution</h2>
+          <p>
+            These Terms of Use shall be governed by and construed in accordance with the laws of the Republic of Bulgaria and applicable European Union legislation. Any legal inquiries or notices regarding these terms should be addressed to our corporate communications desk at <a href="mailto:info@mobikom.bg" class="card-link" title="Official corporate communications desk"><strong>info@mobikom.bg</strong></a>.
           </p>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Syndication &amp; Licensing Queries</h3>
-            <p>Direct all inquiries regarding editorial syndication or institutional permissions to our desk.</p>
-          </div>
-          <a href="/contact/" class="nav-btn">Contact Operations Desk</a>
-        </section>
       </article>
+
+      <!-- Conversion Banner -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading">
+        <div>
+          <h3 id="conversion-heading">Have a Legal or Institutional Governance Question?</h3>
+          <p>Contact our corporate communications desk directly regarding licensing, syndication, or operational guidelines.</p>
+        </div>
+        <a href="/contact/" class="nav-btn" title="Contact operations desk for media coverage and sponsorships">Contact Corporate Desk &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Mobikom Network</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Feed</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Northeastern Bulgarian daily municipal and civic reporting">dobrichnews.com &bull; Regional News</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Agricultural preservation, regional traditions and community media">dobruja.com &bull; Cultural Journal</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Direct employment advertisements and job listings in Bulgaria">bestjobs.bg &bull; Job Ads Board</a></li>
+            <li><a href="/rss.xml" title="Subscribe to syndicated XML news and operations feed">&#128246; Syndicated RSS Feed</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
           <h4>Governance &amp; Desk</h4>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About Us &amp; History</a></li>
-            <li><a href="/about/governance/">Governance</a></li>
-            <li><a href="/contact/">Direct Contact</a></li>
+            <li><a href="/" title="Return to primary institutional landing page">Gateway Overview</a></li>
+            <li><a href="/about/" title="Full history of Bulgarian wireless communications and 2011 founding">Historical Chronicle</a></li>
+            <li><a href="/about/governance/" title="Corporate governance structure and editorial guidelines">Corporate Governance</a></li>
+            <li><a href="/portfolio/" title="Directory of active web publishing platforms and digital properties">All Digital Properties</a></li>
+            <li><a href="/blog/" title="Technical manifestos on performance, 512-byte principle and hardware">Insights &amp; Whitepapers</a></li>
+            <li><a href="/contact/" title="Official contact email and corporate desk communications">Commercial Communications Desk</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Security &amp; Legal</h4>
+          <h4>Chronology</h4>
           <ul>
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Use</a></li>
-            <li><a href="/gdpr/">GDPR Compliance</a></li>
-            <li><a href="/bg/terms/">Български (BG)</a></li>
+            <li><a href="/about/#nmt-450" title="The 1992 foundation of RTC Mobikom with Cable &amp; Wireless and BTC">1992 Cellular Pioneer</a></li>
+            <li><a href="/about/#pagers-mobika" title="Motorola Advisor paging systems and collectible Mobika phonecards">Pagers &amp; Mobika Cards</a></li>
+            <li><a href="/about/#ostatus-2011" title="Autonomous Linux server clusters, Red5 streaming and news media founding">2011 Operations Founding</a></li>
+            <li><a href="/blog/manifesto-512/" title="Engineering manifesto for zero-dependency static web delivery">512-Byte Web Architecture</a></li>
           </ul>
         </div>
       </div>
 
+      <!-- Horizontal Security, Legal & Language Bar -->
+      <nav class="footer-legal-bar" aria-label="Legal &amp; Policy Navigation">
+        <a href="/privacy/" title="Zero-cookie architecture and strict no-tracking privacy notice">Privacy Policy</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/terms/" title="Operational guidelines and intellectual property usage terms">Terms of Use</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/gdpr/" title="Regulation (EU) 2016/679 compliance declaration and CPDP rights">GDPR Compliance</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" hreflang="bg" title="Преминете към българските общи условия">Български Портал (BG)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
-        <a href="/contact/">Operations Desk &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License (github.com/mobikom). Zero-cookie architecture.</p>
+        <a href="/contact/" title="Direct communication channel to executive corporate communications">Reach Corporate Desk &rarr;</a>
       </div>
     </div>
   </footer>
