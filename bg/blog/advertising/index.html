@@ -1,17 +1,18 @@
 <!--
   ==============================================================================
   FILE: /bg/blog/advertising/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg)
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Монография за контекстната реклама без проследяване: директни рекламни
-  партньорства в мрежата на Мобиком без бисквитки, посредници и профилиране.
+  Технически и оперативен монограф за Контекстуалната реклама без бисквитки.
+  Описва прехода от поведенчески рекламни мрежи към първични (first-party)
+  контекстуални позиции в мрежата на Мобиком.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -19,147 +20,264 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Контекстна Реклама Без Проследяване | Мобиком</title>
-  <meta name="description" content="Защо Мобиком прилага модел на директна контекстна реклама в dobrichnews.com, dobruja.com и bestjobs.bg без проследяващи бисквитки.">
+  <title>Рекламен протокол без бисквитки | Инженерен монограф на Мобиком</title>
+  <meta name="description" content="Оперативен монограф за контекстуална медийна синдикация: елиминиране на проследяващите реклами и доставка на защитени first-party кампании.">
+  <meta name="author" content="Стоян Стоянов, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Multilingual Canonical Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/blog/advertising/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/advertising/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/advertising/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/advertising/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Контекстна Реклама Без Проследяване | Мобиком">
-  <meta property="og:description" content="Директна реклама и медийни партньорства без маркетингови тракери и профилиране.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Рекламен протокол без бисквитки | Контекстуална медийна синдикация">
+  <meta property="og:description" content="Технологична доктрина за замяна на инвазивните рекламни мрежи със защитени контекстуални позиции.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/advertising/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Рекламен протокол без бисквитки | Контекстуална медийна синдикация">
+  <meta name="twitter:description" content="Технологична доктрина за замяна на инвазивните рекламни мрежи със защитени контекстуални позиции.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Контекстна Реклама", "item": "https://mobikom.bg/bg/blog/advertising/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Контекстна Реклама Без Проследяване",
-        "description": "Защо Мобиком прилага модел на директна контекстна реклама в регионалните си медии без проследяващи бисквитки.",
-        "url": "https://mobikom.bg/bg/blog/advertising/",
-        "datePublished": "2024-11-15T09:00:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "Рекламен протокол без бисквитки: Контекстуална медийна синдикация и нативна edge доставка",
+    "description": "Технически и оперативен монограф, описващ прехода от инвазивни поведенчески рекламни мрежи към защитена контекстуална реклама в мрежата на Мобиком.",
+    "url": "https://mobikom.bg/bg/blog/advertising/",
+    "datePublished": "2026-09-18",
+    "dateModified": "2026-09-18",
+    "inLanguage": "bg",
+    "keywords": "Контекстуална реклама, Без бисквитки, Zero-Cookie, Медийна синдикация, Поверителност, B2B реклама",
+    "author": {
+      "@type": "Person",
+      "name": "Стоян Стоянов, MBA",
+      "jobTitle": "Управител",
+      "url": "https://mobikom.bg/stoyanov/bg/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мобиком България",
+      "url": "https://mobikom.bg/bg/",
+      "sameAs": ["https://github.com/mobikom"]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/bg/blog/advertising/"
+    }
   }
   </script>
 </head>
 <body>
 
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link" aria-current="page">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/blog/advertising/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/blog/advertising/" class="lang-toggle" hreflang="en" title="Switch to the English version of this monograph">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Медийна Икономика &bull; Рекламна Етика</span>
-          <h1>Контекстна Реклама Без Проследяване</h1>
-          <p class="hero-lead">Високоефективна директна реклама в българските регионални медии без проследяващи бисквитки, алгоритмични борси и нарушаване на личното пространство.</p>
-          <time datetime="2026-09-07">Публикувано в Анализи &bull; Поддържано от Мобиком</time>
+          <span class="hero-tag">ОПЕРАТИВЕН МОНОГРАФ &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Контекстуална реклама и медийна синдикация</h1>
+          <p class="hero-lead">
+            Рекламният протокол без бисквитки: Елиминиране на външните мрежи чрез защитена, нативна доставка.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Кризата на алгоритмичната реклама</h2>
+        <!-- Абстракт -->
+        <section class="audit-box" aria-labelledby="abstract-heading-bg">
+          <h3 id="abstract-heading-bg">Абстракт и методологичен обхват</h3>
           <p>
-            Съвременната интернет реклама се превърна в механизъм за масово наблюдение. Програматик борсите за наддаване в реално време (RTB) и маркетинговите пиксели прехвърлят данните на читателите през десетки посредници. За медиите това води до бавно зареждане на страниците, риск от зловреден код и правна несигурност по отношение на GDPR.
-          </p>
-          <p>
-            За рекламодателите алгоритмичният модел губи ефективност: блокирането на реклами надхвърля 40%, банерната слепота е масова, а голяма част от бюджетите се поглъщат от комисионни на посреднически платформи.
+            Съвременната дигитална рекламна екосистема разчита изцяло на външно поведенческо профилиране на потребителите, което компрометира личните данни, генерира огромен софтуерен баласт и отваря критични дупки в сигурността. Този монограф описва <strong>Рекламния протокол без бисквитки</strong> на Мобиком — инфраструктурна методология, която възстановява търговската ефективност чрез контекстуално съобразяване и директна доставка на рекламни активи (first-party assets). Чрез вграждане на спонсорираното съдържание директно в статичния код на издателя, мрежата гарантира мигновено зареждане, имунитет срещу AdBlock-ъри и абсолютно съответствие с GDPR.
           </p>
         </section>
 
+        <!-- Секция 1: Провалът на външните мрежи -->
         <section>
-          <h2>2. Контекстният модел като алтернатива</h2>
+          <h2>1. Архитектурният провал на поведенческите рекламни мрежи</h2>
           <p>
-            Мобиком възстановява доказания модел на <strong>директна контекстна реклама</strong> в своите ключови издания:
+            Масовите издателски платформи делегираха рекламните си приходи на външни автоматизирани борси (като Google AdSense и RTB мрежите). Тази зависимост разрушава фундаменталната уеб архитектура:
           </p>
           <ul>
-            <li><strong><a href="https://www.dobrichnews.com" target="_blank" rel="noopener">dobrichnews.com</a>:</strong> Целенасочено позициониране сред проверени местни новини, бизнес анализи и общински теми в Добрич и региона.</li>
-            <li><strong><a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a>:</strong> Директен достъп до земеделския сектор, агробизнеса, културните среди и обществените архиви на Добруджа.</li>
-            <li><strong><a href="https://bestjobs.bg" target="_blank" rel="noopener">bestjobs.bg</a>:</strong> Директни кариерни обяви, свързващи работодатели и кандидати без такси на агенции посредници.</li>
+            <li><strong>Мрежово забавяне:</strong> Скриптовете за наддаване се изпълняват синхронно, блокирайки главната нишка на процесора и забавяйки зареждането (FCP) с няколко секунди.</li>
+            <li><strong>Форензични следи:</strong> Проследяващите скриптове инжектират перманентни бисквитки и алгоритми за профилиране (fingerprinting) в устройствата, нарушавайки правото на анонимност.</li>
+            <li><strong>Войната с AdBlock-ърите:</strong> Като защитна реакция срещу агресивните скриптове, потребителите инсталират мрежови рекламни блокери. Те напълно неутрализират приходите на сайтовете, докато външните скриптове продължават да хабят сървърен трафик.</li>
           </ul>
         </section>
 
+        <!-- Секция 2: Протоколът без бисквитки -->
         <section>
-          <h2>3. Технологични и етични предимства</h2>
+          <h2>2. Контекстуалният протокол с нулеви бисквитки (Zero-Cookie Protocol)</h2>
           <p>
-            Чрез отхвърлянето на външни рекламни скриптове и борси за данни:
+            Мобиком преобръща тази парадигма, отхвърляйки поведенческото проследяване в полза на <strong>Семантичната контекстуална релевантност</strong>. Вместо да се таргетират личните данни на потребителя, рекламното съдържание се обвързва математически и логически със семантиката на самата страница.
+          </p>
+          <p>
+            Ако читател преглежда аграрен анализ в <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank"><strong>dobruja.com</strong></a>, сървърът статично доставя спонсорирани карета за земеделска техника. Ако посетител разглежда ИТ позиции в <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank"><strong>bestjobs.bg</strong></a>, системата му сервира директно работодателски брандинг.
+          </p>
+          <p>
+            Това гарантира висок коефициент на конверсия, базиран изцяло на моментното внимание на читателя, елиминирайки напълно нуждата от събиране и складиране на лични данни.
+          </p>
+        </section>
+
+        <!-- Секция 3: Нативна доставка -->
+        <section>
+          <h2>3. Механика на директната нативна доставка (First-Party Delivery)</h2>
+          <p>
+            От инженерна гледна точка инжектирането на външен JavaScript (от трети страни) е строго забранено от политиката ни за сигурност (CSP Level 3).
+          </p>
+          <p>
+            Вместо това всички търговски банери, нативни статии и графики се третират като <strong>Собствени активи (First-Party Assets)</strong>:
           </p>
           <ul>
-            <li><strong>Нулево използване на бисквитки:</strong> Рекламните формати се зареждат статично и защитено директно от нашите сървъри.</li>
-            <li><strong>Мигновена скорост:</strong> Липсата на външни търгове гарантира отваряне на страниците за части от секундата.</li>
-            <li><strong>Пълна стойност на бюджета:</strong> Всеки инвестиран лев подпомага директно независимата регионална журналистика, а не междинни брокери на данни.</li>
+            <li><strong>Зареждане под милисекунда:</strong> Рекламните активи се компилират предварително в HTML кода и се доставят от същия Cloudflare Anycast възел като самия сайт. Те се зареждат мигновено още в рамките на първия мрежов пакет (<code>InitCwnd</code>).</li>
+            <li><strong>Имунитет срещу рекламни блокери:</strong> Тъй като търговските данни идват директно от първичния домейн и не изпълняват проследяващи скриптове, конвенционалните AdBlock системи не ги блокират. Съдържанието уважава хардуера на потребителя и същевременно гарантира 100% видимост за рекламодателя.</li>
+            <li><strong>Визуална хармония:</strong> Спонсорираните карета използват нативната CSS Subgrid архитектура, интегрирайки се перфектно в редакционното съдържание, без да предизвикват трептене и разместване (Cumulative Layout Shift).</li>
           </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Запитвания за реклама и партньорство</h3>
-            <p>Свържете се с реална аудитория в Североизточна България чрез прозрачно контекстно позициониране.</p>
-          </div>
-          <a href="/bg/contact/" class="nav-btn">Към Рекламния Отдел &rarr;</a>
+        <!-- Секция 4: Внедряване в мрежата -->
+        <section>
+          <h2>4. Оперативно внедряване в мрежата на Мобиком</h2>
+          <p>
+            Рекламният протокол без бисквитки управлява всички стратегически партньорства в мрежата:
+          </p>
+          <ul>
+            <li>
+              <strong>Регионална гражданска реклама:</strong> Банерни позиции и спонсорирани информационни кампании, вградени нативно във високоскоростния поток на <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com</strong></a>, гарантиращи общински обхват без нарушения на поверителността.
+            </li>
+            <li>
+              <strong>Работодателски брандинг:</strong> Промотирани обяви за работа и корпоративни банери за подбор на персонал, интегрирани директно в <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на директни обяви за работа в bestjobs.bg"><strong>bestjobs.bg</strong></a>.
+            </li>
+            <li><strong>Директно B2B договаряне:</strong> Всички кампании се договарят и изпълняват директно между рекламодателя и оперативния отдел на Мобиком, което премахва таксите за дигитални брокери и комисионите на външни агенции.</li>
+          </ul>
         </section>
+
+        <!-- Секция 5: Каре за цитиране -->
+        <section class="audit-box" aria-labelledby="citation-heading-bg">
+          <h3 id="citation-heading-bg">Как да цитирате този труд &bull; Academic Citation</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "The Zero-Cookie Advertising Protocol: Contextual Media Syndication and Native Edge Delivery," <em>Mobikom Technical Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/advertising/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>The Zero-Cookie Advertising Protocol: Contextual Media Syndication</em>. Mobikom Insights. <code>https://mobikom.bg/blog/advertising/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026zerocookie, author={Stoyanov, Stoyan}, title={The Zero-Cookie Advertising Protocol}, journal={Mobikom Technical Monograph}, year={2026}, url={https://mobikom.bg/blog/advertising/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Планирате директна медийна кампания?</h3>
+          <p>Реализирайте вашите нативни рекламни формати през нашата високоскоростна инфраструктура без бисквитки.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел за медийни кампании и партньорства">Връзка с търговския отдел &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Мрежа Мобиком</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Управление и контакти</h4>
+          <ul>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и оперативна кореспонденция">Търговски отдел контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Хронология</h4>
+          <ul>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/advertising/" hreflang="en" title="Switch to the English version of this monograph">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
