@@ -1,18 +1,18 @@
 <!--
   ==============================================================================
   FILE: /bg/blog/seastars/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледален монограф
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Научна публикация за черноморската минерална балнеология, лечебната поморийска
-  луга от ИОНХ към Българската академия на науките (БАН) и дигиталното архивиране.
-  Всички връзки са заключени към локала /bg/.
+  Научен и балнеологичен монограф за лечебната поморийска езерна луга,
+  черноморските минерални соли, трансдермалната магнезиева абсорбция и
+  стандартите на Българската академия на науките (БАН).
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -20,185 +20,276 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sea Stars и Поморийската Луга: Балнеология и Дигитално Съхранение | Мобиком</title>
-  <meta name="description" content="Научното наследство на Black Sea Stars, лечебната поморийска луга, разработена с ИОНХ към БАН, и дигиталната архивна инфраструктура на Мобиком.">
+  <title>Монограф Sea Stars | Поморийска луга и морска таласотерапия</title>
+  <meta name="description" content="Научен монограф от Стоян Стоянов, MBA за биохимичните свойства на лечебната поморийска луга, черноморските минерални соли и стандартите на БАН.">
+  <meta name="author" content="Стоян Стоянов, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Absolute Multilingual Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/blog/seastars/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/seastars/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/seastars/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/seastars/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Sea Stars и Поморийската Луга: Балнеология и Дигитално Съхранение">
-  <meta property="og:description" content="Научна балнеология, автентична поморийска луга от ИОНХ-БАН и олекотена каталожна инфраструктура.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Монограф Sea Stars | Поморийска луга и морска таласотерапия">
+  <meta property="og:description" content="Биохимични свойства на лечебната поморийска езерна луга, черноморските минерални соли и стандартите на БАН.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/seastars/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Монограф Sea Stars | Поморийска луга и морска таласотерапия">
+  <meta name="twitter:description" content="Биохимични свойства на лечебната поморийска езерна луга, черноморските минерални соли и стандартите на БАН.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Sea Stars и Поморийска Луга", "item": "https://mobikom.bg/bg/blog/seastars/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Sea Stars и Поморийската Луга: Балнеология и Дигитално Съхранение",
-        "description": "Научна балнеология, автентична поморийска луга от ИОНХ-БАН и олекотена каталожна инфраструктура.",
-        "url": "https://mobikom.bg/bg/blog/seastars/",
-        "datePublished": "2024-03-15T08:00:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "Монограф Sea Stars: Лечебна поморийска езерна луга, черноморски минерални соли и наука за биохимичната таласотерапия",
+    "description": "Научен монограф, изследващ биохимичния профил на свръхконцентрираната поморийска езерна луга, механизмите на трансдермална магнезиева абсорбция и стандартите на БАН.",
+    "url": "https://mobikom.bg/bg/blog/seastars/",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-18",
+    "inLanguage": "bg",
+    "keywords": "Поморийска луга, Черноморски минерали, Магнезиев хлорид, Таласотерапия, Балнеология, Българска академия на науките, Трансдермална абсорбция",
+    "author": {
+      "@type": "Person",
+      "name": "Стоян Стоянов, MBA",
+      "jobTitle": "Управител",
+      "url": "https://mobikom.bg/stoyanov/bg/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мобиком България",
+      "url": "https://mobikom.bg/",
+      "sameAs": ["https://github.com/mobikom"]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/bg/blog/seastars/"
+    }
   }
   </script>
 </head>
 <body>
 
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link" aria-current="page">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/blog/seastars/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/blog/seastars/" class="lang-toggle" hreflang="en" title="Switch to the English version of this monograph">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Биохимично Наследство &bull; Уеб Операции</span>
-          <h1>Sea Stars и Поморийската Луга: Балнеология и Дигитално Съхранение</h1>
-          <p class="hero-lead">Свързваме автентичната черноморска минерална химия, разработена съвместно с БАН, с устойчиво дигитално каталогизиране.</p>
-          <time datetime="2026-09-07">Публикувано в Анализи &bull; Поддържано от Мобиком</time>
+          <span class="hero-tag">БАЛНЕОЛОГИЧЕН МОНОГРАФ &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Sea Stars и Поморийската луга</h1>
+          <p class="hero-lead">
+            Биохимични механизми, трансдермална магнезиева минерализация и лечебна таласотерапия на Българското Черноморие.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Уникалният минерален профил на Поморийското езеро</h2>
+        <!-- Абстракт и балнеологичен обхват -->
+        <section class="audit-box" aria-labelledby="abstract-heading-bg">
+          <h3 id="abstract-heading-bg">Абстракт и научен обхват</h3>
           <p>
-            Формирана по естествен път в продължение на хилядолетия по Южното Черноморие, свръхсолената лагуна на Поморийското езеро създава рядка лечебна матрица с доминиращо съдържание на магнезий. За разлика от откритите морски води, <strong>стабилизираната медицинска луга</strong> е силно концентриран остатъчен разтвор от естествения солодобив, притежаващ йонна плътност с почти пълния спектър от елементи в Менделеевата таблица.
-          </p>
-          <p>
-            Основният компонент е магнезиевият хлорид (MgCl₂), допълнен от калций, бром, йод, сулфатни йони и органични биостимулатори от микроводораслите (<em>Dunaliella salina</em>). В дерматологията и възстановяването на опорно-двигателния апарат тази хиперосмотична формула действа с изразен противовъзпалителен и клетъчно регенериращ ефект.
+            Поморийската езерна луга представлява уникален хиперконцентриран природен минерален разтвор, генериран като краен продукт при естественото изпарение на солта в крайбрежните лагуни на Българското Черноморие. Разработен и стандартизиран чрез задълбочени научни изследвания на Института по обща и неорганична химия към Българската академия на науките (ИОНХ &ndash; БАН), този монограф деконструира биохимичния профил на медицинската луга, моделира механизмите на трансдермална електролитна абсорбция и документира балнеологичните протоколи в рехабилитационните центрове по Черноморието.
           </p>
         </section>
 
+        <!-- Секция 1: Генезис и химичен състав -->
         <section>
-          <h2>2. Научни формули: Ролята на ИОНХ към БАН</h2>
+          <h2>1. Геоложки генезис и биохимичен профил на Поморийската луга</h2>
           <p>
-            Продуктовите серии <strong>Sea Stars</strong> и <strong>Солилуг</strong> са резултат от научноизследователската дейност на <em>Института по обща и неорганична химия към Българската академия на науките (ИОНХ-БАН)</em>. Вместо синтетични ароматизатори и агресивни полимери, формулите запазват:
+            Поморийската луга се образува при многогодишно слънчево изпарение на морска вода в защитените свръхсолени крайбрежни езера. След кристализацията и утаяването на натриевия хлорид, остатъчната майчина луга се концентрира в гъст, маслообразен минерален разтвор с плътност между 1.25 и 1.35 g/cm&sup3;.
+          </p>
+          <p>
+            Полученият течен матрикс съдържа изключителна концентрация на разтворени макро- и микроелементи:
           </p>
           <ul>
-            <li><strong>Физиологична осмотична цялост:</strong> Активни концентрации на минерални соли, подпомагащи дълбоко дермално проникване без дехидратация на тъканите.</li>
-            <li><strong>Термична устойчивост:</strong> Методи на студена стабилизация, които защитават естествените терапевтични ензими и микроелементи.</li>
-            <li><strong>Чисти производствени стандарти:</strong> Без парабени, микропластмаси и излишни консерванти.</li>
+            <li><strong>Магнезиева доминанта (Mg&sup2;&sdot;):</strong> Над 300 грама разтворени соли на литър, преобладаващо съставени от силно бионаличен магнезиев хлорид ($MgCl_2$) и магнезиев сулфат ($MgSO_4$).</li>
+            <li><strong>Натриеви и калиеви електролити:</strong> Жизненоважни йонни регулатори ($NaCl, KCl$), поддържащи осмотичното равновесие на клетките.</li>
+            <li><strong>Биоактивни микроелементи:</strong> Натурални съединения на йод, бром, сяра, калций, цинк и селен.</li>
+            <li><strong>Органична микроводораслова фракция:</strong> Обогатена с естествени биостимулатори, каротеноиди и аминокиселини, синтезирани от халофитното микроводорасло <em>Dunaliella salina</em>.</li>
           </ul>
         </section>
 
+        <!-- Секция 2: Трансдермална абсорбция -->
         <section>
-          <h2>3. Дигитално каталогизиране и архивна инфраструктура</h2>
+          <h2>2. Трансдермална фармакокинетика и клетъчно действие</h2>
           <p>
-            Като част от мандата на дигиталната мрежа на Мобиком, платформата <strong>Sea Stars Shop</strong> се поддържа според принципите за максимална енергийна и функционална ефективност:
+            За разлика от пероралния прием на магнезий — който често причинява стомашен дискомфорт и преминава през чернодробен метаболизъм — минералните йони на поморийската луга се усвояват директно през кожата (трансдермална доставка):
           </p>
           <ul>
-            <li><strong>Детерминистична статична архитектура:</strong> Моментално зареждане на технически описания, състав и регионални балнеологични регистри.</li>
-            <li><strong>Пълна поверителност:</strong> Нулев тракинг, без профилиращи бисквитки от трети страни, гарантиращи сигурността на потребителите.</li>
-            <li><strong>Архивна приемственост:</strong> Дългосрочно съхранение и популяризиране на българските постижения в таласотерапията.</li>
+            <li><strong>Фоликуларна и междуклетъчна дифузия:</strong> Високият осмотичен градиент на хипертоничната луга улеснява преминаването на минералите през роговия слой на кожата, използвайки космените фоликули и мастните жлези като естествени проводници.</li>
+            <li><strong>Невромускулна релаксация:</strong> Магнезиевите йони действат като естествени антагонисти на калция в невромускулните синапси, блокирайки излишното освобождаване на ацетилхолин и премахвайки мускулните спазми и схващания.</li>
+            <li><strong>Противовъзпалителен каскаден ефект:</strong> Модулира локалните възпалителни медиатори, стимулира лимфния дренаж и подобрява микроциркулацията в околоставните тъкани.</li>
           </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Разгледайте дигиталния каталог</h3>
-            <p>Прегледайте каталога с черноморски соли, лечебна кал и продукти с натурална поморийска луга.</p>
-          </div>
-          <a href="/bg/portfolio/#seastars" class="nav-btn">Към проекта Sea Stars &rarr;</a>
+        <!-- Секция 3: Клинични балнеологични приложения -->
+        <section>
+          <h2>3. Клинични индикации в черноморската балнеология</h2>
+          <p>
+            Десетилетия клинична практика в българските морски курорти и рехабилитационни бази (Албена, Св. Св. Константин и Елена, Поморие) доказват терапевтичната сила на формулите с поморийска луга:
+          </p>
+          <ul>
+            <li><strong>Опорно-двигателен апарат:</strong> Артрози, остеоартрит, дископатии, радикулити и следтравматична рехабилитация на стави, кости и сухожилия.</li>
+            <li><strong>Дерматологична терапия:</strong> Псориазис, хронични екземи, акне и повърхностни възпаления чрез естествена осмотична тъканна регенерация.</li>
+            <li><strong>Пародонтология и устна хигиена:</strong> Хипертонични промивки и реминерализиращи пасти за зъби със стабилизирана луга, спиращи кървенето на венците и укрепващи зъбния емайл.</li>
+          </ul>
         </section>
+
+        <!-- Секция 4: Стандартизация от БАН и серията Sea Stars -->
+        <section>
+          <h2>4. Научна стандартизация от БАН и наследството на Sea Stars</h2>
+          <p>
+            Научното извличане и стабилизиране на природната езерна луга в медицински продукти и лечебна козметика е дело на <strong>Института по обща и неорганична химия при Българската академия на науките (ИОНХ &ndash; БАН)</strong> под марката <strong>Sea Stars</strong>:
+          </p>
+          <ul>
+            <li><strong>Студена стабилизация:</strong> Метод, гарантиращ запазването на живите органични микроводорасли и минералните соли без химическо термично разрушаване.</li>
+            <li><strong>Терапевтичен вискозитет:</strong> Разработка на специализирани минерални масажни гелове, компреси и соли за вана с удължено контактно време с кожата.</li>
+          </ul>
+        </section>
+
+        <!-- Секция 5: Дигитално представяне -->
+        <section>
+          <h2>5. Архитектурно представяне в мрежата на Мобиком</h2>
+          <p>
+            Дигиталният каталог и научното съхранение на данните за поморийската луга следва инженерните стандарти на <a href="/bg/" class="card-link" title="Към началния институционален портал на Мобиком"><strong>mobikom.bg</strong></a>:
+          </p>
+          <ul>
+            <li>
+              <strong>Статичен уеб каталог без баласт:</strong> Документиране на българското минерално богатство без комерсиални рекламни мрежи, проследяващи пиксели и софтуерно натоварване.
+            </li>
+            <li>
+              <strong>Свободен образователен достъп:</strong> Предоставяне на биохимичните факти за лечебната луга достъпни за медици, рехабилитатори и граждани от цяла България.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Секция 6: Каре за цитиране -->
+        <section class="audit-box" aria-labelledby="citation-heading-bg">
+          <h3 id="citation-heading-bg">Как да цитирате този труд &bull; Academic Citation</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "Sea Stars Monograph: Curative Pomorie Lake Lye, Black Sea Mineral Salts, and Biochemical Thalassotherapy Science," <em>Mobikom Technical Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/seastars/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>Sea Stars Monograph: Pomorie Lake Lye and Black Sea Mineral Thalassotherapy</em>. Mobikom Insights. <code>https://mobikom.bg/blog/seastars/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026seastars, author={Stoyanov, Stoyan}, title={Sea Stars Monograph: Curative Pomorie Lake Lye and Black Sea Mineral Salts}, journal={Mobikom Technical Monograph}, year={2026}, url={https://mobikom.bg/blog/seastars/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Стратегически партньорства и технологично консултиране</h3>
+          <p>Директна реклама, медийно отразяване и технически консултации без комерсиално профилиране.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел за медийни кампании и партньорства">Връзка с бизнес отдела &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer with Non-Clickable Plain Text MIT Inscription -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Управление и Отдел</h4>
+          <h4>Управление и контакти</h4>
           <ul>
-            <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За Нас и История</a></li>
-            <li><a href="/bg/about/governance/">Управление</a></li>
-            <li><a href="/bg/portfolio/">Портфолио</a></li>
-            <li><a href="/bg/contact/">Контакт</a></li>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и оперативна кореспонденция">Търговски отдел контакти</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
-          <h4>Основни Публикации</h4>
+          <h4>Хронология</h4>
           <ul>
-            <li><a href="/bg/blog/seastars/">Sea Stars и Поморийската Луга</a></li>
-            <li><a href="/bg/blog/manifesto-512/">512-байтовият Принцип</a></li>
-            <li><a href="/bg/about/#nmt-450">NMT-450 Наследство (1992)</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Сигурност и Законодателство</h4>
-          <ul>
-            <li><a href="/bg/privacy/">Поверителност</a></li>
-            <li><a href="/bg/terms/">Общи Условия</a></li>
-            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
-            <li><a href="/blog/seastars/">English (EN)</a></li>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
           </ul>
         </div>
       </div>
+
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/seastars/" hreflang="en" title="Switch to the English version of this monograph">English Version (EN)</a>
+      </nav>
+
+      <!-- Долен ред: Чист некликаем надпис без изходящи връзки -->
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
