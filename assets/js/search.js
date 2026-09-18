@@ -3,7 +3,7 @@
  * FILE: /assets/js/search.js
  * PROJECT: mobikom.bg — Master Institutional Portal
  * LICENSE: MIT (https://opensource.org/licenses/MIT)
- * AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+ * AUTHOR: Stoyan Stoyanov, MBA / Mobikom Bulgaria (mobikom.bg)
  * STANDARDS: Vanilla ECMAScript • WAI-ARIA 1.2 • Strict CSP Level 3 Compliant
  * PERFORMANCE: Zero Layout Reflows (textContent) • Precomputed Index • Zero Dependencies
  * ==============================================================================
@@ -18,12 +18,13 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   const searchInput = document.getElementById('search-input');
-  const cardsGrid = document.getElementById('cards-grid');
+  const cardsGrid = document.getElementById('cards-grid') || document.getElementById('cards-grid-core') || document.getElementById('cards-grid-monographs');
 
   // Gracefully exit if search interface elements are not present on the page
   if (!searchInput || !cardsGrid) return;
 
-  const cards = Array.from(cardsGrid.querySelectorAll('.feature-card'));
+  // Gather all feature cards on the page (supports multiple grid sections)
+  const cards = Array.from(document.querySelectorAll('.feature-card'));
   if (cards.length === 0) return;
 
   /* ==========================================================================
@@ -95,18 +96,19 @@ document.addEventListener('DOMContentLoaded', () => {
      ========================================================================== */
   let noResults = document.getElementById('search-empty-msg');
   if (!noResults) {
-    noResults = document.createElement('p');
+    noResults = document.createElement('div');
     noResults.id = 'search-empty-msg';
+    noResults.className = 'search-empty-msg';
     noResults.setAttribute('role', 'status');
     noResults.setAttribute('aria-live', 'polite');
     noResults.style.display = 'none';
-    noResults.style.gridColumn = '1 / -1';
-    noResults.style.textAlign = 'center';
-    noResults.style.padding = '2.5rem 1rem';
-    noResults.style.color = 'var(--muted)';
-    noResults.style.fontSize = '1.05rem';
     noResults.textContent = 'No matching platforms found. / Няма намерени резултати.';
-    cardsGrid.appendChild(noResults);
+    
+    // Append after the search container so it doesn't break CSS grids
+    const searchContainer = document.querySelector('.search-container');
+    if (searchContainer) {
+      searchContainer.parentNode.insertBefore(noResults, searchContainer.nextSibling);
+    }
   }
 
   /* ==========================================================================
@@ -134,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Split query into discrete words: "добрич news" -> ["добрич", "news"]
       const queryTokens = rawQuery.split(/\s+/).filter(Boolean);
 
-      // Precompute bilingual variants ONCE per keystroke (prevents N x T loop overhead)
+      // Precompute bilingual variants ONCE per keystroke
       const tokenVariantsList = queryTokens.map(getBilingualVariants);
       let visibleCount = 0;
 
@@ -156,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       // Toggle accessible empty-state notification
-      noResults.style.display = visibleCount === 0 ? '' : 'none';
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
     });
   }, { passive: true });
 });
