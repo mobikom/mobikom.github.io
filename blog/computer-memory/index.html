@@ -3,15 +3,16 @@
   FILE: /blog/computer-memory/index.html
   PROJECT: mobikom.bg — Master Institutional Portal
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
+  AUTHOR: Stoyan Stoyanov, MBA / Mobikom Bulgaria (mobikom.bg)
   LANGUAGE: English (en)
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Technical paper on computer memory architecture, CPU cache locality (L1/L2/L3),
-  SRAM/DRAM latencies, and how modern web bloat mismanages physical memory.
+  Comprehensive hardware engineering guide on computer memory hierarchy:
+  CPU cache registers (L1/L2/L3), DDR SDRAM generations, dual-channel bus
+  mechanics, non-volatile solid-state storage (NAND), and enterprise RAID topologies.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -19,59 +20,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Computer Memory Architecture &amp; The Web Bloat Penalty | Mobikom</title>
-  <meta name="description" content="Technical analysis of computer memory hierarchies, cache lines, RAM latencies, and why static deterministic web design saves physical hardware resources.">
+  <title>Computer Memory for Non-Specialists | Mobikom Technical Monograph</title>
+  <meta name="description" content="A practical hardware guide by Stoyan Stoyanov, MBA on CPU cache hierarchies, DDR generations, dual-channel architectures, and enterprise RAID arrays.">
+  <meta name="author" content="Stoyan Stoyanov, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Multilingual Canonical Indexation -->
   <link rel="canonical" href="https://mobikom.bg/blog/computer-memory/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/">
-  <link rel="alternate" type="application/rss+xml" title="Mobikom RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Computer Memory Architecture &amp; The Web Bloat Penalty">
-  <meta property="og:description" content="Why hardware cache locality and RAM physics matter in modern web engineering.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom Syndicated RSS Feed" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Computer Memory for Non-Specialists | Technical Monograph">
+  <meta property="og:description" content="Comprehensive engineering guide to CPU cache levels, DDR memory buses, and enterprise storage arrays.">
   <meta property="og:url" content="https://mobikom.bg/blog/computer-memory/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Mobikom">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Computer Memory for Non-Specialists | Technical Monograph">
+  <meta name="twitter:description" content="Comprehensive engineering guide to CPU cache levels, DDR memory buses, and enterprise storage arrays.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://mobikom.bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://mobikom.bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Computer Memory Architecture", "item": "https://mobikom.bg/blog/computer-memory/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Computer Memory Architecture & The Web Bloat Penalty",
-        "description": "Technical analysis of memory hierarchies, CPU cache locality, and how modern web bloat misallocates hardware resources.",
-        "url": "https://mobikom.bg/blog/computer-memory/",
-        "datePublished": "2024-12-05T10:00:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Mobikom",
-          "url": "https://mobikom.bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "Computer Memory for Non-Specialists: Hardware Hierarchies, Memory Buses, and Fault-Tolerant Storage Arrays",
+    "description": "Comprehensive engineering guide on CPU cache registers (L1/L2/L3), DDR SDRAM generations, dual-channel bus mechanics, non-volatile solid-state storage (NAND), and enterprise RAID topologies.",
+    "url": "https://mobikom.bg/blog/computer-memory/",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-18",
+    "inLanguage": "en",
+    "keywords": "SRAM, DRAM, CPU Cache, L1 L2 L3 Cache, DDR3, DDR4, DDR5, Dual Channel, RAID 0, RAID 1, RAID 5, RAID 10, NVMe, Solid State Storage",
+    "author": {
+      "@type": "Person",
+      "name": "Stoyan Stoyanov, MBA",
+      "jobTitle": "General Manager",
+      "url": "https://mobikom.bg/stoyanov/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Mobikom",
+      "url": "https://mobikom.bg/",
+      "sameAs": ["https://github.com/mobikom"]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/blog/computer-memory/"
+    }
   }
   </script>
 </head>
 <body>
 
+  <!-- Universal Master Header -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/" class="brand-link" title="Mobikom">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
+      <a href="/" class="brand-link" title="Mobikom Bulgaria — Institutional Gateway Home">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Mobikom Bulgaria Logo">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
@@ -85,83 +104,220 @@
       </a>
 
       <nav aria-label="Primary Navigation">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu Toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Drawer">
+        <label for="nav-toggle" class="nav-toggle-label" title="Open Navigation Menu">&#9776;</label>
 
         <ul>
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
-          <li><a href="/blog/" class="nav-link" aria-current="page">Insights</a></li>
-          <li><a href="/about/" class="nav-link">About</a></li>
-          <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/bg/blog/computer-memory/" class="lang-toggle" hreflang="bg">BG</a></li>
+          <li><a href="/" class="nav-link" title="Navigate to Mobikom Central Gateway">Home Gateway</a></li>
+          <li><a href="/portfolio/" class="nav-link" title="Explore Active Network Properties and Platforms">Project Portfolio</a></li>
+          <li><a href="/blog/" class="nav-link" aria-current="page" title="Read Technical Manifestos and Historical Analyses">Technical Insights</a></li>
+          <li><a href="/about/" class="nav-link" title="Discover Telecom Heritage from 1992 to Present">About History</a></li>
+          <li><a href="/contact/" class="nav-btn" title="Initiate Partnership or Business Inquiry">Direct Contact</a></li>
+          <li><a href="/bg/blog/computer-memory/" class="lang-toggle" hreflang="bg" title="Превключете към българския вариант на статията">Български (BG)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Computer Science &bull; Hardware Architecture</span>
-          <h1>Computer Memory Architecture &amp; The Web Bloat Penalty</h1>
-          <p class="hero-lead">Understanding CPU cache hierarchies, physical memory latencies, and how modern web bloat wastes hardware bandwidth and battery energy.</p>
-          <time datetime="2026-09-07">Published in Insights &bull; Monitored by Mobikom Operations</time>
+          <span class="hero-tag">HARDWARE MONOGRAPH &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Computer Memory for Non-Specialists</h1>
+          <p class="hero-lead">
+            Physical Hierarchies, Latency Discrepancies, Memory Bus Generations, and Enterprise Redundancy Topologies.
+          </p>
         </header>
 
-        <section>
-          <h2>1. The Physics of the Memory Hierarchy</h2>
+        <!-- Abstract Box -->
+        <section class="audit-box" aria-labelledby="abstract-heading">
+          <h3 id="abstract-heading">Abstract &amp; Practical Scope</h3>
           <p>
-            At the core of modern computation lies a fundamental physical bottleneck: the processor executes operations far faster than dynamic random-access memory (DRAM) can deliver instructions. To bridge this nanosecond gap, hardware engineers established the cache hierarchy:
+            Understanding computer memory is fundamental to systems architecture and digital cost optimization. This monograph deconstructs the physical memory hierarchy from on-die processor registers to multi-terabyte non-volatile storage arrays. Authored for technical managers, students, and non-specialists, this guide details why memory speed dictates computational throughput, explores the operational mechanics of dual-channel buses, and evaluates fault-tolerant enterprise RAID storage models.
+          </p>
+        </section>
+
+        <!-- Section 1: The Memory Pyramid -->
+        <section>
+          <h2>1. The Physical Memory Hierarchy and the Latency Scale</h2>
+          <p>
+            In modern computer architecture, no single storage technology is simultaneously infinitely fast, infinitely large, and cost-effective. Consequently, computer engineers structure systems into a strict <strong>Memory Hierarchy Pyramid</strong> balancing capacity against access latency:
           </p>
           <ul>
-            <li><strong>L1 Cache (SRAM):</strong> Operates on-die at sub-nanosecond speeds (~1 ns, 4 cycles). Smallest capacity, highest energy efficiency.</li>
-            <li><strong>L2 &amp; L3 Caches:</strong> Larger SRAM buffers providing 3 to 15 ns latency, designed to retain hot working sets.</li>
-            <li><strong>Main Memory (DRAM):</strong> Off-die silicon requiring 60 to 100 ns plus bus transit overhead. Crossing into DRAM burns orders of magnitude more power.</li>
+            <li><strong>Level 0: CPU Registers:</strong> Immediate processor storage executing within fractions of a nanosecond ($&lt; 0.5\text{ ns}$).</li>
+            <li><strong>Level 1: On-Die Static RAM (L1, L2, L3 Cache):</strong> High-speed silicon caches residing directly on the processor die ($1\text{ to }15\text{ ns}$).</li>
+            <li><strong>Level 2: Dynamic System RAM (DDR4 / DDR5):</strong> Volatile working memory providing tens of gigabytes of capacity ($50\text{ to }80\text{ ns}$).</li>
+            <li><strong>Level 3: Non-Volatile Solid State Storage (NVMe / SATA SSD):</strong> High-density NAND flash storage retaining data without power ($50\text{ to }150\ \mu\text{s}$).</li>
+            <li><strong>Level 4: Magnetic Storage &amp; Backup Arrays (HDD / Tape):</strong> Mechanical platters utilized for bulk cold storage ($5\text{ to }15\text{ ms}$).</li>
+          </ul>
+          <p>
+            To appreciate this scale: if a CPU register access took 1 second, accessing system RAM would take 2 minutes, while fetching data from a traditional mechanical hard drive would take over 4 months.
+          </p>
+        </section>
+
+        <!-- Section 2: SRAM vs DRAM -->
+        <section>
+          <h2>2. The Silicon Physics: Static RAM (SRAM) vs. Dynamic RAM (DRAM)</h2>
+          <p>
+            Volatile system memory exists in two fundamental semiconductor implementations:
+          </p>
+          <ul>
+            <li>
+              <strong>Static RAM (SRAM):</strong> Constructed using a 6-transistor (6T) flip-flop circuit per bit. SRAM requires no continuous electrical refresh to retain state while powered. It is exceptionally fast and power-efficient at high clock frequencies, but physically bulky and expensive to manufacture. It is exclusively deployed for on-die CPU cache hierarchies (L1, L2, and L3).
+            </li>
+            <li>
+              <strong>Dynamic RAM (DRAM):</strong> Constructed using an ultra-compact single-transistor and single-capacitor (1T-1C) cell. Because the tiny capacitor leaks electrical charge continuously, DRAM requires periodic electronic recharging (refresh cycles every 64 milliseconds). DRAM provides massive density at low manufacturing cost, serving as universal system memory.
+            </li>
           </ul>
         </section>
 
+        <!-- Section 3: DDR Generations & Dual-Channel -->
         <section>
-          <h2>2. How Modern Web Frameworks Thrash Memory</h2>
+          <h2>3. DDR Memory Generations and the Multi-Channel Architecture</h2>
           <p>
-            When a modern web page downloads 10 megabytes of JavaScript to render a text article, it forces the browser’s Just-In-Time (JIT) compiler to allocate hundreds of thousands of heap objects. This triggers severe architectural penalties:
+            System memory operates on the <strong>Double Data Rate (DDR) SDRAM</strong> standard, which transfers data on both the rising and falling edges of the clock signal, doubling bus throughput:
           </p>
           <ul>
-            <li><strong>Cache Line Invalidation:</strong> Complex object graphs with fragmented memory pointers continuously miss CPU L1/L2 caches, stalling the processor.</li>
-            <li><strong>Garbage Collection Pauses:</strong> The browser engine repeatedly stops execution to traverse and free abandoned heap allocations.</li>
-            <li><strong>Thermal &amp; Battery Drain:</strong> Memory bus saturation forces mobile memory controllers to stay in high-power states, rapidly draining battery charge.</li>
+            <li><strong>DDR3 SDRAM:</strong> Operating at 1.5V with throughput rates ranging from 800 to 2133 MT/s.</li>
+            <li><strong>DDR4 SDRAM:</strong> Operating at an energy-reduced 1.2V, introducing higher bank groups and transfer rates spanning 2133 to 3200+ MT/s.</li>
+            <li><strong>DDR5 SDRAM:</strong> Modern architectural standard operating at 1.1V, featuring dual 32-bit sub-channels per module, on-die Error Correction Code (ODECC), and bandwidths exceeding 4800 to 7200+ MT/s.</li>
+          </ul>
+          <p>
+            <strong>The Dual-Channel Throughput Advantage:</strong> When two identical memory modules are installed across matched motherboard channel pairs, the memory controller widens the data bus from 64-bit to 128-bit width. This doubles theoretical memory bandwidth without increasing clock frequencies, eliminating bottlenecks for integrated graphics and parallel computing workloads.
+          </p>
+        </section>
+
+        <!-- Section 4: Non-Volatile Flash & Wear-Leveling -->
+        <section>
+          <h2>4. Non-Volatile Storage Mechanics: NAND Flash and Wear-Leveling</h2>
+          <p>
+            Unlike volatile RAM, Solid State Drives (SSDs) store information persistently using floating-gate or charge-trap NAND flash memory cells (categorized as SLC, MLC, TLC, and QLC according to bit density per cell).
+          </p>
+          <p>
+            Because writing to a flash cell requires high-voltage tunnel injection that gradually degrades the insulating oxide layer:
+          </p>
+          <ul>
+            <li><strong>Flash Translation Layer (FTL):</strong> An on-board controller algorithm that maps logical block addresses to physical memory pages.</li>
+            <li><strong>Dynamic Wear-Leveling:</strong> Distributes write and erase cycles evenly across the entire physical flash array to prevent localized cell burnout.</li>
+            <li><strong>The Zero-Disk Paradigm:</strong> In our 512-Byte architectural doctrine, operating strictly in volatile system RAM prevents disk write amplification entirely, prolonging the physical lifespan of client SSD storage.</li>
           </ul>
         </section>
 
+        <!-- Section 5: Enterprise RAID Topologies -->
         <section>
-          <h2>3. The Static Web as a Memory-First Solution</h2>
+          <h2>5. Enterprise Fault Tolerance: RAID Topologies Explained</h2>
           <p>
-            Mobikom’s static web architecture respects physical hardware constraints. By serving declarative HTML and CSS:
+            To prevent catastrophic data loss from individual disk failures, enterprise systems deploy <strong>Redundant Arrays of Independent Disks (RAID)</strong>:
           </p>
           <ul>
-            <li><strong>Contiguous Memory Representation:</strong> HTML DOM nodes are parsed in a single sequential pass, matching CPU prefetch buffers.</li>
-            <li><strong>Zero Garbage Collection Overhead:</strong> Without runtime client JavaScript heaps, browser memory consumption remains flat and predictable.</li>
-            <li><strong>Hardware Accessibility:</strong> Pages load instantaneously on decade-old low-memory hardware with zero frame drops.</li>
+            <li><strong>RAID 0 (Block-Level Striping):</strong> Distributes data evenly across 2 or more disks. Maximizes read/write speed, but offers <strong>zero fault tolerance</strong> &mdash; failure of one disk destroys the entire array.</li>
+            <li><strong>RAID 1 (Mirroring):</strong> Duplicates exact data across 2 matching drives. Provides 100% redundancy against single drive failure, at the cost of 50% usable storage capacity.</li>
+            <li><strong>RAID 5 (Striping with Distributed Parity):</strong> Requires a minimum of 3 drives. Combines block striping with XOR mathematical parity distributed across all members. Tolerates the loss of any single drive with minimal capacity overhead.</li>
+            <li><strong>RAID 6 (Dual Distributed Parity):</strong> Requires a minimum of 4 drives. Implements dual parity blocks, surviving the simultaneous failure of any 2 drives &mdash; essential for high-capacity enterprise storage.</li>
+            <li><strong>RAID 10 (1+0 Striped Mirrors):</strong> Combines the performance of RAID 0 with the full redundancy of RAID 1. The universal standard for mission-critical relational databases.</li>
           </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>The 512-Byte Web Principle</h3>
-            <p>Discover how minimal packet budgets and static architectures deliver sustainable computing.</p>
-          </div>
-          <a href="/blog/manifesto-512/" class="nav-btn">Read 512-Byte Manifesto &rarr;</a>
+        <!-- Section 6: Network Deployment in Practice -->
+        <section>
+          <h2>6. Practical Application Across the Mobikom Network</h2>
+          <p>
+            Deep mastery over memory hardware and storage architecture informs every operational decision across <a href="/" class="card-link" title="Return to Mobikom Institutional Gateway Home"><strong>mobikom.bg</strong></a>:
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Open DobrichNews.com daily regional media publication"><strong>dobrichnews.com:</strong></a> Engineered to execute directly within the volatile browser cache, avoiding disk thrashing and client memory contention.
+            </li>
+            <li>
+              <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Explore Dobruja regional cultural journal and agrarian archive"><strong>dobruja.com:</strong></a> Long-term historical monographs preserved in static format, eliminating database cache bloat and storage degradation.
+            </li>
+            <li>
+              <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Search direct job advertisements on BestJobs.bg"><strong>bestjobs.bg:</strong></a> High-speed candidate matching operating with complete client data privacy and zero background tracking overhead.
+            </li>
+          </ul>
         </section>
+
+        <!-- Section 7: Citation Box -->
+        <section class="audit-box" aria-labelledby="citation-heading">
+          <h3 id="citation-heading">How to Cite This Work &bull; Академично цитиране</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "Computer Memory for Non-Specialists: Hardware Hierarchies, Memory Buses, and Fault-Tolerant Storage Arrays," <em>Mobikom Technical Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/computer-memory/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>Computer Memory for Non-Specialists: Hardware Hierarchies and Storage Topologies</em>. Mobikom Insights. <code>https://mobikom.bg/blog/computer-memory/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026computermemory, author={Stoyanov, Stoyan}, title={Computer Memory for Non-Specialists}, journal={Mobikom Technical Monograph}, year={2026}, url={https://mobikom.bg/blog/computer-memory/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Conversion Banner -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading">
+        <div>
+          <h3 id="conversion-heading">Strategic Partnerships &amp; Technical Consulting</h3>
+          <p>Direct advertising, media coverage, and technical advisory without tracking cookies.</p>
+        </div>
+        <a href="/contact/" class="nav-btn" title="Contact operations desk for media coverage and sponsorships">Contact Corporate Desk &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Mobikom Network</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Northeastern Bulgarian daily municipal and civic reporting">dobrichnews.com &bull; Regional News</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Agricultural preservation, regional traditions and community media">dobruja.com &bull; Cultural Journal</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Direct employment advertisements and job listings in Bulgaria">bestjobs.bg &bull; Job Ads Board</a></li>
+            <li><a href="/rss.xml" title="Subscribe to syndicated XML news and operations feed">&#128246; Syndicated RSS Feed</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Governance &amp; Desk</h4>
+          <ul>
+            <li><a href="/" title="Return to primary institutional landing page">Gateway Overview</a></li>
+            <li><a href="/about/" title="Full history of Bulgarian wireless communications and 2011 founding">Historical Chronicle</a></li>
+            <li><a href="/about/governance/" title="Corporate governance structure and editorial guidelines">Corporate Governance</a></li>
+            <li><a href="/portfolio/" title="Directory of active web publishing platforms and digital properties">All Digital Properties</a></li>
+            <li><a href="/blog/" title="Technical manifestos on performance, 512-byte principle and hardware">Insights &amp; Whitepapers</a></li>
+            <li><a href="/contact/" title="Official contact email and corporate desk communications">Commercial Communications Desk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chronology</h4>
+          <ul>
+            <li><a href="/about/#nmt-450" title="The 1992 foundation of RTC Mobikom with Cable &amp; Wireless and BTC">1992 Cellular Pioneer</a></li>
+            <li><a href="/about/#pagers-mobika" title="Motorola Advisor paging systems and collectible Mobika phonecards">Pagers &amp; Mobika Cards</a></li>
+            <li><a href="/about/#ostatus-2011" title="Autonomous Linux server clusters, Red5 streaming and news media founding">2011 Operations Founding</a></li>
+            <li><a href="/blog/manifesto-512/" title="Engineering manifesto for zero-dependency static web delivery">512-Byte Web Architecture</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Horizontal Security, Legal & Language Bar -->
+      <nav class="footer-legal-bar" aria-label="Legal &amp; Policy Navigation">
+        <a href="/privacy/" title="Zero-cookie architecture and strict no-tracking privacy notice">Privacy Policy</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/terms/" title="Operational guidelines and intellectual property usage terms">Terms of Use</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/gdpr/" title="Regulation (EU) 2016/679 compliance declaration and CPDP rights">GDPR Compliance</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/blog/computer-memory/" hreflang="bg" title="Преминете към българския вариант на статията">Български Вариант (BG)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
-        <a href="/contact/">Operations Desk &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <a href="/contact/" title="Direct communication channel to executive corporate communications">Reach Corporate Desk &rarr;</a>
       </div>
     </div>
   </footer>
