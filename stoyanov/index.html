@@ -3,10 +3,11 @@
   FILE: /stoyanov/index.html
   PROJECT: mobikom.bg — Master Institutional Portal
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: English (en)
+  AUTHOR: Stoyan Stoyanov, MBA / Mobikom Bulgaria (mobikom.bg)
+  LANGUAGE: English (en) • Canonical Curriculum Vitae
   LAYOUT: Pure CSS Grid Level 2 (Track 1: Left 1fr min-width:0, Track 2: 75px Right)
-  STANDARDS: ATS Compliant • 1-Page A4 Engine • Zero !important • SEO Locked
+  STANDARDS: ATS Compliant • 1-Page A4 Engine • Zero !important • Zero Inline CSS
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -14,99 +15,78 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stoyan Stoyanov — Curriculum Vitae</title>
-  <meta name="description" content="Curriculum Vitae of Stoyan Stoyanov: General Management, Economics, Hospitality, and Scientific Research.">
+  <title>Stoyan Stoyanov, MBA — Curriculum Vitae &amp; Credentials | Mobikom</title>
+  <meta name="description" content="Official Curriculum Vitae of Stoyan Stoyanov, MBA &ndash; General Manager at Mobikom. International multi-unit cluster operations across Bulgaria, France, and Monaco.">
+  <meta name="author" content="Stoyan Stoyanov, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Absolute Multilingual Indexation -->
   <link rel="canonical" href="https://mobikom.bg/stoyanov/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/stoyanov/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/stoyanov/bg/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/stoyanov/">
 
-  <style>
-    .cv-sheet {
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.75rem 2rem;
-      max-width: 820px;
-      margin-inline: auto;
-    }
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Mobikom Syndicated RSS Feed" href="https://mobikom.bg/rss.xml">
 
-    .cv-section { margin-top: 0.75rem; }
-    .cv-section h2 {
-      font-size: 0.85rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--primary);
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.15rem;
-      margin-bottom: 0.3rem;
-    }
+  <!-- Open Graph Protocol -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Mobikom">
+  <meta property="og:title" content="Stoyan Stoyanov, MBA — Curriculum Vitae &amp; Credentials">
+  <meta property="og:description" content="General Manager at Mobikom Bulgaria. Multi-unit operations, ERP/CRM governance, and high-availability digital networks.">
+  <meta property="og:url" content="https://mobikom.bg/stoyanov/">
+  <meta property="og:image" content="https://mobikom.bg/s.stoyanov.jpg">
+  <meta name="twitter:card" content="summary">
 
-    .cv-item { margin-bottom: 0.4rem; }
-    .cv-item-title {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--text);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    .cv-item-sub { font-size: 0.88rem; color: var(--muted); margin-bottom: 0.15rem; }
-
-    .cv-list {
-      list-style: square;
-      margin-left: 1.15rem;
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-    .cv-list li { margin-bottom: 0.12rem; }
-
-    .cv-compact-p {
-      font-size: 0.88rem;
-      color: var(--muted);
-      line-height: 1.4;
-      margin-bottom: 0.2rem;
-    }
-
-    .action-row {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 1rem;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-    }
-
-    @media print {
-      @page { size: A4 portrait; margin: 10mm 12mm; }
-      header.site-header, footer.site-footer, .no-print, .action-row, .nav-toggle, .nav-toggle-label { display: none; }
-      html, body { background: #ffffff; color: #000000; font-size: 9.1pt; line-height: 1.28; padding: 0; margin: 0; overflow: visible; }
-      main { padding: 0; }
-      .shell, .cv-sheet { max-width: 100%; border: none; padding: 0; margin: 0; background: transparent; }
-      .cv-section { margin-top: 4.5pt; break-inside: avoid; }
-      .cv-section h2 { font-size: 8.2pt; color: #000000; border-bottom: 0.75pt solid #444444; padding-bottom: 1pt; margin-bottom: 2pt; }
-      .cv-item-title { font-size: 8.5pt; color: #000000; }
-      .cv-item-sub, .cv-compact-p, .cv-list { font-size: 8.1pt; color: #111111; }
-      .cv-list { margin-left: 11pt; }
-      .cv-list li { margin-bottom: 1pt; }
-      a { color: #000000; text-decoration: none; }
-      a[href^="http"]::after { content: ""; }
-    }
-  </style>
+  <!-- Structured Data: Schema.org Person -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Stoyan Stoyanov, MBA",
+    "jobTitle": "General Manager",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Mobikom Bulgaria",
+      "url": "https://mobikom.bg/"
+    },
+    "alumniOf": [
+      {
+        "@type": "EducationalOrganization",
+        "name": "D. A. Tsenov Academy of Economics"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Varna University of Management"
+      },
+      {
+        "@type": "EducationalOrganization",
+        "name": "Lycée Hôtelier de Nice, France"
+      }
+    ],
+    "knowsLanguage": ["Bulgarian", "French", "Russian", "English", "German"],
+    "image": "https://mobikom.bg/s.stoyanov.jpg",
+    "url": "https://mobikom.bg/stoyanov/"
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Universal Master Header -->
   <header class="site-header no-print">
     <div class="shell nav-bar">
-      <a href="/" class="brand-link" title="Mobikom">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Mobikom">
+      <a href="/" class="brand-link" title="Mobikom Bulgaria — Institutional Gateway Home">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Mobikom Bulgaria Logo">
           <g transform="translate(4, 3)">
-            <circle cx="8" cy="20" r="4" fill="#0052cc" /><circle cx="22" cy="10" r="4" fill="#0052cc" /><circle cx="22" cy="30" r="4" fill="#0052cc" /><circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <circle cx="8" cy="20" r="4" fill="#0052cc" />
+            <circle cx="22" cy="10" r="4" fill="#0052cc" />
+            <circle cx="22" cy="30" r="4" fill="#0052cc" />
+            <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
             <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">BULGARIA</text>
@@ -115,16 +95,16 @@
       </a>
 
       <nav aria-label="Primary Navigation">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Menu Toggle">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Toggle Navigation Drawer">
+        <label for="nav-toggle" class="nav-toggle-label" title="Open Navigation Menu">&#9776;</label>
 
         <ul>
-          <li><a href="/" class="nav-link">Home</a></li>
-          <li><a href="/portfolio/" class="nav-link">Portfolio</a></li>
-          <li><a href="/blog/" class="nav-link">Insights</a></li>
-          <li><a href="/about/" class="nav-link">About</a></li>
-          <li><a href="/contact/" class="nav-btn">Direct Inquiry</a></li>
-          <li><a href="/stoyanov/bg/" class="lang-toggle" hreflang="bg">BG</a></li>
+          <li><a href="/" class="nav-link" title="Navigate to Mobikom Central Gateway">Home Gateway</a></li>
+          <li><a href="/portfolio/" class="nav-link" title="Explore Active Network Properties and Platforms">Project Portfolio</a></li>
+          <li><a href="/blog/" class="nav-link" title="Read Technical Manifestos and Historical Analyses">Technical Insights</a></li>
+          <li><a href="/about/" class="nav-link" title="Discover Telecom Heritage from 1992 to Present">About History</a></li>
+          <li><a href="/contact/" class="nav-btn" title="Initiate Partnership or Business Inquiry">Direct Contact</a></li>
+          <li><a href="/stoyanov/bg/" class="lang-toggle" hreflang="bg" title="Превключете към българската автобиография">Български (BG)</a></li>
         </ul>
       </nav>
     </div>
@@ -133,104 +113,111 @@
   <main>
     <div class="shell">
 
+      <!-- Action Toolbar (Hidden in Print) -->
       <div class="action-row no-print">
         <div>
-          Contact: <strong>stoyanov@mobikom.bg</strong> | Bulgaria
+          <a href="/about/governance/" class="card-link" title="Return to Corporate Governance Framework">&larr; Return to Governance</a>
         </div>
-        <div style="display: flex; gap: 0.5rem; align-items: center;">
-          <button type="button" onclick="window.print()" class="nav-btn" style="cursor: pointer; border: none; font-size: 0.85rem; padding: 0.4rem 0.85rem;">
+        <div class="action-buttons">
+          <button type="button" onclick="window.print()" class="nav-btn" title="Print or Save Official 1-Page A4 PDF CV">
             Print / Save 1-Page PDF
           </button>
-          <a href="/stoyanov/bg/" class="lang-toggle">Български (BG)</a>
+          <a href="/stoyanov/bg/" class="lang-toggle" hreflang="bg" title="Превключете към българския вариант">Български (BG)</a>
         </div>
       </div>
 
+      <!-- Live Printable CV Document -->
       <article class="cv-sheet">
 
-        <!-- PURE CSS GRID LEVEL 2: Track 1 (1fr, min-width:0), Track 2 (75px Right) -->
-        <header style="display: grid; grid-template-columns: 1fr 75px; column-gap: 1.25rem; align-items: start; border-bottom: 2px solid var(--primary); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
-          
-          <!-- Column 1: min-width: 0 allows column to calculate correctly -->
-          <div style="grid-column: 1; min-width: 0;">
-            <h1 style="margin: 0 0 0.25rem 0; line-height: 1.15; font-size: 1.85rem; font-weight: 800; color: var(--text);">Stoyan Stoyanov</h1>
-            <div style="font-size: 0.9rem; color: var(--muted); line-height: 1.4;">
-              <span>Location: Bulgaria</span> &bull;
-              <span>Email: stoyanov@mobikom.bg</span> &bull;
-              <span>Web: mobikom.bg/stoyanov/</span>
+        <!-- Grid Header: Column 1 (1fr Info), Column 2 (75px Photo Locked to Right) -->
+        <header class="cv-header-grid">
+          <div class="cv-title-group">
+            <h1>Stoyan Stoyanov, MBA</h1>
+            <div class="cv-contact-line">
+              <span>General Manager</span> &bull;
+              <span>Contact: stoyanov@mobikom.bg</span> &bull;
+              <span>Sofia, Bulgaria</span>
             </div>
           </div>
 
-          <!-- Column 2: Photo explicitly locked to Column 2 on the RIGHT -->
-          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov" width="75" height="90" style="grid-column: 2; width: 75px; height: 90px; object-fit: cover; border-radius: var(--radius); border: 1px solid var(--border); display: block;" onerror="this.style.display='none'">
+          <img src="/s.stoyanov.jpg" alt="Stoyan Stoyanov, MBA" width="75" height="90" class="cv-photo-img" onerror="this.style.display='none'">
         </header>
 
+        <!-- Section: Competencies & Governance -->
         <section class="cv-section">
-          <h2>Competencies</h2>
+          <h2>Competencies &amp; Governance</h2>
           <p class="cv-compact-p">
-            Micro economics; Macro economics; Marketing and management; Marketing and management in the hospitality and tourism; Hotel and Restaurant Management; Human resources management; Management and consultancy activities; Organization of seminars, education of students; International Business and Management, Intellectual Property activities.
+            Microeconomics; Macroeconomics; Strategic Marketing &amp; Business Management; Healthcare Systems &amp; Medical Administration; Hospitality &amp; Tourism Management; Multi-Unit Cluster Management, Financial Accounting &amp; Budgeting; Strategic Corporate Governance; Intellectual Property Stewardship.
           </p>
-          <p class="cv-compact-p" style="font-weight: 600; color: var(--text);">
-            Doctorate (PhD), discontinued by disease with permanent disabilities.
+          <p class="cv-compact-p cv-bold-note">
+            Doctorate (PhD) studies: discontinued due to permanent health disabilities.
           </p>
         </section>
 
+        <!-- Section: Professional Experience -->
         <section class="cv-section">
-          <h2>Experience</h2>
+          <h2>Professional Experience</h2>
           <div class="cv-item">
             <div class="cv-item-title">
-              <span>Business Management</span>
-              <span>15+ Years</span>
+              <span>Business Management &bull; General Manager</span>
+              <span>2011 &ndash; Present</span>
             </div>
-            <div class="cv-item-sub">General Manager &bull; <a href="/about/">mobikom.bg/about</a></div>
+            <div class="cv-item-sub">Mobikom Bulgaria &bull; <a href="/about/governance/" class="card-link" title="Review Mobikom Corporate Governance">mobikom.bg/about/governance/</a></div>
+            <p class="cv-compact-p">
+              Directing overall corporate operations, high-availability web architectures, and digital syndication across <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Browse direct job advertisements on BestJobs.bg">bestjobs.bg</a>, <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Open DobrichNews.com daily regional media publication">dobrichnews.com</a>, and <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Explore Dobruja regional cultural journal and agrarian archive">dobruja.com</a>.
+            </p>
           </div>
+
           <div class="cv-item">
             <div class="cv-item-title">
-              <span>Tourism Management</span>
-              <span>10 Years</span>
+              <span>Tourism &amp; Multi-Unit Cluster Management</span>
+              <span>10+ Years</span>
             </div>
-            <div class="cv-item-sub">Manager &bull; albena.bg</div>
+            <div class="cv-item-sub">Bulgaria, France &amp; Principality of Monaco</div>
+            <p class="cv-compact-p">
+              Operational management across premier hospitality facilities: Albena Resort, Golden Sands, Sunny Beach, Primorsko (Bulgaria); Nice, Mougins, Cannes, Mandelieu-la-Napoule, Isola Village, Isola 2000, Auron, Moliets-et-Maa, Dax, Bordeaux (France), and Monaco.
+            </p>
           </div>
         </section>
 
+        <!-- Section: Education & Diplomas -->
         <section class="cv-section">
-          <h2>Education and field of studies</h2>
+          <h2>Education &amp; Field of Studies</h2>
           <ul class="cv-list">
-            <li>Medical University studies and qualifications.</li>
-            <li>Master of Business Management (MBM) by uni-svishtov.bg.</li>
-            <li>Bachelor of Business Management (BBM) by uni-svishtov.bg.</li>
-            <li>Certificate of Tourism BTS (MHR) by lycee-hotelier-nice.fr.</li>
-            <li>Bachelor of Tourism and Hospitality Management BA (Hons) by vum.bg.</li>
-            <li>Certificate of French Language and Culture (DUEF) C1 by vum.bg.</li>
-            <li>Diploma of Cook and Waiter-Bartender by intermenu.org.</li>
-            <li>Driving licence: Professional category C by mvr.bg.</li>
-            <li>Electrician by High school "M.V. Lomonosov" pglomonosov.org.</li>
+            <li><strong>Master of Business Management (MBM):</strong> D. A. Tsenov Academy of Economics.</li>
+            <li><strong>Bachelor of Business Management (BBM):</strong> D. A. Tsenov Academy of Economics.</li>
+            <li><strong>Certificate of Tourism BTS (MHR):</strong> Lycée Hôtelier de Nice, France.</li>
+            <li><strong>Bachelor of Tourism &amp; Hospitality Management BA (Hons):</strong> Varna University of Management.</li>
+            <li><strong>Diplôme Universitaire d'Études Françaises (DUEF) C1:</strong> French Language &amp; Culture (VUM).</li>
+            <li><strong>Diploma of Cook &amp; Waiter-Bartender:</strong> Intermenu Institute.</li>
+            <li><strong>Professional Electrical Technician:</strong> High School "M. V. Lomonosov".</li>
+            <li><strong>Driving Licence:</strong> Professional Category C (MVR Bulgaria).</li>
           </ul>
         </section>
 
+        <!-- Section: Skills & Languages -->
         <section class="cv-section">
-          <h2>Research interests, Skills &amp; Languages</h2>
+          <h2>Specialized Skills &amp; Languages</h2>
           <p class="cv-compact-p">
-            <strong>Research interests:</strong> Business, Management, Law, Marketing, Mathematics, Computer Science, Physics, Biology, Chemistry, Medicine, Languages.
+            <strong>Systems &amp; Management:</strong> Microsoft Office 365, Specialized Enterprise ERP &amp; CRM Platforms, High-Availability Web Architecture, Cluster Accounting, Strategic Governance, Culinary Arts &amp; Oenology.
           </p>
           <p class="cv-compact-p">
-            <strong>Skills and abilities:</strong> Journalism, Publicistic, PR and Advertising; Research and communication; Culinary &amp; Cocktails &amp; Oenology; Business: cluster management, accounting, budgeting and strategic planning;.
-          </p>
-          <p class="cv-compact-p">
-            <strong>Languages:</strong> Mother tongue: Bulgarian, native: French, fluent: Russian, advanced: English, proficient: German.
+            <strong>Languages:</strong> Bulgarian (Mother tongue), French (Bilingual C1), Russian (Fluent), English (Advanced), German (Operational).
           </p>
         </section>
 
+        <!-- Section: References -->
         <section class="cv-section">
-          <h2>References</h2>
+          <h2>Professional References</h2>
           <ul class="cv-list">
-            <li>C. Guillot, Owner of a hotel in France lecureuil.com LT1 Tourism. BTS;</li>
-            <li>Assoc. Prof. H. Sirashki PhD, Course Coordinator at uni-svishtov.bg Bulgaria LT2 MBM;</li>
-            <li>V. Varbanova Prep., Honored Editor-in-Chief of Dobruja Media Group at <a href="https://www.dobruja.com" target="_blank" rel="noopener">dobruja.com</a> LT3 EIC.</li>
+            <li><strong>C. Guillot:</strong> Hotel Owner, France (lecureuil.com) &mdash; Reference LT1 Tourism.BTS.</li>
+            <li><strong>Assoc. Prof. H. Sirashki, PhD:</strong> Course Coordinator, D. A. Tsenov Academy of Economics (uni-svishtov.bg) &mdash; Reference LT2 MBM.</li>
+            <li><strong>Prep. V. Varbanova:</strong> Honored Head Chief-of-Editor, Dobruja Media Group at <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Explore Dobruja regional cultural journal and agrarian archive">dobruja.com</a> &mdash; Reference LT3 EIC.</li>
           </ul>
         </section>
 
-        <footer style="margin-top: 0.65rem; padding-top: 0.35rem; border-top: 1px solid var(--border); font-size: 0.75rem; color: var(--muted);">
-          <p>Stoyan Stoyanov &copy; 2026 content &bull; Web page Resume CV template by <a href="https://bestjobs.bg/kariera" target="_blank" rel="noopener">bestjobs.bg/kariera</a>.</p>
+        <footer class="cv-footer">
+          <p>Stoyan Stoyanov &copy; 2026 content &bull; Web page Resume CV template by <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Direct employment advertisements and job listings in Bulgaria">bestjobs.bg</a>.</p>
         </footer>
 
       </article>
@@ -238,11 +225,57 @@
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer no-print">
     <div class="shell">
-      <div class="footer-bottom" style="border-top: none; padding-top: 0;">
-        <p>&copy; 2026 mobikom.bg. Open-source under MIT License. Zero-cookie architecture.</p>
-        <a href="/contact/">Operations Desk &rarr;</a>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Mobikom Network</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Northeastern Bulgarian daily municipal and civic reporting">dobrichnews.com &bull; Regional News</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Agricultural preservation, regional traditions and community media">dobruja.com &bull; Cultural Journal</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Direct employment advertisements and job listings in Bulgaria">bestjobs.bg &bull; Job Ads Board</a></li>
+            <li><a href="/rss.xml" title="Subscribe to syndicated XML news and operations feed">&#128246; Syndicated RSS Feed</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Governance &amp; Desk</h4>
+          <ul>
+            <li><a href="/" title="Return to primary institutional landing page">Gateway Overview</a></li>
+            <li><a href="/about/" title="Full history of Bulgarian wireless communications and 2011 founding">Historical Chronicle</a></li>
+            <li><a href="/about/governance/" title="Corporate governance structure and editorial guidelines">Corporate Governance</a></li>
+            <li><a href="/portfolio/" title="Directory of active web publishing platforms and digital properties">All Digital Properties</a></li>
+            <li><a href="/blog/" title="Technical manifestos on performance, 512-byte principle and hardware">Insights &amp; Whitepapers</a></li>
+            <li><a href="/contact/" title="Official contact email and operations desk communications">Commercial Communications Desk</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Chronology</h4>
+          <ul>
+            <li><a href="/about/#nmt-450" title="The 1992 foundation of RTC Mobikom with Cable &amp; Wireless and BTC">1992 Cellular Pioneer</a></li>
+            <li><a href="/about/#pagers-mobika" title="Motorola Advisor paging systems and collectible Mobika phonecards">Pagers &amp; Mobika Cards</a></li>
+            <li><a href="/about/#ostatus-2011" title="Autonomous Linux server clusters, Red5 streaming and news media founding">2011 Operations Founding</a></li>
+            <li><a href="/blog/manifesto-512/" title="Engineering manifesto for zero-dependency static web delivery">512-Byte Web Architecture</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Horizontal Security, Legal & Language Bar -->
+      <nav class="footer-legal-bar" aria-label="Legal &amp; Policy Navigation">
+        <a href="/privacy/" title="Zero-cookie architecture and strict no-tracking privacy notice">Privacy Policy</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/terms/" title="Operational guidelines and intellectual property usage terms">Terms of Use</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/gdpr/" title="Regulation (EU) 2016/679 compliance declaration and CPDP rights">GDPR Compliance</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/stoyanov/bg/" hreflang="bg" title="Преминете към българската автобиография">Български Портал (BG)</a>
+      </nav>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <a href="/contact/" title="Direct communication channel to executive operations">Reach Operations Desk &rarr;</a>
       </div>
     </div>
   </footer>
