@@ -1,17 +1,18 @@
 <!--
   ==============================================================================
   FILE: /bg/blog/nmt-450-retrospective/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg)
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Ретроспективен анализ на аналоговата мобилна мрежа NMT-450 в България (1992 г.),
-  разпространението на радиовълните на 450 MHz и уроците за съвременния уеб.
+  Исторически и технически монограф, документиращ създаването на първата мобилна
+  мрежа в България (РТК Мобиком), стандарта NMT-450, хардуера на мобифоните,
+  пейджинг системите и прехода към съвременни дигитални уеб операции.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -19,145 +20,267 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ретроспекция на NMT-450: Клетъчната Архитектура през 1992 г. | Мобиком</title>
-  <meta name="description" content="Инженерен анализ на първата клетъчна мрежа в България: разпространение на радиовълните на 450 MHz, Мобифони и уроци за съвременния уеб.">
+  <title>Телекомуникационно наследство: Ретроспекция на NMT-450 | Мобиком</title>
+  <meta name="description" content="Исторически монограф за първия мобилен оператор в България РТК Мобиком: аналоговата мрежа NMT-450, пейджърите Motorola, фонокартите Мобика и апаратите Benefon.">
+  <meta name="author" content="Стоян Стоянов, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Multilingual Canonical Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/blog/nmt-450-retrospective/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/nmt-450-retrospective/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/nmt-450-retrospective/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/nmt-450-retrospective/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Ретроспекция на NMT-450: Клетъчната Архитектура през 1992 г.">
-  <meta property="og:description" content="Инженерен преглед на 450 MHz радиовълни, аналогови комуникации и уроци за уеб устойчивост.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Телекомуникационно наследство: Ретроспекция на NMT-450">
+  <meta property="og:description" content="Исторически монограф за първата клетъчна мрежа в България, аналоговите комуникации и инфраструктурата на Мобиком.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/nmt-450-retrospective/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Телекомуникационно наследство: Ретроспекция на NMT-450">
+  <meta name="twitter:description" content="Исторически монограф за първата клетъчна мрежа в България, аналоговите комуникации и инфраструктурата на Мобиком.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "NMT-450 Ретроспекция", "item": "https://mobikom.bg/bg/blog/nmt-450-retrospective/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Ретроспекция на NMT-450: Клетъчната Архитектура през 1992 г.",
-        "description": "Инженерен анализ на първата клетъчна мрежа в България, радиовълните на 450 MHz и технологичната приемственост.",
-        "url": "https://mobikom.bg/bg/blog/nmt-450-retrospective/",
-        "datePublished": "2025-01-15T09:30:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "Телекомуникационно наследство 1992: Ретроспекция на NMT-450 и зората на безжичните комуникации в България",
+    "description": "Исторически и технически монограф, документиращ създаването на първата клетъчна мрежа в България (РТК Мобиком), аналоговия стандарт NMT-450i, хардуера на мобифоните и пейджинг системите.",
+    "url": "https://mobikom.bg/bg/blog/nmt-450-retrospective/",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-18",
+    "inLanguage": "bg",
+    "keywords": "NMT-450, РТК Мобиком, Мобифон, Benefon Sigma, Motorola Advisor, Мобика, Телекомуникационна история, Аналогова мрежа",
+    "author": {
+      "@type": "Person",
+      "name": "Стоян Стоянов, MBA",
+      "jobTitle": "Управител",
+      "url": "https://mobikom.bg/stoyanov/bg/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мобиком България",
+      "url": "https://mobikom.bg/bg/",
+      "sameAs": ["https://github.com/mobikom"]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/bg/blog/nmt-450-retrospective/"
+    }
   }
   </script>
 </head>
 <body>
 
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link" aria-current="page">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/blog/nmt-450-retrospective/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/blog/nmt-450-retrospective/" class="lang-toggle" hreflang="en" title="Switch to the English version of this monograph">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Телеком История &bull; Радиоинженерство</span>
-          <h1>Ретроспекция на NMT-450: Клетъчната Архитектура през 1992 г.</h1>
-          <p class="hero-lead">Физиката на разпространението на радиовълните на 450 MHz, предимствата на големите клетки и архитектурните уроци за съвременния статичен уеб.</p>
-          <time datetime="2026-09-07">Публикувано в Анализи &bull; Поддържано от Мобиком</time>
+          <span class="hero-tag">ИСТОРИЧЕСКИ МОНОГРАФ &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Телекомуникационно наследство: Ретроспекция на NMT-450</h1>
+          <p class="hero-lead">
+            Зората на безжичните комуникации, аналоговите радиочестоти и инфраструктурата, която свърза България.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Предимството на честотата 450 MHz</h2>
+        <!-- Абстракт -->
+        <section class="audit-box" aria-labelledby="abstract-heading-bg">
+          <h3 id="abstract-heading-bg">Абстракт и исторически обхват</h3>
           <p>
-            При стартирането на първата търговска клетъчна мрежа в България през 1992 г. под марката Мобиком, инженерите залагат на скандинавския стандарт NMT-450. Докато съвременните 4G и 5G мрежи работят на високи микровълнови честоти (от 1.8 GHz до 3.5 GHz), NMT оперираше в дециметровия обхват на 450 MHz.
-          </p>
-          <p>
-            Физиката на радиовълните осигуряваше огромно предимство: по-ниските честоти имат значително по-ниско затихване и висока дифракция около планински препятствия. Една базова станция на NMT-450 покриваше радиус до 30 километра, осигурявайки стабилна гласова връзка през трудната топография на България само с част от кулите, необходими днес.
+            Преди масовото навлизане на дигиталните GSM мрежи, мобилните телекомуникации разчитаха на устойчиви аналогови радиопротоколи. Този монограф документира създаването на Радиокомуникационна компания (РТК) Мобиком през 1992 г. — първият търговски мобилен оператор в България. Той разглежда физиката на честотната лента 450 MHz, хардуерната архитектура на ранните апарати „Мобифон“, изграждането на националните системи за буквено-цифров пейджинг, както и последващото закриване и дигитално възраждане на домейна като независима уеб инфраструктура.
           </p>
         </section>
 
+        <!-- Секция 1: Генезисът на РТК Мобиком -->
         <section>
-          <h2>2. Хардуерният модел: От Мобифони до Пейджъри</h2>
+          <h2>1. Генезисът на РТК Мобиком (1992 г.)</h2>
           <p>
-            Устройствата от онзи период – мобилните апарати за автомобилен монтаж и преносимите „Мобифони“ – бяха проектирани за максимална чувствителност на антената, а не за софтуерна сложност. Липсваха слоеве от операционни системи, фонова телеметрия и постоянен трансфер на скрити пакети.
+            След края на Студената война България изпитваше остра нужда от модернизация на телекомуникационната си инфраструктура. През декември 1992 г. бе създадена Радиокомуникационна компания (РТК) Мобиком като историческо международно съвместно предприятие. Собствеността обединяваше експертизата на британския телеком гигант <strong>Cable &amp; Wireless (49%)</strong>, държавната <strong>Българска телекомуникационна компания (БТК, 39%)</strong> и <strong>Радиоелектронни системи (12%)</strong>.
           </p>
           <p>
-            С последвалото внедряване на пейджърната мрежа (пейджъри) и картовите улични автомати „Мобика“, националната система доказа, че надеждността на връзката се постига чрез простота на протоколите.
+            Това стратегическо партньорство успешно стартира първата търговска клетъчна мрежа в страната, полагайки основите на съвременната мобилна свързаност и въвеждайки концепцията за персонална безжична комуникация сред българското общество.
           </p>
         </section>
 
+        <!-- Секция 2: Стандартът NMT-450i -->
         <section>
-          <h2>3. Уроци за съвременния уеб</h2>
+          <h2>2. Радиофизика: Стандартът NMT-450i</h2>
           <p>
-            Отпадането на аналоговата модулация не обезсилва базовия инженерен принцип: <strong>съобразявай се с физическите ограничения, вместо да ги преодоляваш с излишни ресурси</strong>.
+            Мобиком оперираше по аналоговия клетъчен стандарт <strong>Nordic Mobile Telephone (NMT-450i)</strong>, използвайки ултрависокочестотния (UHF) диапазон от 450 MHz. От инженерна и радиофизична гледна точка, честотата 450 MHz предоставяше огромно предимство пред по-късните 900 MHz и 1800 MHz GSM стандарти: <strong>екстремно разпространение на вълната</strong>.
           </p>
           <ul>
-            <li><strong>Спектър и скорост:</strong> Както 450 MHz осигуряваше широк обхват чрез физика на вълните, така статичният HTML осигурява скорост под секунда чрез прецизен пакетен бюджет.</li>
-            <li><strong>Простота на протоколите:</strong> Опростените протоколи с ясни състояния надживяват сложните многослойни софтуерни библиотеки.</li>
-            <li><strong>Обществена достъпност:</strong> Информационните системи трябва да работят безотказно дори при слаба връзка и нискоскоростен интернет.</li>
+            <li><strong>Огромен радиус на клетките:</strong> Поради по-ниското затихване на честотата, една базова станция NMT-450 можеше да предава сигнал в радиус над 30 до 40 километра.</li>
+            <li><strong>Топографско проникване:</strong> По-дългите вълни успешно проникваха през гъсти гори, планински релефи и крайбрежни зони, осигурявайки изключително надеждно покритие по българските магистрали, отдалечените земеделски райони (като Добруджа) и Черноморието.</li>
+            <li><strong>Мащаб на абонатите:</strong> В своя пик мрежата обслужваше над 196 000 активни абонати. Първоначално мрежата използваше националния код <code>0799</code> с 5-цифрени номера, а по-късно премина към емблематичния префикс <code>048</code> с 6-цифрено номериране на абонатите.</li>
           </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Пълна телекомуникационна хронология</h3>
-            <p>Разгледайте пълната историческа линия на телекомуникациите и уеб инфраструктурата.</p>
-          </div>
-          <a href="/bg/about/#nmt-450" class="nav-btn">Към Хронологията &rarr;</a>
+        <!-- Секция 3: Хардуер и Мобифони -->
+        <section>
+          <h2>3. Хардуерни терминали: Ерата на Benefon и Nokia</h2>
+          <p>
+            За разлика от съвременните устройства, използващи SIM карти, аналоговите NMT-450 апарати се програмираха хардуерно директно към мрежата чрез електронен сериен номер (ESN) в официалните сервизни центрове на Мобиком. Тези устройства, популярни в обществото като <em>„Мобифони“</em>, се превърнаха в статусен символ на бизнес културата от началото на 90-те години.
+          </p>
+          <p>
+            Хардуерният пейзаж беше доминиран от здравото скандинавско инженерство:
+          </p>
+          <ul>
+            <li><strong>Benefon Sigma и Sigma Gold:</strong> Произведен във Финландия, този изключително здрав апарат се превърна в масова културна сензация, придобивайки легендарен статут по време на Световното първенство по футбол през 1994 г.</li>
+            <li><strong>Benefon Dragon, Delta и Spica:</strong> Известни със своето неразрушимо качество на изработка и мощни външни антени, гарантиращи улавяне на сигнал дори в най-отдалечените райони.</li>
+            <li><strong>Nokia 440, 450, 540, 640 и 650:</strong> Серия, която беляза еволюцията на преносимата ергономия, въвеждайки по-малки размери и усъвършенствани аналогови функции за масовия пазар.</li>
+          </ul>
         </section>
+
+        <!-- Секция 4: Пейджинг и Мобика -->
+        <section>
+          <h2>4. Спомагателна инфраструктура: Пейджинг системи и телефони Мобика</h2>
+          <p>
+            Паралелно с клетъчната мрежа, Мобиком изгради и поддържаше две допълнителни критични комуникационни структури:
+          </p>
+          <ul>
+            <li><strong>Пейджинг мрежата:</strong> Използвайки приемници <strong>Motorola Advisor</strong> и <strong>Motorola Bravo</strong>, Мобиком предоставяше национална услуга за буквено-цифров пейджинг. Операторите в централизираните кол центрове набираха съобщения, продиктувани по стационарен телефон, и незабавно ги излъчваха като текст към устройствата, носени на колана от лекари, техници и мениджъри.</li>
+            <li><strong>Улични телефони Мобика:</strong> Мобиком разположи хиляди модерни, ярко оцветени улични телефонни кабини из цяла България. Те работеха чрез предплатени оптични и чип карти (с номинал 25, 50, 100, 200 и 400 импулса). Марката <strong>„Мобика“</strong> даде началото на националното колекционерско хоби, известно като <em>фонокартия</em> (telecartophily).</li>
+          </ul>
+        </section>
+
+        <!-- Секция 5: Закриване и дигитално възраждане -->
+        <section>
+          <h2>5. Закриване на мрежата и дигиталното възраждане от 2011 г.</h2>
+          <p>
+            С узряването на цифровата GSM технология (2G/3G), която предложи по-добра спектрална ефективност и криптирани гласови разговори, ерата на аналоговите клетъчни мрежи приключи. На 5 август 2008 г. мрежата NMT-450 беше официално спряна.
+          </p>
+          <p>
+            Технологичното наследство на домейна обаче не приключи. През 2011 г. именно домейнът <code>mobikom.bg</code> беше придобит и преструктуриран от Мобиком България под изпълнителното ръководство на <strong>Стоян Стоянов, MBA</strong>. Домейнът беше препрограмиран от хардуерна телекомуникационна инфраструктура в суверенна дигитална медийна мрежа — въвеждайки ранните OStatus протоколи за микроблогинг, управлявайки автономни Linux стрийминг клъстери за Медийна група Добруджа и в крайна сметка еволюирайки до високонадеждната статична уеб инфраструктура без зависимости, която оперира днес.
+          </p>
+        </section>
+
+        <!-- Секция 6: Каре за цитиране -->
+        <section class="audit-box" aria-labelledby="citation-heading-bg">
+          <h3 id="citation-heading-bg">Как да цитирате този труд &bull; Academic Citation</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "1992 Telecom Heritage: The NMT-450 Retrospective," <em>Mobikom Technical Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/nmt-450-retrospective/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>1992 Telecom Heritage: The NMT-450 Retrospective</em>. Mobikom Insights. <code>https://mobikom.bg/blog/nmt-450-retrospective/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026nmt450, author={Stoyanov, Stoyan}, title={1992 Telecom Heritage: The NMT-450 Retrospective}, journal={Mobikom Technical Monograph}, year={2026}, url={https://mobikom.bg/blog/nmt-450-retrospective/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Стратегически партньорства и технологично консултиране</h3>
+          <p>Директна реклама, медийно отразяване и технически консултации без проследяващи бисквитки.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел за медийни кампании и партньорства">Връзка с бизнес отдела &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer with Non-Clickable Plain Text MIT Inscription -->
   <footer class="site-footer">
     <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Мрежа Мобиком</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Управление и контакти</h4>
+          <ul>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и оперативна кореспонденция">Търговски отдел контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Хронология</h4>
+          <ul>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/nmt-450-retrospective/" hreflang="en" title="Switch to the English version of this monograph">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
