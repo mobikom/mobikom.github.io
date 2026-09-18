@@ -4,10 +4,10 @@
   FILE: /rss.xml
   PROJECT: mobikom.bg — Master Institutional Portal
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  STANDARDS: RSS 2.0 • Atom Namespace Extensions
+  STANDARDS: RSS 2.0 • Atom Namespace Extensions • RFC 822
   ==============================================================================
   DESCRIPTION:
-  Official RSS syndication feed for the mobikom.bg network insights, technical
+  Official RSS syndication feed for mobikom.bg network insights, technical
   monographs, and historical publications.
   ==============================================================================
 -->
@@ -17,55 +17,55 @@
     <link>https://mobikom.bg/blog/</link>
     <description>Technical monographs, web performance papers, and telecom historical archives from Mobikom Bulgaria.</description>
     <language>en</language>
-    <lastBuildDate>Mon, 07 Sep 2026 10:00:00 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 18 Sep 2026 14:00:00 +0300</lastBuildDate>
     <atom:link href="https://mobikom.bg/rss.xml" rel="self" type="application/rss+xml"/>
-
-    <item>
-      <title>NMT-450 Retrospective: 1992 Cellular Architecture</title>
-      <link>https://mobikom.bg/blog/nmt-450-retrospective/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/nmt-450-retrospective/</guid>
-      <pubDate>Wed, 15 Jan 2025 09:30:00 +0200</pubDate>
-      <description>Engineering retrospective on Bulgaria's 1992 analog NMT-450 cellular network, radio propagation at 450 MHz, and lessons for modern web infrastructure.</description>
-    </item>
-
-    <item>
-      <title>Computer Memory Architecture &amp; The Web Bloat Penalty</title>
-      <link>https://mobikom.bg/blog/computer-memory/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/computer-memory/</guid>
-      <pubDate>Thu, 05 Dec 2024 10:00:00 +0200</pubDate>
-      <description>Technical analysis of computer memory hierarchies, CPU cache locality (L1/L2/L3), and how modern web bloat mismanages physical memory.</description>
-    </item>
-
-    <item>
-      <title>Contextual Advertising Without Surveillance</title>
-      <link>https://mobikom.bg/blog/advertising/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/advertising/</guid>
-      <pubDate>Fri, 15 Nov 2024 09:00:00 +0200</pubDate>
-      <description>Why Mobikom operates direct contextual advertising across dobrichnews.com, dobruja.com, and bestjobs.bg without programmatic tracking cookies.</description>
-    </item>
-
-    <item>
-      <title>Dobruja Media Group: Regional Journalism &amp; Civic Archives</title>
-      <link>https://mobikom.bg/blog/dobruja/</link>
-      <guid isPermaLink="true">https://mobikom.bg/blog/dobruja/</guid>
-      <pubDate>Tue, 20 Aug 2024 08:30:00 +0200</pubDate>
-      <description>Delivering verified regional news, community records, and independent editorial oversight across North-East Bulgaria.</description>
-    </item>
 
     <item>
       <title>The 512-Byte Web Principle</title>
       <link>https://mobikom.bg/blog/manifesto-512/</link>
       <guid isPermaLink="true">https://mobikom.bg/blog/manifesto-512/</guid>
-      <pubDate>Mon, 10 Jun 2024 09:00:00 +0200</pubDate>
-      <description>Why reducing network round-trips and eradicating unnecessary client-side JavaScript represents the true foundation of sustainable web operations.</description>
+      <pubDate>Fri, 18 Sep 2026 10:00:00 +0300</pubDate>
+      <description>Why reducing network round-trips (RFC 6928), first-byte MIME sniffing, and volatile RAM execution represent the true foundation of sustainable web operations.</description>
     </item>
 
     <item>
-      <title>Sea Stars &amp; Pomorie Lye: Mineral Balneology &amp; Digital Preservation</title>
+      <title>Computer Memory for Non-Specialists</title>
+      <link>https://mobikom.bg/blog/computer-memory/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/computer-memory/</guid>
+      <pubDate>Fri, 18 Sep 2026 09:30:00 +0300</pubDate>
+      <description>Hardware engineering guide by Stoyan Stoyanov, MBA on CPU cache hierarchies (L1/L2/L3), DDR generations, dual-channel buses, and enterprise RAID arrays.</description>
+    </item>
+
+    <item>
+      <title>Sea Stars Monograph: Pomorie Lake Lye &amp; Mineral Balneology</title>
       <link>https://mobikom.bg/blog/seastars/</link>
       <guid isPermaLink="true">https://mobikom.bg/blog/seastars/</guid>
-      <pubDate>Fri, 15 Mar 2024 08:00:00 +0200</pubDate>
-      <description>Scientific monograph on Black Sea mineral balneology, authentic hyper-concentrated Pomorie lye developed with the Bulgarian Academy of Sciences (IONH-BAS), and lightweight digital cataloging.</description>
+      <pubDate>Fri, 18 Sep 2026 09:00:00 +0300</pubDate>
+      <description>Scientific monograph on Black Sea mineral balneology, authentic hyper-concentrated Pomorie lye developed with the Bulgarian Academy of Sciences (BAS), and clean digital preservation.</description>
+    </item>
+
+    <item>
+      <title>Dobruja Media Group: From Print to Real-Time Streaming</title>
+      <link>https://mobikom.bg/blog/dobruja/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/dobruja/</guid>
+      <pubDate>Fri, 18 Sep 2026 08:30:00 +0300</pubDate>
+      <description>Operational chronicle of autonomous Linux server clusters, Red5 real-time video streaming, and independent regional media publishing across North-East Bulgaria.</description>
+    </item>
+
+    <item>
+      <title>The Zero-Cookie Advertising Protocol</title>
+      <link>https://mobikom.bg/blog/advertising/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/advertising/</guid>
+      <pubDate>Fri, 18 Sep 2026 08:00:00 +0300</pubDate>
+      <description>Contextual media syndication doctrine: eliminating invasive third-party ad-tech bloat through first-party native edge delivery and semantic targeting.</description>
+    </item>
+
+    <item>
+      <title>1992 Telecom Heritage: The NMT-450 Retrospective</title>
+      <link>https://mobikom.bg/blog/nmt-450-retrospective/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/nmt-450-retrospective/</guid>
+      <pubDate>Fri, 18 Sep 2026 07:30:00 +0300</pubDate>
+      <description>Historical dissertation documenting Bulgaria's first commercial mobile operator (RTC Mobikom), analog 450 MHz radio physics, Motorola pagers, and Mobika phonecards.</description>
     </item>
 
   </channel>
