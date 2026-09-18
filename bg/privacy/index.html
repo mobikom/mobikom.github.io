@@ -1,17 +1,18 @@
 <!--
   ==============================================================================
   FILE: /bg/privacy/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледална декларация за поверителност
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
-  STANDARDS: HTML5 Living Standard • Zero-Cookie Default • Schema.org WebPage
-  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Compliant
+  STANDARDS: HTML5 Living Standard • GDPR (ЕС) 2016/679 • Zero Inline CSS
+  COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • Поверителност по дизайн
   ==============================================================================
   DESCRIPTION:
-  Official Bulgarian privacy policy. Every internal link is strictly bound to
-  the /bg/ locale. Outlines the zero-cookie policy and data minimalism.
+  Официална декларация за поверителност и защита на личните данни на mobikom.bg.
+  Регламентира архитектурата с нулеви бисквитки, ефемерното изпълнение в RAM,
+  обработката на системни логове за сигурност и спазването на GDPR.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -19,158 +20,269 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Политика за Поверителност | Мобиком</title>
-  <meta name="description" content="Политика за поверителност на Мобиком: Архитектура без бисквитки, нулево проследяване и минимализъм на данните по стандартите на GDPR.">
+  <title>Мобиком | Политика за поверителност и нулеви бисквитки</title>
+  <meta name="description" content="Официална политика за поверителност на mobikom.bg: Архитектура с нулеви бисквитки, ефемерно изпълнение в RAM и стриктно спазване на Регламент (ЕС) 2016/679 (GDPR).">
+  <meta name="author" content="Стоянов">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Absolute Multilingual Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/privacy/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/privacy/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/privacy/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/privacy/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Политика за Поверителност | Мобиком">
-  <meta property="og:description" content="Архитектура без бисквитки и минимализъм на данните по стандартите на GDPR.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Мобиком | Политика за поверителност и нулеви бисквитки">
+  <meta property="og:description" content="Поверителност по архитектурен дизайн: Нулеви проследяващи бисквитки, волатилно изпълнение в RAM и пълно съответствие с GDPR.">
   <meta property="og:url" content="https://mobikom.bg/bg/privacy/">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Twitter/X Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Мобиком | Политика за поверителност и нулеви бисквитки">
+  <meta name="twitter:description" content="Поверителност по архитектурен дизайн: Нулеви проследяващи бисквитки, волатилно изпълнение в RAM и пълно съответствие с GDPR.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org WebPage / Privacy Policy Graph -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Декларация за поверителност и защита на личните данни на Мобиком",
+    "url": "https://mobikom.bg/bg/privacy/",
+    "description": "Институционална декларация за поверителност, регламентираща архитектурата с нулеви бисквитки, липсата на клиентско проследяване и спазването на GDPR в Мобиком.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мобиком България",
+      "url": "https://mobikom.bg/bg/",
+      "email": "info@mobikom.bg",
+      "sameAs": ["https://github.com/mobikom"]
+    }
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/privacy/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/privacy/" class="lang-toggle" hreflang="en" title="Switch to the English privacy statement">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Съответствие &bull; Законодателство</span>
-          <h1>Политика за Поверителност</h1>
-          <p class="hero-lead">Защитата на личните данни е вградена в самата архитектура на мрежата.</p>
-          <time datetime="2026-09-07" style="font-size: 0.85rem; color: var(--muted); display: block; margin-top: 0.5rem;">
-            В сила от: 7 септември 2026 г.
-          </time>
+          <span class="hero-tag">ИНСТИТУЦИОНАЛНА ПОЛИТИКА &bull; РЕГЛАМЕНТ (ЕС) 2016/679</span>
+          <h1>Политика за поверителност и нулеви бисквитки</h1>
+          <p class="hero-lead">
+            Архитектурно минимизиране на данните, ефемерно волатилно изпълнение в RAM и категорично елиминиране на външната телеметрия за следене.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Основен принцип: Архитектура без проследяващи бисквитки</h2>
+        <!-- Основен принцип -->
+        <section class="audit-box" aria-labelledby="privacy-core-heading-bg">
+          <h3 id="privacy-core-heading-bg">Основен принцип: Поверителност по архитектурен дизайн</h3>
           <p>
-            Мобиком прилага принципа на пълен минимализъм по отношение на данните. Този уебсайт не поставя, не чете и не записва бисквитки (cookies), тракери или локални маркери в браузъра на Вашето устройство.
-          </p>
-          <p>
-            Тъй като не извършваме профилиране или поведенческо проследяване, на този портал няма да видите банери за съгласие или натрапчиви известия.
+            Мобиком функционира под стриктната доктрина за <strong>Архитектурно минимизиране на данните</strong>. Ние изповядваме принципа, че най-надеждният начин за защита на личните данни е те въобще да не бъдат събирани, монетизирани или складирани. Този портал не използва перманентни бисквитки, не извършва поведенческо профилиране и не съдържа външни маркетингови тракери.
           </p>
         </section>
 
+        <!-- Секция 1: Администратор на данни -->
         <section>
-          <h2>2. Временни системни дневници (Server Logs)</h2>
+          <h2>1. Идентификация на администратора на лични данни</h2>
           <p>
-            При зареждане на страници сървърите записват единствено временни технически данни, строго необходими за сигурността и защитата на мрежата:
+            Административното и техническо звено, отговорно за надзора върху обработката на данни в пространството на <code>mobikom.bg</code>, е:
           </p>
           <ul>
-            <li>IP адрес на устройството.</li>
-            <li>Метод на заявката, адрес на ресурса и времеви печат.</li>
-            <li>Код на отговора и обем на пренесените байтове.</li>
-            <li>Идентификатор на браузъра (User-Agent).</li>
+            <li><strong>Организация:</strong> Мобиком България / Институционална мрежа</li>
+            <li><strong>Управител и надзор:</strong> Стоян Стоянов, MBA</li>
+            <li><strong>Седалище и локация:</strong> гр. София, Република България</li>
+            <li><strong>Официална кореспондентска поща:</strong> <a href="mailto:info@mobikom.bg" class="card-link" title="Официален имейл за кореспонденция"><strong>info@mobikom.bg</strong></a></li>
+            <li><strong>Изпълнително ръководство:</strong> <a href="mailto:stoyanov@mobikom.bg" class="card-link" title="Директна служебна връзка с управителя Стоян Стоянов, MBA"><strong>stoyanov@mobikom.bg</strong></a></li>
           </ul>
-          <p>
-            Тези дневници се съхраняват във временен буфер за предотвратяване на кибератаки и DDoS заплахи. Те никога не се свързват с външни бази данни и не служат за търговски цели.
-          </p>
         </section>
 
+        <!-- Секция 2: Нулеви бисквитки -->
         <section>
-          <h2>3. Директна кореспонденция</h2>
+          <h2>2. Архитектура без бисквитки и елиминиране на локалния запис</h2>
           <p>
-            При контакт с нас чрез имейл, предоставеният имейл адрес и съдържанието на съобщението се обработват единствено за целите на отговор на Вашето запитване. Ние не добавяме адреси към рекламни бюлетини и не ги предоставяме на трети страни.
+            За разлика от конвенционалните сайтове, <code>mobikom.bg</code> не записва никаква информация на диска на вашето устройство:
           </p>
+          <ul>
+            <li><strong>Нулеви проследяващи бисквитки:</strong> Сайтът не изпраща бисквитки (Cookies) — нито маркетингови, нито аналитични, нито функционални. Поради тази причина никога няма да видите банер за съгласие за бисквитки при нас, тъй като няма бисквитки, за които да искаме съгласие.</li>
+            <li><strong>Пълна липса на постоянни записи:</strong> Порталът не използва <code>localStorage</code>, <code>sessionStorage</code>, <code>IndexedDB</code> или фонови процеси <code>Service Workers</code>.</li>
+            <li><strong>Ефемерна изолация в оперативната памет (RAM):</strong> Документите, шрифтовете и векторните графики се зареждат единствено във волатилната RAM памет на вашето устройство. Затварянето на таба на браузъра задейства моментално освобождаване на паметта от операционната система, без да остават дигитални следи или файлове на диска.</li>
+          </ul>
         </section>
 
+        <!-- Секция 3: Системни логове -->
         <section>
-          <h2>4. Външни зависимости</h2>
+          <h2>3. Ефемерни сървърни логове на крайните възли (GDPR Чл. 6, т. 1, б. „е“)</h2>
           <p>
-            Този портал доставя само собствени статични ресурси. Той не зарежда външни шрифтове от Google Fonts, отдалечени скриптове от публични CDN мрежи или проследяващи пиксели от социални мрежи.
+            За да доставя съдържание през Anycast мрежата и да се защитава от автоматизирани кибератаки, нашата edge инфраструктура (хоствана през Cloudflare) автоматично обработва кратковременни технически данни за връзката:
+          </p>
+          <ul>
+            <li><strong>Обработвани параметри:</strong> Анонимизиран IP адрес на клиента, операционна система (User-Agent), времеви отпечатък на заявката и търсен URL адрес.</li>
+            <li><strong>Правно основание:</strong> Член 6, Параграф 1, Буква „е“ от Общия регламент за защита на данните (GDPR) &mdash; <strong>Легитимен интерес</strong>. Обработката се извършва единствено и само с цел откриване, ограничаване и блокиране на масирани DDoS атаки, автоматизирано сканиране за уязвимости и злонамерени заявки.</li>
+            <li><strong>Съхранение:</strong> Тези технически дневници се изчистват автоматично, напълно изолирани са от комерсиални бази данни и никога не се използват за индивидуално профилиране или продажба.</li>
+          </ul>
+        </section>
+
+        <!-- Секция 4: Директни запитвания -->
+        <section>
+          <h2>4. Директна кореспонденция и конфиденциалност</h2>
+          <p>
+            При осъществяване на контакт по имейл с <a href="mailto:info@mobikom.bg" class="card-link" title="Официална поща за контакт"><strong>info@mobikom.bg</strong></a> или <a href="mailto:stoyanov@mobikom.bg" class="card-link" title="Директен контакт с управителя"><strong>stoyanov@mobikom.bg</strong></a>:
+          </p>
+          <ul>
+            <li><strong>Доброволно предоставяне:</strong> Вашият имейл адрес, технически хедъри и текст на писмото се използват единствено за да разгледаме и отговорим на вашето бизнес предложение или запитване.</li>
+            <li><strong>Строга фирмена дискретност:</strong> Данните от кореспонденцията се пазят при висока конфиденциалност. Те никога не се преотстъпват, отдават под наем или предоставят на трети страни за рекламни цели.</li>
+          </ul>
+        </section>
+
+        <!-- Секция 5: Собствени ресурси -->
+        <section>
+          <h2>5. Изолация на собствените ресурси и липса на външна телеметрия</h2>
+          <p>
+            Външните софтуерни скриптове водят до хронично изтичане на данни. За да предотвратим това:
+          </p>
+          <ul>
+            <li><strong>Без външни шрифтове:</strong> Не зареждаме шрифтове от Google Fonts или външни сървъри. Платформата използва шрифтовете, които вече са вградени във вашата операционна система.</li>
+            <li><strong>Без външен анализ:</strong> Никакви проследяващи скриптове от Google Analytics, Meta Pixel, Hotjar или рекламни борси не работят на нашите страници.</li>
+            <li><strong>Нативна доставка:</strong> Всички стилове и графики се сервират директно от нашия собствен криптиран мрежов периметър при строга политика за сигурност на съдържанието (CSP Level 3).</li>
+          </ul>
+        </section>
+
+        <!-- Секция 6: Права по GDPR -->
+        <section>
+          <h2>6. Права на субектите на данни съгласно Регламент (ЕС) 2016/679</h2>
+          <p>
+            Като потребител вие разполагате с пълните права, гарантирани от европейското законодателство, по отношение на данните, изпратени доброволно по имейл:
+          </p>
+          <ul>
+            <li><strong>Право на достъп и коригиране:</strong> Можете да поискате потвърждение дали съхраняваме писма от вас и да поискате тяхното коригиране.</li>
+            <li><strong>Право на изтриване („Право да бъдеш забравен“):</strong> Можете да поискате пълното изтриване на вашата кореспонденция от нашите входящи пощи.</li>
+            <li><strong>Надзорен орган:</strong> Ако смятате, че правата ви по регламента са нарушени, имате законно право да подадете жалба до националния надзорен орган:
+              <br>
+              <strong>Комисия за защита на личните данни (КЗЛД):</strong>
+              <br>
+              Адрес: бул. „Проф. Цветан Лазаров“ № 2, София 1592 &bull; Уебсайт: <code>cpdp.bg</code>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Секция 7: Мрежов обхват -->
+        <section>
+          <h2>7. Мрежов обхват и независими платформи</h2>
+          <p>
+            Тази политика за поверителност се прилага пряко за основния институционален портал <a href="/bg/" class="card-link" title="Обратно към началния портал на Мобиком"><strong>mobikom.bg</strong></a>. Независимите платформи в медийната екосистема — включително <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com</strong></a>, <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалния културен и стопански журнал dobruja.com"><strong>dobruja.com</strong></a> и <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на директни обяви за работа в bestjobs.bg"><strong>bestjobs.bg</strong></a> — следват същите принципи за минимизиране на данните, осигурявайки директна потребителска стойност без външно наблюдение.
           </p>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>GDPR Права и Институционална Рамка</h3>
-            <p>Прегледайте правните основания, данните за администратора и Вашите права по Регламент (ЕС) 2016/679.</p>
-          </div>
-          <a href="/bg/gdpr/" class="nav-btn">GDPR Съответствие &rarr;</a>
-        </section>
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Имате въпрос относно защитата на данните?</h3>
+          <p>Свържете се директно с нашия отдел за корпоративни комуникации.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с отдела за корпоративни комуникации">Корпоративен контакт &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
       <div class="footer-grid">
         <div class="footer-col">
           <h4>Мрежа Мобиком</h4>
           <ul>
-            <li><a href="https://www.dobrichnews.com" rel="noopener" target="_blank">dobrichnews.com</a></li>
-            <li><a href="https://www.dobruja.com" rel="noopener" target="_blank">dobruja.com</a></li>
-            <li><a href="https://bestjobs.bg" rel="noopener" target="_blank">bestjobs.bg</a></li>
-            <li><a href="/rss.xml">&#128246; RSS Емисия</a></li>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Управление и Отдел</h4>
+          <h4>Управление и контакти</h4>
           <ul>
-            <li><a href="/bg/">Начало</a></li>
-            <li><a href="/bg/about/">За Нас и История</a></li>
-            <li><a href="/bg/about/governance/">Управление</a></li>
-            <li><a href="/bg/contact/">Контакт</a></li>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и корпоративна кореспонденция">Търговски отдел контакти</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Сигурност и Законодателство</h4>
+          <h4>Хронология</h4>
           <ul>
-            <li><a href="/bg/privacy/">Поверителност</a></li>
-            <li><a href="/bg/terms/">Общи Условия</a></li>
-            <li><a href="/bg/gdpr/">GDPR Съответствие</a></li>
-            <li><a href="/privacy/">English (EN)</a></li>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
           </ul>
         </div>
       </div>
 
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/privacy/" hreflang="en" title="Switch to the English privacy statement">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към отдела за корпоративни комуникации">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
