@@ -12,7 +12,7 @@
   ==============================================================================
   DESCRIPTION:
   Главен каталог на техническите анализи, инженерни манифести и исторически
-  монографии за мрежата на Мобиком. Презентира публикациите чрез нативен 4-пистов
+  монографии за мрежата на Мобиком. Презентира 6 публикации чрез нативен 4-пистов
   Subgrid в рамките на единната 800px академична рамка.
   ==============================================================================
 -->
@@ -22,7 +22,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мобиком | Технически анализи, манифести и монографии</title>
-  <meta name="description" content="Технически анализи, инженерни манифести за нискостепенна уеб архитектура, хардуерна компютърна памет и исторически монографии от Мобиком.">
+  <meta name="description" content="Технически анализи, инженерни манифести за нискостепенна уеб архитектура, хардуерна компютърна памет, медийна синдикация и исторически монографии.">
   <meta name="author" content="Стоянов">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
@@ -42,7 +42,7 @@
 
   <!-- Open Graph Protocol -->
   <meta property="og:title" content="Мобиком | Технически анализи, манифести и монографии">
-  <meta property="og:description" content="Приложен софтуерен инженеринг, транспортна мрежова физика и исторически монографии.">
+  <meta property="og:description" content="Приложен софтуерен инженеринг, транспортна мрежова физика, медийна синдикация и исторически монографии.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Мобиком България">
@@ -51,7 +51,7 @@
   <!-- Twitter/X Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Мобиком | Технически анализи, манифести и монографии">
-  <meta name="twitter:description" content="Приложен софтуерен инженеринг, транспортна мрежова физика и исторически монографии.">
+  <meta name="twitter:description" content="Приложен софтуерен инженеринг, транспортна мрежова физика, медийна синдикация и исторически монографии.">
   <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
   <!-- Structured Data: CollectionPage & Technical Articles -->
@@ -64,7 +64,8 @@
     "publisher": {
       "@type": "Organization",
       "name": "Мобиком България",
-      "url": "https://mobikom.bg/bg/"
+      "url": "https://mobikom.bg/bg/",
+      "sameAs": ["https://github.com/mobikom"]
     }
   }
   </script>
@@ -117,11 +118,12 @@
         </p>
       </section>
 
-      <!-- Monographs Grid (2 Cards Per Row) -->
+      <!-- Monographs Grid (6 карти, точно 2 колони) -->
       <section aria-labelledby="monographs-catalog-heading-bg">
         <h2 id="monographs-catalog-heading-bg">Публикувани дисертации и технически ръководства</h2>
         <div class="grid-cards" id="cards-grid-monographs-bg">
 
+          <!-- 1. Принципът 512 байта -->
           <article class="feature-card" data-searchable="манифест 512 байта rfc 6928 initcwnd tcp slow start волатилна ram антифорензика">
             <span class="card-meta">ИНЖЕНЕРЕН МАНИФЕСТ</span>
             <h3>Принципът 512 байта</h3>
@@ -129,6 +131,7 @@
             <a href="/bg/blog/manifesto-512/" class="card-link" title="Прочетете пълния монограф за Принципа 512 байта">Към пълния монограф &rarr;</a>
           </article>
 
+          <!-- 2. Компютърна памет -->
           <article class="feature-card" data-searchable="компютърна памет рам ddr3 ddr4 ddr5 процесорен кеш l1 l2 l3 хардуер стоянов">
             <span class="card-meta">ХАРДУЕРНА АРХИТЕКТУРА</span>
             <h3>Компютърната памет за неспециалисти</h3>
@@ -136,6 +139,7 @@
             <a href="/bg/blog/computer-memory/" class="card-link" title="Прочетете ръководството за компютърна памет от Стоян Стоянов, MBA">Към хардуерния гид &rarr;</a>
           </article>
 
+          <!-- 3. Sea Stars и Поморийска луга -->
           <article class="feature-card" data-searchable="seastars поморийска луга минерали черноморска сол козметика бан">
             <span class="card-meta">ДИГИТАЛЕН КАТАЛОГ &bull; АРХИВ</span>
             <h3>Монограф: Sea Stars и Поморийска луга</h3>
@@ -143,11 +147,28 @@
             <a href="/bg/blog/seastars/" class="card-link" title="Прочетете казуса за поморийската луга и морските минерали">Вижте монографа &rarr;</a>
           </article>
 
+          <!-- 4. Медийна група Добруджа -->
+          <article class="feature-card" data-searchable="добруджа медийна група red5 linux стрийминг новини телевизия">
+            <span class="card-meta">МЕДИЙНА ХРОНИКА</span>
+            <h3>Медийна група Добруджа: Печат към стрийминг</h3>
+            <p>Оперативна хроника за изграждането на автономни Linux сървърни клъстери, Red5 видео стрийминг в реално време и международна телевизионна синдикация.</p>
+            <a href="/bg/blog/dobruja/" class="card-link" title="Прочетете хрониката на Медийна група Добруджа">Към медийната хроника &rarr;</a>
+          </article>
+
+          <!-- 5. Рекламен протокол без бисквитки -->
+          <article class="feature-card" data-searchable="реклама контекстуална нула бисквитки ad-tech медийна синдикация">
+            <span class="card-meta">ОПЕРАТИВЕН ПРОТОКОЛ</span>
+            <h3>Рекламен протокол без бисквитки</h3>
+            <p>Контекстуална медийна синдикация: елиминиране на инвазивните външни рекламни мрежи чрез директна нативна доставка и семантично таргетиране.</p>
+            <a href="/bg/blog/advertising/" class="card-link" title="Прочетете монографа за Рекламния протокол без бисквитки">Към рекламния протокол &rarr;</a>
+          </article>
+
+          <!-- 6. Ретроспекция на NMT-450 -->
           <article class="feature-card" data-searchable="история nmt-450 мобифони 1992 пейджъри мобика телеком архив">
             <span class="card-meta">ТЕЛЕКОМУНИКАЦИОННО НАСЛЕДСТВО</span>
-            <h3>Архив на телекомуникациите от 1992 г.</h3>
-            <p>Хроника на първия мобилен оператор в България: аналоговите NMT-450 мобифони, пейджърите Motorola Advisor и ранните протоколи за микроблогинг.</p>
-            <a href="/bg/about/#nmt-450" class="card-link" title="Преглед на хронологията на аналоговите клетъчни мрежи">Пълна хронология &rarr;</a>
+            <h3>1992 Телекомуникации: NMT-450</h3>
+            <p>Исторически монограф за първия мобилен оператор в България (РТК Мобиком), радиофизиката на аналоговия диапазон 450 MHz и картите Мобика.</p>
+            <a href="/bg/blog/nmt-450-retrospective/" class="card-link" title="Прочетете историческия монограф за NMT-450">Към ретроспекцията &rarr;</a>
           </article>
 
         </div>
@@ -223,8 +244,9 @@
         <a href="/blog/" hreflang="en" title="Switch to the English insights directory">English Version (EN)</a>
       </nav>
 
+      <!-- Долен ред: Чист некликаем надпис без изходящи връзки -->
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Портал с нулеви бисквитки и гарантирана сигурност.</p>
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
         <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
       </div>
     </div>
