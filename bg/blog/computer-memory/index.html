@@ -1,17 +1,18 @@
 <!--
   ==============================================================================
   FILE: /bg/blog/computer-memory/index.html
-  PROJECT: mobikom.bg — Master Institutional Portal
+  PROJECT: mobikom.bg — Институционален портал
   LICENSE: MIT (https://opensource.org/licenses/MIT)
-  AUTHOR: Stoyan Stoyanov / Mobikom Bulgaria (mobikom.bg)
-  LANGUAGE: Bulgarian (bg) • Localized Mirror
+  AUTHOR: Стоян Стоянов, MBA / Мобиком България (mobikom.bg)
+  LANGUAGE: Български (bg) • Огледален монограф
   PATTERN: Pattern 2 (Universal Prose & Editorial Engine)
   STANDARDS: HTML5 Living Standard • Schema.org BlogPosting • Zero Inline CSS
   COMPLIANCE: Strict CSP Level 3 • Zero Trackers • Zero Cookies • GDPR Default
   ==============================================================================
   DESCRIPTION:
-  Научен анализ на йерархията на компютърната памет, процесорните кешове (L1/L2/L3),
-  SRAM/DRAM латентността и как претовареният уеб пилее хардуерни ресурси.
+  Изчерпателно хардуерно ръководство за йерархията на компютърната памет:
+  процесорен кеш (L1/L2/L3), DDR SDRAM поколения, двуканална шинна архитектура,
+  енергонезависими твърдотелни носители (NAND) и корпоративни RAID масиви.
   ==============================================================================
 -->
 <!DOCTYPE html>
@@ -19,149 +20,304 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Архитектура на Компютърната Памет и Уеб Претоварването | Мобиком</title>
-  <meta name="description" content="Анализ на йерархията на паметта, кеш линиите на процесора, латентността на RAM и защо статичният детерминистичен уеб щади хардуера.">
+  <title>Компютърната памет за неспециалисти | Технически монограф на Мобиком</title>
+  <meta name="description" content="Практическо хардуерно ръководство от Стоян Стоянов, MBA за нивата на процесорния кеш, DDR поколенията, двуканалната архитектура и RAID масивите.">
+  <meta name="author" content="Стоян Стоянов, MBA">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
 
+  <!-- Production Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Fully Qualified Multilingual Canonical Indexation -->
   <link rel="canonical" href="https://mobikom.bg/bg/blog/computer-memory/">
   <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/">
   <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/">
   <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/">
-  <link rel="alternate" type="application/rss+xml" title="Мобиком RSS" href="https://mobikom.bg/rss.xml">
 
-  <meta property="og:title" content="Архитектура на Компютърната Памет и Уеб Претоварването">
-  <meta property="og:description" content="Защо физиката на паметта и кешовете на процесора имат значение в уеб разработката.">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/rss.xml">
+
+  <!-- Open Graph Protocol -->
+  <meta property="og:title" content="Компютърната памет за неспециалисти | Технически монограф">
+  <meta property="og:description" content="Изчерпателно инженерно ръководство за нивата на процесорния кеш, DDR шините и надеждните дискови масиви.">
   <meta property="og:url" content="https://mobikom.bg/bg/blog/computer-memory/">
   <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Мобиком България">
   <meta property="og:image" content="https://mobikom.bg/assets/img/og-cover.png">
 
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Компютърната памет за неспециалисти | Технически монограф">
+  <meta name="twitter:description" content="Изчерпателно инженерно ръководство за нивата на процесорния кеш, DDR шините и надеждните дискови масиви.">
+  <meta name="twitter:image" content="https://mobikom.bg/assets/img/og-cover.png">
+
+  <!-- Schema.org BlogPosting Graph -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Начало", "item": "https://mobikom.bg/bg/" },
-          { "@type": "ListItem", "position": 2, "name": "Анализи", "item": "https://mobikom.bg/bg/blog/" },
-          { "@type": "ListItem", "position": 3, "name": "Компютърна Памет", "item": "https://mobikom.bg/bg/blog/computer-memory/" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "headline": "Архитектура на Компютърната Памет и Уеб Претоварването",
-        "description": "Анализ на йерархията на компютърната памет, процесорните кешове и как претовареният уеб пилее хардуерни ресурси.",
-        "url": "https://mobikom.bg/bg/blog/computer-memory/",
-        "datePublished": "2024-12-05T10:00:00+02:00",
-        "dateModified": "2026-09-07T10:00:00+03:00",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Мобиком",
-          "url": "https://mobikom.bg/bg/"
-        }
-      }
-    ]
+    "@type": "BlogPosting",
+    "headline": "Компютърната памет за неспециалисти: Хардуерна йерархия, паметни шини и отказоустойчиви дискови масиви",
+    "description": "Изчерпателно хардуерно ръководство за йерархията на компютърната памет: процесорен кеш (L1/L2/L3), DDR SDRAM поколения, двуканална шинна архитектура, енергонезависими твърдотелни носители (NAND) и корпоративни RAID масиви.",
+    "url": "https://mobikom.bg/bg/blog/computer-memory/",
+    "datePublished": "2026-09-01",
+    "dateModified": "2026-09-18",
+    "inLanguage": "bg",
+    "keywords": "SRAM, DRAM, Процесорен кеш, L1 L2 L3 Кеш, DDR3, DDR4, DDR5, Dual Channel, RAID 0, RAID 1, RAID 5, RAID 10, NVMe, Твърдотелни дискове",
+    "author": {
+      "@type": "Person",
+      "name": "Стоян Стоянов, MBA",
+      "jobTitle": "Управител",
+      "url": "https://mobikom.bg/stoyanov/bg/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Мобиком България",
+      "url": "https://mobikom.bg/bg/",
+      "sameAs": ["https://github.com/mobikom"]
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://mobikom.bg/bg/blog/computer-memory/"
+    }
   }
   </script>
 </head>
 <body>
 
+  <!-- Universal Master Header с българско лого -->
   <header class="site-header">
     <div class="shell nav-bar">
-      <a href="/bg/" class="brand-link" title="Мобиком България">
-        <svg viewBox="0 0 220 46" width="190" height="42" class="brand-logo-svg" role="img" aria-label="Мобиком">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
           <g transform="translate(4, 3)">
             <circle cx="8" cy="20" r="4" fill="#0052cc" />
             <circle cx="22" cy="10" r="4" fill="#0052cc" />
             <circle cx="22" cy="30" r="4" fill="#0052cc" />
             <circle cx="36" cy="20" r="4" fill="#0052cc" />
             <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
-            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Mobikom</text>
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
             <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
           </g>
         </svg>
       </a>
 
       <nav aria-label="Основна навигация">
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на менюто">
-        <label for="nav-toggle" class="nav-toggle-label">&#9776;</label>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
 
         <ul>
-          <li><a href="/bg/" class="nav-link">Начало</a></li>
-          <li><a href="/bg/portfolio/" class="nav-link">Портфолио</a></li>
-          <li><a href="/bg/blog/" class="nav-link" aria-current="page">Анализи</a></li>
-          <li><a href="/bg/about/" class="nav-link">За Нас</a></li>
-          <li><a href="/bg/contact/" class="nav-btn">Запитване</a></li>
-          <li><a href="/blog/computer-memory/" class="lang-toggle" hreflang="en">EN</a></li>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с бизнес отдела">Директен контакт</a></li>
+          <li><a href="/blog/computer-memory/" class="lang-toggle" hreflang="en" title="Switch to the English version of this article">English (EN)</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <div class="shell-prose">
+    <div class="shell">
       <article class="prose">
+        
         <header>
-          <span class="hero-tag">Компютърни Науки &bull; Хардуерна Архитектура</span>
-          <h1>Архитектура на Компютърната Памет и Уеб Претоварването</h1>
-          <p class="hero-lead">Разбиране на кеш йерархията на процесора, латентността на физическата памет и защо претовареният уеб пилее хардуерни ресурси и батерия.</p>
-          <time datetime="2026-09-07">Публикувано в Анализи &bull; Поддържано от Мобиком</time>
+          <span class="hero-tag">ХАРДУЕРЕН МОНОГРАФ &bull; PATTERN 2 PROSE ENGINE</span>
+          <h1>Компютърната памет за неспециалисти</h1>
+          <p class="hero-lead">
+            Физически йерархии, латентни разлики, поколения на паметните шини и корпоративни дискови топологии.
+          </p>
         </header>
 
-        <section>
-          <h2>1. Физиката на йерархията на паметта</h2>
+        <!-- Абстракт и практическо предназначение -->
+        <section class="audit-box" aria-labelledby="abstract-heading-bg">
+          <h3 id="abstract-heading-bg">Абстракт и методологичен обхват</h3>
           <p>
-            В основата на съвременните компютри стои физическо ограничение: процесорът обработва операции с порядъци по-бързо, отколкото динамичната памет (DRAM) може да достави инструкции. За да компенсират тази разлика, инженерите изграждат кеш йерархия:
+            Разбирането на компютърната памет е фундаментално за системната архитектура и оптимизацията на ресурсите. Този монограф деконструира физическата йерархия на паметта — от процесорните регистри на кристала до многотерабайтовите енергонезависими дискови масиви. Написано за мениджъри, студенти и неспециалисти, ръководството обяснява защо скоростта на паметта определя изчислителната мощ, как работят двуканалните шини и какви са предимствата на отказоустойчивите RAID топологии.
+          </p>
+        </section>
+
+        <!-- Секция 1: Пирамидата на паметта -->
+        <section>
+          <h2>1. Физическата йерархия на паметта и скалата на латентността</h2>
+          <p>
+            В съвременната компютърна архитектура не съществува единна технология, която да бъде едновременно безкрайно бърза, с огромен капацитет и на ниска цена. Поради това инженерите структурират паметта в **Строга йерархична пирамида**, балансираща обема срещу времето за достъп (латентността):
           </p>
           <ul>
-            <li><strong>L1 Кеш (SRAM):</strong> Работи директно в ядрото на процесора със субнаносекундна скорост (~1 ns, 4 такта). Най-висока енергийна ефективност.</li>
-            <li><strong>L2 и L3 Кешове:</strong> По-големи SRAM буфери с латентност от 3 до 15 ns, проектирани да задържат активните данни.</li>
-            <li><strong>Оперативна памет (DRAM):</strong> Чипове извън процесора, изискващи от 60 до 100 ns. Достъпът до DRAM консумира значително повече енергия.</li>
+            <li><strong>Ниво 0: Процесорни регистри (CPU Registers):</strong> Моментална памет вътре в ядрото, изпълняваща команди за части от наносекундата ($&lt; 0.5\text{ ns}$).</li>
+            <li><strong>Ниво 1: Статична RAM памет на кристала (L1, L2, L3 Кеш):</strong> Свръхбърз силициев кеш, разположен директно до изчислителните ядра ($1\text{ до }15\text{ ns}$).</li>
+            <li><strong>Ниво 2: Динамична системна оперативна памет (DDR4 / DDR5 RAM):</strong> Волатилна работна памет с обем от десетки гигабайти ($50\text{ до }80\text{ ns}$).</li>
+            <li><strong>Ниво 3: Енергонезависими твърдотелни дискове (NVMe / SATA SSD):</strong> Високоплътна NAND флаш памет, съхраняваща данните без захранване ($50\text{ до }150\ \mu\text{s}$).</li>
+            <li><strong>Ниво 4: Магнитни твърди дискове и архивни ленти (HDD):</strong> Механични въртящи се плочи за масивно студено съхранение на данни ($5\text{ до }15\text{ ms}$).</li>
+          </ul>
+          <p>
+            За да се разбере този мащаб: ако достъпът до регистър на процесора отнемаше 1 секунда, четенето от системната RAM памет щеше да трае 2 минути, а извличането на сектор от механичен твърд диск щеше да изисква над 4 месеца чакане.
+          </p>
+        </section>
+
+        <!-- Секция 2: SRAM срещу DRAM -->
+        <section>
+          <h2>2. Силициевата физика: Статична RAM (SRAM) срещу Динамична RAM (DRAM)</h2>
+          <p>
+            Волатилната работна памет се реализира чрез две фундаментално различни полупроводникови схеми:
+          </p>
+          <ul>
+            <li>
+              <strong>Статична RAM (SRAM):</strong> Изградена от 6 транзистора (6T) на всеки отделен бит. SRAM не изисква непрекъснато електрическо опресняване, за да помни състоянието си, докато има захранване. Тя е изключително бърза и енергоефективна при високи честоти, но е физически обемна и скъпа за производство. Затова се използва единствено за кеш паметта на процесора (L1, L2 и L3).
+            </li>
+            <li>
+              <strong>Динамична RAM (DRAM):</strong> Изградена от свръхкомпактна клетка от 1 транзистор и 1 микроскопичен кондензатор (1T-1C). Тъй като кондензаторът непрекъснато губи електрическия си заряд, DRAM изисква циклично опресняване (на всеки 64 милисекунди). DRAM осигурява огромен капацитет на ниска цена и служи като системна оперативна памет.
+            </li>
           </ul>
         </section>
 
+        <!-- Секция 3: DDR поколения и Dual-Channel -->
         <section>
-          <h2>2. Как съвременните уеб рамки натоварват паметта</h2>
+          <h2>3. Поколенията DDR памет и двуканалната шинна архитектура (Dual-Channel)</h2>
           <p>
-            Когато даден уебсайт зареди 10 мегабайта JavaScript за обикновена текстова статия, JIT компилаторът на браузъра заделя стотици хиляди обекти в динамичната памет (heap). Това води до тежки последствия:
+            Системната памет работи по стандарта <strong>Double Data Rate (DDR) SDRAM</strong>, който предава данни както при възходящия, така и при низходящия фронт на тактовия сигнал, удвоявайки пропускателната способност:
           </p>
           <ul>
-            <li><strong>Инвалидиране на кеш линиите:</strong> Фрагментираните указатели в паметта непрекъснато пропускат L1/L2 кешовете, принуждавайки процесора да изчаква.</li>
-            <li><strong>Паузи за Garbage Collection:</strong> Браузърът периодично спира изпълнението, за да сканира и освободи неизползваните обекти в паметта.</li>
-            <li><strong>Изтощаване на батерията:</strong> Натоварването на контролера на паметта пречи на мобилните чипове да преминат в енергоспестяващ режим.</li>
+            <li><strong>DDR3 SDRAM:</strong> Работно напрежение 1.5V със скорост на трансфер от 800 до 2133 MT/s.</li>
+            <li><strong>DDR4 SDRAM:</strong> Намалено напрежение от 1.2V, въвеждане на независими банкови групи и скорости от 2133 до 3200+ MT/s.</li>
+            <li><strong>DDR5 SDRAM:</strong> Съвременният стандарт, работещ на 1.1V, с два независими 32-битови подканала на модул, вградена корекция на грешки (On-Die ECC) и скорости, надхвърлящи 4800 до 7200+ MT/s.</li>
+          </ul>
+          <p>
+            <strong>Предимството на двуканалния режим (Dual-Channel):</strong> Когато на дънната платка се инсталират два еднакви модула памет в съответните двойки слотове, контролерът на паметта разширява шината на данните от 64 бита на 128 бита. Това удвоява теоретичния трансфер без повишаване на работната честота.
+          </p>
+        </section>
+
+        <!-- Секция 4: NAND Flash и износване -->
+        <section>
+          <h2>4. Енергонезависима флаш памет (NAND) и алгоритми за износване (Wear-Leveling)</h2>
+          <p>
+            За разлика от оперативната памет, твърдотелните дискове (SSD) съхраняват информацията постоянно чрез клетки с плаващ гейт (SLC, MLC, TLC и QLC според броя битове в клетка).
+          </p>
+          <p>
+            Тъй като записването на данни изисква високо напрежение, което постепенно износва изолиращия оксиден слой на клетката:
+          </p>
+          <ul>
+            <li><strong>Flash Translation Layer (FTL):</strong> Вграден микроконтролер с фърмуер, който транслира логическите адреси във физически страници флаш памет.</li>
+            <li><strong>Динамичен Wear-Leveling:</strong> Алгоритъм, който разпределя циклите на запис и изтриване равномерно по целия масив, предотвратявайки преждевременното дефектиране на отделни клетки.</li>
+            <li><strong>Концепцията на Принципа 512 байта:</strong> Работата изцяло във волатилната RAM памет без непрекъснати дискови записи напълно елиминира цикличното износване на клиентските SSD дискове.</li>
           </ul>
         </section>
 
+        <!-- Секция 5: RAID топологии -->
         <section>
-          <h2>3. Статичният уеб като решение за хардуера</h2>
+          <h2>5. Корпоративна отказоустойчивост: Топологии на RAID масивите</h2>
           <p>
-            Статичната архитектура на Мобиком зачита хардуерните ограничения:
+            За защита от загуба на информация при дефект на физически диск, корпоративните системи използват <strong>Redundant Arrays of Independent Disks (RAID)</strong>:
           </p>
           <ul>
-            <li><strong>Последователно четене:</strong> HTML дървото се обработва линейно в един проход, съвпадайки с буферите за предварително извличане на процесора.</li>
-            <li><strong>Без почистване на паметта:</strong> Липсата на тежък клиентски JavaScript елиминира натоварването от Garbage Collection.</li>
-            <li><strong>Хардуерна достъпност:</strong> Страниците работят мигновено дори на бюджетни устройства с малко количество RAM.</li>
+            <li><strong>RAID 0 (Разпределен запис / Striping):</strong> Разпределя данните поравно между 2 или повече диска. Дава максимална скорост, но **нулева защита** — дефект на един диск унищожава целия масив.</li>
+            <li><strong>RAID 1 (Огледален запис / Mirroring):</strong> Записва абсолютно еднакви данни паралелно на 2 диска. Осигурява 100% защита при авария на един диск при 50% полезен капацитет.</li>
+            <li><strong>RAID 5 (Разпределен запис с четност / Parity):</strong> Изисква минимум 3 диска. Използва XOR математическа четност за възстановяване на информацията. Издържа на пълна повреда на 1 произволен диск при минимална загуба на общ обем.</li>
+            <li><strong>RAID 6 (Двойна четност / Dual Parity):</strong> Изисква минимум 4 диска. Използва два независими блока четност и издържа на едновременната повреда на **2 диска** — златен стандарт за критични архиви.</li>
+            <li><strong>RAID 10 (1+0 Огледален и разпределен масив):</strong> Обединява скоростта на RAID 0 със сигурността на RAID 1. Най-надеждният стандарт за корпоративни релационни бази данни.</li>
           </ul>
         </section>
 
-        <section class="conversion-banner">
-          <div>
-            <h3>Принципът за 512-байтовия Уеб</h3>
-            <p>Научете как пакетната дисциплина и статичният уеб осигуряват устойчивост.</p>
-          </div>
-          <a href="/bg/blog/manifesto-512/" class="nav-btn">Към Манифеста &rarr;</a>
+        <!-- Секция 6: Внедряване в мрежата -->
+        <section>
+          <h2>6. Практическо приложение в мрежата на Мобиком</h2>
+          <p>
+            Дълбокото познаване на хардуерната йерархия управлява инженерните решения във всички платформи под шапката на <a href="/bg/" class="card-link" title="Към началния институционален портал на Мобиком"><strong>mobikom.bg</strong></a>:
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.dobrichnews.com" class="card-link" rel="noopener external" target="_blank" title="Към ежедневния новинарски портал dobrichnews.com"><strong>dobrichnews.com:</strong></a> Проектиран да се изпълнява директно в процесорния и браузърен кеш, спестявайки ресурсите на клиентския хардуер.
+            </li>
+            <li>
+              <a href="https://www.dobruja.com" class="card-link" rel="noopener external" target="_blank" title="Към регионалния културен и стопански журнал dobruja.com"><strong>dobruja.com:</strong></a> Дългосрочни обществени архиви, съхранени в чист статичен формат без натоварване на дискови бази данни.
+            </li>
+            <li>
+              <a href="https://bestjobs.bg" class="card-link" rel="noopener external" target="_blank" title="Търсене на директни обяви за работа в bestjobs.bg"><strong>bestjobs.bg:</strong></a> Високоскоростен сайт за директни обяви за работа без скриптове за проследяване и без излишен софтуерен разход.
+            </li>
+          </ul>
         </section>
+
+        <!-- Секция 7: Каре за цитиране -->
+        <section class="audit-box" aria-labelledby="citation-heading-bg">
+          <h3 id="citation-heading-bg">Как да цитирате този труд &bull; Academic Citation</h3>
+          <p>
+            <strong>IEEE Style:</strong> S. Stoyanov, "Computer Memory for Non-Specialists: Hardware Hierarchies, Memory Buses, and Fault-Tolerant Storage Arrays," <em>Mobikom Technical Monograph</em>, Sep. 2026. [Online]. Available: <code>https://mobikom.bg/blog/computer-memory/</code>
+          </p>
+          <p>
+            <strong>APA Style (7th ed.):</strong> Stoyanov, S. (2026, September). <em>Computer Memory for Non-Specialists: Hardware Hierarchies and Storage Topologies</em>. Mobikom Insights. <code>https://mobikom.bg/blog/computer-memory/</code>
+          </p>
+          <p>
+            <strong>BibTeX:</strong> <code>@article{stoyanov2026computermemory, author={Stoyanov, Stoyan}, title={Computer Memory for Non-Specialists}, journal={Mobikom Technical Monograph}, year={2026}, url={https://mobikom.bg/blog/computer-memory/}}</code>
+          </p>
+        </section>
+
       </article>
+
+      <!-- Конверсионен банер -->
+      <section class="conversion-banner" aria-labelledby="conversion-heading-bg">
+        <div>
+          <h3 id="conversion-heading-bg">Стратегически партньорства и технологично консултиране</h3>
+          <p>Директна реклама, медийно отразяване и технически консултации без комерсиално профилиране.</p>
+        </div>
+        <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел за медийни кампании и партньорства">Връзка с бизнес отдела &rarr;</a>
+      </section>
+
     </div>
   </main>
 
+  <!-- Universal Master Footer -->
   <footer class="site-footer">
     <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Мрежа Мобиком</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener external" target="_blank" title="Регионални ежедневни новини и граждански теми за Североизточна България">dobrichnews.com &bull; Регионални новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener external" target="_blank" title="Опазване на земеделските традиции, регионална култура и общество">dobruja.com &bull; Културен журнал</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener external" target="_blank" title="Директни обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/rss.xml" title="Абониране за синдикираната XML новинарска емисия на Мобиком">&#128246; RSS Новинарски канал</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Управление и контакти</h4>
+          <ul>
+            <li><a href="/bg/" title="Обратно към началната страница на българския портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="Пълна история на българските безжични комуникации и основаването през 2011 г.">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка и редакционни стандарти">Ръководство и управление</a></li>
+            <li><a href="/bg/portfolio/" title="Пълен каталог на активните дигитални издателски платформи в мрежата">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести за скорост, 512-байтов принцип и хардуер">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт и оперативна кореспонденция">Търговски отдел контакти</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Хронология</h4>
+          <ul>
+            <li><a href="/bg/about/#nmt-450" title="Основаването на РТК Мобиком съвместно с Cable &amp; Wireless и БТК през 1992 г.">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи Motorola Advisor и колекционерски фонокарти Мобика">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Автономни Linux сървърни клъстери, Red5 видео стрийминг и медийна група">Медийна група от 2011 г.</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест за статична уеб архитектура без външни зависимости">Манифест 512 байта</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Хоризонтална правна лента -->
+      <nav class="footer-legal-bar" aria-label="Правна и регулаторна навигация">
+        <a href="/bg/privacy/" title="Архитектура с нулеви бисквитки и стриктна политика за липса на следене">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Оперативни правила и условия за ползване на интелектуална собственост">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="Декларация за съответствие с Регламент (ЕС) 2016/679 и права пред КЗЛД">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/computer-memory/" hreflang="en" title="Switch to the English version of this article">English Version (EN)</a>
+      </nav>
+
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. Всички права запазени. Олекотен портал с отворен код (MIT). Без бисквитки.</p>
-        <a href="/bg/contact/">Оперативен отдел &rarr;</a>
+        <p>&copy; 2026 mobikom.bg. Всички права запазени. Портал с нулеви бисквитки и гарантирана сигурност.</p>
+        <a href="/bg/contact/" title="Директен комуникационен канал към корпоративния отдел">Корпоративен отдел &rarr;</a>
       </div>
     </div>
   </footer>
