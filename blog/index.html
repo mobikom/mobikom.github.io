@@ -12,7 +12,7 @@
   ==============================================================================
   DESCRIPTION:
   Master technical dispatches, engineering manifestos, and historical monographs
-  directory for the Mobikom network. Renders featured scholarly analyses via a
+  directory for the Mobikom network. Renders 6 featured scholarly analyses via a
   native 4-track subgrid within the unified 800px academic boundary.
   ==============================================================================
 -->
@@ -22,7 +22,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mobikom | Technical Insights, Manifestos &amp; Monographs</title>
-  <meta name="description" content="Technical dispatches, low-level engineering manifestos, computer memory hardware architecture, and historical monographs from Mobikom.">
+  <meta name="description" content="Technical dispatches, low-level engineering manifestos, computer memory hardware architecture, media syndication, and telecom heritage monographs.">
   <meta name="author" content="Stoyanov">
   <meta name="theme-color" content="#0052cc">
   <meta name="robots" content="index, follow">
@@ -64,7 +64,8 @@
     "publisher": {
       "@type": "Organization",
       "name": "Mobikom",
-      "url": "https://mobikom.bg/"
+      "url": "https://mobikom.bg/",
+      "sameAs": ["https://github.com/mobikom"]
     }
   }
   </script>
@@ -117,18 +118,20 @@
         </p>
       </section>
 
-      <!-- Monographs Grid (Strictly 2 Columns on Desktop) -->
+      <!-- Monographs Grid (6 Cards, Strictly 2 Columns on Desktop) -->
       <section aria-labelledby="monographs-catalog-heading">
         <h2 id="monographs-catalog-heading">Published Dissertations &amp; Technical Guides</h2>
         <div class="grid-cards" id="cards-grid-monographs">
 
+          <!-- 1. The 512-Byte Web Principle -->
           <article class="feature-card" data-searchable="manifesto 512-byte rfc 6928 initcwnd tcp slow start volatile ram anti-forensics">
             <span class="card-meta">ENGINEERING MANIFESTO</span>
             <h3>The 512-Byte Web Principle</h3>
             <p>Academic dissertation on transport physics (RFC 6928), first-byte MIME sniffing (§7), volatile RAM execution, and mathematical attack surface eradication.</p>
-            <a href="/blog/manifesto-512/" class="card-link" title="Read the complete 512-Byte Web Principle academic monograph">Read Scholarly Monograph &rarr;</a>
+            <a href="/blog/manifesto-512/" class="card-link" title="Read the 512-Byte Web Principle academic monograph">Read Scholarly Monograph &rarr;</a>
           </article>
 
+          <!-- 2. Computer Memory for Non-Specialists -->
           <article class="feature-card" data-searchable="computer memory ram ddr3 ddr4 ddr5 cpu cache l1 l2 l3 hdd raid ssd hardware stoyanov">
             <span class="card-meta">HARDWARE ARCHITECTURE</span>
             <h3>Computer Memory for Non-Specialists</h3>
@@ -136,6 +139,7 @@
             <a href="/blog/computer-memory/" class="card-link" title="Read Computer Memory Guide by Stoyan Stoyanov, MBA">Read Hardware Guide &rarr;</a>
           </article>
 
+          <!-- 3. Sea Stars Shop Monograph -->
           <article class="feature-card" data-searchable="seastars pomorie lye curative mineral black sea salts wellness cosmetics">
             <span class="card-meta">NATURAL WELLNESS MONOGRAPH</span>
             <h3>Sea Stars Shop Monograph</h3>
@@ -143,11 +147,28 @@
             <a href="/blog/seastars/" class="card-link" title="Read case study on Pomorie lake lye and Black Sea mineral salts">Read Wellness Monograph &rarr;</a>
           </article>
 
+          <!-- 4. Dobruja Media Group Chronicle -->
+          <article class="feature-card" data-searchable="dobruja media group linux streaming red5 internet tv news syndication">
+            <span class="card-meta">MEDIA CHRONICLE</span>
+            <h3>Dobruja Media Group: Print to Streaming</h3>
+            <p>Operational chronicle of autonomous Linux server clusters, Red5 real-time video streaming, and international television broadcast syndication.</p>
+            <a href="/blog/dobruja/" class="card-link" title="Read the historical chronicle of Dobruja Media Group">Read Media Chronicle &rarr;</a>
+          </article>
+
+          <!-- 5. Contextual Advertising Protocol -->
+          <article class="feature-card" data-searchable="advertising contextual zero-cookie ad-tech media syndication first-party">
+            <span class="card-meta">OPERATIONAL PROTOCOL</span>
+            <h3>The Zero-Cookie Advertising Protocol</h3>
+            <p>Contextual media syndication doctrine: eliminating invasive third-party ad-tech bloat through first-party native edge delivery and semantic targeting.</p>
+            <a href="/blog/advertising/" class="card-link" title="Read the Zero-Cookie Advertising Protocol monograph">Read Advertising Protocol &rarr;</a>
+          </article>
+
+          <!-- 6. NMT-450 Retrospective -->
           <article class="feature-card" data-searchable="history nmt-450 mobifons 1992 pagers beepers mobika telecom archive">
-            <span class="card-meta">HISTORICAL CHRONOLOGY</span>
-            <h3>1992 Telecom Heritage Archive</h3>
-            <p>Chronicle of Bulgaria's first cellular operator: analog NMT-450 Mobifons, Motorola Advisor pagers, and early status microblogging protocols.</p>
-            <a href="/about/#nmt-450" class="card-link" title="Examine historical timeline of NMT-450 analog cellular communications">Examine Telecom Timeline &rarr;</a>
+            <span class="card-meta">TELECOM HERITAGE</span>
+            <h3>1992 Telecom Heritage: NMT-450</h3>
+            <p>Historical dissertation documenting Bulgaria's first commercial mobile operator (RTC Mobikom), analog 450 MHz radio physics, and Mobika phonecards.</p>
+            <a href="/blog/nmt-450-retrospective/" class="card-link" title="Read the 1992 NMT-450 telecommunications retrospective monograph">Read Telecom Retrospective &rarr;</a>
           </article>
 
         </div>
@@ -223,8 +244,9 @@
         <a href="/bg/blog/" hreflang="bg" title="Преминете към българската версия на блога">Български Портал (BG)</a>
       </nav>
 
+      <!-- Plain Text Non-Clickable MIT Inscription -->
       <div class="footer-bottom">
-        <p>&copy; 2026 mobikom.bg. All rights reserved. Zero-cookie, privacy-engineered portal.</p>
+        <p>&copy; 2026 mobikom.bg. Open-source under MIT License (github.com/mobikom). Zero-cookie architecture.</p>
         <a href="/contact/" title="Direct communication channel to executive corporate communications">Reach Corporate Desk &rarr;</a>
       </div>
     </div>
