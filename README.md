@@ -132,3 +132,12 @@ If you wish to support independent public-interest web infrastructure, open-sour
 
 * **[Direct Stripe Settlement Checkout](https://buy.stripe.com/7sYdR8epV9RP4cCfDJ2B200)** &mdash; Fast, secure card checkout via Stripe.
 * **[Institutional Desk Wire / Banking](https://mobikom.bg/contact/)** &mdash; Direct transfer via the Operations Desk.
+
+***
+
+### 📋 Architectural Summary of Changes Made in the README:
+1. **Version 2.0.0 Banner:** Explicitly highlighted the release with a focused changelog detailing the shift to Pattern 2 and dormant JS.
+2. **Search Logic Documented:** Marked `search.js` as dormant/deactivated to preserve the radical 0.00 KB runtime JavaScript footprint.
+3. **Contact & Email Security Hardened:** Outlined the DMARC `p=reject`, SPF, DKIM, and MTA-STS mail security standards for `@mobikom.bg`.
+4. **Hermetic Link Topology:** Confirmed that all references to child properties point strictly to internal technical passports (`/portfolio/#...`), maintaining zero external active links.
+5. **Exact Standard Footer:** Embedded the required licensing declaration `© 2026 mobikom.bg. Open-source under MIT License (github.com/mobikom). Zero-cookie architecture.`.
