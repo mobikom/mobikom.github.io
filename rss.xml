@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mobikom Bulgaria | Institutional Syndicated RSS Feed</title>
+    <link>https://mobikom.bg/</link>
+    <description>Syndicated technical literature, telecommunications chronicles, regional media analyses, and open-source standards for digital sovereignty.</description>
+    <language>en</language>
+    <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+    <lastBuildDate>Tue, 22 Sep 2026 12:00:00 +0300</lastBuildDate>
+    <atom:link href="https://mobikom.bg/rss.xml" rel="self" type="application/rss+xml"/>
+    <managingEditor>desk@mobikom.bg (Mobikom Operations Directorate)</managingEditor>
+    <webMaster>ops@mobikom.bg (Mobikom Technical Operations)</webMaster>
+
+    <item>
+      <title>The Web Asceticism Matrix: Evaluating the 512-Byte Web as 5 Academic Cases</title>
+      <link>https://mobikom.bg/blog/phd-philosophy/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/phd-philosophy/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Academic monograph analyzing software minimalism through transport layer physics (RFC 6928), digital jurisprudence, Landauer thermodynamics, and the Company of One doctrine.</description>
+    </item>
+
+    <item>
+      <title>Engineering Manifesto: The 512-Byte Web Principle</title>
+      <link>https://mobikom.bg/blog/manifesto-512/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/manifesto-512/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Treatise modeling initial TCP burst datagrams (10 MSS), transport layer mechanics, and mathematical attack surface eradication for zero-dependency web delivery.</description>
+    </item>
+
+    <item>
+      <title>Computer Memory for Non-Specialists (Hardware Architecture)</title>
+      <link>https://mobikom.bg/blog/computer-memory/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/computer-memory/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Applied engineering guide evaluating DDR generations, dual-channel throughput, CPU cache hierarchies (L1, L2, L3), and resilient RAID array configurations.</description>
+    </item>
+
+    <item>
+      <title>Sea Stars Shop Monograph: Therapeutic Pomorie Lake Lye &amp; Mineral Salts</title>
+      <link>https://mobikom.bg/blog/seastars/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/seastars/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Scientific case study documenting the balneological, therapeutic, and biochemical properties of authentic Pomorie lake lye and Black Sea salts with BAS.</description>
+    </item>
+
+    <item>
+      <title>2011 Chronicle: Autonomous Linux Server Clusters &amp; Red5 Streaming Media</title>
+      <link>https://mobikom.bg/blog/dobruja/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/dobruja/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Historical report on the founding of the independent regional media group, Red5 RTMP streaming, cinema broadcasts from Cannes, and Nelson Mandela residence coverage.</description>
+    </item>
+
+    <item>
+      <title>Zero-Cookie Advertising Economics: Ethical Media Monetization</title>
+      <link>https://mobikom.bg/blog/advertising/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/advertising/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Economic doctrine for direct media sponsorships and publisher monetization without tracking cookies, behavioral profiling, or statutory GDPR consent overlays.</description>
+    </item>
+
+    <item>
+      <title>Telecom Heritage: 1992 NMT-450 Analog Cellular Retrospective</title>
+      <link>https://mobikom.bg/blog/nmt-450-retrospective/</link>
+      <guid isPermaLink="true">https://mobikom.bg/blog/nmt-450-retrospective/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Archival overview of Bulgaria's first mobile telecommunications network (RTC Mobikom), analog Benefon terminals, Motorola pagers, and software protocol evolution.</description>
+    </item>
+  </channel>
+</rss>

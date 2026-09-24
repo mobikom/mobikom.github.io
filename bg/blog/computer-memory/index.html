@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Компютърната памет за неспециалисти | Mobikom</title>
+  <meta name="description" content="Приложно инженерно ръководство за компютърната памет: DDR поколения, двуканален режим, CPU кешове (L1, L2, L3), NVMe дискове и RAID надеждност.">
+  <meta name="theme-color" content="#0052cc">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mobikom.bg/bg/blog/computer-memory/">
+  <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/computer-memory/">
+  <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/computer-memory/">
+  <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/computer-memory/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/bg/rss.xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-bar">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
+          <g transform="translate(4, 3)">
+            <circle cx="8" cy="20" r="4" fill="#0052cc" />
+            <circle cx="22" cy="10" r="4" fill="#0052cc" />
+            <circle cx="22" cy="30" r="4" fill="#0052cc" />
+            <circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
+            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
+          </g>
+        </svg>
+      </a>
+      <nav aria-label="Основна навигация">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
+        <ul>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <!--<li><a href="/bg/tools/" class="nav-link" title="Инструменти и еталони за уеб стандарти">Инструменти</a></li>-->
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с оперативния отдел">Директен контакт</a></li>
+          <li><a href="/blog/computer-memory/" class="lang-toggle" hreflang="en" title="Switch to the English canonical monograph">English (EN)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="shell-prose">
+      <article class="prose">
+        <header>
+          <span class="hero-tag">ХАРДУЕРНА АРХИТЕКТУРА &bull; НАУЧНА МОНОГРАФИЯ</span>
+          <h1>Компютърната памет за неспециалисти: Архитектура, йерархия и надеждност</h1>
+          <p class="hero-lead">Приложно инженерно ръководство за физическата и логическа организация на паметта: еволюция на DDR поколенията, пропускателна способност на двуканалния режим, кеш йерархии и дискови RAID масиви.</p>
+        </header>
+
+        <section class="audit-box">
+          <h3>Резюме и обхват на изследването (Abstract)</h3>
+          <p>
+            Настоящият труд демистифицира хардуерната архитектура на компютърната памет за широк кръг от инженери, мениджъри и потребители. Разглежда се фундаменталният компромис между латентност, капацитет и цена. Изяснява се защо софтуерната оптимизация (включително 512-байтовият уеб) зависи пряко от физическото поведение на полупроводниковите кристали, кешовете на централния процесор (L1, L2, L3) и минимизирането на обръщенията към по-бавните слоеве памет.
+          </p>
+        </section>
+
+        <section>
+          <h2>1. Йерархия на паметта: Пирамидата на латентността</h2>
+          <p>
+            В компютърната архитектура паметта не е хомогенен блок, а строга вертикална йерархия. Всяко ниво по-близо до изчислителните ядра е драматично по-бързо, но с ограничен капацитет:
+          </p>
+          <ul>
+            <li><strong>CPU Регистри:</strong> Достъп за част от наносекундата ($< 1\text{ ns}$). Съхраняват непосредствените операнди на машинните инструкции.</li>
+            <li><strong>L1 Кеш:</strong> Обикновено 32–64 KB на ядро. Изключително бърза статична памет (SRAM) с латентност от около 1 наносекунда (~4 процесорни цикъла).</li>
+            <li><strong>L2 Кеш:</strong> По-голям обем (512 KB &ndash; 1 MB на ядро), осигуряващ буфер с латентност от 3–4 наносекунди (~12–14 цикъла).</li>
+            <li><strong>L3 Кеш:</strong> Споделен между всички ядра (16–64 MB+). Действа като последен бърз праг преди заявката да напусне процесорния кристал (10–20 наносекунди).</li>
+            <li><strong>Оперативна памет (DRAM):</strong> Динамична памет с огромен капацитет (16–128 GB), но с латентност от 50–80 наносекунди. Всяко пропускане на кеша (Cache Miss) принуждава процесора да бездейства стотици цикли в очакване на данни.</li>
+          </ul>
+
+          <h2>2. Еволюция на DDR поколенията (DDR3, DDR4, DDR5)</h2>
+          <p>
+            Синхронната динамична памет с двоен пренос на данни (DDR SDRAM) предава информация както при възходящия, така и при низходящия фронт на тактовия сигнал:
+          </p>
+          <ul>
+            <li><strong>DDR3:</strong> Напрежение 1.5V, работни честоти от 800 до 2133 MT/s. Надежден исторически стандарт с умерена пропускателна способност.</li>
+            <li><strong>DDR4:</strong> Снижено напрежение до 1.2V, честоти от 2133 до 3200+ MT/s, въвеждане на банкови групи (Bank Groups) за паралелен достъп.</li>
+            <li><strong>DDR5:</strong> Работно напрежение 1.1V, честоти стартиращи от 4800 до 8400+ MT/s. Основната иновация е разделянето на един 64-битов канал на два независими 32-битови подканала на един модул и вграден контрол на грешките (On-Die ECC).</li>
+          </ul>
+
+          <h2>3. Двуканален режим (Dual-Channel Architecture)</h2>
+          <p>
+            Инсталирането на памет в двуканален режим удвоява теоретичната ширина на шината от 64 на 128 бита. Вместо процесорът да изчаква последователни трансакции, контролерът на паметта чете и записва едновременно в два физически отделни модула:
+          </p>
+          <p>
+            При използване на вградена графика (iGPU) или тежки софтуерни компилации, двуканалният режим увеличава производителността с до 30–50% спрямо едноканална конфигурация със същия капацитет.
+          </p>
+
+          <h2>4. Постоянно съхранение: HDD, SATA SSD и NVMe PCIe</h2>
+          <p>
+            Докато оперативната памет губи съдържанието си при изключване (волатилност), постоянното съхранение запазва данните чрез магнитни плочи или полупроводникови NAND клетки:
+          </p>
+          <ul>
+            <li><strong>Твърди дискове (HDD):</strong> Механични глави и въртящи се плочи (5400/7200 RPM). Латентност от 10–15 милисекунди (милиони пъти по-бавно от RAM). Подходящи за студени архиви.</li>
+            <li><strong>SATA SSD:</strong> Електронни NAND Flash чипове, ограничени от остарялата SATA III шина до ~550 MB/s.</li>
+            <li><strong>NVMe PCIe SSD:</strong> Директен достъп до PCIe линиите на процесора. Скорости на четене, надхвърлящи 7000 MB/s (Gen 4) и 14 000 MB/s (Gen 5), с десетки хиляди паралелни опашки за заявки (IOPS).</li>
+          </ul>
+
+          <h2>5. Надеждност и защита: ECC памет и RAID масиви</h2>
+          <p>
+            В критичните сървърни среди защитата на данните от случайни битови преобръщания (Bit Flips), причинени от космически лъчи или електромагнитен шум, е от първостепенно значение:
+          </p>
+          <ul>
+            <li><strong>ECC RAM (Error-Correcting Code):</strong> Специализирани модули с допълнителен контролен чип, които засичат и коригират еднобитови грешки в реално време, предотвратявайки сривове на операционната система (Kernel Panic / BSOD).</li>
+            <li><strong>RAID 1 (Огледален масив):**</strong> Записване на еднакви данни върху два диска едновременно. Пълно резервиране при хардуерен отказ на единия носител.</li>
+            <li><strong>RAID 5 / RAID 6:**</strong> Разпределена четност за баланс между капацитет, производителност и устойчивост при отказ на един или два диска.</li>
+            <li><strong>RAID 10 (1+0):**</strong> Комбинация от огледален запис и паралелно разпределяне (Striping) за максимална скорост и отказоустойчивост при корпоративни бази данни.</li>
+          </ul>
+
+          <h2>6. Връзката с 512-байтовия уеб</h2>
+          <p>
+            Когато един уеб документ се проектира да бъде под 512 байта, той се побира изцяло в L1 кеша за данни на процесора ($32\text{ KB}$). Системата не изпитва сривове на кеша (Cache Thrashing), не разхищава страници в RAM паметта и не принуждава устройството да вика виртуална памет (Swap) от диска. Ето как съвършеният софтуер работи в абсолютна симбиоза с физиката на полупроводниците.
+          </p>
+        </section>
+
+        <!-- Академично цитиране -->
+        <section class="audit-box">
+          <h4>Академично цитиране &bull; How to Cite</h4>
+          <p><strong>IEEE Style:</strong> Mobikom Research Directorate, "Computer Memory for Non-Specialists: Hardware Architecture, Memory Hierarchies, and Fault Tolerance," <em>Mobikom Engineering Monograph</em>, Sep. 2026. [Online]. Available: https://mobikom.bg/bg/blog/computer-memory/</p>
+          <p><strong>APA Style (7th ed.):</strong> Mobikom Research Directorate. (2026, September). <em>Computer Memory for Non-Specialists: Hardware Architecture, Memory Hierarchies, and Fault Tolerance</em>. Mobikom Insights. https://mobikom.bg/bg/blog/computer-memory/</p>
+          <p><strong>BibTeX:</strong><br>
+          <code>@article{mobikom2026computermemory,<br>
+          &nbsp;&nbsp;author={Mobikom Research Directorate},<br>
+          &nbsp;&nbsp;title={Computer Memory for Non-Specialists},<br>
+          &nbsp;&nbsp;journal={Mobikom Engineering Monograph},<br>
+          &nbsp;&nbsp;year={2026},<br>
+          &nbsp;&nbsp;url={https://mobikom.bg/bg/blog/computer-memory/}<br>
+          }</code></p>
+        </section>
+
+        <section class="conversion-banner">
+          <div>
+            <h3>Институционални партньорства и технологични одити</h3>
+            <p>Директна връзка с оперативния отдел за консултации по хардуерна архитектура и инфраструктурен суверенитет.</p>
+          </div>
+          <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел">Оперативен отдел &rarr;</a>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Мрежа Мобиком</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer external" target="_blank" title="Регионални ежедневни новини за Североизточна България">dobrichnews.com &bull; Новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener noreferrer external" target="_blank" title="Опазване на традициите и аграрна памет">dobruja.com &bull; Култура</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener noreferrer external" target="_blank" title="Обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/bg/rss.xml" title="RSS новинарска емисия">&#128246; RSS канал</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Управление и контакти</h4>
+          <ul>
+            <li><a href="/bg/" title="Към началния портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="История на телекомуникациите и основаването">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка">Управление</a></li>
+            <li><a href="/bg/portfolio/" title="Каталог на платформите">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести и монографии">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт">Контакти</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Хронология</h4>
+          <ul>
+            <li><a href="/bg/about/#nmt-450" title="1992 основаване на РТК Мобиком">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи и фонокарти">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Федеративен микроблогинг и стрийминг">2011 Софтуерна еволюция</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест 512 байта">Манифест 512 байта</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="footer-legal-bar" aria-label="Правна навигация">
+        <a href="/bg/privacy/" title="Политика за поверителност">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Общи условия за ползване">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="GDPR съответствие">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/computer-memory/" hreflang="en" title="Switch to the English canonical monograph">English Version (EN)</a>
+      </nav>
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Връзка с оперативния отдел">Оперативен отдел &rarr;</a>
+      </div>
+    </div>
+  </footer>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Компютърната памет за неспециалисти: Архитектура, йерархия и надеждност","url":"https://mobikom.bg/bg/blog/computer-memory/","inLanguage":"bg","publisher":{"@type":"Organization","name":"Мобиком България","url":"https://mobikom.bg/"},"author":{"@type":"Organization","name":"Mobikom Research Directorate"}}</script>
+</body>
+</html>

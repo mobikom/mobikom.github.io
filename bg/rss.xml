@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Мобиком България | Институционална RSS Емисия</title>
+    <link>https://mobikom.bg/bg/</link>
+    <description>Синдикиран поток: технически монографии, телекомуникационна хроника, регионални медийни анализи и отворени стандарти за уеб суверенитет.</description>
+    <language>bg</language>
+    <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+    <lastBuildDate>Tue, 22 Sep 2026 12:00:00 +0300</lastBuildDate>
+    <atom:link href="https://mobikom.bg/bg/rss.xml" rel="self" type="application/rss+xml"/>
+    <managingEditor>desk@mobikom.bg (Оперативно бюро на Мобиком България)</managingEditor>
+    <webMaster>ops@mobikom.bg (Технически отдел Мобиком)</webMaster>
+
+    <item>
+      <title>Матрицата на уеб аскетизма: Защо 512-байтовият уеб е основа за 5 доктората</title>
+      <link>https://mobikom.bg/bg/blog/phd-philosophy/</link>
+      <guid isPermaLink="true">https://mobikom.bg/bg/blog/phd-philosophy/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Академичен анализ на доктрината за софтуерен минимализъм през призмата на транспортната физика (RFC 6928), дигиталното право, декарбонизацията и модела Компания от един субект.</description>
+    </item>
+
+    <item>
+      <title>Инженерен манифест: Принципът 512 байта</title>
+      <link>https://mobikom.bg/bg/blog/manifesto-512/</link>
+      <guid isPermaLink="true">https://mobikom.bg/bg/blog/manifesto-512/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Научно изследване върху физиката на първия TCP мрежов пакет, InitCwnd (10 MSS) и елиминирането на мрежовото закъснение за мигновена доставка без зависимости.</description>
+    </item>
+
+    <item>
+      <title>Компютърната памет за неспециалисти (Хардуерна архитектура)</title>
+      <link>https://mobikom.bg/bg/blog/computer-memory/</link>
+      <guid isPermaLink="true">https://mobikom.bg/bg/blog/computer-memory/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Приложно инженерно ръководство за архитектурата на оперативната памет: DDR поколения, двуканална пропускателна способност, CPU кешове и дискови RAID масиви.</description>
+    </item>
+
+    <item>
+      <title>Монограф: Sea Stars и лечебните свойства на Поморийската луга</title>
+      <link>https://mobikom.bg/bg/blog/seastars/</link>
+      <guid isPermaLink="true">https://mobikom.bg/bg/blog/seastars/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Научен казус за терапевтичните, балнеологични и биохимични качества на поморийската езерна луга и черноморските минерални соли съвместно с БАН.</description>
+    </item>
+
+    <item>
+      <title>Хроника 2011: Автономни Linux клъстери и Red5 медиен стрийминг</title>
+      <link>https://mobikom.bg/bg/blog/dobruja/</link>
+      <guid isPermaLink="true">https://mobikom.bg/bg/blog/dobruja/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Документален отчет за изграждането на независимата медийна група, ранния видео стрийминг, международните предавания от Кан и дома на Мандела в Йоханесбург.</description>
+    </item>
+
+    <item>
+      <title>Икономика на нулевите бисквитки: Етична монетизация на медии</title>
+      <link>https://mobikom.bg/bg/blog/advertising/</link>
+      <guid isPermaLink="true">https://mobikom.bg/bg/blog/advertising/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Икономическа доктрина за директно медийно спонсорство и дигитална реклама без натрапчиво профилиране, шпионски пиксели и съгласия по GDPR.</description>
+    </item>
+
+    <item>
+      <title>Телекомуникационно наследство: Ретроспектива на аналоговия NMT-450 от 1992 г.</title>
+      <link>https://mobikom.bg/bg/blog/nmt-450-retrospective/</link>
+      <guid isPermaLink="true">https://mobikom.bg/bg/blog/nmt-450-retrospective/</guid>
+      <pubDate>Tue, 22 Sep 2026 12:00:00 +0300</pubDate>
+      <description>Исторически преглед на първия мобилен оператор в България (РТК Мобиком), пейджинг системите Motorola и еволюцията към софтуерен суверенитет.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Хроника 2011: Linux клъстери и Red5 стрийминг | Mobikom</title>
+  <meta name="description" content="Инженерна хроника от 2011 г.: изграждане на физически Linux сървърни клъстери, ранен Red5 медиен стрийминг, излъчвания от Кан и Йоханесбург и раждането на независимата медийна група.">
+  <meta name="theme-color" content="#0052cc">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mobikom.bg/bg/blog/dobruja/">
+  <link rel="alternate" hreflang="bg" href="https://mobikom.bg/bg/blog/dobruja/">
+  <link rel="alternate" hreflang="en" href="https://mobikom.bg/blog/dobruja/">
+  <link rel="alternate" hreflang="x-default" href="https://mobikom.bg/blog/dobruja/">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="192x192" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/rss+xml" title="Мобиком Новини RSS Емисия" href="https://mobikom.bg/bg/rss.xml">
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell nav-bar">
+      <a href="/bg/" class="brand-link" title="Мобиком България — Официален начален портал">
+        <svg viewBox="0 0 220 46" width="180" height="40" class="brand-logo-svg" role="img" aria-label="Лого Мобиком България">
+          <g transform="translate(4, 3)">
+            <circle cx="8" cy="20" r="4" fill="#0052cc" />
+            <circle cx="22" cy="10" r="4" fill="#0052cc" />
+            <circle cx="22" cy="30" r="4" fill="#0052cc" />
+            <circle cx="36" cy="20" r="4" fill="#0052cc" />
+            <path d="M8 20 L22 10 L36 20 L22 30 Z M22 10 L22 30" stroke="#0052cc" stroke-width="2" fill="none" />
+            <text x="48" y="24" font-size="22" font-weight="800" fill="currentColor" letter-spacing="-0.02em">Мобиком</text>
+            <text x="50" y="36" font-size="9" font-weight="600" fill="#2563eb" letter-spacing="0.18em">БЪЛГАРИЯ</text>
+          </g>
+        </svg>
+      </a>
+      <nav aria-label="Основна навигация">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Превключване на навигационното меню">
+        <label for="nav-toggle" class="nav-toggle-label" title="Отвори навигационното меню">&#9776;</label>
+        <ul>
+          <li><a href="/bg/" class="nav-link" title="Към началния портал на Мобиком">Начален портал</a></li>
+          <li><a href="/bg/portfolio/" class="nav-link" title="Активни платформи и дигитални проекти в мрежата">Проектно портфолио</a></li>
+          <li><a href="/bg/blog/" class="nav-link" aria-current="page" title="Технологични манифести и исторически анализи">Технически анализи</a></li>
+          <!--<li><a href="/bg/tools/" class="nav-link" title="Инструменти и еталони за уеб стандарти">Инструменти</a></li>-->
+          <li><a href="/bg/about/" class="nav-link" title="История на телекомуникациите от 1992 г. до днес">За нас</a></li>
+          <li><a href="/bg/contact/" class="nav-btn" title="Директен контакт с оперативния отдел">Директен контакт</a></li>
+          <li><a href="/blog/dobruja/" class="lang-toggle" hreflang="en" title="Switch to the English canonical monograph">English (EN)</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="shell-prose">
+      <article class="prose">
+        <header>
+          <span class="hero-tag">ИСТОРИЧЕСКА ХРОНИКА &bull; НАУЧНА МОНОГРАФИЯ</span>
+          <h1>Хроника 2011: Linux клъстери, Red5 стрийминг и медийна група Добруджа</h1>
+          <p class="hero-lead">Документален инженерен отчет за изграждането на независима медийна инфраструктура: администриране на физически Linux сървърни паркове, ранно внедряване на RTMP/HLS видео стрийминг и глобални медийни излъчвания от Кан и Южна Африка.</p>
+        </header>
+
+        <section class="audit-box">
+          <h3>Резюме и исторически обхват (Abstract)</h3>
+          <p>
+            Настоящата хроника документира архитектурната основа на медийната екосистема около <code>dobruja.com</code>, положена в периода 2007&ndash;2011 г. Анализира се преходът от класическо регионално издателство към пълна технологична автономия чрез управление на собствени физически Linux сървъри, ранно осигуряване на стрийминг технологии чрез Red5 Media Server и изграждане на журналистическа синдикация, доставяща мултимедийно съдържание за водещи национални и световни новинарски агенции.
+          </p>
+        </section>
+
+        <section>
+          <h2>1. Архитектура на физическия сървърен парк (Bare-Metal Linux)</h2>
+          <p>
+            В епоха преди масовата комерсиализация на споделените облачни платформи, мрежата избира пътя на пълния инфраструктурен суверенитет. Вместо зависимост от наети виртуални среди с непрозрачен достъп, медийната група проектира, инсталира и администрира собствен физически хардуерен парк:
+          </p>
+          <ul>
+            <li><strong>Операционни системи от корпоративен клас:</strong> Разполагане на сървърни инстанции под Debian Stable, Ubuntu LTS, CentOS и RedHat Enterprise Linux (RHEL).</li>
+            <li><strong>Уеб и пощенски стек:</strong> Балансирано натоварване между Apache HTTP Server и Nginx като реверсивно прокси, съчетано с надеждна криптирана пощенска инфраструктура под Postfix и Dovecot.</li>
+            <li><strong>Бази данни и файлови услуги:</strong> Класически релационни клъстери под MySQL и MariaDB, оптимизирани за бързо четене на масивни текстови архиви, и криптирани ProFTPD канали за отдалечен пренос на репортажи.</li>
+          </ul>
+
+          <h2>2. Мултимедиен пионер: Стрийминг в реално време с Red5</h2>
+          <p>
+            През 2011 г. предаването на видео през интернет бе доминирано от тромави формати и високи лицензионни бариери. Мобиком внедрява отворената Java-базирана алтернатива <strong>Red5 Open Source Media Server</strong>:
+          </p>
+          <ul>
+            <li><strong>Протоколна съвместимост:</strong> Директна поддръжка на Real-Time Messaging Protocol (RTMP), RTSP за мобилни терминали и ранни HLS имплементации за мобилни браузъри.</li>
+            <li><strong>Транскодиране на живо:</strong> Интеграция на FFmpeg конвейери на ниво операционна система за компресиране на видео сигнали от полеви камери в реално време, оптимизирайки честотната лента при тогавашните ограничени интернет скорости.</li>
+          </ul>
+
+          <h2>3. Международни дестинации: Кинофестивалът в Кан и Йоханесбург</h2>
+          <p>
+            Технологичният капацитет на платформата намира практическо приложение в мащабни международни медийни проекти с глобален отзвук:
+          </p>
+          <ul>
+            <li><strong>Кинофестивалът в Кан (Франция):</strong> Реализиране на преки цифрови видео излъчвания и авторски културни хроники директно от лазурния бряг на Франция.</li>
+            <li><strong>Проектът africa.dobruja.com (Южна Африка):</strong> Разгръщане на специализиран медиен канал с ексклузивни репортажи от Йоханесбург, включително документално отразяване на събития непосредствено от резиденцията на Нобеловия лауреат за мир Нелсън Мандела в квартал Хютън.</li>
+            <li><strong>Регионален медиен авангард:</strong> Паралелно с международната дейност медийната група стартира специализирания канал <code>sport.dobruja.com</code> и литературната аудио платформа <code>audiobooks.dobruja.com</code> на 1 август 2011 г., изпреварвайки масовата вълна на дигиталните аудиокниги с години.</li>
+          </ul>
+
+          <h2>4. Редакционна колегия и глобална новинарска синдикация</h2>
+          <p>
+            Мултимедийното съдържание и разследващите репортажи на медийната група, създадени под почетното ръководство на дългогодишния главен редактор <strong>преп. Виолета Върбанова</strong> и журналиста Руслан Николов, се превръщат в ценен първоизточник за водещи български и световни телевизионни мрежи.
+          </p>
+          <p>
+            Мрежата реализира официални медийни партньорства и информационен обмен с bTV, Нова телевизия, БНТ, TV7, както и със световните информационни гиганти Deutsche Welle (DW), Associated Press (AP) и CNN. Репортажите от Добруджа редовно се препечатват и от независимите български печатни издания в Лондон и Великобритания за нуждите на диаспората.
+          </p>
+
+          <h2>5. Еволюцията към днешния 512-байтов суверенитет</h2>
+          <p>
+            Опитът от управлението на тежки стрийминг сървъри и физически клъстери през 2011 г. дава ясен отговор на въпроса как трябва да изглежда устойчивият интернет на бъдещето:
+          </p>
+          <p>
+            Днес Мобиком пренася тази историческа надеждност в ерата на статичния уеб аскетизъм. Вместо да поддържаме уязвими и скъпи монолитни сървъри, цялото знание е синтезирано в децентрализирана, статична 512-байтова архитектура. Сървърният суверенитет от 2011 г. еволюира в дигитален суверенитет на чистия код през 2026 г.
+          </p>
+        </section>
+
+        <!-- Академично цитиране -->
+        <section class="audit-box">
+          <h4>Академично цитиране &bull; How to Cite</h4>
+          <p><strong>IEEE Style:</strong> Mobikom Research Directorate, "Dobruja Media Group (2011 Chronicle): Autonomous Linux Server Infrastructure, Red5 Real-Time Streaming, and Global Newsroom Syndication," <em>Mobikom Engineering Monograph</em>, Sep. 2026. [Online]. Available: https://mobikom.bg/bg/blog/dobruja/</p>
+          <p><strong>APA Style (7th ed.):</strong> Mobikom Research Directorate. (2026, September). <em>Dobruja Media Group (2011 Chronicle): Autonomous Linux Server Infrastructure, Red5 Real-Time Streaming, and Global Newsroom Syndication</em>. Mobikom Insights. https://mobikom.bg/bg/blog/dobruja/</p>
+          <p><strong>BibTeX:</strong><br>
+          <code>@article{mobikom2026dobruja,<br>
+          &nbsp;&nbsp;author={Mobikom Research Directorate},<br>
+          &nbsp;&nbsp;title={Dobruja Media Group (2011 Chronicle): Autonomous Linux Clusters and Red5 Streaming},<br>
+          &nbsp;&nbsp;journal={Mobikom Engineering Monograph},<br>
+          &nbsp;&nbsp;year={2026},<br>
+          &nbsp;&nbsp;url={https://mobikom.bg/bg/blog/dobruja/}<br>
+          }</code></p>
+        </section>
+
+        <section class="conversion-banner">
+          <div>
+            <h3>Институционални партньорства и исторически архиви</h3>
+            <p>Директна връзка с оперативния отдел за медийна синдикация и технологични одити.</p>
+          </div>
+          <a href="/bg/contact/" class="nav-btn" title="Връзка с оперативния отдел">Оперативен отдел &rarr;</a>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Мрежа Мобиком</h4>
+          <ul>
+            <li><a href="https://www.dobrichnews.com" rel="noopener noreferrer external" target="_blank" title="Регионални ежедневни новини за Североизточна България">dobrichnews.com &bull; Новини</a></li>
+            <li><a href="https://www.dobruja.com" rel="noopener noreferrer external" target="_blank" title="Опазване на традициите и аграрна памет">dobruja.com &bull; Култура</a></li>
+            <li><a href="https://bestjobs.bg" rel="noopener noreferrer external" target="_blank" title="Обяви за работа в цяла България">bestjobs.bg &bull; Обяви за работа</a></li>
+            <li><a href="/bg/rss.xml" title="RSS новинарска емисия">&#128246; RSS канал</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Управление и контакти</h4>
+          <ul>
+            <li><a href="/bg/" title="Към началния портал">Начален портал</a></li>
+            <li><a href="/bg/about/" title="История на телекомуникациите и основаването">За нас и история</a></li>
+            <li><a href="/bg/about/governance/" title="Корпоративна управленска рамка">Управление</a></li>
+            <li><a href="/bg/portfolio/" title="Каталог на платформите">Проекти в мрежата</a></li>
+            <li><a href="/bg/blog/" title="Технологични манифести и монографии">Статии и анализи</a></li>
+            <li><a href="/bg/contact/" title="Официален имейл за контакт">Контакти</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Хронология</h4>
+          <ul>
+            <li><a href="/bg/about/#nmt-450" title="1992 основаване на РТК Мобиком">1992 Клетъчен пионер</a></li>
+            <li><a href="/bg/about/#pagers-mobika" title="Пейджинг системи и фонокарти">Пейджъри и карти Мобика</a></li>
+            <li><a href="/bg/about/#ostatus-2011" title="Федеративен микроблогинг и стрийминг">2011 Софтуерна еволюция</a></li>
+            <li><a href="/bg/blog/manifesto-512/" title="Инженерен манифест 512 байта">Манифест 512 байта</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="footer-legal-bar" aria-label="Правна навигация">
+        <a href="/bg/privacy/" title="Политика за поверителност">Поверителност</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/terms/" title="Общи условия за ползване">Общи условия</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/bg/gdpr/" title="GDPR съответствие">Регламент GDPR</a>
+        <span class="legal-sep">&bull;</span>
+        <a href="/blog/dobruja/" hreflang="en" title="Switch to the English canonical monograph">English Version (EN)</a>
+      </nav>
+      <div class="footer-bottom">
+        <p>&copy; 2026 mobikom.bg. Отворен код под MIT лиценз (github.com/mobikom). Архитектура с нулеви бисквитки.</p>
+        <a href="/bg/contact/" title="Връзка с оперативния отдел">Оперативен отдел &rarr;</a>
+      </div>
+    </div>
+  </footer>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Хроника 2011: Linux клъстери и Red5 стрийминг","url":"https://mobikom.bg/bg/blog/dobruja/","inLanguage":"bg","publisher":{"@type":"Organization","name":"Мобиком България","url":"https://mobikom.bg/"},"author":{"@type":"Organization","name":"Mobikom Research Directorate"}}</script>
+</body>
+</html>
