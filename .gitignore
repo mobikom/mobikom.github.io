@@ -1,0 +1,56 @@
+# ==============================================================================
+# mobikom.bg — Git Ignore Rules
+# High-Availability Web Operations & Static Edge Architecture
+# ==============================================================================
+
+# 1. macOS System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+.AppleDouble
+.LSOverride
+
+# 2. Windows System Files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+desktop.ini
+
+# 3. IDE, Editor & Tooling Configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+*~
+
+# 4. Local Temporary, Backup & Scratch Files
+*.bak
+*.tmp
+*.log
+tree.txt
+
+# 5. Secrets, API Keys & Cryptography (CRITICAL)
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.cert
+*.pfx
+*.p12
+
+# 6. Package Managers & Build Artifacts (Zero-Dependency Enforcement)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 7. Local Servers & Cloudflare Wrangler Caches
+.wrangler/
+__pycache__/
+*.pyc
