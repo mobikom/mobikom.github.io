@@ -1,0 +1,35 @@
+name: Network Syndicate Auto Sync
+
+on:
+  schedule:
+    - cron: '30 5 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: 'network-sync'
+  cancel-in-progress: true
+
+jobs:
+  sync-feeds:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Fetch Media Feeds and VIP Vacancies
+        run: node scripts/sync-network.js
+
+      - name: Commit and Push Synchronized Assets
+        run: |
+          git config --global user.name "Mobikom Network Bot"
+          git config --global user.email "office@mobikom.bg"
+          git add index.html bg/index.html
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(syndicate): auto-sync network media and vip jobs [skip ci]" && git push origin main)
